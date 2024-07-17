@@ -1,0 +1,18 @@
+<?php
+/**
+ * Share Review
+ *
+ * SPDX-FileCopyrightText: 2024 Marcel Scherello
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
+
+
+return [
+    'routes' => [
+        ['name' => 'page#index', 'url' => '/', 'verb' => 'GET'],
+
+        // Output
+        ['name' => 'output#read', 'url' => '/data', 'verb' => 'GET'],
+		['name' => 'output#delete', 'url' => '/delete/{shareId}', 'verb' => 'DELETE'],
+    ]
+];
