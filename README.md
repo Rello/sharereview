@@ -1,6 +1,10 @@
-Review all shared for audit and review requirements.
+Review and audit all shares
 
 Remove shares from the review screen
+
+<p align="center">
+<img src="https://github.com/Rello/sharereview/blob/main/screenshots/logo.png?raw=true" alt="Main" width="300" title="Share Review">
+</p>
 
 ## Maintainers
 - [Marcel Scherello](https://github.com/rello) (author, project leader)
