@@ -1,0 +1,42 @@
+# SPDX-FileCopyrightText: 2024 Marcel Scherello
+# SPDX-License-Identifier: AGPL-3.0-or-later
+version = 1
+SPDX-PackageName = "Marcel Scherello"
+SPDX-PackageSupplier = "Marcel Scherello <sharereview@scherello.de>"
+SPDX-PackageDownloadLocation = "https://github.com/rello/sharereview"
+
+[[annotations]]
+path = "l10n/**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2019-2024 Nextcloud translators"
+SPDX-License-Identifier = "AGPL-3.0-or-later"
+
+[[annotations]]
+path = [".**", "**.md", "**.json", "**.code-workspace", "tests/**", "sample_data/**", "screenshots/**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2024 Marcel Scherello"
+SPDX-License-Identifier = "AGPL-3.0-or-later"
+
+[[annotations]]
+path = ["img/app.svg", "img/app-dark.svg"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2024 Marcel Scherello"
+SPDX-License-Identifier = "AGPL-3.0-or-later"
+
+[[annotations]]
+path = ["img/delete.svg", "img/edit.svg", "img/email.svg", "img/group.svg", "img/link.svg", "img/more.svg", "img/read.svg", "img/user.svg"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2018-2024 Google LLC"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = "appinfo/info.xml"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2024 Marcel Scherello"
+SPDX-License-Identifier = "AGPL-3.0-or-later"
+
+[[annotations]]
+path = ["css/3rdParty/datatables.min.css", "js/3rdParty/datatables.min.js"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "SpryMedia Ltd"
+SPDX-License-Identifier = "MIT"

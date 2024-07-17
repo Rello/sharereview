@@ -1,6 +1,5 @@
-Review and audit all shares
-
-Remove shares from the review screen
+- Review and audit all shares within the Nextcloud instance
+- Remove shares from the review screen
 
 <p align="center">
 <img src="https://github.com/Rello/sharereview/blob/main/screenshots/logo.png?raw=true" alt="Main" width="600" title="Share Review">

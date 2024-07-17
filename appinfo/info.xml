@@ -4,8 +4,8 @@
     <name>Share Review</name>
     <summary>Share Review</summary>
 	<description><![CDATA[
-Review and audit all shares
-Remove shares from the review screen
+- Review and audit all shares within the Nextcloud instance
+- Remove shares from the review screen
 
 ]]></description>
     <version>0.0.1</version>
