@@ -22,14 +22,23 @@ OCA.ShareReview.Visualization = {
     // *** table ***
     // *************
 
-    buildDataTable: function (domTarget, data) {
+    buildDataTable: function (data) {
 
+        if (data.length === 0) {
+            this.showElement('noDataContainer');
+            this.hideElement('tableContainer');
+            return;
+        } else {
+            this.hideElement('noDataContainer');
+            this.showElement('tableContainer');
+        }
+        let domTarget = document.getElementById("tableContainer");
+        domTarget.innerHTML = '';
         if (OCA.ShareReview.tableObject) {
             OCA.ShareReview.tableObject.destroy();
-            domTarget.innerHTML = '';
+
         }
 
-        this.showElement('tableContainer');
 
         let language = {
             // TRANSLATORS Noun
@@ -52,13 +61,22 @@ OCA.ShareReview.Visualization = {
 
         columns = OCA.ShareReview.Visualization.addColumnRender(columns);
 
+        const isDataLengthGreaterThanDefault = data.length > 10;
+
+
         OCA.ShareReview.tableObject = new DataTable(domTarget, {
             pagingType: 'simple_numbers',
             autoWidth: false,
             data: data,
             columns: columns,
             language: language,
-            order: [[6, 'desc']]
+            order: [[6, 'desc']],
+            layout: {
+                topStart: isDataLengthGreaterThanDefault ? 'pageLength' : null,
+                topEnd: isDataLengthGreaterThanDefault ? 'search' : null,
+                bottomStart: isDataLengthGreaterThanDefault ? 'info' : null,
+                bottomEnd: isDataLengthGreaterThanDefault ? 'paging' : null,
+            },
         });
 
         },

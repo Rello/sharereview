@@ -38,16 +38,87 @@ OCA.ShareReview.UI = {
     },
 };
 
+OCA.ShareReview.Navigation = {
+    buildNavigation: function (data) {
+        document.getElementById('shareReviewNavigation').innerHTML = '';
+
+        //document.getElementById('shareReviewNavigation').appendChild(OCA.Analytics.Navigation.buildOverviewButton());
+        let navigations = [
+            {
+                name: 'All Shares',
+                event: OCA.ShareReview.Navigation.handleAllNavigation,
+                style: 'icon-sharereview-shares',
+                pinned: false
+            },
+            {
+                name: 'New Shares',
+                event: OCA.ShareReview.Navigation.handleNewSharesNavigation,
+                style: 'icon-sharereview-new',
+                pinned: false
+            },
+            {
+                name: 'Confirm reviewed',
+                event: OCA.ShareReview.Navigation.handleConfirmNavigation,
+                style: 'icon-sharereview-check',
+                pinned: false
+            },
+            {
+                name: 'Reset time',
+                event: OCA.ShareReview.Navigation.handleConfirmResetNavigation,
+                style: 'icon-sharereview-reset',
+                pinned: false
+            }
+
+        ];
+        for (let navigation of navigations) {
+            document.getElementById('shareReviewNavigation').appendChild(OCA.ShareReview.Navigation.buildNewButton(navigation));
+        }
+
+        //document.getElementById('navigationDatasets').appendChild(OCA.Analytics.Navigation.buildNewGroupPlaceholder());
+        //document.getElementById('navigationDatasets').appendChild(OCA.Analytics.Navigation.buildNewButton()); // first pinned
+    },
+
+    buildNewButton: function (data) {
+        let li = document.createElement('li');
+        if (data['pinned']) li.classList.add('pinned', 'first-pinned');
+        let a = document.createElement('a');
+        a.classList.add(data['style'], 'svg');
+        a.addEventListener('click', data['event']);
+        a.innerText = t('sharereview', data['name']);
+        li.appendChild(a);
+        return li;
+    },
+
+    handleAllNavigation: function () {
+        OCA.ShareReview.Backend.getData();
+    },
+
+    handleNewSharesNavigation: function () {
+        OCA.ShareReview.Backend.getData(true);
+    },
+
+    handleConfirmNavigation: function () {
+        OCA.ShareReview.Backend.confirm();
+    },
+
+    handleConfirmResetNavigation: function () {
+        OCA.ShareReview.Backend.confirmReset();
+    }
+
+}
+
 OCA.ShareReview.Backend = {
-    getData: function () {
-        let requestUrl = OC.generateUrl('apps/sharereview/data');
+    getData: function (onlyNew) {
+        let newUrl = '';
+        if (onlyNew) newUrl = '/new';
+        let requestUrl = OC.generateUrl('apps/sharereview/data') + newUrl;
         fetch(requestUrl, {
             method: 'GET',
             headers: OCA.ShareReview.headers()
         })
             .then(response => response.json())
             .then(data => {
-                OCA.ShareReview.Visualization.buildDataTable(document.getElementById("tableContainer"), data);
+                OCA.ShareReview.Visualization.buildDataTable(data);
             });
      },
 
@@ -60,12 +131,40 @@ OCA.ShareReview.Backend = {
         })
             .then(response => response.json())
             .then(data => {
-                OCA.ShareReview.Backend.getData()
+                OCA.ShareReview.Notification.notification('success', t('sharereview', 'Share deleted'));
+                OCA.ShareReview.Backend.getData();
+            })
+            .catch(error => {
+                OCA.Analytics.Notification.notification('error', t('sharereview', 'Request could not be processed'))
             });
+    },
 
-    }
+    confirm: function () {
+        let requestUrl = OC.generateUrl('apps/sharereview/confirm');
+        fetch(requestUrl, {
+            method: 'POST',
+            headers: OCA.ShareReview.headers()
+        })
+            .then(response => response.json())
+            .then(data => {
+                OCA.ShareReview.Notification.notification('success', t('sharereview', 'Timestamp saved'));
+            });
+    },
+
+    confirmReset: function () {
+        let requestUrl = OC.generateUrl('apps/sharereview/confirmReset');
+        fetch(requestUrl, {
+            method: 'POST',
+            headers: OCA.ShareReview.headers()
+        })
+            .then(response => response.json())
+            .then(data => {
+                OCA.ShareReview.Notification.notification('success', t('sharereview', 'Timestamp deleted'));
+            });
+    },
 };
 
 document.addEventListener('DOMContentLoaded', function () {
     OCA.ShareReview.Backend.getData();
+    OCA.ShareReview.Navigation.buildNavigation();
 });

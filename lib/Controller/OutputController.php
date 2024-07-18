@@ -13,6 +13,7 @@ use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\IRequest;
+use OCP\Share\Exceptions\ShareNotFound;
 use Psr\Log\LoggerInterface;
 
 class OutputController extends Controller {
@@ -37,7 +38,18 @@ class OutputController extends Controller {
 	 * @return DataResponse
 	 */
 	public function read() {
-		$data = $this->ShareService->read();
+		$data = $this->ShareService->read(false);
+		return new DataResponse($data, HTTP::STATUS_OK);
+	}
+
+	/**
+	 * get the data when requested from internal page
+	 *
+	 * @NoAdminRequired
+	 * @return DataResponse
+	 */
+	public function readNew() {
+		$data = $this->ShareService->read(true);
 		return new DataResponse($data, HTTP::STATUS_OK);
 	}
 
@@ -47,10 +59,36 @@ class OutputController extends Controller {
 	 * @NoAdminRequired
 	 * @param $shareId
 	 * @return DataResponse
+	 * @throws ShareNotFound
 	 */
 	public function delete($shareId) {
 		$result = $this->ShareService->delete($shareId);
 		return new DataResponse($result, HTTP::STATUS_OK);
 	}
+
+	/**
+	 * confirm shares by setting the current timestamp
+	 *
+	 * @NoAdminRequired
+	 * @return DataResponse
+	 * @throws ShareNotFound
+	 */
+	public function confirm() {
+		$result = $this->ShareService->confirm(time());
+		return new DataResponse($result, HTTP::STATUS_OK);
+	}
+
+	/**
+	 * confirm shares by setting the current timestamp
+	 *
+	 * @NoAdminRequired
+	 * @return DataResponse
+	 * @throws ShareNotFound
+	 */
+	public function confirmReset() {
+		$result = $this->ShareService->confirm(0);
+		return new DataResponse($result, HTTP::STATUS_OK);
+	}
+
 
 }

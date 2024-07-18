@@ -13,6 +13,9 @@ return [
 
         // Output
         ['name' => 'output#read', 'url' => '/data', 'verb' => 'GET'],
+		['name' => 'output#readNew', 'url' => '/data/new', 'verb' => 'GET'],
 		['name' => 'output#delete', 'url' => '/delete/{shareId}', 'verb' => 'DELETE'],
+		['name' => 'output#confirm', 'url' => '/confirm', 'verb' => 'POST'],
+		['name' => 'output#confirmReset', 'url' => '/confirmReset', 'verb' => 'POST'],
     ]
 ];

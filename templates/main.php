@@ -13,7 +13,6 @@ Util::addScript('sharereview', 'app');
 Util::addScript('sharereview', 'visualization');
 Util::addScript('sharereview', '3rdParty/datatables.min');
 Util::addScript('sharereview', 'userGuidance');
-
 ?>
 
 <div id="app-navigation">

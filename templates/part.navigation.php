@@ -8,7 +8,6 @@
 
 ?>
 
-<ul id="navigationDatasets">
-    <!--<div style="text-align:center; padding-top:100px" class="get-metadata icon-loading"></div>-->
-    <br><br>filter listing?
+<ul id="shareReviewNavigation">
+    <div style="text-align:center; padding-top:100px" class="get-metadata icon-loading"></div>
 </ul>

@@ -43,6 +43,33 @@
     background-size: 16px;
     background-position: left !important;
 }
+
+.icon-sharereview-new {
+    background-image: url(../img/new.svg);
+    filter: var(--background-invert-if-dark);
+    background-size: 24px;
+}
+
+.icon-sharereview-shares {
+    background-image: url(../img/shares.svg);
+    filter: var(--background-invert-if-dark);
+    background-size: 24px;
+}
+
+.icon-sharereview-check {
+    background-image: url(../img/check.svg);
+    filter: var(--background-invert-if-dark);
+    background-size: 24px;
+    margin-left: 30px;
+}
+
+.icon-sharereview-reset {
+    background-image: url(../img/reset.svg);
+    filter: var(--background-invert-if-dark);
+    background-size: 24px;
+    margin-left: 30px;
+}
+
 .icon-sharereview-delete {
     background-image: url(../img/delete.svg);
     filter: var(--background-invert-if-dark);
@@ -57,7 +84,7 @@ div.dt-container .dt-paging .dt-paging-button {
     font-weight: 400;
 }
 
-.analyticsDialogHeader {
+.shareReviewDialogHeader {
     background-image: url(../img/app-dark.svg);
     filter: var(--background-invert-if-dark);
     background-size: 16px 16px;
@@ -66,7 +93,7 @@ div.dt-container .dt-paging .dt-paging-button {
     padding-left: 25px;
 }
 
-.analyticsDialogClose {
+.shareReviewDialogClose {
     position: absolute;
     top: 0;
     right: 0;
@@ -76,7 +103,7 @@ div.dt-container .dt-paging .dt-paging-button {
     border-radius: var(--border-radius-pill);
 }
 
-.analyticsDialog {
+.shareReviewDialog {
     background: var(--color-main-background);
     color: var(--color-main-text);
     border-radius: var(--border-radius-large);
@@ -95,7 +122,7 @@ div.dt-container .dt-paging .dt-paging-button {
     position: fixed;
 }
 
-.analyticsDialogDim {
+.shareReviewDialogDim {
     background-color: #000;
     opacity: .2;
     z-index: 9999;
@@ -106,9 +133,232 @@ div.dt-container .dt-paging .dt-paging-button {
     height: 100%;
 }
 
-.analyticsDialogButtonrow {
+.shareReviewDialogButtonrow {
     justify-content: space-between;
     position: relative;
     display: flex;
     padding-top: 10px;
+}
+
+.app-navigation-list {
+    padding: 8px;
+}
+
+.app-navigation-entry {
+    border-radius: 8px;
+    width: 100%;
+}
+
+.app-navigation-entry.active {
+    background-color: var(--color-primary-element)!important;
+    color:var(--color-primary-element-text) !important
+}
+
+.app-navigation-entry-link{
+    z-index: 100;
+    display: flex;
+    line-height: 34px;
+}
+
+.app-navigation-entry-icon {
+    width: 34px;
+    height: 34px;
+}
+
+.app-navigation-entry-icon-span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-width: var(--default-clickable-area); */
+    min-height: 34px;
+    opacity: 1;
+}
+
+.app-navigation-entry-icon-svg {
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+}
+
+.app-navigation-entry-name {
+    overflow: hidden;
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+#app-navigation .collapsible:before {
+    content: inherit;
+}
+
+/* show a down-triangle if a folder is opened */
+#app-navigation .collapsible.open > a {
+    background-image: var(--icon-triangle-s-dark);
+}
+
+/* show the ... icon when the navigation row is hovered */
+#app-navigation > ul > li > a:hover + .app-navigation-entry-utils > ul > li > button,
+#app-navigation > ul > li > ul > li > a:hover + .app-navigation-entry-utils > ul > li > button {
+    opacity: 0.5;
+}
+
+/* show the ... icon when the icon itself is hovered */
+#app-navigation > ul > li > ul > li > .app-navigation-entry-utils:hover {
+    opacity: 1;
+}
+
+/* hide the ... icon as default */
+#app-navigation .app-navigation-entry-utils .app-navigation-entry-utils-menu-button > button, #app-navigation .app-navigation-entry-deleted .app-navigation-entry-deleted-button {
+    opacity: 0;
+}
+
+/* take over from core >NC28*/
+
+#app-navigation > ul {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    padding-bottom: 0;
+}
+
+#app-navigation > ul > li {
+    display: inline-flex;
+    flex-wrap: wrap;
+    order: 1;
+    flex-shrink: 0;
+    margin: 0;
+    margin-bottom: 3px;
+    width: 100%;
+    border-radius: var(--border-radius-pill);
+}
+
+#app-navigation>ul>li a:hover,
+#app-navigation>ul>li a:hover>a {
+    background-color: var(--color-background-hover);
+}
+
+#app-navigation > ul > li.active,
+#app-navigation > ul > li.active > a,
+#app-navigation > ul > li a:active,
+#app-navigation > ul > li a:active > a,
+#app-navigation > ul > li a.selected,
+#app-navigation > ul > li a.selected > a,
+#app-navigation > ul > li a.active,
+#app-navigation > ul > li a.active > a {
+    background-color: var(--color-primary-element-light);
+}
+
+#app-navigation > ul > li > a.svg, #app-navigation > ul > li > ul > li > a.svg {
+    padding: 0 12px 0 44px;
+}
+
+#app-navigation>ul>li>a, #app-navigation>ul>li>ul>li>a {
+    background-size: 20px;
+    background-position: 14px center;
+    background-repeat: no-repeat;
+    display: block;
+    justify-content: space-between;
+    line-height: 44px;
+    min-height: 44px;
+    padding: 0 12px 0 14px;
+    overflow: hidden;
+    box-sizing: border-box;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-radius: var(--border-radius-pill);
+    color: var(--color-main-text);
+    flex: 1 1 0px;
+    z-index: 100;
+}
+
+#app-navigation .app-navigation-entry-utils {
+    flex: 0 1 auto;
+}
+
+#app-navigation .app-navigation-entry-utils ul,
+#app-navigation .app-navigation-entry-menu ul {
+    list-style-type: none;
+}
+#app-navigation .app-navigation-entry-utils ul {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#app-navigation .app-navigation-entry-utils li {
+    width: 44px !important;
+    height: 44px;
+}
+#app-navigation li {
+    position: relative;
+}
+
+#app-navigation .app-navigation-entry-utils .app-navigation-entry-utils-menu-button button:not([class^=icon-]):not([class*=" icon-"]) {
+    background-image: var(--icon-more-dark);
+}
+
+#app-navigation .app-navigation-entry-utils .app-navigation-entry-utils-menu-button>button:hover, #app-navigation .app-navigation-entry-utils .app-navigation-entry-utils-menu-button>button:focus, #app-navigation .app-navigation-entry-deleted .app-navigation-entry-deleted-button:hover, #app-navigation .app-navigation-entry-deleted .app-navigation-entry-deleted-button:focus {
+    background-color: rgba(0,0,0,0);
+    opacity: 1;
+}
+
+#app-navigation .app-navigation-entry-utils .app-navigation-entry-utils-menu-button>button, #app-navigation .app-navigation-entry-deleted .app-navigation-entry-deleted-button {
+    border: 0;
+    opacity: .5;
+    background-color: rgba(0,0,0,0);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#app-navigation .app-navigation-entry-utils .app-navigation-entry-utils-menu-button > button, #app-navigation .app-navigation-entry-deleted .app-navigation-entry-deleted-button {
+    opacity: 0;
+}
+
+#app-navigation .app-navigation-entry-utils button {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+}
+
+#app-navigation>ul>li>.app-navigation-entry-menu, #app-navigation>ul>li>ul>li>.app-navigation-entry-menu {
+    top: 44px;
+}
+
+#app-navigation>ul>li.pinned.first-pinned {
+    margin-top: auto !important;
+}
+#app-navigation>ul>li.pinned {
+    order: 2;
+}
+
+#app-navigation>ul>li>ul {
+    flex: 0 1 auto;
+    width: 100%;
+    position: relative;
+}
+
+#app-navigation>ul>li>ul>li {
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding-left: 44px;
+    width: 100%;
+    margin-bottom: 3px;
+}
+
+#app-navigation>ul>li.deleted>ul, #app-navigation>ul>li.collapsible:not(.open)>ul {
+    display: none;
+}
+
+
+#app-navigation>ul>li>ul>li.active, #app-navigation>ul>li>ul>li.active>a, #app-navigation>ul>li>ul>li a.selected, #app-navigation>ul>li>ul>li a.selected>a {
+    border-radius: var(--border-radius-pill);
+    background-color: var(--color-primary-element-light);
 }

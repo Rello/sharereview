@@ -15,34 +15,34 @@ use Psr\Log\LoggerInterface;
 use OCP\Share\IManager as ShareManager;
 use OCP\Share\IShare;
 use OCP\Files\IRootFolder;
+use OCP\IConfig;
+use OCP\IUserSession;
 
 class ShareService {
 
+	/** @var IConfig */
+	protected $config;
 	/** @var LoggerInterface */
 	private $logger;
 	/** @var ShareManager */
 	private $shareManager;
 	/** @var IRootFolder */
 	private $rootFolder;
+	/** @var IUserSession */
+	private $userSession;
 
 	public function __construct(
+		IConfig $config,
 		LoggerInterface $logger,
 		ShareManager    $shareManager,
+		IUserSession $userSession,
 		IRootFolder     $rootFolder
 	) {
+		$this->config = $config;
 		$this->logger = $logger;
 		$this->shareManager = $shareManager;
 		$this->rootFolder = $rootFolder;
-	}
-
-	private function getShareTypes(): array {
-		return [
-			IShare::TYPE_USER,
-			IShare::TYPE_GROUP,
-			IShare::TYPE_LINK,
-			IShare::TYPE_EMAIL,
-			IShare::TYPE_REMOTE,
-		];
+		$this->userSession = $userSession;
 	}
 
 	/**
@@ -50,10 +50,16 @@ class ShareService {
 	 *
 	 * @return array
 	 */
-	public function read() {
+	public function read($onlyNew) {
+		$user = $this->userSession->getUser();
+		$userTimestamp = $this->config->getUserValue($user->getUID(), 'sharereview', 'reviewTimestamp', 0);
+
 		$shares = $this->shareManager->getAllShares();
 		$formated = [];
+
 		foreach ($shares as $share) {
+			$this->logger->info('share: ' . $share->getShareTime()->format('U') . ' user: '.$userTimestamp);
+			if ($onlyNew && $share->getShareTime()->format('U') <= $userTimestamp) continue;
 			$formated[] = $this->formatShare($share);
 		}
 		return $formated;
@@ -123,4 +129,11 @@ class ShareService {
 
 		return $data;
 	}
+
+	public function confirm($timestamp) {
+		$user = $this->userSession->getUser();
+		$this->config->setUserValue($user->getUID(), 'sharereview', 'reviewTimestamp', $timestamp);
+		return $timestamp;
+	}
+
 }

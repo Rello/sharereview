@@ -25,45 +25,45 @@ OCA.ShareReview.Notification = {
 
     info: function (header, text, guidance) {
         document.body.insertAdjacentHTML('beforeend',
-            '<div id="analyticsDialogOverlay" class="analyticsDialogDim"></div>'
-            + '<div id="analyticsDialogContainer" class="analyticsDialog">'
-            + '<a class="analyticsDialogClose" id="analyticsDialogBtnClose"></a>'
-            + '<h2 class="analyticsDialogHeader" id="analyticsDialogHeader" style="display:flex;margin-right:30px;">'
+            '<div id="sharereviewDialogOverlay" class="shareReviewDialogDim"></div>'
+            + '<div id="shareReviewDialogContainer" class="shareReviewDialog">'
+            + '<a class="shareReviewDialogClose" id="shareReviewDialogBtnClose"></a>'
+            + '<h2 class="shareReviewDialogHeader" id="shareReviewDialogHeader" style="display:flex;margin-right:30px;">'
             + header
             + '</h2>'
-            + '<span id="analyticsDialogGuidance" class="userGuidance"></span><br><br>'
-            + '<div id="analyticsDialogContent">'
+            + '<span id="shareReviewDialogGuidance" class="userGuidance"></span><br><br>'
+            + '<div id="shareReviewDialogContent">'
             + '</div>'
-            + '<br><div class="analyticsDialogButtonrow">'
-            + '<a class="button primary" id="analyticsDialogBtnGo">' + t('analytics', 'OK') + '</a>'
+            + '<br><div class="shareReviewDialogButtonrow">'
+            + '<a class="button primary" id="shareReviewDialogBtnGo">' + t('shareReview', 'OK') + '</a>'
             + '</div></div>'
         );
-        document.getElementById('analyticsDialogGuidance').innerHTML = guidance;
-        document.getElementById('analyticsDialogContent').innerHTML = text;
-        document.getElementById("analyticsDialogBtnClose").addEventListener("click", OCA.ShareReview.Notification.dialogClose);
-        document.getElementById("analyticsDialogBtnGo").addEventListener("click", OCA.ShareReview.Notification.dialogClose);
+        document.getElementById('shareReviewDialogGuidance').innerHTML = guidance;
+        document.getElementById('shareReviewDialogContent').innerHTML = text;
+        document.getElementById("shareReviewDialogBtnClose").addEventListener("click", OCA.ShareReview.Notification.dialogClose);
+        document.getElementById("shareReviewDialogBtnGo").addEventListener("click", OCA.ShareReview.Notification.dialogClose);
     },
 
     confirm: function (header, text, callback) {
         document.body.insertAdjacentHTML('beforeend',
-            '<div id="analyticsDialogOverlay" class="analyticsDialogDim"></div>'
-            + '<div id="analyticsDialogContainer" class="analyticsDialog">'
-            + '<a class="analyticsDialogClose" id="analyticsDialogBtnClose"></a>'
-            + '<h2 class="analyticsDialogHeader" id="analyticsDialogHeader" style="display:flex;margin-right:30px;">'
+            '<div id="shareReviewDialogOverlay" class="shareReviewDialogDim"></div>'
+            + '<div id="shareReviewDialogContainer" class="shareReviewDialog">'
+            + '<a class="shareReviewDialogClose" id="shareReviewDialogBtnClose"></a>'
+            + '<h2 class="shareReviewDialogHeader" id="shareReviewDialogHeader" style="display:flex;margin-right:30px;">'
             + header
             + '</h2>'
-            + '<div id="analyticsDialogContent">'
+            + '<div id="shareReviewDialogContent">'
             + '<div style="text-align:center; padding-top:100px" class="get-metadata icon-loading"></div>'
             + '</div>'
-            + '<br><div class="analyticsDialogButtonrow">'
-            + '<a class="button primary" id="analyticsDialogBtnGo">' + t('analytics', 'OK') + '</a>'
-            + '<a class="button" id="analyticsDialogBtnCancel">' + t('analytics', 'Cancel') + '</a>'
+            + '<br><div class="shareReviewDialogButtonrow">'
+            + '<a class="button primary" id="shareReviewDialogBtnGo">' + t('sharereview', 'OK') + '</a>'
+            + '<a class="button" id="shareReviewDialogBtnCancel">' + t('sharereview', 'Cancel') + '</a>'
             + '</div></div>'
         );
-        document.getElementById('analyticsDialogContent').innerHTML = text;
-        document.getElementById("analyticsDialogBtnClose").addEventListener("click", OCA.ShareReview.Notification.dialogClose);
-        document.getElementById("analyticsDialogBtnCancel").addEventListener("click", OCA.ShareReview.Notification.dialogClose);
-        document.getElementById("analyticsDialogBtnGo").addEventListener("click", callback);
+        document.getElementById('shareReviewDialogContent').innerHTML = text;
+        document.getElementById("shareReviewDialogBtnClose").addEventListener("click", OCA.ShareReview.Notification.dialogClose);
+        document.getElementById("shareReviewDialogBtnCancel").addEventListener("click", OCA.ShareReview.Notification.dialogClose);
+        document.getElementById("shareReviewDialogBtnGo").addEventListener("click", callback);
     },
 
     /**
@@ -91,39 +91,39 @@ OCA.ShareReview.Notification = {
      */
     htmlDialogInitiate: function (header, callback) {
         document.body.insertAdjacentHTML('beforeend',
-            '<div id="analyticsDialogOverlay" class="analyticsDialogDim"></div>'
-            + '<div id="analyticsDialogContainer" class="analyticsDialog">'
-            + '<a class="analyticsDialogClose" id="analyticsDialogBtnClose"></a>'
-            + '<h2 class="analyticsDialogHeader" id="analyticsDialogHeader" style="display:flex;margin-right:30px;">'
+            '<div id="shareReviewDialogOverlay" class="shareReviewDialogDim"></div>'
+            + '<div id="shareReviewDialogContainer" class="shareReviewDialog">'
+            + '<a class="shareReviewDialogClose" id="shareReviewDialogBtnClose"></a>'
+            + '<h2 class="shareReviewDialogHeader" id="shareReviewDialogHeader" style="display:flex;margin-right:30px;">'
             + header
             + '</h2>'
-            + '<span id="analyticsDialogGuidance" class="userGuidance"></span><br><br>'
-            + '<div id="analyticsDialogContent">'
+            + '<span id="shareReviewDialogGuidance" class="userGuidance"></span><br><br>'
+            + '<div id="shareReviewDialogContent">'
             + '<div style="text-align:center; padding-top:100px" class="get-metadata icon-loading"></div>'
             + '</div>'
-            + '<br><div class="analyticsDialogButtonrow">'
-            + '<a class="button primary" id="analyticsDialogBtnGo">' + t('analytics', 'OK') + '</a>'
-            + '<a class="button" id="analyticsDialogBtnCancel">' + t('analytics', 'Cancel') + '</a>'
+            + '<br><div class="shareReviewDialogButtonrow">'
+            + '<a class="button primary" id="shareReviewDialogBtnGo">' + t('sharereview', 'OK') + '</a>'
+            + '<a class="button" id="shareReviewDialogBtnCancel">' + t('sharereview', 'Cancel') + '</a>'
             + '</div></div>'
         );
 
-        document.getElementById("analyticsDialogBtnClose").addEventListener("click", OCA.ShareReview.Notification.dialogClose);
-        document.getElementById("analyticsDialogBtnCancel").addEventListener("click", OCA.ShareReview.Notification.dialogClose);
-        document.getElementById("analyticsDialogBtnGo").addEventListener("click", callback);
+        document.getElementById("shareReviewDialogBtnClose").addEventListener("click", OCA.ShareReview.Notification.dialogClose);
+        document.getElementById("shareReviewDialogBtnCancel").addEventListener("click", OCA.ShareReview.Notification.dialogClose);
+        document.getElementById("shareReviewDialogBtnGo").addEventListener("click", callback);
     },
 
     htmlDialogUpdate: function (content, guidance) {
-        document.getElementById('analyticsDialogContent').innerHTML = '';
-        document.getElementById('analyticsDialogContent').appendChild(content);
-        document.getElementById('analyticsDialogGuidance').innerHTML = guidance;
+        document.getElementById('shareReviewDialogContent').innerHTML = '';
+        document.getElementById('shareReviewDialogContent').appendChild(content);
+        document.getElementById('shareReviewDialogGuidance').innerHTML = guidance;
     },
 
     htmlDialogUpdateAdd: function (guidance) {
-        document.getElementById('analyticsDialogGuidance').innerHTML += '<br>' + guidance;
+        document.getElementById('shareReviewDialogGuidance').innerHTML += '<br>' + guidance;
     },
 
     dialogClose: function () {
-        document.getElementById('analyticsDialogContainer').remove();
-        document.getElementById('analyticsDialogOverlay').remove();
+        document.getElementById('shareReviewDialogContainer').remove();
+        document.getElementById('shareReviewDialogOverlay').remove();
     },
 }
