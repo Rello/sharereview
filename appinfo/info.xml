@@ -7,6 +7,7 @@
 - Review and audit all shares within the Nextcloud instance
 - Remove shares
 - Confirm review
+- Audit compliance
 - Show only new shares since last review
 - Restrict app to user groups (e.g. audit or risk mgmt)
 ]]></description>
@@ -22,6 +23,9 @@
     <bugs>https://github.com/Rello/sharereview/issues</bugs>
     <screenshot>
         https://raw.githubusercontent.com/Rello/sharereview/master/screenshots/logo.png
+    </screenshot>
+    <screenshot>
+        https://raw.githubusercontent.com/Rello/sharereview/master/screenshots/screenshot.png
     </screenshot>
     <dependencies>
         <nextcloud min-version="20" max-version="99"/>

@@ -2,11 +2,15 @@
 - Review and audit all shares within the Nextcloud instance
 - Remove shares
 - Confirm review
+- Audit compliance
 - Show only new shares since last review
 - Restrict app to user groups (e.g. audit or risk mgmt)
 
 <p align="center">
 <img src="https://github.com/Rello/sharereview/blob/main/screenshots/logo.png?raw=true" alt="Main" width="600" title="Share Review">
+</p>
+<p align="center">
+<img src="https://github.com/Rello/sharereview/blob/main/screenshots/screenshot.png?raw=true" alt="Main" width="600" title="Share Review">
 </p>
 
 ## Maintainers
