@@ -5,8 +5,10 @@
     <summary>Share Review</summary>
 	<description><![CDATA[
 - Review and audit all shares within the Nextcloud instance
-- Remove shares from the review screen
-
+- Remove shares
+- Confirm review
+- Show only new shares since last review
+- Restrict app to user groups (e.g. audit or risk mgmt)
 ]]></description>
     <version>0.0.1</version>
     <licence>agpl</licence>
