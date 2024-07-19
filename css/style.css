@@ -1,3 +1,10 @@
+/**
+ * Share Review
+ *
+ * SPDX-FileCopyrightText: 2024 Marcel Scherello
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
+
 .icon-sharereview-read {
     background-image: url(../img/read.svg);
     filter: var(--background-invert-if-dark);
