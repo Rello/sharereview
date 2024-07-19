@@ -1,0 +1,6 @@
+{ "translations": {
+    "OK" : "ნორმალური",
+    "Cancel" : "გაუქმება",
+    "Search" : "ძიება"
+},"pluralForm" :"nplurals=2; plural=(n!=1);"
+}

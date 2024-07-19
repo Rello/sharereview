@@ -1,0 +1,8 @@
+{ "translations": {
+    "Delete" : "Suprimir",
+    "Are you sure?" : "Ne sètz segur ?",
+    "OK" : "D’acòrdi",
+    "Cancel" : "Anullar",
+    "Search" : "Recercar"
+},"pluralForm" :"nplurals=2; plural=(n > 1);"
+}
