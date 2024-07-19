@@ -38,6 +38,10 @@ class OutputController extends Controller {
 	 * @return DataResponse
 	 */
 	public function read() {
+		if ($this->ShareService->isSecured() !== true) {
+			$this->logger->info('if check: ');
+			return new DataResponse('', HTTP::STATUS_FORBIDDEN);
+		}
 		$data = $this->ShareService->read(false);
 		return new DataResponse($data, HTTP::STATUS_OK);
 	}
@@ -49,6 +53,9 @@ class OutputController extends Controller {
 	 * @return DataResponse
 	 */
 	public function readNew() {
+		if (!$this->ShareService->isSecured()) {
+			return new DataResponse('', HTTP::STATUS_FORBIDDEN);
+		}
 		$data = $this->ShareService->read(true);
 		return new DataResponse($data, HTTP::STATUS_OK);
 	}
@@ -90,5 +97,19 @@ class OutputController extends Controller {
 		return new DataResponse($result, HTTP::STATUS_OK);
 	}
 
+	/**
+	 * confirm shares by setting the current timestamp
+	 *
+	 * @NoAdminRequired
+	 * @return DataResponse|true
+	 */
+	private function checkSecured() {
+		$this->logger->info('config 3: ' . $this->ShareService->isSecured());
+		if ($this->ShareService->isSecured() !== true) {
+			$this->logger->info('if check: ');
+			return new DataResponse('', HTTP::STATUS_FORBIDDEN);
+		}
+		return true;
+	}
 
 }

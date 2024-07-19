@@ -4,7 +4,11 @@
 - Confirm review
 - Audit compliance
 - Show only new shares since last review
-- Restrict app to user groups (e.g. audit or risk mgmt)
+- Assign review to user groups (e.g. audit or risk mgmt)
+
+### Note:
+The app must be restricted to at least one specific user group in the app store. 
+This prevents accidental exposure of the shared content to all users.
 
 <p align="center">
 <img src="https://github.com/Rello/sharereview/blob/main/screenshots/logo.png?raw=true" alt="Main" width="600" title="Share Review">

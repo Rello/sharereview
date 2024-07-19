@@ -12,8 +12,16 @@
     <h3 id="reportSubHeader" hidden></h3>
     <table id="tableContainer"></table>
     <div id="noDataContainer" hidden>
-        <?php p($l->t('No data found')); ?>
+        <br><br>
+		<?php p($l->t('No share found')); ?>
     </div>
+    <div id="notSecuredContainer" hidden>
+        <br><br>
+		<?php p($l->t('The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users.')); ?>
+        <br><br>
+        <a href="/settings/apps/enabled/sharereview"><?php p($l->t('Click here')); ?></a>
+    </div>
+
 </div>
 <div id="shareReview-loading" style="width:100%; padding: 100px 5%;" hidden>
     <div style="text-align:center; padding-top:100px" class="get-metadata icon-loading"></div>

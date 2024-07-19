@@ -10,14 +10,6 @@
 /** global: OC */
 'use strict';
 
-if (!OCA.ShareReview) {
-    /**
-     * @namespace
-     */
-    OCA.ShareReview = {};
-}
-
-
  /* @namespace OCA.ShareReview.Notification
  */
 OCA.ShareReview.Notification = {

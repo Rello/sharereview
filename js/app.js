@@ -42,7 +42,6 @@ OCA.ShareReview.Navigation = {
     buildNavigation: function (data) {
         document.getElementById('shareReviewNavigation').innerHTML = '';
 
-        //document.getElementById('shareReviewNavigation').appendChild(OCA.Analytics.Navigation.buildOverviewButton());
         let navigations = [
             {
                 name: 'All Shares',
@@ -73,9 +72,6 @@ OCA.ShareReview.Navigation = {
         for (let navigation of navigations) {
             document.getElementById('shareReviewNavigation').appendChild(OCA.ShareReview.Navigation.buildNewButton(navigation));
         }
-
-        //document.getElementById('navigationDatasets').appendChild(OCA.Analytics.Navigation.buildNewGroupPlaceholder());
-        //document.getElementById('navigationDatasets').appendChild(OCA.Analytics.Navigation.buildNewButton()); // first pinned
     },
 
     buildNewButton: function (data) {
@@ -116,9 +112,20 @@ OCA.ShareReview.Backend = {
             method: 'GET',
             headers: OCA.ShareReview.headers()
         })
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(response.statusText);
+                }
+                return response.json();
+            })
             .then(data => {
                 OCA.ShareReview.Visualization.buildDataTable(data);
+            })
+            .catch(error => {
+                OCA.ShareReview.Notification.notification('error', error)
+                OCA.ShareReview.Visualization.hideElement('noDataContainer');
+                OCA.ShareReview.Visualization.showElement('notSecuredContainer');
+                OCA.ShareReview.Visualization.hideElement('tableContainer');
             });
      },
 
@@ -135,7 +142,7 @@ OCA.ShareReview.Backend = {
                 OCA.ShareReview.Backend.getData();
             })
             .catch(error => {
-                OCA.Analytics.Notification.notification('error', t('sharereview', 'Request could not be processed'))
+                OCA.ShareReview.Notification.notification('error', t('sharereview', 'Request could not be processed'))
             });
     },
 

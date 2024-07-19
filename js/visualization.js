@@ -27,18 +27,19 @@ OCA.ShareReview.Visualization = {
         if (data.length === 0) {
             this.showElement('noDataContainer');
             this.hideElement('tableContainer');
+            this.hideElement('notSecuredContainer');
+
             return;
         } else {
             this.hideElement('noDataContainer');
+            this.hideElement('notSecuredContainer');
             this.showElement('tableContainer');
         }
         let domTarget = document.getElementById("tableContainer");
         domTarget.innerHTML = '';
         if (OCA.ShareReview.tableObject) {
             OCA.ShareReview.tableObject.destroy();
-
         }
-
 
         let language = {
             // TRANSLATORS Noun
@@ -60,9 +61,7 @@ OCA.ShareReview.Visualization = {
         }));
 
         columns = OCA.ShareReview.Visualization.addColumnRender(columns);
-
         const isDataLengthGreaterThanDefault = data.length > 10;
-
 
         OCA.ShareReview.tableObject = new DataTable(domTarget, {
             pagingType: 'simple_numbers',
@@ -78,7 +77,6 @@ OCA.ShareReview.Visualization = {
                 bottomEnd: isDataLengthGreaterThanDefault ? 'paging' : null,
             },
         });
-
         },
 
     addColumnRender: function(columns) {

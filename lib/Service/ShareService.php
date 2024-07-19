@@ -16,10 +16,13 @@ use OCP\Share\IManager as ShareManager;
 use OCP\Share\IShare;
 use OCP\Files\IRootFolder;
 use OCP\IConfig;
+use OCP\IAppConfig;
 use OCP\IUserSession;
 
 class ShareService {
 
+	/** @var IAppConfig */
+	protected $appConfig;
 	/** @var IConfig */
 	protected $config;
 	/** @var LoggerInterface */
@@ -32,12 +35,14 @@ class ShareService {
 	private $userSession;
 
 	public function __construct(
-		IConfig $config,
+		IAppConfig      $appConfig,
+		IConfig         $config,
 		LoggerInterface $logger,
 		ShareManager    $shareManager,
-		IUserSession $userSession,
+		IUserSession    $userSession,
 		IRootFolder     $rootFolder
 	) {
+		$this->appConfig = $appConfig;
 		$this->config = $config;
 		$this->logger = $logger;
 		$this->shareManager = $shareManager;
@@ -57,8 +62,8 @@ class ShareService {
 		$shares = $this->shareManager->getAllShares();
 		$formated = [];
 
+
 		foreach ($shares as $share) {
-			$this->logger->info('share: ' . $share->getShareTime()->format('U') . ' user: '.$userTimestamp);
 			if ($onlyNew && $share->getShareTime()->format('U') <= $userTimestamp) continue;
 			$formated[] = $this->formatShare($share);
 		}
@@ -104,27 +109,27 @@ class ShareService {
 		if ($share->getShareType() === IShare::TYPE_USER) {
 			$data['type'] = 'user';
 			$data['recipient'] = $share->getSharedWith();
-			$data['action'] = 'ocinternal:'.$share->getId();
+			$data['action'] = 'ocinternal:' . $share->getId();
 		}
 		if ($share->getShareType() === IShare::TYPE_GROUP) {
 			$data['type'] = 'group';
 			$data['recipient'] = $share->getSharedWith();
-			$data['action'] = 'ocinternal:'.$share->getId();
+			$data['action'] = 'ocinternal:' . $share->getId();
 		}
 		if ($share->getShareType() === IShare::TYPE_LINK) {
 			$data['type'] = 'link';
 			$data['recipient'] = '';
-			$data['action'] = 'ocinternal:'.$share->getId();
+			$data['action'] = 'ocinternal:' . $share->getId();
 		}
 		if ($share->getShareType() === IShare::TYPE_EMAIL) {
 			$data['type'] = 'email';
 			$data['recipient'] = $share->getSharedWith();
-			$data['action'] = 'ocMailShare:'.$share->getId();
+			$data['action'] = 'ocMailShare:' . $share->getId();
 		}
 		if ($share->getShareType() === IShare::TYPE_REMOTE) {
 			$data['type'] = 'federated';
 			$data['recipient'] = $share->getSharedWith();
-			$data['action'] = 'ocFederatedSharing:'.$share->getId();
+			$data['action'] = 'ocFederatedSharing:' . $share->getId();
 		}
 
 		return $data;
@@ -136,4 +141,17 @@ class ShareService {
 		return $timestamp;
 	}
 
+	/**
+	 * app can only be used when it is restricted to at least one group for security reasons
+	 *
+	 * @return bool
+	 */
+	public function isSecured() {
+		$enabled = $this->appConfig->getAllValues('sharereview', 'enabled')['enabled'];
+		if ($enabled !== 'yes') {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
