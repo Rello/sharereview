@@ -44,25 +44,25 @@ OCA.ShareReview.Navigation = {
 
         let navigations = [
             {
-                name: 'All Shares',
+                name: t('sharereview', 'All Shares'),
                 event: OCA.ShareReview.Navigation.handleAllNavigation,
                 style: 'icon-sharereview-shares',
                 pinned: false
             },
             {
-                name: 'New Shares',
+                name: t('sharereview', 'New Shares'),
                 event: OCA.ShareReview.Navigation.handleNewSharesNavigation,
                 style: 'icon-sharereview-new',
                 pinned: false
             },
             {
-                name: 'Confirm reviewed',
+                name: t('sharereview', 'Confirm reviewed'),
                 event: OCA.ShareReview.Navigation.handleConfirmNavigation,
                 style: 'icon-sharereview-check',
                 pinned: false
             },
             {
-                name: 'Reset time',
+                name: t('sharereview', 'Reset time'),
                 event: OCA.ShareReview.Navigation.handleConfirmResetNavigation,
                 style: 'icon-sharereview-reset',
                 pinned: false
