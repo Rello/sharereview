@@ -1,6 +1,9 @@
 OC.L10N.register(
     "sharereview",
     {
+    "Delete" : "Izbriši",
+    "OK" : "U redu",
+    "Cancel" : "Odustani",
     "Search" : "Traži",
     "Showing 0 to 0 of 0 entries" : "Prikazuje se 0 do 0 od 0 unosa"
 },

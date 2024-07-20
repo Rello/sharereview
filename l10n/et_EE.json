@@ -1,0 +1,6 @@
+{ "translations": {
+    "Delete" : "Kustuta",
+    "Cancel" : "Tühista",
+    "Search" : "Otsi"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}
