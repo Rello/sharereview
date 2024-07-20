@@ -1,6 +1,7 @@
 OC.L10N.register(
     "sharereview",
     {
+    "Delete" : "Kkes",
     "OK" : "IH",
     "Search" : "Nadi"
 },

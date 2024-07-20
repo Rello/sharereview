@@ -1,6 +1,7 @@
 OC.L10N.register(
     "sharereview",
     {
+    "Delete" : "삭제",
     "Are you sure?" : "확실합니까?",
     "OK" : "확인",
     "Cancel" : "취소",

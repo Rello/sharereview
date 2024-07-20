@@ -1,6 +1,7 @@
 OC.L10N.register(
     "sharereview",
     {
+    "Delete" : "លុប",
     "Are you sure?" : "តើអ្នកប្រាកដឬទេ?",
     "OK" : "OK",
     "Cancel" : "លើកលែង",
