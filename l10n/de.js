@@ -2,9 +2,7 @@ OC.L10N.register(
     "sharereview",
     {
     "Delete" : "Löschen",
-    "Are you sure?" : "Benötigt keine Übersetzung. Hier wird nur die formelle Übersetzung verwendet (de_DE).",
     "Request could not be processed" : "Anfrage konnte nicht bearbeitet werden",
-    "OK" : "Fein",
     "Cancel" : "Abbrechen",
     "Search" : "Suche",
     "Show _MENU_ entries" : "Zeige _MENU_ Einträge",
