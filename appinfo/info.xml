@@ -2,7 +2,7 @@
 <info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
     <id>sharereview</id>
     <name>Share Review</name>
-    <summary>Review and audit shares</summary>
+    <summary>Review and audit all shares</summary>
 	<description><![CDATA[
 - Review and audit all shares within the Nextcloud instance
 - Remove shares
