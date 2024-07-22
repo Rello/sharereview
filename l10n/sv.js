@@ -3,12 +3,24 @@ OC.L10N.register(
     {
     "Delete" : "Radera",
     "Are you sure?" : "Är du säker?",
+    "The share will be deleted!" : "Delningen kommer att raderas!",
+    "All Shares" : "Alla delningar",
+    "New Shares" : "Nya delningar",
+    "Confirm reviewed" : "Bekräfta granskad",
+    "Reset time" : "Återställ tid",
+    "Share deleted" : "Delningen raderad",
     "Request could not be processed" : "Begäran kunde inte bearbetas",
+    "Timestamp saved" : "Tidsstämpel sparad",
+    "Timestamp deleted" : "Tidsstämpel raderad",
     "OK" : "OK",
     "Cancel" : "Avbryt",
     "Search" : "Sök",
     "Show _MENU_ entries" : "Visa_MENY_poster",
     "Showing _START_ to _END_ of _TOTAL_ entries" : "Visar_START_till_SLUT_av_TOTALA_poster",
-    "Showing 0 to 0 of 0 entries" : "Visar 0 till 0 av 0 poster"
+    "Showing 0 to 0 of 0 entries" : "Visar 0 till 0 av 0 poster",
+    "Share Review" : "Granska delning",
+    "No share found" : "Ingen delning hittades",
+    "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Appen måste vara begränsad till minst en specifik användargrupp i appbutiken. Detta förhindrar oavsiktlig exponering av det delade innehållet för alla användare.",
+    "Click here" : "Klicka här"
 },
 "nplurals=2; plural=(n != 1);");

@@ -3,12 +3,25 @@ OC.L10N.register(
     {
     "Delete" : "Scrios",
     "Are you sure?" : "An bhfuil tú cinnte?",
+    "The share will be deleted!" : "Scriosfar an sciar!",
+    "All Shares" : "Gach Scair",
+    "New Shares" : "Scaireanna Nua",
+    "Confirm reviewed" : "Deimhnigh athbhreithniú",
+    "Reset time" : "Athshocraigh am",
+    "Share deleted" : "Scriosadh an sciar",
     "Request could not be processed" : "Níorbh fhéidir an t-iarratas a phróiseáil",
+    "Timestamp saved" : "Stampa ama sábháilte",
+    "Timestamp deleted" : "Scriosadh an stampa ama",
     "OK" : "Ceart go leor",
     "Cancel" : "Cealaigh",
     "Search" : "Cuardach",
     "Show _MENU_ entries" : "Taispeáin _MENU_ iontráil",
     "Showing _START_ to _END_ of _TOTAL_ entries" : "Ag taispeáint _START_ go _END_ de _TOTAL_ iontráil",
-    "Showing 0 to 0 of 0 entries" : "Ag taispeáint 0 go 0 as 0 iontráil"
+    "Showing 0 to 0 of 0 entries" : "Ag taispeáint 0 go 0 as 0 iontráil",
+    "Share Review" : "Léirmheas Comhroinn",
+    "- Review and audit all shares within the Nextcloud instance\n- Remove shares\n- Confirm review\n- Audit compliance\n- Show only new shares since last review\n- Assign review to user groups (e.g. audit or risk mgmt)\n\n### Note:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users." : "- Athbhreithniú agus iniúchadh a dhéanamh ar na scaireanna go léir laistigh den ásc Nextcloud\n- Bain scaireanna\n- Deimhnigh athbhreithniú\n- Comhlíonadh iniúchta\n- Ná taispeáin ach scaireanna nua ón athbhreithniú deiridh\n- Athbhreithniú a shannadh do ghrúpaí úsáideoirí (m.sh. iniúchadh nó mgmt riosca)\n\n### Nóta:\nNí mór an aip a theorannú do ghrúpa úsáideoirí ar leith amháin ar a laghad sa siopa app.\nCuireann sé seo cosc ​​ar an ábhar comhroinnte a nochtadh de thaisme do gach úsáideoir.",
+    "No share found" : "Níor aimsíodh sciar ar bith",
+    "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Ní mór an aip a theorannú do ghrúpa úsáideoirí ar leith amháin ar a laghad sa siopa app. Cuireann sé seo cosc ​​ar an ábhar comhroinnte a nochtadh de thaisme do gach úsáideoir.",
+    "Click here" : "Cliceáil anseo"
 },
 "nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : 4);");
