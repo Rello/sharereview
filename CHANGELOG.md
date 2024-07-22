@@ -1,5 +1,5 @@
 # Changelog
 
-## 0.0.1 - 2024-0x-0x
+## 1.0.0 - 2024-07-22
 ### Added
 - Initial version
