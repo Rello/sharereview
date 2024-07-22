@@ -2,7 +2,7 @@
 <info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
     <id>sharereview</id>
     <name>Share Review</name>
-    <summary>Share Review</summary>
+    <summary>Review and audit shares</summary>
 	<description><![CDATA[
 - Review and audit all shares within the Nextcloud instance
 - Remove shares
@@ -15,7 +15,7 @@
 The app must be restricted to at least one specific user group in the app store.
 This prevents accidental exposure of the shared content to all users.
 ]]></description>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <licence>agpl</licence>
     <author>Marcel Scherello</author>
     <namespace>ShareReview</namespace>
