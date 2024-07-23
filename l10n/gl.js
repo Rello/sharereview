@@ -7,7 +7,7 @@ OC.L10N.register(
     "All Shares" : "Todas as comparticións",
     "New Shares" : "Novas comparticións",
     "Confirm reviewed" : "Confirmar a revisión",
-    "Reset time" : "Tempo de reposición",
+    "Reset time" : "Restabelecer a hora",
     "Share deleted" : "A compartición foi eliminada",
     "Request could not be processed" : "Non foi posíbel procesar a solicitude",
     "Timestamp saved" : "Gardouse a marca de tempo",
