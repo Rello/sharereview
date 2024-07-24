@@ -53,7 +53,10 @@ class ShareService {
 	/**
 	 * get all shares for a report
 	 *
+	 * @param $onlyNew
 	 * @return array
+	 * @throws NotFoundException
+	 * @throws NotPermittedException
 	 */
 	public function read($onlyNew) {
 		$user = $this->userSession->getUser();
@@ -65,7 +68,8 @@ class ShareService {
 
 		foreach ($shares as $share) {
 			if ($onlyNew && $share->getShareTime()->format('U') <= $userTimestamp) continue;
-			$formated[] = $this->formatShare($share);
+			$formatedShare = $this->formatShare($share);
+			if ($formatedShare !== []) $formated[] = $formatedShare;
 		}
 		return $formated;
 	}
@@ -83,17 +87,26 @@ class ShareService {
 	}
 
 	/**
-	 * @throws NotPermittedException
+	 * @param IShare $share
+	 * @return array
 	 * @throws NotFoundException
+	 * @throws NotPermittedException
 	 */
 	private function formatShare(IShare $share): array {
 		$userFolder = $this->rootFolder->getUserFolder($share->getShareOwner());
 		$nodes = $userFolder->getById($share->getNodeId());
 		$node = array_shift($nodes);
 
+		if ($node !== null && $userFolder !== null) {
+			$path = $userFolder->getRelativePath($node->getPath());
+		} else {
+			//$path = '(*)' . $share->getTarget();
+			return [];
+		}
+
 		$data = [
 			//'id' => $share->getId(),
-			'path' => $userFolder->getRelativePath($node->getPath()),
+			'path' => $path,
 			//'name' => $node->getName(),
 			//'is_directory' => $node->getType() === 'dir',
 			//'file_id' => $share->getNodeId(),

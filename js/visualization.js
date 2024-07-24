@@ -24,6 +24,13 @@ OCA.ShareReview.Visualization = {
 
     buildDataTable: function (data) {
 
+        let domTarget = document.getElementById("tableContainer");
+        domTarget.innerHTML = '';
+        if (OCA.ShareReview.tableObject) {
+            OCA.ShareReview.tableObject.destroy();
+            OCA.ShareReview.tableObject = null;
+        }
+
         if (data.length === 0) {
             this.showElement('noDataContainer');
             this.hideElement('tableContainer');
@@ -34,11 +41,6 @@ OCA.ShareReview.Visualization = {
             this.hideElement('noDataContainer');
             this.hideElement('notSecuredContainer');
             this.showElement('tableContainer');
-        }
-        let domTarget = document.getElementById("tableContainer");
-        domTarget.innerHTML = '';
-        if (OCA.ShareReview.tableObject) {
-            OCA.ShareReview.tableObject.destroy();
         }
 
         let language = {
