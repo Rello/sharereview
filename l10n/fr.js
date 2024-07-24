@@ -3,6 +3,10 @@ OC.L10N.register(
     {
     "Delete" : "Supprimer",
     "Are you sure?" : "Êtes-vous sûr ?",
+    "The share will be deleted!" : "Ce partage sera supprimé !",
+    "All Shares" : "Tous les partages",
+    "New Shares" : "Nouveaux partages",
+    "Share deleted" : "Partage supprimé",
     "Request could not be processed" : "La requête n'a pas pu être traitée",
     "OK" : "OK",
     "Cancel" : "Annuler",
