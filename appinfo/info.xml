@@ -15,7 +15,7 @@
 The app must be restricted to at least one specific user group in the app store.
 This prevents accidental exposure of the shared content to all users.
 ]]></description>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <licence>agpl</licence>
     <author>Marcel Scherello</author>
     <namespace>ShareReview</namespace>
