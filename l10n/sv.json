@@ -16,7 +16,8 @@
     "Show _MENU_ entries" : "Visa_MENY_poster",
     "Showing _START_ to _END_ of _TOTAL_ entries" : "Visar_START_till_SLUT_av_TOTALA_poster",
     "Showing 0 to 0 of 0 entries" : "Visar 0 till 0 av 0 poster",
-    "Share Review" : "Granska delning",
+    "Share Review" : "Granska delningar",
+    "Review and audit all shares" : "Granska och övervaka alla delningar",
     "No share found" : "Ingen delning hittades",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Appen måste vara begränsad till minst en specifik användargrupp i appbutiken. Detta förhindrar oavsiktlig exponering av det delade innehållet för alla användare.",
     "Click here" : "Klicka här"

@@ -3,12 +3,26 @@ OC.L10N.register(
     {
     "Delete" : "Slett",
     "Are you sure?" : "Er du sikker?",
+    "The share will be deleted!" : "Den delte ressursen blir slettet!",
+    "All Shares" : "Alle delte ressurser",
+    "New Shares" : "Nye delte ressurser",
+    "Confirm reviewed" : "Bekreft gjennomgått",
+    "Reset time" : "Tilbakestill tid",
+    "Share deleted" : "Delt ressurs slettet",
     "Request could not be processed" : "Forespørselen kunne ikke behandles",
+    "Timestamp saved" : "Tidsstempel lagret",
+    "Timestamp deleted" : "Tidsstempel slettet",
     "OK" : "Ok",
     "Cancel" : "Avbryt",
     "Search" : "Søk",
     "Show _MENU_ entries" : "Vis _MENU_ oppføringer",
     "Showing _START_ to _END_ of _TOTAL_ entries" : "Viser _START_ til _END_ av _TOTAL_ oppføringer",
-    "Showing 0 to 0 of 0 entries" : "Viser 0 til 0 av 0 oppføringer"
+    "Showing 0 to 0 of 0 entries" : "Viser 0 til 0 av 0 oppføringer",
+    "Share Review" : "Gjennomgå delt ressurs",
+    "Review and audit all shares" : "Gjennomgå og revider alle delte ressurser",
+    "- Review and audit all shares within the Nextcloud instance\n- Remove shares\n- Confirm review\n- Audit compliance\n- Show only new shares since last review\n- Assign review to user groups (e.g. audit or risk mgmt)\n\n### Note:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users." : "- Gjennomgå og revider alle delte ressurser i Nextcloud-forekomsten\n- Fjern delte ressurser\n- Bekreft gjennomgang\n- Samsvar med revisjoner\n- Vis kun nye delte ressurser siden sist gjennomgang\n- Tildel gjennomganger til brukergrupper (f.eks. revisjon eller risikostyring)\n\n### Merk:\nAppen må være begrenset til minst én bestemt brukergruppe i appbutikken.\nDette forhindrer utilsiktet eksponering av det delte innholdet for alle brukere.",
+    "No share found" : "Ingen delt ressurs funnet",
+    "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Appen må være begrenset til minst én bestemt brukergruppe i appbutikken. Dette forhindrer utilsiktet eksponering av det delte innholdet for alle brukere.",
+    "Click here" : "Klikk her"
 },
 "nplurals=2; plural=(n != 1);");
