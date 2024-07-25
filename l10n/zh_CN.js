@@ -3,12 +3,24 @@ OC.L10N.register(
     {
     "Delete" : "删除",
     "Are you sure?" : "你确定吗？",
+    "The share will be deleted!" : "分享将被删除！",
+    "All Shares" : "全部分享",
+    "New Shares" : "新分享",
+    "Confirm reviewed" : "确认评论",
+    "Reset time" : "重置时间",
+    "Share deleted" : "分享已删除",
     "Request could not be processed" : "无法处理请求",
+    "Timestamp saved" : "时间戳已保存",
+    "Timestamp deleted" : "时间戳已删除",
     "OK" : "还可以",
     "Cancel" : "取消",
     "Search" : "搜索",
     "Show _MENU_ entries" : "显示 _MENU_ 项",
     "Showing _START_ to _END_ of _TOTAL_ entries" : "正显示第 _START_ 项到第 _END_ 项 ，共有 _TOTAL_ 项",
-    "Showing 0 to 0 of 0 entries" : "正显示第 0 项到第 0 项 ，共 0 项"
+    "Showing 0 to 0 of 0 entries" : "正显示第 0 项到第 0 项 ，共 0 项",
+    "Share Review" : "分享评论",
+    "Review and audit all shares" : "检查并核对全部分享",
+    "No share found" : "未找到分享",
+    "Click here" : "点击此处"
 },
 "nplurals=1; plural=0;");
