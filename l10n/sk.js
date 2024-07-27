@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Delete" : "Vymazať",
     "Are you sure?" : "Ste si istý?",
+    "New Shares" : "Nové zdieľania",
     "Request could not be processed" : "Požiadavka nemohla byť spracovaná",
     "OK" : "OK",
     "Cancel" : "Zrušiť",
