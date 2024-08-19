@@ -3,7 +3,11 @@ OC.L10N.register(
     {
     "Delete" : "Sil",
     "Are you sure?" : "Emin misiniz?",
-    "The share will be deleted!" : "Paylaşım silinecektir!",
+    "The share will be deleted!" : "Paylaşım silinecek!",
+    "All Shares" : "Tüm paylaşımlar",
+    "New Shares" : "Yeni paylaşımlar",
+    "Confirm reviewed" : "İncelenenleri onayla",
+    "Reset time" : "Zamanı sıfırla",
     "Share deleted" : "Paylaşım silindi",
     "Request could not be processed" : "İstek işlenemedi",
     "Timestamp saved" : "Zaman damgası kaydedildi",
@@ -14,8 +18,11 @@ OC.L10N.register(
     "Show _MENU_ entries" : "_MENU_ kayıtlarını görüntüle",
     "Showing _START_ to _END_ of _TOTAL_ entries" : "Toplam _TOTAL_  kayıttan _START_ ile _END_ arası görüntüleniyor",
     "Showing 0 to 0 of 0 entries" : "Toplam 0 kayıttan 0 ile 0 arası görüntüleniyor",
+    "Share Review" : "İncelemeyi paylaş",
+    "Review and audit all shares" : "Tüm paylaşımları incele ve denetle",
+    "- Review and audit all shares within the Nextcloud instance\n- Remove shares\n- Confirm review\n- Audit compliance\n- Show only new shares since last review\n- Assign review to user groups (e.g. audit or risk mgmt)\n\n### Note:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users." : "- Nextcloud kopyasındaki tüm paylaşımları inceleyin ve denetleyin\n- Paylaşımları kaldırın\n- İncelemeyi onaylayın\n- Uyumluluğu denetleyin\n- Son incelemeden bu yana yapılan paylaşımlara bakın\n- İncelemeyi kullanıcı gruplarına atayın (denetim veya risk yönetimi gibi)\n\n### Not:\nUygulama, uygulama mağazasında en az bir belirli kullanıcı grubuyla sınırlandırılmalıdır.\nBöylece, paylaşılan içeriklerin tüm kullanıcılara yanlışlıkla görüntülenmesi engellenir.",
     "No share found" : "Herhangi bir paylaşım bulunamadı",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Uygulama, mağazada en az bir belirli kullanıcı grubuyla sınırlandırılmalıdır. Bu, paylaşılan içeriğin yanlışlıkla tüm kullanıcılar açılmasını önler",
-    "Click here" : "Buraya tıkla"
+    "Click here" : "Buraya tıklayın"
 },
 "nplurals=2; plural=(n > 1);");
