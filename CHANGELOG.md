@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.1.0 - 2024-08-xx
+## 1.1.0 - 2024-08-21
 ### Added
 - show user names instead of ids
 
