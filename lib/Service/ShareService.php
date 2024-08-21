@@ -8,6 +8,8 @@
 
 namespace OCA\ShareReview\Service;
 
+use OCA\ShareReview\Helper\UserHelper;
+use OCA\ShareReview\Helper\GroupHelper;
 use OCP\Files\NotFoundException;
 use OCP\Files\NotPermittedException;
 use OCP\Share\Exceptions\ShareNotFound;
@@ -33,6 +35,8 @@ class ShareService {
 	private $rootFolder;
 	/** @var IUserSession */
 	private $userSession;
+	protected UserHelper $userHelper;
+	protected GroupHelper $groupHelper;
 
 	public function __construct(
 		IAppConfig      $appConfig,
@@ -40,6 +44,8 @@ class ShareService {
 		LoggerInterface $logger,
 		ShareManager    $shareManager,
 		IUserSession    $userSession,
+		UserHelper 		$userHelper,
+		GroupHelper 	$groupHelper,
 		IRootFolder     $rootFolder
 	) {
 		$this->appConfig = $appConfig;
@@ -47,6 +53,8 @@ class ShareService {
 		$this->logger = $logger;
 		$this->shareManager = $shareManager;
 		$this->rootFolder = $rootFolder;
+		$this->userHelper = $userHelper;
+		$this->groupHelper = $groupHelper;
 		$this->userSession = $userSession;
 	}
 
@@ -110,8 +118,8 @@ class ShareService {
 			//'name' => $node->getName(),
 			//'is_directory' => $node->getType() === 'dir',
 			//'file_id' => $share->getNodeId(),
-			'owner' => $share->getShareOwner(),
-			'initiator' => $share->getSharedBy(),
+			//'owner' => $this->userHelper->getUserDisplayName($share->getShareOwner()),
+			'initiator' => $this->userHelper->getUserDisplayName($share->getSharedBy()),
 			'type' => '',
 			'permissions' => $share->getPermissions(),
 			'recipient' => '',
@@ -121,12 +129,12 @@ class ShareService {
 
 		if ($share->getShareType() === IShare::TYPE_USER) {
 			$data['type'] = 'user';
-			$data['recipient'] = $share->getSharedWith();
+			$data['recipient'] = $this->userHelper->getUserDisplayName($share->getSharedWith());
 			$data['action'] = 'ocinternal:' . $share->getId();
 		}
 		if ($share->getShareType() === IShare::TYPE_GROUP) {
 			$data['type'] = 'group';
-			$data['recipient'] = $share->getSharedWith();
+			$data['recipient'] = $this->groupHelper->getGroupDisplayName($share->getSharedWith());
 			$data['action'] = 'ocinternal:' . $share->getId();
 		}
 		if ($share->getShareType() === IShare::TYPE_LINK) {
@@ -160,7 +168,7 @@ class ShareService {
 	 * @return bool
 	 */
 	public function isSecured() {
-		$enabled = $this->appConfig->getAllValues('sharereview', 'enabled')['enabled'];
+		$enabled = $this->appConfig->getFilteredValues('sharereview')['enabled'];
 		if ($enabled !== 'yes') {
 			return true;
 		} else {
