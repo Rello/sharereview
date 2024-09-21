@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.1 - 2024-08-xx
+### Fixed
+- Helper\Exception error #6
+
 ## 1.1.0 - 2024-08-21
 ### Added
 - show user names instead of ids

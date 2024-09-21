@@ -101,15 +101,18 @@ class ShareService {
 	 * @throws NotPermittedException
 	 */
 	private function formatShare(IShare $share): array {
-		$userFolder = $this->rootFolder->getUserFolder($share->getShareOwner());
-		$nodes = $userFolder->getById($share->getNodeId());
-		$node = array_shift($nodes);
+		if ($this->userHelper->isValidOwner($share->getShareOwner())) {
+			$userFolder = $this->rootFolder->getUserFolder($share->getShareOwner());
+			$nodes = $userFolder->getById($share->getNodeId());
+			$node = array_shift($nodes);
 
-		if ($node !== null && $userFolder !== null) {
-			$path = $userFolder->getRelativePath($node->getPath());
+			if ($node !== null && $userFolder !== null) {
+				$path = $userFolder->getRelativePath($node->getPath());
+			} else {
+				$path = 'invalid share (*) ' . $share->getTarget();
+			}
 		} else {
-			//$path = '(*)' . $share->getTarget();
-			return [];
+			$path = 'invalid share (*) ' . $share->getTarget();
 		}
 
 		$data = [

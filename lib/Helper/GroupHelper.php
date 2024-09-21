@@ -26,7 +26,7 @@ class GroupHelper {
 			return $group->getDisplayName() ?: $groupId;
 		} else {
 			$this->logger->info('no group given, will return groupId');
-			return $groupId;
+			return $groupId . ' (*)';
 		}
 	}
 }
