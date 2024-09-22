@@ -12,9 +12,9 @@
     <h3 id="reportSubHeader" hidden></h3>
     <div id="tableContainer" hidden>
         <table id="dataTable"></table>
-        <br><br>
 		<?php p($l->t('(*) indicates incorrect data. Share should be removed after evaluation.')); ?>
-        <br><br>
+        <br>
+        <br>
         <input type="checkbox" id="pauseUpdate" class="checkbox"><label for="pauseUpdate"><?php p($l->t('Pause reload after deletion')); ?></label>
     </div>
     <div id="noDataContainer">
