@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.1.1 - 2024-08-xx
+## 1.2.0 - 2024-08-xx
 ### Added
 - stop table refresh on demand #4
 
