@@ -1,6 +1,9 @@
 # Changelog
 
 ## 1.1.1 - 2024-08-xx
+### Added
+- stop table refresh on demand #4
+
 ### Fixed
 - Helper\Exception error #6
 - dark theme issue #7

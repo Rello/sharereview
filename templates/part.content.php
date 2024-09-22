@@ -10,10 +10,14 @@
 <div id="sharereview-content" style="width:100%; padding: 20px 5%;">
     <h2 id="reportHeader">Share Review</h2>
     <h3 id="reportSubHeader" hidden></h3>
-    <table id="tableContainer">
+    <div id="tableContainer" hidden>
+        <table id="dataTable"></table>
+        <br><br>
 		<?php p($l->t('(*) indicates incorrect data. Share should be removed after evaluation.')); ?>
-    </table>
-    <div id="noDataContainer" hidden>
+        <br><br>
+        <input type="checkbox" id="pauseUpdate" class="checkbox"><label for="pauseUpdate"><?php p($l->t('Pause reload after deletion')); ?></label>
+    </div>
+    <div id="noDataContainer">
         <br><br>
 		<?php p($l->t('No share found')); ?>
     </div>

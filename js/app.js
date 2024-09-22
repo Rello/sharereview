@@ -138,8 +138,12 @@ OCA.ShareReview.Backend = {
         })
             .then(response => response.json())
             .then(data => {
-                OCA.ShareReview.Notification.notification('success', t('sharereview', 'Share deleted'));
-                OCA.ShareReview.Backend.getData();
+                if (document.getElementById('pauseUpdate').checked === false) {
+                    OCA.ShareReview.Backend.getData();
+                    OCA.ShareReview.Notification.notification('success', t('sharereview', 'Share deleted'));
+                } else {
+                    OCA.ShareReview.Notification.notification('success', t('sharereview', 'Share deleted') + '. ' + t('sharereview', 'Table not reloaded'));
+                }
             })
             .catch(error => {
                 OCA.ShareReview.Notification.notification('error', t('sharereview', 'Request could not be processed'))

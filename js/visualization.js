@@ -24,7 +24,7 @@ OCA.ShareReview.Visualization = {
 
     buildDataTable: function (data) {
 
-        let domTarget = document.getElementById("tableContainer");
+        let domTarget = document.getElementById("dataTable");
         domTarget.innerHTML = '';
         if (OCA.ShareReview.tableObject) {
             OCA.ShareReview.tableObject.destroy();
