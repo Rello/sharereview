@@ -53,26 +53,26 @@
 
 .icon-sharereview-new {
     background-image: url(../img/new.svg);
-    filter: var(--background-invert-if-dark);
+    /*filter: var(--background-invert-if-dark);*/
     background-size: 24px;
 }
 
 .icon-sharereview-shares {
     background-image: url(../img/shares.svg);
-    filter: var(--background-invert-if-dark);
+    /*filter: var(--background-invert-if-dark);*/
     background-size: 24px;
 }
 
 .icon-sharereview-check {
     background-image: url(../img/check.svg);
-    filter: var(--background-invert-if-dark);
+    /*filter: var(--background-invert-if-dark);*/
     background-size: 24px;
     margin-left: 30px;
 }
 
 .icon-sharereview-reset {
     background-image: url(../img/reset.svg);
-    filter: var(--background-invert-if-dark);
+    /*filter: var(--background-invert-if-dark);*/
     background-size: 24px;
     margin-left: 30px;
 }

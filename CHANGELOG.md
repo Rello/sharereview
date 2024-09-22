@@ -3,6 +3,7 @@
 ## 1.1.1 - 2024-08-xx
 ### Fixed
 - Helper\Exception error #6
+- dark theme issue #7
 
 ## 1.1.0 - 2024-08-21
 ### Added
