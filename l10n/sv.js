@@ -9,6 +9,7 @@ OC.L10N.register(
     "Confirm reviewed" : "Bekräfta granskad",
     "Reset time" : "Återställ tid",
     "Share deleted" : "Delningen raderad",
+    "Table not reloaded" : "Tabellen har inte laddats om",
     "Request could not be processed" : "Begäran kunde inte bearbetas",
     "Timestamp saved" : "Tidsstämpel sparad",
     "Timestamp deleted" : "Tidsstämpel raderad",
@@ -21,6 +22,7 @@ OC.L10N.register(
     "Share Review" : "Granska delningar",
     "Review and audit all shares" : "Granska och övervaka alla delningar",
     "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) indikerar felaktiga uppgifter. Delningen bör tas bort efter utvärdering.",
+    "Pause reload after deletion" : "Pausa omladdning efter radering",
     "No share found" : "Ingen delning hittades",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Appen måste vara begränsad till minst en specifik användargrupp i appbutiken. Detta förhindrar oavsiktlig exponering av det delade innehållet för alla användare.",
     "Click here" : "Klicka här"

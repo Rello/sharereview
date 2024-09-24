@@ -9,6 +9,7 @@ OC.L10N.register(
     "Confirm reviewed" : "確認已審閱",
     "Reset time" : "重設時間",
     "Share deleted" : "分享已刪除",
+    "Table not reloaded" : "表格未重新載入",
     "Request could not be processed" : "無法處理請求",
     "Timestamp saved" : "已儲存時間戳",
     "Timestamp deleted" : "已刪除時間戳",
@@ -21,6 +22,8 @@ OC.L10N.register(
     "Share Review" : "分享審閱",
     "Review and audit all shares" : "審閱並稽核所有分享",
     "- Review and audit all shares within the Nextcloud instance\n- Remove shares\n- Confirm review\n- Audit compliance\n- Show only new shares since last review\n- Assign review to user groups (e.g. audit or risk mgmt)\n\n### Note:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users." : "- 審閱並稽核 Nextcloud 站台內的所有分享\n- 移除分享\n- 確認審閱\n- 稽核法遵\n- 僅顯示上次審閱以來的新分享\n- 將審閱分配給使用者群組（例如稽核或風險管理）\n\n### 備註：\n此應用程式必須在應用程式商店中限制為僅供一個特定的使用者群組使用。\n這可以避免分享內容意外暴露給所有使用者。",
+    "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) 表示不正確的資料。評估後應移除分享。",
+    "Pause reload after deletion" : "刪除後暫停重新載入",
     "No share found" : "找不到分享",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "此應用程式必須在應用程式商店中限制為僅供一個特定的使用者群組使用。這可以避免分享內容意外暴露給所有使用者。",
     "Click here" : "點選此處"

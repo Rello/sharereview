@@ -9,6 +9,7 @@ OC.L10N.register(
     "Confirm reviewed" : "Потврди прегледано",
     "Reset time" : "Ресетуј време",
     "Share deleted" : "Дељење је обрисано",
+    "Table not reloaded" : "Табела није поново учитана",
     "Request could not be processed" : "Захтев не може да се обради",
     "Timestamp saved" : "Сачувана је временска ознака",
     "Timestamp deleted" : "Временска ознака је обрисана",
@@ -21,6 +22,8 @@ OC.L10N.register(
     "Share Review" : "Дели преглед",
     "Review and audit all shares" : "Прегледајте и процените сва дељења",
     "- Review and audit all shares within the Nextcloud instance\n- Remove shares\n- Confirm review\n- Audit compliance\n- Show only new shares since last review\n- Assign review to user groups (e.g. audit or risk mgmt)\n\n### Note:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users." : "- Прегледајте и процените сва дељења у Nextcloud инстанци\n- Уклоните дељења\n- Потврдите преглед\n- Процените саобразност\n- Прикажите само дељења настала након последњег прегледа\n- Доделите преглед групама корисника (нпр. audit или risk mgmt)\n\n### Напомена:\nАпликација мора да се ограничи на барем једну одређену групу корисника у продавници апликација.\nНа тај начин се спречава нехотично излагање дељеног садржаја свим корисницима.",
+    "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) означава неисправне податке. Након оцењивања, дељење би требало да се уклони.",
+    "Pause reload after deletion" : "Паузирај поновно учитавање након брисања",
     "No share found" : "Није пронађено ниједно дељење",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Апликација мора да се ограничи на барем једну одређену групу корисника у продавници апликација. На тај начин се спречава нехотично излагање дељеног садржаја свим корисницима.",
     "Click here" : "Кликните овде"
