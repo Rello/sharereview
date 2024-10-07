@@ -100,45 +100,48 @@ OCA.ShareReview.Visualization = {
         let iconClass = 'icon-sharereview-more';
         let titleText = 'more'
 
-        switch (data) {
+        switch (parseInt(data)) {
             case 1:
+            case 17:
                 iconClass = 'icon-sharereview-read';
                 titleText = 'read';
                 break;
-            case 17: // link read
-                iconClass = 'icon-sharereview-read';
-                break;
+            case 2:
             case 31:
+            case 19:
                 iconClass = 'icon-sharereview-edit';
-                break;
-            case 19: //link edit
-                iconClass = 'icon-sharereview-edit';
+                titleText = 'edit';
                 break;
         }
 
-        return '<div permission="' + data + '"class="' + iconClass + '" title="'+titleText+'"></div>';
+        return '<div permission="' + data + '"class="' + iconClass + '" title="'+ titleText +'"></div>';
 },
 
     renderTypes: function(data) {
         let iconClass = 'icon-sharereview-link';
         let titleText = 'more'
+        let dataArray = data.split(';');
 
-        switch (data) {
-            case 'email':
+        switch (parseInt(dataArray[0])) {
+            case 4:
                 iconClass = 'icon-sharereview-email';
+                titleText = 'email'
                 break;
-            case 'link': // link read
+            case 3:
                 iconClass = 'icon-sharereview-link';
+                titleText = 'link'
                 break;
-            case 'group':
+            case 1:
                 iconClass = 'icon-sharereview-group';
+                titleText = 'group'
                 break;
-            case 'user': //link edit
+            case 0:
                 iconClass = 'icon-sharereview-user';
+                titleText = 'user'
                 break;
         }
 
-        return '<div class="' + iconClass + '" ><span style="margin-left: 20px;">'+data+'</span></div>';
+        return '<div class="' + iconClass + '" title="'+ titleText +'"><span style="margin-left: 20px;">' + dataArray[1] + '</span></div>';
     },
 
     renderDates: function (data) {
@@ -147,12 +150,14 @@ OCA.ShareReview.Visualization = {
     },
 
     renderAction: function (data) {
-        let string = '<div class="icon-sharereview-delete" data-id='+data+'></div>';
-        let div = document.createElement('div');
-        div.classList.add('icon-sharereview-delete');
-        div.id = data;
-        div.addEventListener('click', OCA.ShareReview.UI.handleDeleteClicked);
-        return div;
+        if (data !== '') {
+            let div = document.createElement('div');
+            div.classList.add('icon-sharereview-delete');
+            div.id = data;
+            div.addEventListener('click', OCA.ShareReview.UI.handleDeleteClicked);
+            return div;
+        }
+        return null;
     },
 
     showElement: function (element) {

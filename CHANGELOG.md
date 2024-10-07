@@ -4,6 +4,9 @@
 ### Added
 - Event to register further sharing apps #8
 
+### Changed
+- Optimize table layout
+
 ## 1.2.0 - 2024-09-22
 ### Added
 - stop table refresh on demand #4
