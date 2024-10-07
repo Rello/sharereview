@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.0 - 2024-11-xx
+### Added
+- Event to register further sharing apps #8
+
 ## 1.2.0 - 2024-09-22
 ### Added
 - stop table refresh on demand #4
