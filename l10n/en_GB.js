@@ -9,6 +9,7 @@ OC.L10N.register(
     "Confirm reviewed" : "Confirm reviewed",
     "Reset time" : "Reset time",
     "Share deleted" : "Share deleted",
+    "Table not reloaded" : "Table not reloaded",
     "Request could not be processed" : "Request could not be processed",
     "Timestamp saved" : "Timestamp saved",
     "Timestamp deleted" : "Timestamp deleted",
@@ -21,6 +22,8 @@ OC.L10N.register(
     "Share Review" : "Share Review",
     "Review and audit all shares" : "Review and audit all shares",
     "- Review and audit all shares within the Nextcloud instance\n- Remove shares\n- Confirm review\n- Audit compliance\n- Show only new shares since last review\n- Assign review to user groups (e.g. audit or risk mgmt)\n\n### Note:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users." : "- Review and audit all shares within the Nextcloud instance\n- Remove shares\n- Confirm review\n- Audit compliance\n- Show only new shares since last review\n- Assign review to user groups (e.g. audit or risk mgmt)\n\n### Note:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users.",
+    "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) indicates incorrect data. Share should be removed after evaluation.",
+    "Pause reload after deletion" : "Pause reload after deletion",
     "No share found" : "No share found",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users.",
     "Click here" : "Click here"
