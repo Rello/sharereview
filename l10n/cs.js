@@ -5,6 +5,8 @@ OC.L10N.register(
     "Are you sure?" : "Opravdu to chcete?",
     "All Shares" : "Všechna sdílení",
     "New Shares" : "Nová sdílení",
+    "Confirm reviewed" : "Potvrdit revidování",
+    "Reset time" : "Vrátit čas na výchozí",
     "Share deleted" : "Sdílení smazáno",
     "Request could not be processed" : "Požadavek se nepodařilo zpracovat",
     "Timestamp saved" : "Časové razítko uloženo",
@@ -15,6 +17,7 @@ OC.L10N.register(
     "Show _MENU_ entries" : "Zobrazit položky _NABÍDKY_",
     "Showing _START_ to _END_ of _TOTAL_ entries" : "Zobrazuje se _START_ až _END_ z _TOTAL_ položek",
     "Showing 0 to 0 of 0 entries" : "Zobrazují se položky 0 až 0 z 0",
+    "Share Review" : "Revidovat sdílení",
     "No share found" : "Nenalezeno žádné sdílení",
     "Click here" : "Klikněte sem"
 },
