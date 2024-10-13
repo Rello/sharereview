@@ -3,11 +3,13 @@ OC.L10N.register(
     {
     "Delete" : "Smazat",
     "Are you sure?" : "Opravdu to chcete?",
+    "The share will be deleted!" : "Sdílení bude smazáno!",
     "All Shares" : "Všechna sdílení",
     "New Shares" : "Nová sdílení",
     "Confirm reviewed" : "Potvrdit revidování",
     "Reset time" : "Vrátit čas na výchozí",
     "Share deleted" : "Sdílení smazáno",
+    "Table not reloaded" : "Tabulka nenačtena znovu",
     "Request could not be processed" : "Požadavek se nepodařilo zpracovat",
     "Timestamp saved" : "Časové razítko uloženo",
     "Timestamp deleted" : "Časové razítko smazáno",
@@ -18,6 +20,8 @@ OC.L10N.register(
     "Showing _START_ to _END_ of _TOTAL_ entries" : "Zobrazuje se _START_ až _END_ z _TOTAL_ položek",
     "Showing 0 to 0 of 0 entries" : "Zobrazují se položky 0 až 0 z 0",
     "Share Review" : "Revidovat sdílení",
+    "Review and audit all shares" : "Zrevidovat a auditovat veškerá sdílení",
+    "Pause reload after deletion" : "Po smazání pozastavit znovunačtení",
     "No share found" : "Nenalezeno žádné sdílení",
     "Click here" : "Klikněte sem"
 },
