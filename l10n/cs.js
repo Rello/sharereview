@@ -21,6 +21,7 @@ OC.L10N.register(
     "Showing 0 to 0 of 0 entries" : "Zobrazují se položky 0 až 0 z 0",
     "Share Review" : "Revidovat sdílení",
     "Review and audit all shares" : "Zrevidovat a auditovat veškerá sdílení",
+    "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) značí nesprávná data. Sdílení by mělo být po vyhodnocení odebráno.",
     "Pause reload after deletion" : "Po smazání pozastavit znovunačtení",
     "No share found" : "Nenalezeno žádné sdílení",
     "Click here" : "Klikněte sem"
