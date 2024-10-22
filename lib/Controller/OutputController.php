@@ -12,6 +12,8 @@ use OCA\ShareReview\Service\ShareService;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataResponse;
+use OCP\Files\NotFoundException;
+use OCP\Files\NotPermittedException;
 use OCP\IRequest;
 use OCP\Share\Exceptions\ShareNotFound;
 use Psr\Log\LoggerInterface;
@@ -36,10 +38,11 @@ class OutputController extends Controller {
 	 *
 	 * @NoAdminRequired
 	 * @return DataResponse
+	 * @throws NotFoundException
+	 * @throws NotPermittedException
 	 */
 	public function read() {
 		if ($this->ShareService->isSecured() !== true) {
-			$this->logger->info('if check: ');
 			return new DataResponse('', HTTP::STATUS_FORBIDDEN);
 		}
 		$data = $this->ShareService->read(false);
@@ -51,6 +54,8 @@ class OutputController extends Controller {
 	 *
 	 * @NoAdminRequired
 	 * @return DataResponse
+	 * @throws NotFoundException
+	 * @throws NotPermittedException
 	 */
 	public function readNew() {
 		if (!$this->ShareService->isSecured()) {
@@ -69,6 +74,9 @@ class OutputController extends Controller {
 	 * @throws ShareNotFound
 	 */
 	public function delete($shareId) {
+		if (!$this->ShareService->isSecured()) {
+			return new DataResponse('', HTTP::STATUS_FORBIDDEN);
+		}
 		$result = $this->ShareService->delete($shareId);
 		return new DataResponse($result, HTTP::STATUS_OK);
 	}
@@ -81,35 +89,38 @@ class OutputController extends Controller {
 	 * @throws ShareNotFound
 	 */
 	public function confirm() {
+		if (!$this->ShareService->isSecured()) {
+			return new DataResponse('', HTTP::STATUS_FORBIDDEN);
+		}
 		$result = $this->ShareService->confirm(time());
 		return new DataResponse($result, HTTP::STATUS_OK);
 	}
 
 	/**
-	 * confirm shares by setting the current timestamp
+	 * reset the confirmation timestamp
 	 *
 	 * @NoAdminRequired
 	 * @return DataResponse
 	 * @throws ShareNotFound
 	 */
 	public function confirmReset() {
+		if (!$this->ShareService->isSecured()) {
+			return new DataResponse('', HTTP::STATUS_FORBIDDEN);
+		}
 		$result = $this->ShareService->confirm(0);
 		return new DataResponse($result, HTTP::STATUS_OK);
 	}
 
 	/**
-	 * confirm shares by setting the current timestamp
+	 * app can only be used when it is restricted to at least one group for security reasons
 	 *
 	 * @NoAdminRequired
 	 * @return DataResponse|true
 	 */
 	private function checkSecured() {
-		$this->logger->info('config 3: ' . $this->ShareService->isSecured());
 		if ($this->ShareService->isSecured() !== true) {
-			$this->logger->info('if check: ');
 			return new DataResponse('', HTTP::STATUS_FORBIDDEN);
 		}
-		return true;
+		return new DataResponse(true, HTTP::STATUS_OK);
 	}
-
 }

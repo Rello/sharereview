@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2024 Marcel Scherello
 # SPDX-License-Identifier: AGPL-3.0-or-later
 version = 1
-SPDX-PackageName = "Marcel Scherello"
+SPDX-PackageName = "sharereview"
 SPDX-PackageSupplier = "Marcel Scherello <sharereview@scherello.de>"
 SPDX-PackageDownloadLocation = "https://github.com/rello/sharereview"
 
@@ -12,7 +12,7 @@ SPDX-FileCopyrightText = "2019-2024 Nextcloud translators"
 SPDX-License-Identifier = "AGPL-3.0-or-later"
 
 [[annotations]]
-path = [".**", "**.md", "**.json", "**.code-workspace", "tests/**", "sample_data/**", "screenshots/**"]
+path = [".**", "**.md", "**.json", "**.code-workspace", "tests/**"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2024 Marcel Scherello"
 SPDX-License-Identifier = "AGPL-3.0-or-later"

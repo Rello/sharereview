@@ -13,6 +13,7 @@ use OCA\ShareReview\Helper\GroupHelper;
 use OCA\ShareReview\Sources\SourceEvent;
 use OCP\Files\NotFoundException;
 use OCP\Files\NotPermittedException;
+use OCP\PreConditionNotMetException;
 use OCP\Share\Exceptions\ShareNotFound;
 use Psr\Log\LoggerInterface;
 use OCP\Share\IManager as ShareManager;
@@ -65,7 +66,7 @@ class ShareService {
 	}
 
 	/**
-	 * get all shares for a report
+	 * get all shares
 	 *
 	 * @param $onlyNew
 	 * @return array
@@ -83,7 +84,9 @@ class ShareService {
 		$shares = array_merge($shares, $appShares);
 
 		foreach ($shares as $share) {
-			if ($onlyNew && $share->getShareTime()->format('U') <= $userTimestamp) continue;
+			$dateTime = new \DateTime($share['time']);
+
+			if ($onlyNew && $dateTime->getTimestamp() <= $userTimestamp) continue;
 			$formatedShare = $this->formatShare($share);
 			if ($formatedShare !== []) $formated[] = $formatedShare;
 		}
@@ -92,37 +95,31 @@ class ShareService {
 	}
 
 	/**
-	 * get all shares for a report
+	 * delete a share
 	 *
 	 * @param $shareId
-	 * @return array
+	 * @return bool
 	 * @throws ShareNotFound
 	 */
 	public function delete($shareId) {
-		$share = $this->shareManager->getShareById($shareId);
-		return $this->shareManager->deleteShare($share);
+		$array = explode('_', $shareId);
+		$app = $array[0];
+		$share = $array[1];
+
+		if ($app === 'Files') {
+			$share = $this->shareManager->getShareById($shareId);
+			return $this->shareManager->deleteShare($share);
+		} else {
+			return $this->deleteAppShare($app, $share);
+		}
 	}
 
 	/**
-	 * @param $share
-	 * @return array
-	 * @throws NotFoundException
-	 * @throws NotPermittedException
+	 * confirm current shares by setting the current timestamp
+	 * @param $timestamp
+	 * @return mixed
+	 * @throws PreConditionNotMetException
 	 */
-	private function formatShare($share): array {
-
-		if ($share['type'] === IShare::TYPE_GROUP) {
-			$share['recipient'] = $share['recipient'] != '' ? $this->groupHelper->getGroupDisplayName($share['recipient']) : '';
-		} elseif ($share['type'] != IShare::TYPE_EMAIL && $share['type'] != IShare::TYPE_LINK) {
-			$share['recipient'] = $share['recipient'] != '' ? $this->userHelper->getUserDisplayName($share['recipient']) : '';
-		}
-		$share['type'] = $share['type'] . ';' . $share['recipient'];
-		unset($share['recipient']);
-		$share['initiator'] = $share['initiator'] != '' ? $this->userHelper->getUserDisplayName($share['initiator']) : '';
-
-		return $share;
-	}
-
 	public function confirm($timestamp) {
 		$user = $this->userSession->getUser();
 		$this->config->setUserValue($user->getUID(), 'sharereview', 'reviewTimestamp', $timestamp);
@@ -143,6 +140,48 @@ class ShareService {
 		}
 	}
 
+	/**
+	 * format any share to the required format
+	 * @param $share
+	 * @return array
+	 * @throws NotFoundException
+	 * @throws NotPermittedException
+	 */
+	private function formatShare($share): array {
+
+		if ($share['type'] === IShare::TYPE_GROUP) {
+			$share['recipient'] = $share['recipient'] != '' ? $this->groupHelper->getGroupDisplayName($share['recipient']) : '';
+		} elseif ($share['type'] != IShare::TYPE_EMAIL && $share['type'] != IShare::TYPE_LINK) {
+			$share['recipient'] = $share['recipient'] != '' ? $this->userHelper->getUserDisplayName($share['recipient']) : '';
+		}
+		$share['type'] = $share['type'] . ';' . $share['recipient'];
+		$share['initiator'] = $share['initiator'] != '' ? $this->userHelper->getUserDisplayName($share['initiator']) : '';
+
+		$share['action'] = $share['action'] !== '' ? $share['action'] : $share['id'];
+		$share['action'] = $share['app'] . '_' . $share['action'];
+
+		// remap to the required structure to avoid issues with wrong app arrays
+		$data = [
+			//'id' => $share['id'],
+			'app' => $share['app'],
+			'object' => $share['object'],
+			'initiator' => $share['initiator'],
+			'type' => $share['type'],
+			//'recipient' => $share['recipient'],
+			'permissions' => $share['permissions'],
+			'time' => $share['time'],
+			'action' => $share['action'],
+		];
+
+		return $data;
+	}
+
+	/**
+	 * get file shares
+	 * @return array
+	 * @throws NotFoundException
+	 * @throws NotPermittedException
+	 */
 	private function getFileShares() {
 		$shares = $this->shareManager->getAllShares();
 
@@ -181,6 +220,7 @@ class ShareService {
 			}
 
 			$data = [
+				'id' => $share->getId(),
 				'app' => 'Files',
 				'object' => $path,
 				'initiator' => $share->getSharedBy(),
@@ -196,19 +236,28 @@ class ShareService {
 		return $formated;
 	}
 
+	/**
+	 * get shares from other registered apps
+	 * @return array
+	 */
 	private function getAppShares() {
 		foreach ($this->getRegisteredSources() as $key => $app) {
 			$apps[$key] = $app->getShares();
 		}
 
-		foreach ($apps as $shares) {
+		foreach ($apps as $key => $shares) { // Include $key here
 			foreach ($shares as $share) {
+				$share['app'] = $key;
 				$formated[] = $share;
 			}
 		}
 		return $formated;
 	}
 
+	/**
+	 * get the list of all registered apps
+	 * @return array
+	 */
 	private function getRegisteredSources() {
 		$dataSources = [];
 		$event = new SourceEvent();
@@ -216,7 +265,7 @@ class ShareService {
 
 		foreach ($event->getSources() as $class) {
 			try {
-				$uniqueId = '99' . \OC::$server->get($class)->getId();
+				$uniqueId = \OC::$server->get($class)->getName();
 
 				if (isset($dataSources[$uniqueId])) {
 					$this->logger->error(new \InvalidArgumentException('Data source with the same ID already registered: ' . \OC::$server->get($class)
@@ -230,5 +279,22 @@ class ShareService {
 			}
 		}
 		return $dataSources;
+	}
+
+	/**
+	 * delete share from other registered app
+	 * @param $app
+	 * @param $shareId
+	 * @return false
+	 */
+	private function deleteAppShare($app, $shareId) {
+		$registeredSources = $this->getRegisteredSources();
+		if (isset($registeredSources[$app])) {
+			return $registeredSources[$app]->deleteShare($shareId);
+		} else {
+			// Handle the case where the key does not exist
+			$this->logger->info('Can not delete app share: ' . $app);
+			return false;
+		}
 	}
 }

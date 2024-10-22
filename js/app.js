@@ -131,7 +131,7 @@ OCA.ShareReview.Backend = {
 
     delete: function (shareId) {
         OCA.ShareReview.Notification.dialogClose();
-        let requestUrl = OC.generateUrl('apps/sharereview/delete/')+shareId;
+        let requestUrl = OC.generateUrl('apps/sharereview/delete/') + shareId;
         fetch(requestUrl, {
             method: 'DELETE',
             headers: OCA.ShareReview.headers()
