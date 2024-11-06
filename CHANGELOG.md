@@ -3,6 +3,7 @@
 ## 1.3.0 - 2024-11-xx
 ### Added
 - Event to register further sharing apps #8
+- Show Talk shares #9
 
 ### Changed
 - Optimize table layout

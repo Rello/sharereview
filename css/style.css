@@ -30,6 +30,13 @@
     background-position: left !important;
 }
 
+.icon-sharereview-talk {
+    background-image: url(../img/talk.svg);
+    filter: var(--background-invert-if-dark);
+    background-size: 16px;
+    background-position: left !important;
+}
+
 .icon-sharereview-link {
     background-image: url(../img/link.svg);
     filter: var(--background-invert-if-dark);

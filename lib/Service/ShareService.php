@@ -10,6 +10,7 @@ namespace OCA\ShareReview\Service;
 
 use OCA\ShareReview\Helper\UserHelper;
 use OCA\ShareReview\Helper\GroupHelper;
+use OCA\ShareReview\Helper\TalkHelper;
 use OCA\ShareReview\Sources\SourceEvent;
 use OCP\Files\NotFoundException;
 use OCP\Files\NotPermittedException;
@@ -40,6 +41,7 @@ class ShareService {
 	private $userSession;
 	protected UserHelper $userHelper;
 	protected GroupHelper $groupHelper;
+	protected TalkHelper $talkHelper;
 	/** @var IEventDispatcher */
 	private $dispatcher;
 
@@ -51,6 +53,7 @@ class ShareService {
 		IUserSession     $userSession,
 		UserHelper       $userHelper,
 		GroupHelper      $groupHelper,
+		TalkHelper       $talkHelper,
 		IRootFolder      $rootFolder,
 		IEventDispatcher $dispatcher
 	) {
@@ -61,6 +64,7 @@ class ShareService {
 		$this->rootFolder = $rootFolder;
 		$this->userHelper = $userHelper;
 		$this->groupHelper = $groupHelper;
+		$this->talkHelper = $talkHelper;
 		$this->userSession = $userSession;
 		$this->dispatcher = $dispatcher;
 	}
@@ -151,9 +155,12 @@ class ShareService {
 
 		if ($share['type'] === IShare::TYPE_GROUP) {
 			$share['recipient'] = $share['recipient'] != '' ? $this->groupHelper->getGroupDisplayName($share['recipient']) : '';
+		} elseif ($share['type'] === IShare::TYPE_ROOM) {
+			$share['recipient'] = $share['recipient'] != '' ? $this->talkHelper->getRoomDisplayName($share['recipient']) : '';
 		} elseif ($share['type'] != IShare::TYPE_EMAIL && $share['type'] != IShare::TYPE_LINK) {
 			$share['recipient'] = $share['recipient'] != '' ? $this->userHelper->getUserDisplayName($share['recipient']) : '';
 		}
+
 		$share['type'] = $share['type'] . ';' . $share['recipient'];
 		$share['initiator'] = $share['initiator'] != '' ? $this->userHelper->getUserDisplayName($share['initiator']) : '';
 

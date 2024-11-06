@@ -41,6 +41,7 @@ OCA.ShareReview.UI = {
 OCA.ShareReview.Navigation = {
     buildNavigation: function (data) {
         document.getElementById('shareReviewNavigation').innerHTML = '';
+        let reviewTimestamp = OCA.ShareReview.Navigation.getInitialState('reviewTimestamp');
 
         let navigations = [
             {
@@ -62,7 +63,7 @@ OCA.ShareReview.Navigation = {
                 pinned: false
             },
             {
-                name: t('sharereview', 'Reset time'),
+                name: t('sharereview', 'Reset time') . reviewTimestamp,
                 event: OCA.ShareReview.Navigation.handleConfirmResetNavigation,
                 style: 'icon-sharereview-reset',
                 pinned: false
@@ -99,7 +100,16 @@ OCA.ShareReview.Navigation = {
 
     handleConfirmResetNavigation: function () {
         OCA.ShareReview.Backend.confirmReset();
-    }
+    },
+
+    getInitialState: function (key) {
+        const app = 'sharereview';
+        const elem = document.querySelector('#initial-state-' + app + '-' + key);
+        if (elem === null) {
+            return false;
+        }
+        return JSON.parse(atob(elem.value))
+    },
 
 }
 

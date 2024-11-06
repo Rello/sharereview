@@ -11,33 +11,47 @@ namespace OCA\ShareReview\Controller;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IRequest;
+use OCP\AppFramework\Services\IInitialState;
+use OCP\IConfig;
+use OCP\IUserSession;
 use Psr\Log\LoggerInterface;
 use OCA\Text\Event\LoadEditor;
 
 /**
  * Controller class for main page.
  */
-class PageController extends Controller
-{
-    private $logger;
+class PageController extends Controller {
+	private $logger;
+	/** @var IInitialState */
+	protected $initialState;
+	/** @var IConfig */
+	protected $config;
+	/** @var IUserSession */
+	private $userSession;
 
-    public function __construct(
-        string $appName,
-        IRequest $request,
-        LoggerInterface $logger,
-    )
-    {
-        parent::__construct($appName, $request);
-        $this->logger = $logger;
-    }
+	public function __construct(
+		string          $appName,
+		IRequest        $request,
+		LoggerInterface $logger,
+		IInitialState   $initialState,
+		IConfig         $config,
+		IUserSession    $userSession,
+	) {
+		parent::__construct($appName, $request);
+		$this->logger = $logger;
+		$this->initialState = $initialState;
+		$this->config = $config;
+		$this->userSession = $userSession;
+	}
 
-    /**
-     * @NoAdminRequired
-     * @NoCSRFRequired
-     */
-    public function index()
-    {
-        $params = array();
-        return new TemplateResponse($this->appName, 'main', $params);
-    }
+	/**
+	 * @NoAdminRequired
+	 * @NoCSRFRequired
+	 */
+	public function index() {
+		$user = $this->userSession->getUser();
+		$this->initialState->provideInitialState('reviewTimestamp', $this->config->getUserValue($user->getUID(), 'sharereview', 'reviewTimestamp', 0));
+		$params = array();
+		return new TemplateResponse($this->appName, 'main', $params);
+	}
 }
