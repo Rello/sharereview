@@ -108,13 +108,15 @@ class ShareService {
 	public function delete($shareId) {
 		$array = explode('_', $shareId);
 		$app = $array[0];
-		$share = $array[1];
+		$shareString = rawurldecode($array[1]);
 
 		if ($app === 'Files') {
-			$share = $this->shareManager->getShareById($shareId);
+			$this->logger->info('deleting files share: ' . $shareString);
+			$share = $this->shareManager->getShareById($shareString);
 			return $this->shareManager->deleteShare($share);
 		} else {
-			return $this->deleteAppShare($app, $share);
+			$this->logger->info('deleting App share');
+			return $this->deleteAppShare($app, $shareString);
 		}
 	}
 
@@ -209,21 +211,30 @@ class ShareService {
 
 			$recipient = $share->getSharedWith();
 
-			if ($share->getShareType() === IShare::TYPE_USER) {
-				$action = 'ocinternal:' . $share->getId();
-			}
-			if ($share->getShareType() === IShare::TYPE_GROUP) {
-				$action = 'ocinternal:' . $share->getId();
-			}
-			if ($share->getShareType() === IShare::TYPE_LINK) {
-				$action = 'ocinternal:' . $share->getId();
-				$recipient = $share->getToken();
-			}
-			if ($share->getShareType() === IShare::TYPE_EMAIL) {
-				$action = 'ocMailShare:' . $share->getId();
-			}
-			if ($share->getShareType() === IShare::TYPE_REMOTE) {
-				$action = 'ocFederatedSharing:' . $share->getId();
+			switch ($share->getShareType()) {
+				case IShare::TYPE_USER:
+				case IShare::TYPE_GROUP:
+				case IShare::TYPE_LINK:
+					$action = 'ocinternal:' . $share->getId();
+					if ($share->getShareType() === IShare::TYPE_LINK) {
+						$recipient = $share->getToken();
+					}
+					break;
+				case IShare::TYPE_EMAIL:
+					$action = 'ocMailShare:' . $share->getId();
+					break;
+				case IShare::TYPE_REMOTE:
+					$action = 'ocFederatedSharing:' . $share->getId();
+					break;
+				case IShare::TYPE_ROOM:
+					$action = 'ocRoomShare:' . $share->getId();
+					break;
+				case IShare::TYPE_CIRCLE:
+					$action = 'ocCircleShare:' . $share->getId();
+					break;
+				case IShare::TYPE_DECK:
+					$action = 'deck:' . $share->getId();
+					break;
 			}
 
 			$data = [
@@ -235,7 +246,7 @@ class ShareService {
 				'recipient' => $recipient,
 				'permissions' => $share->getPermissions(),
 				'time' => $share->getShareTime()->format(\DATE_ATOM),
-				'action' => $action,
+				'action' => rawurlencode($action),
 			];
 
 			$formated[] = $data;
