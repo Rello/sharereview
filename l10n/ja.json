@@ -17,7 +17,6 @@
     "Showing _START_ to _END_ of _TOTAL_ entries" : "_TOTAL_件中_START_件までの _END_",
     "Showing 0 to 0 of 0 entries" : "0件中0件から0件を表示",
     "Share Review" : "共有レビュー",
-    "- Review and audit all shares within the Nextcloud instance\n- Remove shares\n- Confirm review\n- Audit compliance\n- Show only new shares since last review\n- Assign review to user groups (e.g. audit or risk mgmt)\n\n### Note:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users." : "- Nextcloudインスタンス内のすべての共有のレビューと監査\n- 共有の削除\n- レビューの確認\n- コンプライアンス監査\n- 最終レビュー以降の新しい共有のみを表示\n- ユーザーグループ（監査やリスク管理など）へのレビューの割り当て\n\n### 注意:\nこのアプリは、アプリストアで少なくとも1つ以上のユーザーグループに制限される必要があります。\nこれにより、共有コンテンツが誤ってすべてのユーザーに公開されるのを防ぐことができます。",
     "No share found" : "共有が見つかりません",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "このアプリは、アプリストアで少なくとも1つ以上のユーザーグループに制限される必要があります。これにより、共有コンテンツが誤ってすべてのユーザーに公開されるのを防ぐことができます。",
     "Click here" : "ここをクリック"

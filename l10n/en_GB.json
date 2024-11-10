@@ -19,7 +19,6 @@
     "Showing 0 to 0 of 0 entries" : "Showing 0 to 0 of 0 entries",
     "Share Review" : "Share Review",
     "Review and audit all shares" : "Review and audit all shares",
-    "- Review and audit all shares within the Nextcloud instance\n- Remove shares\n- Confirm review\n- Audit compliance\n- Show only new shares since last review\n- Assign review to user groups (e.g. audit or risk mgmt)\n\n### Note:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users." : "- Review and audit all shares within the Nextcloud instance\n- Remove shares\n- Confirm review\n- Audit compliance\n- Show only new shares since last review\n- Assign review to user groups (e.g. audit or risk mgmt)\n\n### Note:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users.",
     "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) indicates incorrect data. Share should be removed after evaluation.",
     "Pause reload after deletion" : "Pause reload after deletion",
     "No share found" : "No share found",

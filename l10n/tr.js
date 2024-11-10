@@ -21,7 +21,6 @@ OC.L10N.register(
     "Showing 0 to 0 of 0 entries" : "Toplam 0 kayıttan 0 ile 0 arası görüntüleniyor",
     "Share Review" : "İncelemeyi paylaş",
     "Review and audit all shares" : "Tüm paylaşımları incele ve denetle",
-    "- Review and audit all shares within the Nextcloud instance\n- Remove shares\n- Confirm review\n- Audit compliance\n- Show only new shares since last review\n- Assign review to user groups (e.g. audit or risk mgmt)\n\n### Note:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users." : "- Nextcloud kopyasındaki tüm paylaşımları inceleyin ve denetleyin\n- Paylaşımları kaldırın\n- İncelemeyi onaylayın\n- Uyumluluğu denetleyin\n- Son incelemeden bu yana yapılan paylaşımlara bakın\n- İncelemeyi kullanıcı gruplarına atayın (denetim veya risk yönetimi gibi)\n\n### Not:\nUygulama, uygulama mağazasında en az bir belirli kullanıcı grubuyla sınırlandırılmalıdır.\nBöylece, paylaşılan içeriklerin tüm kullanıcılara yanlışlıkla görüntülenmesi engellenir.",
     "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) hatalı veriyi gösterir. Değerlendirme sonrasında paylaşım kaldırılmalıdır.",
     "Pause reload after deletion" : "Silme sonrası yeniden yükleme duraklatılsın",
     "No share found" : "Herhangi bir paylaşım bulunamadı",

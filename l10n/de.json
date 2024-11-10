@@ -19,7 +19,6 @@
     "Showing 0 to 0 of 0 entries" : "Zeige 0 bis 0 von 0 Einträgen",
     "Share Review" : "Freigaben überprüfen",
     "Review and audit all shares" : "Alle Freigaben überprüfen und auditieren",
-    "- Review and audit all shares within the Nextcloud instance\n- Remove shares\n- Confirm review\n- Audit compliance\n- Show only new shares since last review\n- Assign review to user groups (e.g. audit or risk mgmt)\n\n### Note:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users." : "- Alle Freigaben innerhalb der Nextcloud-Instanz überprüfen und auditieren\n- Freigaben entfernen\n- Überprüfung bestätigen\n- Compliance auditieren\n- Nur neue Freigaben seit der letzten Überprüfung anzeigen\n- Überprüfung an Benutzergruppen zuweisen (z. B. Audit oder Risikomanagement)\n\n### Hinweis:\nDie App muss im App Store auf mindestens eine bestimmte Benutzergruppe beschränkt sein.\nDadurch wird verhindert, dass die freigegebenen Inhalte versehentlich allen Benutzern zugänglich gemacht werden.",
     "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) kennzeichnet fehlerhafte Daten. Die Freigabe sollte nach Überprüfung entfernt werden.",
     "Pause reload after deletion" : "Neuladen nach dem Löschen pausieren",
     "No share found" : "Keine Freigabe gefunden",

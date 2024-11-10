@@ -21,7 +21,6 @@ OC.L10N.register(
     "Showing 0 to 0 of 0 entries" : "正在顯示 0 到 0，總共 0 項",
     "Share Review" : "分享審閱",
     "Review and audit all shares" : "審閱並稽核所有分享",
-    "- Review and audit all shares within the Nextcloud instance\n- Remove shares\n- Confirm review\n- Audit compliance\n- Show only new shares since last review\n- Assign review to user groups (e.g. audit or risk mgmt)\n\n### Note:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users." : "- 審閱並稽核 Nextcloud 站台內的所有分享\n- 移除分享\n- 確認審閱\n- 稽核法遵\n- 僅顯示上次審閱以來的新分享\n- 將審閱分配給使用者群組（例如稽核或風險管理）\n\n### 備註：\n此應用程式必須在應用程式商店中限制為僅供一個特定的使用者群組使用。\n這可以避免分享內容意外暴露給所有使用者。",
     "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) 表示不正確的資料。評估後應移除分享。",
     "Pause reload after deletion" : "刪除後暫停重新載入",
     "No share found" : "找不到分享",
