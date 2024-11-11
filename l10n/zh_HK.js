@@ -21,6 +21,7 @@ OC.L10N.register(
     "Showing 0 to 0 of 0 entries" : "正在顯示第 0 項到第 0 項 ，共有 0 項",
     "Share Review" : "分享評論",
     "Review and audit all shares" : "審核并審計所有分享",
+    "This app can be used  for auditing shares within a Nextcloud instance e.g. for data loss prevention.\n\n- Review any file share\n  - files, talk, deck, teams, federation\n  - app specific shares dependent on app-implementation\n- Remove shares\n- Confirm current review\n  - show only new shares next time\n- Audit compliance\n- Assign review to user groups (e.g. audit or risk mgmt)\n\nNote:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users." : "此應用可用於審核 Nextcloud 實例中的共享，例如用於數據丟失預防。\n\n- 審核任何文件共享\n- 文件、聊天、任務、團隊、聯邦\n- 取決於應用實現的應用特定共享\n- 刪除共享\n- 確認當前審核\n- 下次僅顯示新共享\n- 審核合規性\n- 將審核分配給用戶組（例如審核或風險管理）\n\n注意：\n此應用必須限制至少一個特定用戶組在應用商店中使用。這樣可以防止意外將共享內容暴露給所有用戶。",
     "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) 表示不正確的資料。評估後應移除分享。",
     "Pause reload after deletion" : "刪除後暫停重新載入",
     "No share found" : "未找到任何分享",
