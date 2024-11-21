@@ -3,6 +3,8 @@ OC.L10N.register(
     {
     "Delete" : "Cantzella",
     "Are you sure?" : "A beru boles sighire?",
+    "The share will be deleted!" : "Sa cumpartzidura at a èssere cantzellada.",
+    "Share deleted" : "Cumpartzidura cantzellada",
     "OK" : "AB",
     "Cancel" : "Annulla",
     "Search" : "Chirca",
