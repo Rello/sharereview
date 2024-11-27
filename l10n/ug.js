@@ -21,7 +21,6 @@ OC.L10N.register(
     "Showing 0 to 0 of 0 entries" : "0 دىن 0 گىچە 0 نى كۆرسىتىدۇ",
     "Share Review" : "ھەمبەھىرلىنىش",
     "Review and audit all shares" : "بارلىق پايلارنى تەكشۈرۈش ۋە ئىقتىسادىي تەپتىش قىلىش",
-    "- Review and audit all shares within the Nextcloud instance\n- Remove shares\n- Confirm review\n- Audit compliance\n- Show only new shares since last review\n- Assign review to user groups (e.g. audit or risk mgmt)\n\n### Note:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users." : "- Nextcloud مىسالىدىكى بارلىق پايلارنى تەكشۈرۈپ ئىقتىسادىي تەپتىش قىلىڭ\n- پاينى ئۆچۈرۈڭ\n- تەكشۈرۈشنى جەزملەشتۈرۈڭ\n- ئىقتىسادىي تەپتىش\n- ئالدىنقى قېتىم تەكشۈرۈلگەندىن بۇيان پەقەت يېڭى پايلارنىلا كۆرسىتىڭ\n- ئىشلەتكۈچى توپىغا تەكشۈرۈشنى تەقسىم قىلىڭ (مەسىلەن ئىقتىسادىي تەپتىش ياكى خەتەر mgmt)\n\n### ئەسكەرتىش:\nبۇ ئەپ چوقۇم ئەپ دۇكىنىدىكى كەم دېگەندە بىر ئالاھىدە ئىشلەتكۈچى توپى بىلەنلا چەكلىنىشى كېرەك.\nبۇ بارلىق ئىشلەتكۈچىلەرگە ئورتاق مەزمۇننىڭ تاسادىپىي ئاشكارىلىنىپ كېتىشىنىڭ ئالدىنى ئالىدۇ.",
     "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) خاتا سانلىق مەلۇماتنى كۆرسىتىدۇ. باھالاشتىن كېيىن ھەمبەھىرنى چىقىرىۋېتىش كېرەك.",
     "Pause reload after deletion" : "ئۆچۈرۈلگەندىن كېيىن قايتا يۈكلەشنى توختىتىڭ",
     "No share found" : "ھېچقانداق پاي تېپىلمىدى",

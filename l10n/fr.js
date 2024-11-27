@@ -21,7 +21,6 @@ OC.L10N.register(
     "Showing 0 to 0 of 0 entries" : "Affichage de 0 à 0 sur 0 entrées",
     "Share Review" : "Revue des partages",
     "Review and audit all shares" : "Examiner et auditer tous les partages",
-    "- Review and audit all shares within the Nextcloud instance\n- Remove shares\n- Confirm review\n- Audit compliance\n- Show only new shares since last review\n- Assign review to user groups (e.g. audit or risk mgmt)\n\n### Note:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users." : "- Examiner et auditer tous les partages au sein de l'instance Nextcloud\n- Supprimer des partages\n- Confirmer l'examen\n- Vérifier la conformité\n- Afficher uniquement les nouveaux partages depuis le dernier examen\n- Attribuer l'examen à des groupes d'utilisateurs (par exemple, audit ou gestion des risques)\n\n### Note :\nL'application doit être limitée à au moins un groupe d'utilisateurs spécifique dans le magasin d'applications.\nCela permet d'éviter l'exposition accidentelle du contenu partagé à tous les utilisateurs.",
     "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) indique des données incorrectes. Le partage doit être supprimé après évaluation.",
     "Pause reload after deletion" : "Pause du rechargement après la suppression",
     "No share found" : "Aucun partage trouvé",
