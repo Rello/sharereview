@@ -1,9 +1,9 @@
 # Changelog
 
-## 1.3.0 - 2024-11-xx
+## 1.3.0 - 2024-11-27
 ### Added
 - Event to register further sharing apps #8
-- Show any file share (talk, deck, federated, team, ...) #9
+- Show any file share (talk, deck, team, ...) #9
 - Show confirmation timestamp
 
 ### Changed
