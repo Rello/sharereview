@@ -4,6 +4,7 @@
 ### Added
 - Event to register further sharing apps #8
 - Show any file share (talk, deck, federated, team, ...) #9
+- Show confirmation timestamp
 
 ### Changed
 - Optimize table layout

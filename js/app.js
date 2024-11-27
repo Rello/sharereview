@@ -42,46 +42,64 @@ OCA.ShareReview.Navigation = {
     buildNavigation: function (data) {
         document.getElementById('shareReviewNavigation').innerHTML = '';
         let reviewTimestamp = OCA.ShareReview.Navigation.getInitialState('reviewTimestamp');
+        let localTime = '';
+        if (reviewTimestamp !== '0') {
+            let timestampInMilliseconds = reviewTimestamp * 1000;
+            let date = new Date(timestampInMilliseconds);
+            localTime = date.toLocaleString();
+        }
 
         let navigations = [
             {
+                id: 'navAllShares',
                 name: t('sharereview', 'All Shares'),
                 event: OCA.ShareReview.Navigation.handleAllNavigation,
                 style: 'icon-sharereview-shares',
                 pinned: false
             },
             {
+                id: 'navNewShares',
                 name: t('sharereview', 'New Shares'),
                 event: OCA.ShareReview.Navigation.handleNewSharesNavigation,
                 style: 'icon-sharereview-new',
                 pinned: false
             },
             {
+                id: 'navConfirm',
                 name: t('sharereview', 'Confirm reviewed'),
                 event: OCA.ShareReview.Navigation.handleConfirmNavigation,
                 style: 'icon-sharereview-check',
                 pinned: false
             },
             {
-                name: t('sharereview', 'Reset time') . reviewTimestamp,
+                id: 'navReset',
+                name: t('sharereview', 'Reset time'),
                 event: OCA.ShareReview.Navigation.handleConfirmResetNavigation,
                 style: 'icon-sharereview-reset',
+                pinned: false
+            },
+            {
+                id: 'navTime',
+                name: localTime,
+                event: false,
+                style: 'icon-sharereview-time',
                 pinned: false
             }
 
         ];
         for (let navigation of navigations) {
-            document.getElementById('shareReviewNavigation').appendChild(OCA.ShareReview.Navigation.buildNewButton(navigation));
+            document.getElementById('shareReviewNavigation').appendChild(OCA.ShareReview.Navigation.buildNavigationRow(navigation));
         }
     },
 
-    buildNewButton: function (data) {
+    buildNavigationRow: function (data) {
         let li = document.createElement('li');
         if (data['pinned']) li.classList.add('pinned', 'first-pinned');
         let a = document.createElement('a');
-        a.classList.add(data['style'], 'svg');
-        a.addEventListener('click', data['event']);
-        a.innerText = t('sharereview', data['name']);
+        a.id = data['id'];
+        data['style'] ? a.classList.add(data['style'], 'svg'): false;
+        data['event'] ? a.addEventListener('click', data['event']) : false;
+        a.innerText = data['name'];
         li.appendChild(a);
         return li;
     },
@@ -169,6 +187,9 @@ OCA.ShareReview.Backend = {
             .then(response => response.json())
             .then(data => {
                 OCA.ShareReview.Notification.notification('success', t('sharereview', 'Timestamp saved'));
+                let timestampInMilliseconds = data * 1000;
+                let date = new Date(timestampInMilliseconds);
+                document.getElementById('navTime').innerText = date.toLocaleString();
             });
     },
 
@@ -181,6 +202,7 @@ OCA.ShareReview.Backend = {
             .then(response => response.json())
             .then(data => {
                 OCA.ShareReview.Notification.notification('success', t('sharereview', 'Timestamp deleted'));
+                document.getElementById('navTime').innerText = '';
             });
     },
 };
