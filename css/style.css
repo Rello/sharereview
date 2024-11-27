@@ -30,6 +30,20 @@
     background-position: left !important;
 }
 
+.icon-sharereview-teams {
+    background-image: url(../img/teams.svg);
+    filter: var(--background-invert-if-dark);
+    background-size: 16px;
+    background-position: left !important;
+}
+
+.icon-sharereview-deck {
+    background-image: url(../img/deck.svg);
+    filter: var(--background-invert-if-dark);
+    background-size: 16px;
+    background-position: left !important;
+}
+
 .icon-sharereview-talk {
     background-image: url(../img/talk.svg);
     filter: var(--background-invert-if-dark);
@@ -90,6 +104,16 @@
     background-size: 16px;
     cursor: pointer;
     background-position: left !important;
+}
+
+.icon-sharereview-time {
+    background-size: 24px;
+    margin-left: 30px;
+    font-size: small;
+}
+
+.icon-sharereview-time:hover {
+    background-color: initial !important;
 }
 
 /* make the pagination smaller */

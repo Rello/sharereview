@@ -123,9 +123,17 @@ OCA.ShareReview.Visualization = {
         let dataArray = data.split(';');
 
         switch (parseInt(dataArray[0])) {
+            case 12:
+                iconClass = 'icon-sharereview-deck';
+                titleText = 'Deck'
+                break;
             case 10:
                 iconClass = 'icon-sharereview-talk';
                 titleText = 'Talk room'
+                break;
+            case 7:
+                iconClass = 'icon-sharereview-team';
+                titleText = 'Team'
                 break;
             case 4:
                 iconClass = 'icon-sharereview-email';
