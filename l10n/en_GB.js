@@ -21,7 +21,6 @@ OC.L10N.register(
     "Showing 0 to 0 of 0 entries" : "Showing 0 to 0 of 0 entries",
     "Share Review" : "Share Review",
     "Review and audit all shares" : "Review and audit all shares",
-    "This app can be used  for auditing shares within a Nextcloud instance e.g. for data loss prevention.\n\n- Review any file share\n  - files, talk, deck, teams, federation\n  - app specific shares dependent on app-implementation\n- Remove shares\n- Confirm current review\n  - show only new shares next time\n- Audit compliance\n- Assign review to user groups (e.g. audit or risk mgmt)\n\nNote:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users." : "This app can be used  for auditing shares within a Nextcloud instance e.g. for data loss prevention.\n\n- Review any file share\n  - files, talk, deck, teams, federation\n  - app specific shares dependent on app-implementation\n- Remove shares\n- Confirm current review\n  - show only new shares next time\n- Audit compliance\n- Assign review to user groups (e.g. audit or risk mgmt)\n\nNote:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users.",
     "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) indicates incorrect data. Share should be removed after evaluation.",
     "Pause reload after deletion" : "Pause reload after deletion",
     "No share found" : "No share found",
