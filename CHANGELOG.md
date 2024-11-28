@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.1 - 2024-11-28
+### Fixed
+- Event to register further sharing apps #8
+
 ## 1.3.0 - 2024-11-27
 ### Added
 - Event to register further sharing apps #8

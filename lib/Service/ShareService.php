@@ -265,6 +265,8 @@ class ShareService {
 	 * @return array
 	 */
 	private function getAppShares() {
+		$apps = [];
+		$formated = [];
 		foreach ($this->getRegisteredSources() as $key => $app) {
 			$apps[$key] = $app->getShares();
 		}
