@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Delete" : "Eliminar",
     "Are you sure?" : "Tem a certeza?",
+    "Request could not be processed" : "O pedido não pode ser processado",
     "OK" : "Ok",
     "Cancel" : "Cancelar",
     "Search" : "Pesquisa sobre",
