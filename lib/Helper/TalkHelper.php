@@ -8,25 +8,27 @@
 
 namespace OCA\ShareReview\Helper;
 
-use OCA\Talk\Manager;
 use OCA\Talk\Room;
 use Psr\Log\LoggerInterface;
 
 class TalkHelper {
-	private Manager $talkManager;
 	private LoggerInterface $logger;
 
-	public function __construct(Manager $talkManager, LoggerInterface $logger) {
-		$this->talkManager = $talkManager;
+	public function __construct(LoggerInterface $logger) {
 		$this->logger = $logger;
 	}
 
 	public function getRoomDisplayName(string $token): string {
-		$room = $this->talkManager->getRoomByToken($token);
+		if (!class_exists('OCA\Talk\Manager')) {
+			return $token . ' (*)';
+		}
+
+		$talkManager = \OC::$server->query('OCA\Talk\Manager');
+		$room = $talkManager->getRoomByToken($token);
 		if ($room instanceof Room) {
 			return $room->getName() ? $room->getName() : $token;
 		} else {
-			return $token . ' (r*)';
+			return $token . ' (*)';
 		}
 	}
 }

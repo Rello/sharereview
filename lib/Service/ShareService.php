@@ -159,15 +159,15 @@ class ShareService {
 	 */
 	private function formatShare($share): array {
 
-		if ($share['type'] === IShare::TYPE_GROUP) {
-			$share['recipient'] = $share['recipient'] != '' ? $this->groupHelper->getGroupDisplayName($share['recipient']) : '';
-		} elseif ($share['type'] === IShare::TYPE_ROOM) {
-			$share['recipient'] = $share['recipient'] != '' ? $this->talkHelper->getRoomDisplayName($share['recipient']) : '';
-		} elseif ($share['type'] === IShare::TYPE_DECK) {
-			$share['recipient'] = $share['recipient'] != '' ? $this->deckHelper->getDeckDisplayName($share['recipient']) : '';
-		} elseif ($share['type'] != IShare::TYPE_EMAIL && $share['type'] != IShare::TYPE_LINK) {
-			$share['recipient'] = $share['recipient'] != '' ? $this->userHelper->getUserDisplayName($share['recipient']) : '';
-		}
+			if ($share['type'] === IShare::TYPE_GROUP) {
+				$share['recipient'] = $share['recipient'] != '' ? $this->groupHelper->getGroupDisplayName($share['recipient']) : '';
+			} elseif ($share['type'] === IShare::TYPE_ROOM) {
+				$share['recipient'] = $share['recipient'] != '' ? $this->talkHelper->getRoomDisplayName($share['recipient']) : '';
+			} elseif ($share['type'] === IShare::TYPE_DECK) {
+				$share['recipient'] = $share['recipient'] != '' ? $this->deckHelper->getDeckDisplayName($share['recipient']) : '';
+			} elseif ($share['type'] != IShare::TYPE_EMAIL && $share['type'] != IShare::TYPE_LINK) {
+				$share['recipient'] = $share['recipient'] != '' ? $this->userHelper->getUserDisplayName($share['recipient']) : '';
+			}
 
 		$share['type'] = $share['type'] . ';' . $share['recipient'];
 		$share['initiator'] = $share['initiator'] != '' ? $this->userHelper->getUserDisplayName($share['initiator']) : '';
@@ -177,12 +177,10 @@ class ShareService {
 
 		// remap to the required structure to avoid issues with wrong app arrays
 		$data = [
-			//'id' => $share['id'],
 			'app' => $share['app'],
 			'object' => $share['object'],
 			'initiator' => $share['initiator'],
 			'type' => $share['type'],
-			//'recipient' => $share['recipient'],
 			'permissions' => $share['permissions'],
 			'time' => $share['time'],
 			'action' => $share['action'],

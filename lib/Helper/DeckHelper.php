@@ -8,16 +8,12 @@
 
 namespace OCA\ShareReview\Helper;
 
-use OCP\IUser;
-use OCP\IUserManager;
 use Psr\Log\LoggerInterface;
 
 class DeckHelper {
-	private IUserManager $userManager;
 	private LoggerInterface $logger;
 
-	public function __construct(IUserManager $userManager, LoggerInterface $logger) {
-		$this->userManager = $userManager;
+	public function __construct(LoggerInterface $logger) {
 		$this->logger = $logger;
 	}
 

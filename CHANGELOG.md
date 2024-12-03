@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.2 - 2024-12-03
+### Fixed
+- Error when Talk is not installed #8
+
 ## 1.3.1 - 2024-11-28
 ### Fixed
 - Event to register further sharing apps #8
