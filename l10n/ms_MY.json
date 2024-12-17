@@ -1,5 +1,6 @@
 { "translations": {
     "Delete" : "Padam",
+    "Are you sure?" : "Anda pasti?",
     "Search" : "Search"
 },"pluralForm" :"nplurals=1; plural=0;"
 }
