@@ -72,6 +72,13 @@
     background-position: left !important;
 }
 
+.icon-sharereview-federation {
+    background-image: url(../img/federation.svg);
+    filter: var(--background-invert-if-dark);
+    background-size: 16px;
+    background-position: left !important;
+}
+
 .icon-sharereview-new {
     background-image: url(../img/new.svg);
     /*filter: var(--background-invert-if-dark);*/

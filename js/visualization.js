@@ -135,6 +135,11 @@ OCA.ShareReview.Visualization = {
                 iconClass = 'icon-sharereview-team';
                 titleText = 'Team'
                 break;
+            case 9: // remote group
+            case 6:
+                iconClass = 'icon-sharereview-federation';
+                titleText = 'Federation'
+                break;
             case 4:
                 iconClass = 'icon-sharereview-email';
                 titleText = 'E-mail'

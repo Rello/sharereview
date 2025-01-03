@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.3 - 2025-01-03
+### Added
+- Federation shares
+
 ## 1.3.2 - 2024-12-03
 ### Fixed
 - Error when Talk is not installed #8
