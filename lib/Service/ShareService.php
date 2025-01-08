@@ -197,6 +197,7 @@ class ShareService {
 	 */
 	private function getFileShares() {
 		$shares = $this->shareManager->getAllShares();
+		$formated = [];
 
 		foreach ($shares as $share) {
 			if ($this->userHelper->isValidOwner($share->getShareOwner())) {
