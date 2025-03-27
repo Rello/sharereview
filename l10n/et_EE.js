@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Delete" : "Kustuta",
     "Are you sure?" : "Kas oled kindel?",
+    "OK" : "Sobib",
     "Cancel" : "Tühista",
     "Search" : "Otsi"
 },
