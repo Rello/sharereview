@@ -158,7 +158,10 @@ OCA.ShareReview.Visualization = {
                 break;
         }
 
-        return '<div class="' + iconClass + '" title="'+ titleText +'"><span style="margin-left: 20px;">' + dataArray[1] + '</span></div>';
+        return '<div style="display:flex;">' +
+            '<div class="' + iconClass + '" title="'+ titleText +'"></div>' +
+            '<span style="margin-left: 10px;">' + dataArray[1] + '</span>' +
+            '</div>';
     },
 
     renderDates: function (data) {

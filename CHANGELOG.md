@@ -2,6 +2,7 @@
 
 ### Fixed
 - Error when no file shares are available #12
+- UI improvements #14
 
 ## 1.3.3 - 2025-01-03
 ### Added
