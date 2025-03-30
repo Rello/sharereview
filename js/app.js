@@ -94,9 +94,9 @@ OCA.ShareReview.Navigation = {
 
     buildNavigationRow: function (data) {
         let li = document.createElement('li');
+        li.id = data['id'];
         if (data['pinned']) li.classList.add('pinned', 'first-pinned');
         let a = document.createElement('a');
-        a.id = data['id'];
         data['style'] ? a.classList.add(data['style'], 'svg'): false;
         data['event'] ? a.addEventListener('click', data['event']) : false;
         a.innerText = data['name'];
@@ -105,10 +105,14 @@ OCA.ShareReview.Navigation = {
     },
 
     handleAllNavigation: function () {
+        document.getElementById('navAllShares').classList.add('active');
+        document.getElementById('navNewShares').classList.remove('active');
         OCA.ShareReview.Backend.getData();
     },
 
     handleNewSharesNavigation: function () {
+        document.getElementById('navNewShares').classList.add('active');
+        document.getElementById('navAllShares').classList.remove('active');
         OCA.ShareReview.Backend.getData(true);
     },
 
@@ -189,7 +193,7 @@ OCA.ShareReview.Backend = {
                 OCA.ShareReview.Notification.notification('success', t('sharereview', 'Timestamp saved'));
                 let timestampInMilliseconds = data * 1000;
                 let date = new Date(timestampInMilliseconds);
-                document.getElementById('navTime').innerText = date.toLocaleString();
+                document.getElementById('navTime').firstChild.innerText = date.toLocaleString();
             });
     },
 
@@ -202,12 +206,12 @@ OCA.ShareReview.Backend = {
             .then(response => response.json())
             .then(data => {
                 OCA.ShareReview.Notification.notification('success', t('sharereview', 'Timestamp deleted'));
-                document.getElementById('navTime').innerText = '';
+                document.getElementById('navTime').firstChild.innerText = '';
             });
     },
 };
 
 document.addEventListener('DOMContentLoaded', function () {
-    OCA.ShareReview.Backend.getData();
     OCA.ShareReview.Navigation.buildNavigation();
+    OCA.ShareReview.Navigation.handleNewSharesNavigation();
 });
