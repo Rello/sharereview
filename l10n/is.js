@@ -2,6 +2,7 @@ OC.L10N.register(
     "sharereview",
     {
     "Delete" : "Eyða",
+    "Are you sure?" : "Ertu viss?",
     "Cancel" : "Hætta við",
     "Search" : "Search"
 },

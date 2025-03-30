@@ -1,7 +1,7 @@
 { "translations": {
     "Delete" : "Borrar",
     "OK" : "OK",
-    "Cancel" : "Canzelar",
+    "Cancel" : "Cancelar",
     "Search" : "Buscar"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
