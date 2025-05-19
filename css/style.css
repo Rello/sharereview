@@ -123,9 +123,15 @@
     background-color: initial !important;
 }
 
+
 .pinned {
     line-height: 44px;
     padding-left: 10px;
+}
+
+.share-selection {
+    min-height: 0;
+    height: 13px !important;
 }
 
 /* make the pagination smaller */

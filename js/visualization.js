@@ -31,6 +31,8 @@ OCA.ShareReview.Visualization = {
             OCA.ShareReview.tableObject = null;
         }
 
+        this.hideElement('loadingContainer');
+
         if (data.length === 0) {
             this.showElement('noDataContainer');
             this.hideElement('tableContainer');
@@ -63,6 +65,13 @@ OCA.ShareReview.Visualization = {
         }));
 
         columns = OCA.ShareReview.Visualization.addColumnRender(columns);
+        columns.unshift({
+            title: '<input type="checkbox" id="selectAllShares" title="' + t('sharereview', 'Select all') + '">',
+            data: 'action',
+            orderable: false,
+            render: OCA.ShareReview.Visualization.renderSelect
+        });
+        const timeIndex = columns.findIndex(c => c.data === 'time');
         const isDataLengthGreaterThanDefault = data.length > 10;
 
         OCA.ShareReview.tableObject = new DataTable(domTarget, {
@@ -71,7 +80,7 @@ OCA.ShareReview.Visualization = {
             data: data,
             columns: columns,
             language: language,
-            order: [[6, 'desc']],
+            order: [[timeIndex, 'desc']],
             layout: {
                 topStart: isDataLengthGreaterThanDefault ? 'pageLength' : null,
                 topEnd: isDataLengthGreaterThanDefault ? 'search' : null,
@@ -79,6 +88,15 @@ OCA.ShareReview.Visualization = {
                 bottomEnd: isDataLengthGreaterThanDefault ? 'paging' : null,
             },
         });
+
+        // Reattach the checkbox listeners whenever the table is redrawn
+        OCA.ShareReview.tableObject.on('draw', OCA.ShareReview.UI.initCheckboxListeners);
+
+        let headerCheckbox = document.getElementById('selectAllShares');
+        if (headerCheckbox) {
+            headerCheckbox.addEventListener('change', OCA.ShareReview.UI.handleSelectAll);
+        }
+        OCA.ShareReview.UI.initCheckboxListeners();
         },
 
     addColumnRender: function(columns) {
@@ -178,6 +196,10 @@ OCA.ShareReview.Visualization = {
             return div;
         }
         return null;
+    },
+
+    renderSelect: function(data) {
+        return '<input type="checkbox" class="share-selection" value="' + data + '">';
     },
 
     showElement: function (element) {
