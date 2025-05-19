@@ -1,7 +1,10 @@
 # Changelog
 
+## 1.4 - 2025-05-19
 ### Added
 - Add bulk share deletion #15
+- Add talk share filter and navigation option #19
+- Add loading indicator during backend data fetch #17
 
 ### Fixed
 - Error when no file shares are available #12
