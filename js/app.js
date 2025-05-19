@@ -85,6 +85,7 @@ OCA.ShareReview.Navigation = {
     buildNavigation: function (data) {
         document.getElementById('shareReviewNavigation').innerHTML = '';
         let reviewTimestamp = OCA.ShareReview.Navigation.getInitialState('reviewTimestamp');
+        let showTalk = OCA.ShareReview.Navigation.getInitialState('showTalk') === "true";
         let localTime = '';
         if (reviewTimestamp !== '0') {
             let timestampInMilliseconds = reviewTimestamp * 1000;
@@ -133,6 +134,21 @@ OCA.ShareReview.Navigation = {
         for (let navigation of navigations) {
             document.getElementById('shareReviewNavigation').appendChild(OCA.ShareReview.Navigation.buildNavigationRow(navigation));
         }
+
+        let liTalk = document.createElement('li');
+        liTalk.classList.add('pinned', 'first-pinned');
+        let checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.id = 'showTalkShares';
+        checkbox.checked = showTalk;
+        checkbox.classList.add('checkbox');
+        checkbox.addEventListener('change', OCA.ShareReview.Navigation.handleShowTalkChange);
+        let label = document.createElement('label');
+        label.setAttribute('for', 'showTalkShares');
+        label.innerText = t('sharereview', 'Show talk shares');
+        liTalk.appendChild(checkbox);
+        liTalk.appendChild(label);
+        document.getElementById('shareReviewNavigation').appendChild(liTalk);
     },
 
     buildNavigationRow: function (data) {
@@ -165,6 +181,11 @@ OCA.ShareReview.Navigation = {
 
     handleConfirmResetNavigation: function () {
         OCA.ShareReview.Backend.confirmReset();
+    },
+
+    handleShowTalkChange: function () {
+        let state = document.getElementById('showTalkShares').checked.toString();
+        OCA.ShareReview.Backend.showTalk(state);
     },
 
     getInitialState: function (key) {
@@ -279,6 +300,19 @@ OCA.ShareReview.Backend = {
             .then(data => {
                 OCA.ShareReview.Notification.notification('success', t('sharereview', 'Timestamp deleted'));
                 document.getElementById('navTime').firstChild.innerText = '';
+            });
+    },
+
+    showTalk: function(state) {
+        let requestUrl = OC.generateUrl('apps/sharereview/showTalk');
+        fetch(requestUrl, {
+            method: 'POST',
+            headers: OCA.ShareReview.headers(),
+            body: JSON.stringify({state: state})
+        })
+            .then(response => response.json())
+            .then(data => {
+                OCA.ShareReview.Backend.getData();
             });
     },
 };

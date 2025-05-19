@@ -48,10 +48,11 @@ class PageController extends Controller {
 	 * @NoAdminRequired
 	 * @NoCSRFRequired
 	 */
-	public function index() {
-		$user = $this->userSession->getUser();
-		$this->initialState->provideInitialState('reviewTimestamp', $this->config->getUserValue($user->getUID(), 'sharereview', 'reviewTimestamp', 0));
-		$params = array();
-		return new TemplateResponse($this->appName, 'main', $params);
-	}
+        public function index() {
+                $user = $this->userSession->getUser();
+                $this->initialState->provideInitialState('reviewTimestamp', $this->config->getUserValue($user->getUID(), 'sharereview', 'reviewTimestamp', 0));
+                $this->initialState->provideInitialState('showTalk', $this->config->getUserValue($user->getUID(), 'sharereview', 'showTalk', 'false'));
+                $params = array();
+                return new TemplateResponse($this->appName, 'main', $params);
+        }
 }

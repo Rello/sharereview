@@ -103,13 +103,28 @@ class OutputController extends Controller {
 	 * @return DataResponse
 	 * @throws ShareNotFound
 	 */
-	public function confirmReset() {
-		if (!$this->ShareService->isSecured()) {
-			return new DataResponse('', HTTP::STATUS_FORBIDDEN);
-		}
-		$result = $this->ShareService->confirm(0);
-		return new DataResponse($result, HTTP::STATUS_OK);
-	}
+        public function confirmReset() {
+                if (!$this->ShareService->isSecured()) {
+                        return new DataResponse('', HTTP::STATUS_FORBIDDEN);
+                }
+                $result = $this->ShareService->confirm(0);
+                return new DataResponse($result, HTTP::STATUS_OK);
+        }
+
+       /**
+        * persist talk share visibility
+        *
+        * @NoAdminRequired
+        * @return DataResponse
+        */
+       public function showTalk($state) {
+               if (!$this->ShareService->isSecured()) {
+                       return new DataResponse('', HTTP::STATUS_FORBIDDEN);
+               }
+			   $state = $state === 'true';
+			   $result = $this->ShareService->showTalk($state);
+               return new DataResponse($result, HTTP::STATUS_OK);
+       }
 
 	/**
 	 * app can only be used when it is restricted to at least one group for security reasons

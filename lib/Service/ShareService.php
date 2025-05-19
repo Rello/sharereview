@@ -84,9 +84,10 @@ class ShareService {
 	public function read($onlyNew) {
 		$user = $this->userSession->getUser();
 		$userTimestamp = $this->config->getUserValue($user->getUID(), 'sharereview', 'reviewTimestamp', 0);
+		$showTalk = $this->config->getUserValue($user->getUID(), 'sharereview', 'showTalk', 'true') !== 'false';
 		$formated = [];
 
-		$shares = $this->getFileShares();
+		$shares = $this->getFileShares($showTalk);
 		$appShares = $this->getAppShares();
 
 		$shares = array_merge($shares, $appShares);
@@ -134,6 +135,18 @@ class ShareService {
 		$user = $this->userSession->getUser();
 		$this->config->setUserValue($user->getUID(), 'sharereview', 'reviewTimestamp', $timestamp);
 		return $timestamp;
+	}
+
+	/**
+	 * persist showTalk selection
+	 * @param bool $state
+	 * @return bool
+	 */
+	public function showTalk(bool $state) {
+		$user = $this->userSession->getUser();
+		$value = $state ? 'true' : 'false';
+		$this->config->setUserValue($user->getUID(), 'sharereview', 'showTalk', $value);
+		return $state;
 	}
 
 	/**
@@ -195,24 +208,27 @@ class ShareService {
 	 * @throws NotFoundException
 	 * @throws NotPermittedException
 	 */
-	private function getFileShares() {
+	private function getFileShares(bool $showTalk = true) {
 		$shares = $this->shareManager->getAllShares();
 		$formated = [];
 
 		foreach ($shares as $share) {
+			if (!$showTalk && $share->getShareType() === IShare::TYPE_ROOM) {
+				continue;
+			}
 			$path = '';
 
 			if (!$this->userHelper->isValidOwner($share->getShareOwner())) {
-/*				$userFolder = $this->rootFolder->getUserFolder($share->getShareOwner());
-				$nodes = $userFolder->getById($share->getNodeId());
-				$node = array_shift($nodes);
+				/*				$userFolder = $this->rootFolder->getUserFolder($share->getShareOwner());
+								$nodes = $userFolder->getById($share->getNodeId());
+								$node = array_shift($nodes);
 
-				if ($node !== null && $userFolder !== null) {
-					$path = $userFolder->getRelativePath($node->getPath());
-				} else {
-					$path = 'invalid share (*) ' . $share->getTarget();
-				}
-			} else {*/
+								if ($node !== null && $userFolder !== null) {
+									$path = $userFolder->getRelativePath($node->getPath());
+								} else {
+									$path = 'invalid share (*) ' . $share->getTarget();
+								}
+							} else {*/
 				$path = 'invalid share (*) ';
 			}
 			$path = $path . $share->getTarget();
