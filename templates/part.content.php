@@ -19,11 +19,16 @@
     </div>
     <div id="noDataContainer">
         <br><br>
-		<?php p($l->t('No share found')); ?>
+                <?php p($l->t('No share found')); ?>
+    </div>
+    <div id="loadingContainer" hidden>
+        <div class="icon-loading"></div>
+        <br><br>
+                <?php p($l->t('Shares are being retrieved, please wait...')); ?>
     </div>
     <div id="notSecuredContainer" hidden>
         <br><br>
-		<?php p($l->t('The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users.')); ?>
+                <?php p($l->t('The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users.')); ?>
         <br><br>
         <a href="/settings/apps/enabled/sharereview"><?php p($l->t('Click here')); ?></a>
     </div>
