@@ -42,7 +42,7 @@ OCA.ShareReview.Navigation = {
     buildNavigation: function (data) {
         document.getElementById('shareReviewNavigation').innerHTML = '';
         let reviewTimestamp = OCA.ShareReview.Navigation.getInitialState('reviewTimestamp');
-        let showTalk = OCA.ShareReview.Navigation.getInitialState('showTalk');
+        let showTalk = OCA.ShareReview.Navigation.getInitialState('showTalk') === "true";
         let localTime = '';
         if (reviewTimestamp !== '0') {
             let timestampInMilliseconds = reviewTimestamp * 1000;
@@ -141,7 +141,7 @@ OCA.ShareReview.Navigation = {
     },
 
     handleShowTalkChange: function () {
-        let state = document.getElementById('showTalkShares').checked;
+        let state = document.getElementById('showTalkShares').checked.toString();
         OCA.ShareReview.Backend.showTalk(state);
     },
 

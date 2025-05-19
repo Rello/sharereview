@@ -117,12 +117,12 @@ class OutputController extends Controller {
         * @NoAdminRequired
         * @return DataResponse
         */
-       public function showTalk() {
+       public function showTalk($state) {
                if (!$this->ShareService->isSecured()) {
                        return new DataResponse('', HTTP::STATUS_FORBIDDEN);
                }
-               $state = $this->request->getParam('state') === 'true';
-               $result = $this->ShareService->showTalk($state);
+			   $state = $state === 'true';
+			   $result = $this->ShareService->showTalk($state);
                return new DataResponse($result, HTTP::STATUS_OK);
        }
 

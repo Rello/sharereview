@@ -123,6 +123,11 @@
     background-color: initial !important;
 }
 
+.pinned {
+    line-height: 44px;
+    padding-left: 10px;
+}
+
 /* make the pagination smaller */
 div.dt-container .dt-paging .dt-paging-button {
     font-size: 12px;
