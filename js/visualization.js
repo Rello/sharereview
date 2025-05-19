@@ -31,6 +31,8 @@ OCA.ShareReview.Visualization = {
             OCA.ShareReview.tableObject = null;
         }
 
+        this.hideElement('loadingContainer');
+
         if (data.length === 0) {
             this.showElement('noDataContainer');
             this.hideElement('tableContainer');

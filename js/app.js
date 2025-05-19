@@ -140,6 +140,10 @@ OCA.ShareReview.Backend = {
         let newUrl = '';
         if (onlyNew) newUrl = '/new';
         let requestUrl = OC.generateUrl('apps/sharereview/data') + newUrl;
+        OCA.ShareReview.Visualization.showElement('loadingContainer');
+        OCA.ShareReview.Visualization.hideElement('noDataContainer');
+        OCA.ShareReview.Visualization.hideElement('tableContainer');
+        OCA.ShareReview.Visualization.hideElement('notSecuredContainer');
         fetch(requestUrl, {
             method: 'GET',
             headers: OCA.ShareReview.headers()
@@ -152,9 +156,11 @@ OCA.ShareReview.Backend = {
             })
             .then(data => {
                 OCA.ShareReview.Visualization.buildDataTable(data);
+                OCA.ShareReview.Visualization.hideElement('loadingContainer');
             })
             .catch(error => {
                 OCA.ShareReview.Notification.notification('error', error)
+                OCA.ShareReview.Visualization.hideElement('loadingContainer');
                 OCA.ShareReview.Visualization.hideElement('noDataContainer');
                 OCA.ShareReview.Visualization.showElement('notSecuredContainer');
                 OCA.ShareReview.Visualization.hideElement('tableContainer');
