@@ -87,6 +87,9 @@ OCA.ShareReview.Visualization = {
             },
         });
 
+        // Reattach the checkbox listeners whenever the table is redrawn
+        OCA.ShareReview.tableObject.on('draw', OCA.ShareReview.UI.initCheckboxListeners);
+
         let headerCheckbox = document.getElementById('selectAllShares');
         if (headerCheckbox) {
             headerCheckbox.addEventListener('change', OCA.ShareReview.UI.handleSelectAll);
