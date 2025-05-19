@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.4 - 2025-05-19
+## 1.4.0 - 2025-05-19
 ### Added
 - Add bulk share deletion #15
 - Add talk share filter and navigation option #19
