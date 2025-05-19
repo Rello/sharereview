@@ -1,7 +1,7 @@
 OC.L10N.register(
     "sharereview",
     {
-    "Delete" : "Lemel",
+    "Delete" : "Dilemel",
     "OK" : "Mat eo",
     "Cancel" : "Nullañ",
     "Search" : "Klask"
