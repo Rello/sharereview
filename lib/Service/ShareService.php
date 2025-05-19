@@ -200,8 +200,10 @@ class ShareService {
 		$formated = [];
 
 		foreach ($shares as $share) {
-			if ($this->userHelper->isValidOwner($share->getShareOwner())) {
-				$userFolder = $this->rootFolder->getUserFolder($share->getShareOwner());
+			$path = '';
+
+			if (!$this->userHelper->isValidOwner($share->getShareOwner())) {
+/*				$userFolder = $this->rootFolder->getUserFolder($share->getShareOwner());
 				$nodes = $userFolder->getById($share->getNodeId());
 				$node = array_shift($nodes);
 
@@ -210,10 +212,10 @@ class ShareService {
 				} else {
 					$path = 'invalid share (*) ' . $share->getTarget();
 				}
-			} else {
-				$path = 'invalid share (*) ' . $share->getTarget();
+			} else {*/
+				$path = 'invalid share (*) ';
 			}
-
+			$path = $path . $share->getTarget();
 			$recipient = $share->getSharedWith();
 
 			switch ($share->getShareType()) {
