@@ -8,6 +8,8 @@ OC.L10N.register(
     "New Shares" : "New Shares",
     "Confirm reviewed" : "Confirm reviewed",
     "Reset time" : "Reset time",
+    "Select all" : "Select all",
+    "Delete selected" : "Delete selected",
     "Share deleted" : "Share deleted",
     "Table not reloaded" : "Table not reloaded",
     "Request could not be processed" : "Request could not be processed",

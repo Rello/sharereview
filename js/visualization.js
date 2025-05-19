@@ -63,6 +63,13 @@ OCA.ShareReview.Visualization = {
         }));
 
         columns = OCA.ShareReview.Visualization.addColumnRender(columns);
+        columns.unshift({
+            title: '',
+            data: 'action',
+            orderable: false,
+            render: OCA.ShareReview.Visualization.renderSelect
+        });
+        const timeIndex = columns.findIndex(c => c.data === 'time');
         const isDataLengthGreaterThanDefault = data.length > 10;
 
         OCA.ShareReview.tableObject = new DataTable(domTarget, {
@@ -71,7 +78,7 @@ OCA.ShareReview.Visualization = {
             data: data,
             columns: columns,
             language: language,
-            order: [[6, 'desc']],
+            order: [[timeIndex, 'desc']],
             layout: {
                 topStart: isDataLengthGreaterThanDefault ? 'pageLength' : null,
                 topEnd: isDataLengthGreaterThanDefault ? 'search' : null,
@@ -178,6 +185,10 @@ OCA.ShareReview.Visualization = {
             return div;
         }
         return null;
+    },
+
+    renderSelect: function(data) {
+        return '<input type="checkbox" class="share-selection" value="' + data + '">';
     },
 
     showElement: function (element) {
