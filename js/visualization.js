@@ -64,7 +64,7 @@ OCA.ShareReview.Visualization = {
 
         columns = OCA.ShareReview.Visualization.addColumnRender(columns);
         columns.unshift({
-            title: '',
+            title: '<input type="checkbox" id="selectAllShares" title="' + t('sharereview', 'Select all') + '">',
             data: 'action',
             orderable: false,
             render: OCA.ShareReview.Visualization.renderSelect
@@ -86,6 +86,12 @@ OCA.ShareReview.Visualization = {
                 bottomEnd: isDataLengthGreaterThanDefault ? 'paging' : null,
             },
         });
+
+        let headerCheckbox = document.getElementById('selectAllShares');
+        if (headerCheckbox) {
+            headerCheckbox.addEventListener('change', OCA.ShareReview.UI.handleSelectAll);
+        }
+        OCA.ShareReview.UI.initCheckboxListeners();
         },
 
     addColumnRender: function(columns) {

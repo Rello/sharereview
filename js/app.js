@@ -39,8 +39,26 @@ OCA.ShareReview.UI = {
 
     handleSelectAll: function () {
         let checkboxes = document.querySelectorAll('#dataTable .share-selection');
+        let headerCheckbox = document.getElementById('selectAllShares');
         let allChecked = Array.from(checkboxes).every(cb => cb.checked);
         checkboxes.forEach(cb => { cb.checked = !allChecked; });
+        if (headerCheckbox) headerCheckbox.checked = !allChecked;
+        OCA.ShareReview.UI.updateDeleteButtonVisibility();
+    },
+
+    updateDeleteButtonVisibility: function () {
+        let checkboxes = document.querySelectorAll('#dataTable .share-selection');
+        let checkedCount = document.querySelectorAll('#dataTable .share-selection:checked').length;
+        let deleteBtn = document.getElementById('deleteSelectedShares');
+        if (deleteBtn) deleteBtn.hidden = checkedCount <= 1;
+        let headerCheckbox = document.getElementById('selectAllShares');
+        if (headerCheckbox) headerCheckbox.checked = (checkboxes.length > 0 && checkedCount === checkboxes.length);
+    },
+
+    initCheckboxListeners: function () {
+        let checkboxes = document.querySelectorAll('#dataTable .share-selection');
+        checkboxes.forEach(cb => cb.addEventListener('change', OCA.ShareReview.UI.updateDeleteButtonVisibility));
+        OCA.ShareReview.UI.updateDeleteButtonVisibility();
     },
 
     handleDeleteSelected: function () {
@@ -57,10 +75,9 @@ OCA.ShareReview.UI = {
     },
 
     initBulkActions: function () {
-        let selectBtn = document.getElementById('selectAllShares');
         let deleteBtn = document.getElementById('deleteSelectedShares');
-        if (selectBtn) selectBtn.addEventListener('click', OCA.ShareReview.UI.handleSelectAll);
         if (deleteBtn) deleteBtn.addEventListener('click', OCA.ShareReview.UI.handleDeleteSelected);
+        OCA.ShareReview.UI.updateDeleteButtonVisibility();
     },
 };
 
