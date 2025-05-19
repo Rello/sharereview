@@ -81,13 +81,14 @@ class ShareService {
 	 * @throws NotFoundException
 	 * @throws NotPermittedException
 	 */
-	public function read($onlyNew) {
-		$user = $this->userSession->getUser();
-		$userTimestamp = $this->config->getUserValue($user->getUID(), 'sharereview', 'reviewTimestamp', 0);
-		$formated = [];
+        public function read($onlyNew) {
+                $user = $this->userSession->getUser();
+                $userTimestamp = $this->config->getUserValue($user->getUID(), 'sharereview', 'reviewTimestamp', 0);
+                $showTalk = $this->config->getUserValue($user->getUID(), 'sharereview', 'showTalk', 'true') !== 'false';
+                $formated = [];
 
-		$shares = $this->getFileShares();
-		$appShares = $this->getAppShares();
+                $shares = $this->getFileShares($showTalk);
+                $appShares = $this->getAppShares();
 
 		$shares = array_merge($shares, $appShares);
 
@@ -130,11 +131,23 @@ class ShareService {
 	 * @return mixed
 	 * @throws PreConditionNotMetException
 	 */
-	public function confirm($timestamp) {
-		$user = $this->userSession->getUser();
-		$this->config->setUserValue($user->getUID(), 'sharereview', 'reviewTimestamp', $timestamp);
-		return $timestamp;
-	}
+        public function confirm($timestamp) {
+                $user = $this->userSession->getUser();
+                $this->config->setUserValue($user->getUID(), 'sharereview', 'reviewTimestamp', $timestamp);
+                return $timestamp;
+        }
+
+       /**
+        * persist showTalk selection
+        * @param bool $state
+        * @return bool
+        */
+       public function showTalk(bool $state) {
+               $user = $this->userSession->getUser();
+               $value = $state ? 'true' : 'false';
+               $this->config->setUserValue($user->getUID(), 'sharereview', 'showTalk', $value);
+               return $state;
+       }
 
 	/**
 	 * app can only be used when it is restricted to at least one group for security reasons
@@ -195,12 +208,15 @@ class ShareService {
 	 * @throws NotFoundException
 	 * @throws NotPermittedException
 	 */
-	private function getFileShares() {
-		$shares = $this->shareManager->getAllShares();
-		$formated = [];
+       private function getFileShares(bool $showTalk = true) {
+               $shares = $this->shareManager->getAllShares();
+               $formated = [];
 
-		foreach ($shares as $share) {
-			$path = '';
+               foreach ($shares as $share) {
+                       if (!$showTalk && $share->getShareType() === IShare::TYPE_ROOM) {
+                               continue;
+                       }
+                       $path = '';
 
 			if (!$this->userHelper->isValidOwner($share->getShareOwner())) {
 /*				$userFolder = $this->rootFolder->getUserFolder($share->getShareOwner());
