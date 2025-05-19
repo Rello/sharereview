@@ -12,10 +12,14 @@
     <h3 id="reportSubHeader" hidden></h3>
     <div id="tableContainer" hidden>
         <table id="dataTable"></table>
-		<?php p($l->t('(*) indicates incorrect data. Share should be removed after evaluation.')); ?>
+                <?php p($l->t('(*) indicates incorrect data. Share should be removed after evaluation.')); ?>
         <br>
         <br>
-        <input type="checkbox" id="pauseUpdate" class="checkbox"><label for="pauseUpdate"><?php p($l->t('Pause reload after deletion')); ?></label>
+        <div id="tableActions" style="margin-bottom:10px;">
+            <button id="deleteSelectedShares" class="button"><?php p($l->t('Delete selected')); ?></button>
+            <br><br>
+            <input type="checkbox" id="pauseUpdate" class="checkbox"><label for="pauseUpdate"><?php p($l->t('Pause reload after deletion')); ?></label>
+        </div>
     </div>
     <div id="noDataContainer">
         <br><br>

@@ -36,6 +36,49 @@ OCA.ShareReview.UI = {
             }
         );
     },
+
+    handleSelectAll: function () {
+        let checkboxes = document.querySelectorAll('#dataTable .share-selection');
+        let headerCheckbox = document.getElementById('selectAllShares');
+        let allChecked = Array.from(checkboxes).every(cb => cb.checked);
+        checkboxes.forEach(cb => { cb.checked = !allChecked; });
+        if (headerCheckbox) headerCheckbox.checked = !allChecked;
+        OCA.ShareReview.UI.updateDeleteButtonVisibility();
+    },
+
+    updateDeleteButtonVisibility: function () {
+        let checkboxes = document.querySelectorAll('#dataTable .share-selection');
+        let checkedCount = document.querySelectorAll('#dataTable .share-selection:checked').length;
+        let deleteBtn = document.getElementById('deleteSelectedShares');
+        if (deleteBtn) deleteBtn.hidden = checkedCount <= 1;
+        let headerCheckbox = document.getElementById('selectAllShares');
+        if (headerCheckbox) headerCheckbox.checked = (checkboxes.length > 0 && checkedCount === checkboxes.length);
+    },
+
+    initCheckboxListeners: function () {
+        let checkboxes = document.querySelectorAll('#dataTable .share-selection');
+        checkboxes.forEach(cb => cb.addEventListener('change', OCA.ShareReview.UI.updateDeleteButtonVisibility));
+        OCA.ShareReview.UI.updateDeleteButtonVisibility();
+    },
+
+    handleDeleteSelected: function () {
+        let checkboxes = document.querySelectorAll('#dataTable .share-selection:checked');
+        if (checkboxes.length === 0) return;
+        let ids = Array.from(checkboxes).map(cb => cb.value);
+        OCA.ShareReview.Notification.confirm(
+            t('sharereview', 'Delete'),
+            t('sharereview', 'Are you sure?') + ' ' + t('sharereview', 'The share will be deleted!'),
+            function () {
+                OCA.ShareReview.Backend.deleteMultiple(ids);
+            }
+        );
+    },
+
+    initBulkActions: function () {
+        let deleteBtn = document.getElementById('deleteSelectedShares');
+        if (deleteBtn) deleteBtn.addEventListener('click', OCA.ShareReview.UI.handleDeleteSelected);
+        OCA.ShareReview.UI.updateDeleteButtonVisibility();
+    },
 };
 
 OCA.ShareReview.Navigation = {
@@ -188,6 +231,29 @@ OCA.ShareReview.Backend = {
             });
     },
 
+    deleteMultiple: function (shareIds) {
+        OCA.ShareReview.Notification.dialogClose();
+        let promises = shareIds.map(id => {
+            let requestUrl = OC.generateUrl('apps/sharereview/delete/') + id;
+            return fetch(requestUrl, {
+                method: 'DELETE',
+                headers: OCA.ShareReview.headers()
+            });
+        });
+        Promise.all(promises)
+            .then(() => {
+                if (document.getElementById('pauseUpdate').checked === false) {
+                    OCA.ShareReview.Backend.getData();
+                    OCA.ShareReview.Notification.notification('success', t('sharereview', 'Share deleted'));
+                } else {
+                    OCA.ShareReview.Notification.notification('success', t('sharereview', 'Share deleted') + '. ' + t('sharereview', 'Table not reloaded'));
+                }
+            })
+            .catch(() => {
+                OCA.ShareReview.Notification.notification('error', t('sharereview', 'Request could not be processed'));
+            });
+    },
+
     confirm: function () {
         let requestUrl = OC.generateUrl('apps/sharereview/confirm');
         fetch(requestUrl, {
@@ -220,4 +286,5 @@ OCA.ShareReview.Backend = {
 document.addEventListener('DOMContentLoaded', function () {
     OCA.ShareReview.Navigation.buildNavigation();
     OCA.ShareReview.Navigation.handleNewSharesNavigation();
+    OCA.ShareReview.UI.initBulkActions();
 });
