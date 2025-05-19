@@ -16,7 +16,6 @@
         <br>
         <br>
         <div id="tableActions" style="margin-bottom:10px;">
-            <button id="selectAllShares" class="button"><?php p($l->t('Select all')); ?></button>
             <button id="deleteSelectedShares" class="button"><?php p($l->t('Delete selected')); ?></button>
             <br><br>
             <input type="checkbox" id="pauseUpdate" class="checkbox"><label for="pauseUpdate"><?php p($l->t('Pause reload after deletion')); ?></label>
