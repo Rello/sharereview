@@ -6,6 +6,7 @@ OC.L10N.register(
     "OK" : "Oke",
     "Cancel" : "Batal",
     "Search" : "Cari",
-    "Showing 0 to 0 of 0 entries" : "Menampilkan 0 hingga 0 dari 0 entri"
+    "Showing 0 to 0 of 0 entries" : "Menampilkan 0 hingga 0 dari 0 entri",
+    "Select all" : "Pilih semua"
 },
 "nplurals=1; plural=0;");

@@ -1,6 +1,7 @@
 { "translations": {
     "Delete" : "Fshi",
     "Cancel" : "Anuloje",
-    "Search" : "Kërko"
+    "Search" : "Kërko",
+    "Select all" : "Zgjidhi të gjitha"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

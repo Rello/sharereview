@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Delete" : "հեռացնել",
     "Cancel" : "չեղարկել",
-    "Search" : "Search"
+    "Search" : "Search",
+    "Select all" : "Նշել բոլորը"
 },
 "nplurals=2; plural=(n != 1);");

@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Delete" : "Kkes",
     "OK" : "IH",
-    "Search" : "Nadi"
+    "Search" : "Nadi",
+    "Select all" : "Fren akk"
 },
 "nplurals=2; plural=(n != 1);");

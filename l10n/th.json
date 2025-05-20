@@ -2,6 +2,7 @@
     "Delete" : "ลบ",
     "Are you sure?" : "คุณแน่ใจหรือไม่?",
     "Cancel" : "ยกเลิก",
-    "Search" : "ค้นหา"
+    "Search" : "ค้นหา",
+    "Select all" : "เลือกทั้งหมด"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

@@ -6,8 +6,6 @@
     "New Shares" : "New Shares",
     "Confirm reviewed" : "Confirm reviewed",
     "Reset time" : "Reset time",
-    "Select all" : "Select all",
-    "Delete selected" : "Delete selected",
     "Share deleted" : "Share deleted",
     "Table not reloaded" : "Table not reloaded",
     "Request could not be processed" : "Request could not be processed",
@@ -19,6 +17,7 @@
     "Show _MENU_ entries" : "Show _MENU_ entries",
     "Showing _START_ to _END_ of _TOTAL_ entries" : "Showing _START_ to _END_ of _TOTAL_ entries",
     "Showing 0 to 0 of 0 entries" : "Showing 0 to 0 of 0 entries",
+    "Select all" : "Select all",
     "Share Review" : "Share Review",
     "Review and audit all shares" : "Review and audit all shares",
     "This app can be used  for auditing shares within a Nextcloud instance e.g. for data loss prevention.\n\n- Review any file share\n  - files, talk, deck, teams, federation\n  - additional apps (apps can register)\n- Remove shares\n- Confirm current review\n  - show only new shares next time\n- Audit compliance\n- Assign review to user groups (e.g. audit or risk mgmt)\n\nNote:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users." : "This app can be used  for auditing shares within a Nextcloud instance e.g. for data loss prevention.\n\n- Review any file share\n  - files, talk, deck, teams, federation\n  - additional apps (apps can register)\n- Remove shares\n- Confirm current review\n  - show only new shares next time\n- Audit compliance\n- Assign review to user groups (e.g. audit or risk mgmt)\n\nNote:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users.",
@@ -26,8 +25,6 @@
     "Pause reload after deletion" : "Pause reload after deletion",
     "No share found" : "No share found",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users.",
-    "Click here" : "Click here",
-    "Show talk shares" : "Show talk shares",
-    "Shares are being retrieved, please wait..." : "Shares are being retrieved, please wait..."
+    "Click here" : "Click here"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

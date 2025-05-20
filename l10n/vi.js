@@ -7,6 +7,7 @@ OC.L10N.register(
     "OK" : "Đồng ý",
     "Cancel" : "Hủy",
     "Search" : "Tìm kiếm",
-    "Showing 0 to 0 of 0 entries" : "Đang xem 0 đến 0 của 0 mục"
+    "Showing 0 to 0 of 0 entries" : "Đang xem 0 đến 0 của 0 mục",
+    "Select all" : "Chọn tất cả"
 },
 "nplurals=1; plural=0;");

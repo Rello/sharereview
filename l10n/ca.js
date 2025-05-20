@@ -9,6 +9,7 @@ OC.L10N.register(
     "Search" : "Cercar",
     "Show _MENU_ entries" : "Mostra les entrades _MENU_",
     "Showing _START_ to _END_ of _TOTAL_ entries" : "Es mostren les entrades _START_ a _END_ de _TOTAL_",
-    "Showing 0 to 0 of 0 entries" : "Mostrant 0 a 0 de 0 entrades"
+    "Showing 0 to 0 of 0 entries" : "Mostrant 0 a 0 de 0 entrades",
+    "Select all" : "Selecciona-ho tot"
 },
 "nplurals=2; plural=(n != 1);");

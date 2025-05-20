@@ -9,6 +9,7 @@ OC.L10N.register(
     "Search" : "Buscar",
     "Show _MENU_ entries" : "Mostrar entradas de _MENU_",
     "Showing _START_ to _END_ of _TOTAL_ entries" : "Mostrando _START_ a _END_ de _TOTAL_ entradas",
-    "Showing 0 to 0 of 0 entries" : "Mostrando 0 a 0 de 0 entradas"
+    "Showing 0 to 0 of 0 entries" : "Mostrando 0 a 0 de 0 entradas",
+    "Select all" : "Seleccionar todo"
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

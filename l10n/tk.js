@@ -4,6 +4,7 @@ OC.L10N.register(
     "Delete" : "Pozmak",
     "OK" : "Bolýar",
     "Cancel" : "ýatyrmak",
-    "Search" : "Gözlemek"
+    "Search" : "Gözlemek",
+    "Select all" : "Hemmesini saýlaň"
 },
 "nplurals=2; plural=(n != 1);");

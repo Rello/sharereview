@@ -4,6 +4,7 @@ OC.L10N.register(
     "Delete" : "წაშლა",
     "OK" : "ნორმალური",
     "Cancel" : "გაუქმება",
-    "Search" : "ძიება"
+    "Search" : "ძიება",
+    "Select all" : "ყველას არჩევა"
 },
 "nplurals=2; plural=(n!=1);");

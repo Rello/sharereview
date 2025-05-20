@@ -1,6 +1,7 @@
 { "translations": {
     "Delete" : "հեռացնել",
     "Cancel" : "չեղարկել",
-    "Search" : "Search"
+    "Search" : "Search",
+    "Select all" : "Նշել բոլորը"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

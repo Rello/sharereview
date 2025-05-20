@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Delete" : "Slett",
     "OK" : "Greitt",
-    "Search" : "Søk"
+    "Search" : "Søk",
+    "Select all" : "Merk alt"
 },
 "nplurals=2; plural=(n != 1);");

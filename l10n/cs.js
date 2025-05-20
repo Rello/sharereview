@@ -19,6 +19,7 @@ OC.L10N.register(
     "Show _MENU_ entries" : "Zobrazit položky _NABÍDKY_",
     "Showing _START_ to _END_ of _TOTAL_ entries" : "Zobrazuje se _START_ až _END_ z _TOTAL_ položek",
     "Showing 0 to 0 of 0 entries" : "Zobrazují se položky 0 až 0 z 0",
+    "Select all" : "Vybrat vše",
     "Share Review" : "Revidovat sdílení",
     "Review and audit all shares" : "Zrevidovat a auditovat veškerá sdílení",
     "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) značí nesprávná data. Sdílení by mělo být po vyhodnocení odebráno.",

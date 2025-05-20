@@ -19,6 +19,7 @@ OC.L10N.register(
     "Show _MENU_ entries" : "Visa _MENY_ poster",
     "Showing _START_ to _END_ of _TOTAL_ entries" : "Visar _START_ till _SLUT_ av _TOTALA_ poster",
     "Showing 0 to 0 of 0 entries" : "Visar 0 till 0 av 0 poster",
+    "Select all" : "Välj alla",
     "Share Review" : "Granska delningar",
     "Review and audit all shares" : "Granska och övervaka alla delningar",
     "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) indikerar felaktiga uppgifter. Delningen bör tas bort efter utvärdering.",

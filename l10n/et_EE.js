@@ -5,6 +5,7 @@ OC.L10N.register(
     "Are you sure?" : "Kas oled kindel?",
     "OK" : "Sobib",
     "Cancel" : "Tühista",
-    "Search" : "Otsi"
+    "Search" : "Otsi",
+    "Select all" : "Vali kõik"
 },
 "nplurals=2; plural=(n != 1);");

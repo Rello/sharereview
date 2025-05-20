@@ -9,6 +9,7 @@ OC.L10N.register(
     "Search" : "جستجو",
     "Show _MENU_ entries" : "Show _MENU_ entries",
     "Showing _START_ to _END_ of _TOTAL_ entries" : "Showing _START_ to _END_ of _TOTAL_ entries",
-    "Showing 0 to 0 of 0 entries" : "Showing 0 to 0 of 0 entries"
+    "Showing 0 to 0 of 0 entries" : "Showing 0 to 0 of 0 entries",
+    "Select all" : "انتخاب همه"
 },
 "nplurals=2; plural=(n > 1);");

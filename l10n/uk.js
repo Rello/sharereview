@@ -19,6 +19,7 @@ OC.L10N.register(
     "Show _MENU_ entries" : "Показати записи _MENU_",
     "Showing _START_ to _END_ of _TOTAL_ entries" : "Показано від _START_ до _END_ із _TOTAL_ записів",
     "Showing 0 to 0 of 0 entries" : "Показано від 0 до 0 із 0 записів",
+    "Select all" : "Вибрати все",
     "Share Review" : "Огляд спільних ресурсів",
     "Review and audit all shares" : "Перегляд та аудит спільних ресурсів",
     "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) ознака некоректних даних. Спільні ресурси потрібно буде вилучити після перегляду кожного.",

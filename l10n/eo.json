@@ -1,6 +1,7 @@
 { "translations": {
     "Delete" : "Forigi",
     "OK" : "Akcepti",
-    "Search" : "Serĉi"
+    "Search" : "Serĉi",
+    "Select all" : "Elekti ĉion"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

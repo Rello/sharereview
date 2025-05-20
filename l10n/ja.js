@@ -18,6 +18,7 @@ OC.L10N.register(
     "Show _MENU_ entries" : "_MENU_の項目を表示する",
     "Showing _START_ to _END_ of _TOTAL_ entries" : "_TOTAL_件中_START_件までの _END_",
     "Showing 0 to 0 of 0 entries" : "0件中0件から0件を表示",
+    "Select all" : "すべて選択",
     "Share Review" : "共有レビュー",
     "No share found" : "共有が見つかりません",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "このアプリは、アプリストアで少なくとも1つ以上のユーザーグループに制限される必要があります。これにより、共有コンテンツが誤ってすべてのユーザーに公開されるのを防ぐことができます。",

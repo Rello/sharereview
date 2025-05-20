@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Delete" : "Fshi",
     "Cancel" : "Anuloje",
-    "Search" : "Kërko"
+    "Search" : "Kërko",
+    "Select all" : "Zgjidhi të gjitha"
 },
 "nplurals=2; plural=(n != 1);");

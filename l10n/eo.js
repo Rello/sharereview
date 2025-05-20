@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Delete" : "Forigi",
     "OK" : "Akcepti",
-    "Search" : "Serĉi"
+    "Search" : "Serĉi",
+    "Select all" : "Elekti ĉion"
 },
 "nplurals=2; plural=(n != 1);");

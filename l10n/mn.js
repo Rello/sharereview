@@ -4,6 +4,7 @@ OC.L10N.register(
     "Delete" : "Устгах",
     "OK" : "ЗА",
     "Cancel" : "Цуцлах",
-    "Search" : "Хайх"
+    "Search" : "Хайх",
+    "Select all" : "бүгдийг сонгох"
 },
 "nplurals=2; plural=(n != 1);");
