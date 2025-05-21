@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Delete" : "Skrap",
     "OK" : "OK",
-    "Search" : "Soek"
+    "Search" : "Soek",
+    "Select all" : "Kies alle"
 },
 "nplurals=2; plural=(n != 1);");

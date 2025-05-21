@@ -8,6 +8,7 @@ OC.L10N.register(
     "New Shares" : "新分享",
     "Confirm reviewed" : "確認評論",
     "Reset time" : "重設時間",
+    "Show talk shares" : "Talk 分享顯示",
     "Share deleted" : "分享已刪除",
     "Table not reloaded" : "表格未重新載入",
     "Request could not be processed" : "無法處理請求",
@@ -24,8 +25,10 @@ OC.L10N.register(
     "Review and audit all shares" : "審核并審計所有分享",
     "This app can be used  for auditing shares within a Nextcloud instance e.g. for data loss prevention.\n\n- Review any file share\n  - files, talk, deck, teams, federation\n  - additional apps (apps can register)\n- Remove shares\n- Confirm current review\n  - show only new shares next time\n- Audit compliance\n- Assign review to user groups (e.g. audit or risk mgmt)\n\nNote:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users." : "此應用可用於審核 Nextcloud 實例中的共享，例如用於數據丟失預防。\n\n- 審核任何文件共享\n- 文件、聊天、任務、團隊、聯邦\n- 附加應用程式（應用程式可以註冊）\n- 刪除共享\n- 確認目前審核\n- 下次僅顯示新共享\n- 審核合規性\n- 將審核分配給用戶組（例如審核或風險管理）\n\n注意：\n此應用必須限制至少一個特定用戶組在應用商店中使用。這樣可以防止意外將共享內容暴露給所有用戶。",
     "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) 表示不正確的資料。評估後應移除分享。",
+    "Delete selected" : "刪除所選",
     "Pause reload after deletion" : "刪除後暫停重新載入",
     "No share found" : "未找到任何分享",
+    "Shares are being retrieved, please wait..." : "正在檢索共享內容，請稍候 ...",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "該應用程式必須僅限於應用程式商店中至少一個特定的用戶群組。這可以防止共享內容意外暴露給所有用戶。",
     "Click here" : "點擊此處"
 },

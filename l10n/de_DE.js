@@ -8,6 +8,7 @@ OC.L10N.register(
     "New Shares" : "Neue Freigaben",
     "Confirm reviewed" : "Überprüfte bestätigen",
     "Reset time" : "Zeit zurücksetzen",
+    "Show talk shares" : "Unterhaltungsfreigaben anzeigen",
     "Share deleted" : "Freigabe gelöscht",
     "Table not reloaded" : "Tabelle nicht neu geladen",
     "Request could not be processed" : "Anfrage konnte nicht bearbeitet werden",
@@ -24,8 +25,10 @@ OC.L10N.register(
     "Review and audit all shares" : "Alle Freigaben überprüfen und auditieren",
     "This app can be used  for auditing shares within a Nextcloud instance e.g. for data loss prevention.\n\n- Review any file share\n  - files, talk, deck, teams, federation\n  - additional apps (apps can register)\n- Remove shares\n- Confirm current review\n  - show only new shares next time\n- Audit compliance\n- Assign review to user groups (e.g. audit or risk mgmt)\n\nNote:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users." : "Diese App kann zum Überprüfen von Freigaben innerhalb einer Nextcloud-Instanz verwendet werden, z. B. zur Verhinderung von Datenverlust.\n\n- Überprüfen aller Dateifreigaben\n  - Dateien, Gespräche, Decks, Teams, Federation\n  - zusätzliche Apps (Apps können sich registrieren)\n- Freigaben entfernen\n- Aktuelle Überprüfung bestätigen \n  - Beim nächsten Mal nur neue Freigaben anzeigen\n- Einhaltung von Audits\n- die Überprüfung Benutzergruppen zuweisen (z. B. Audit oder Risikomanagement)\n\nHinweis:\nDie App muss im App Store auf mindestens eine bestimmte Benutzergruppe beschränkt sein.\nDadurch wird verhindert, dass die freigegebenen Inhalte versehentlich allen Benutzern zugänglich gemacht werden.",
     "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) kennzeichnet fehlerhafte Daten. Die Freigabe sollte nach überprüft entfernt werden.",
+    "Delete selected" : "Ausgewählte löschen",
     "Pause reload after deletion" : "Neuladen nach dem Löschen pausieren",
     "No share found" : "Keine Freigabe gefunden",
+    "Shares are being retrieved, please wait..." : "Freigaben werden abgerufen, bitte warten…",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Die App muss im App-Store auf mindestens eine bestimmte Benutzergruppe beschränkt sein. Dadurch wird verhindert, dass die freigegebenen Inhalte versehentlich allen Benutzern zugänglich gemacht werden.",
     "Click here" : "Klicken Sie hier"
 },
