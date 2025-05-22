@@ -8,6 +8,7 @@ OC.L10N.register(
     "New Shares" : "Нова дељења",
     "Confirm reviewed" : "Потврди прегледано",
     "Reset time" : "Ресетуј време",
+    "Show talk shares" : "Прикажи дељења у разговору",
     "Share deleted" : "Дељење је обрисано",
     "Table not reloaded" : "Табела није поново учитана",
     "Request could not be processed" : "Захтев не може да се обради",
@@ -24,8 +25,10 @@ OC.L10N.register(
     "Review and audit all shares" : "Прегледајте и процените сва дељења",
     "This app can be used  for auditing shares within a Nextcloud instance e.g. for data loss prevention.\n\n- Review any file share\n  - files, talk, deck, teams, federation\n  - additional apps (apps can register)\n- Remove shares\n- Confirm current review\n  - show only new shares next time\n- Audit compliance\n- Assign review to user groups (e.g. audit or risk mgmt)\n\nNote:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users." : "Ова  апликација може да се користи за проверу дељења унутар Nextcloud инстанце, нпр. да се спречи губитак података.\n\n- Прегледајте било које дељење фајла\n - фајлови, разговори, шпилови, тимови, здруживање\n - додатне апликације (апликације могу да региструју)\n- Уклоните дељења\n- Потврдите преглед\n- Процените саобразност\n- Прикажите само дељења настала након последњег прегледа\n- Доделите преглед групама корисника (нпр. audit или risk mgmt)\n\nНапомена:\nАпликација мора да се ограничи на барем једну одређену групу корисника у продавници апликација.\nНа тај начин се спречава нехотично излагање дељеног садржаја свим корисницима.",
     "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) означава неисправне податке. Након оцењивања, дељење би требало да се уклони.",
+    "Delete selected" : "Обриши изабрано",
     "Pause reload after deletion" : "Паузирај поновно учитавање након брисања",
     "No share found" : "Није пронађено ниједно дељење",
+    "Shares are being retrieved, please wait..." : "Добављају се дељења, молимо сачекајте",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Апликација мора да се ограничи на барем једну одређену групу корисника у продавници апликација. На тај начин се спречава нехотично излагање дељеног садржаја свим корисницима.",
     "Click here" : "Кликните овде"
 },

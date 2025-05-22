@@ -2,6 +2,7 @@ OC.L10N.register(
     "sharereview",
     {
     "Delete" : "Borrar",
+    "Are you sure?" : "Are you sure?",
     "Search" : "Buscar",
     "Select all" : "Seleccionar todo"
 },

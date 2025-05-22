@@ -8,6 +8,7 @@ OC.L10N.register(
     "New Shares" : "Nová sdílení",
     "Confirm reviewed" : "Potvrdit revidování",
     "Reset time" : "Vrátit čas na výchozí",
+    "Show talk shares" : "Zobrazit sdílení v Talk",
     "Share deleted" : "Sdílení smazáno",
     "Table not reloaded" : "Tabulka nenačtena znovu",
     "Request could not be processed" : "Požadavek se nepodařilo zpracovat",
@@ -23,8 +24,10 @@ OC.L10N.register(
     "Share Review" : "Revidovat sdílení",
     "Review and audit all shares" : "Zrevidovat a auditovat veškerá sdílení",
     "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) značí nesprávná data. Sdílení by mělo být po vyhodnocení odebráno.",
+    "Delete selected" : "Smazat vybrané",
     "Pause reload after deletion" : "Po smazání pozastavit znovunačtení",
     "No share found" : "Nenalezeno žádné sdílení",
+    "Shares are being retrieved, please wait..." : "Sdílení jsou získávána – čekejte…",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Je třeba, aby aplikace byla omezena na alespoň jednu konkrétní skupinu uživatelů v katalogu aplikací. To zabrání neúmyslnému exponování sdíleného obsahu všem uživatelům.",
     "Click here" : "Klikněte sem"
 },
