@@ -26,6 +26,7 @@ OC.L10N.register(
     "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) indica dados incorretos. O compartilhamento deve ser removido após avaliação.",
     "Pause reload after deletion" : "Pausar recarga após exclusão",
     "No share found" : "Nenhum compartilhamento encontrado",
+    "Shares are being retrieved, please wait..." : "Os compartilhamentos estão sendo recuperados, aguarde…",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "O aplicativo deve ser restrito a pelo menos um grupo de usuários específico na app store. Isto evita a exposição acidental do conteúdo compartilhado a todos os usuários.",
     "Click here" : "Clique aqui"
 },
