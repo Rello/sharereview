@@ -4,6 +4,7 @@ OC.L10N.register(
     "Delete" : "Izdzēst",
     "Are you sure?" : "Vai tiešām?",
     "Request could not be processed" : "Pieprasījums nevarēja tikt apstrādāts",
+    "OK" : "Labi",
     "Cancel" : "Atcelt",
     "Search" : "Meklēt",
     "Show _MENU_ entries" : "Rādīt _MENU_ ierakstus",
