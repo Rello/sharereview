@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Delete" : "Skrap",
     "OK" : "OK",
+    "Cancel" : "Cancel",
     "Search" : "Soek",
     "Select all" : "Kies alle"
 },

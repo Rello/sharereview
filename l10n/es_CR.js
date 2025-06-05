@@ -3,6 +3,8 @@ OC.L10N.register(
     {
     "Delete" : "Borrar",
     "Are you sure?" : "Are you sure?",
+    "OK" : "OK",
+    "Cancel" : "Cancel",
     "Search" : "Buscar",
     "Select all" : "Seleccionar todo"
 },

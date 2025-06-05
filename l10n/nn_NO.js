@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Delete" : "Slett",
     "OK" : "Greitt",
+    "Cancel" : "Cancel",
     "Search" : "Søk",
     "Select all" : "Merk alt"
 },

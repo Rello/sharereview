@@ -1,6 +1,7 @@
 { "translations": {
     "Delete" : "Slett",
     "OK" : "Greitt",
+    "Cancel" : "Cancel",
     "Search" : "Søk",
     "Select all" : "Merk alt"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"

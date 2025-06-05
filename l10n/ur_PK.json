@@ -1,5 +1,7 @@
 { "translations": {
     "Delete" : "حذف کریں",
+    "OK" : "OK",
+    "Cancel" : "Cancel",
     "Search" : "Search"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

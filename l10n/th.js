@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Delete" : "ลบ",
     "Are you sure?" : "คุณแน่ใจหรือไม่?",
+    "OK" : "OK",
     "Cancel" : "ยกเลิก",
     "Search" : "ค้นหา",
     "Select all" : "เลือกทั้งหมด"

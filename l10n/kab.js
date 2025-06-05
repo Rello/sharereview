@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Delete" : "Kkes",
     "OK" : "IH",
+    "Cancel" : "Cancel",
     "Search" : "Nadi",
     "Select all" : "Fren akk"
 },

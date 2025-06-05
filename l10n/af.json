@@ -1,6 +1,7 @@
 { "translations": {
     "Delete" : "Skrap",
     "OK" : "OK",
+    "Cancel" : "Cancel",
     "Search" : "Soek",
     "Select all" : "Kies alle"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"

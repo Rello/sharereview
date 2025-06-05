@@ -1,5 +1,7 @@
 { "translations": {
     "Delete" : "Läschen",
+    "OK" : "OK",
+    "Cancel" : "Cancel",
     "Search" : "Sichen",
     "Select all" : "All auswielen"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"

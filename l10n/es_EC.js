@@ -4,6 +4,7 @@ OC.L10N.register(
     "Delete" : "Borrar",
     "Are you sure?" : "¿Estás seguro?",
     "Request could not be processed" : "No se pudo procesar la solicitud",
+    "OK" : "OK",
     "Cancel" : "Cancelar",
     "Search" : "Buscar",
     "Show _MENU_ entries" : "Mostrando _MENU_ entradas",

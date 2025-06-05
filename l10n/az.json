@@ -1,5 +1,7 @@
 { "translations": {
     "Delete" : "Sil",
+    "OK" : "OK",
+    "Cancel" : "Cancel",
     "Search" : "Axtarış",
     "Select all" : "Hamısıı seç"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"

@@ -1,6 +1,7 @@
 { "translations": {
     "Delete" : "Kkes",
     "OK" : "IH",
+    "Cancel" : "Cancel",
     "Search" : "Nadi",
     "Select all" : "Fren akk"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"

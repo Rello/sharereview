@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Delete" : "Forigi",
     "OK" : "Akcepti",
+    "Cancel" : "Cancel",
     "Search" : "Serĉi",
     "Select all" : "Elekti ĉion"
 },

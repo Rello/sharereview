@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Delete" : "Eyða",
     "Are you sure?" : "Ertu viss?",
+    "OK" : "OK",
     "Cancel" : "Hætta við",
     "Search" : "Search",
     "Select all" : "Velja allt"

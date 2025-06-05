@@ -1,5 +1,6 @@
 { "translations": {
     "Delete" : "நீக்குக",
+    "OK" : "OK",
     "Cancel" : "ரத்து செய்",
     "Search" : "தேடுதல்"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
