@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Delete" : "Futa",
     "OK" : "OK",
-    "Cancel" : "Cancel"
+    "Cancel" : "Cancel",
+    "Search" : "Tafuta"
 },
 "nplurals=2; plural=(n != 1);");
