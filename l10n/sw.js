@@ -4,6 +4,7 @@ OC.L10N.register(
     "Delete" : "Futa",
     "OK" : "OK",
     "Cancel" : "Cancel",
-    "Search" : "Tafuta"
+    "Search" : "Tafuta",
+    "Select all" : "Chagua zote"
 },
 "nplurals=2; plural=(n != 1);");
