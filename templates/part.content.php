@@ -28,7 +28,7 @@
     <div id="loadingContainer" hidden>
         <div class="icon-loading"></div>
         <br><br>
-                <?php p($l->t('Shares are being retrieved, please wait...')); ?>
+                <?php p($l->t('Shares are being retrieved, please wait …')); ?>
     </div>
     <div id="notSecuredContainer" hidden>
         <br><br>
