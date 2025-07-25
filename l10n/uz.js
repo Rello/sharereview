@@ -1,7 +1,7 @@
 OC.L10N.register(
     "sharereview",
     {
-    "Delete" : "Delete",
+    "Delete" : "O'chirish",
     "Are you sure?" : "Ishonchingiz komilmi?",
     "The share will be deleted!" : "Ulanish o'chiriladi!",
     "All Shares" : "Barcha ulashmalar",
@@ -13,7 +13,7 @@ OC.L10N.register(
     "Request could not be processed" : "So‘rovni ko‘rib bo‘lmadi",
     "Timestamp saved" : "Vaqt tamg‘asi saqlandi",
     "Timestamp deleted" : "Vaqt tamg‘asi o‘chirildi",
-    "OK" : "OK",
+    "OK" : "Yaxshi",
     "Cancel" : "Bekor qilish",
     "Search" : "Qidirish",
     "Show _MENU_ entries" : "_MENU_ yozuvlarini ko'rsatish",
