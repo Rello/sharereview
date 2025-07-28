@@ -6,6 +6,7 @@
     "New Shares" : "Нові спільні ресурси",
     "Confirm reviewed" : "Підтвердити перегляд",
     "Reset time" : "Скинути час",
+    "Show talk shares" : "Показати обговорення",
     "Share deleted" : "Спільний ресурс вилучено",
     "Table not reloaded" : "Таблицю не завантажено",
     "Request could not be processed" : "Не вдалося обробити запит",
@@ -20,9 +21,12 @@
     "Select all" : "Вибрати все",
     "Share Review" : "Огляд спільних ресурсів",
     "Review and audit all shares" : "Перегляд та аудит спільних ресурсів",
+    "This app can be used  for auditing shares within a Nextcloud instance e.g. for data loss prevention.\n\n- Review any file share\n  - files, talk, deck, teams, federation\n  - additional apps (apps can register)\n- Remove shares\n- Confirm current review\n  - show only new shares next time\n- Audit compliance\n- Assign review to user groups (e.g. audit or risk mgmt)\n\nNote:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users." : "Цей додаток можна використовувати для аудиту спільного доступу в рамках екземпляра Nextcloud, наприклад, для запобігання втраті даних.\n\n- Переглядайте будь-який спільний доступ до файлів\n- файли, чат, презентації, команди, федерація\n- додаткові додатки (додатки можна реєструвати)\n- Видалення спільних ресурсів\n- Підтвердження поточного перегляду\n- показувати тільки нові спільні ресурси наступного разу\n- Аудит відповідності\n- Призначення перегляду групам користувачів (наприклад, аудит або управління ризиками)\n\nПримітка:\nДодаток повинен бути обмежений принаймні однією конкретною групою користувачів в магазині додатків.\nЦе запобігає випадковому розкриттю спільного вмісту всім користувачам.",
     "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) ознака некоректних даних. Спільні ресурси потрібно буде вилучити після перегляду кожного.",
+    "Delete selected" : "Видалити вибране",
     "Pause reload after deletion" : "Пауза з оновленням після вилучення",
     "No share found" : "Відсутні спільні ресурси",
+    "Shares are being retrieved, please wait..." : "Відбувається завантаження акцій, будь ласка, зачекайте...",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "З метою уникнення надання доступу до спільних ресурсів всім користувачам доступ до застосунку потрібно обмежити щонайменше для однєї визначеної групи користувачів в параметрах встановлення з крамниці застосунків.",
     "Click here" : "Клацніть тут"
 },"pluralForm" :"nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);"
