@@ -7,7 +7,7 @@ OC.L10N.register(
     "Reset time" : "Время сброса",
     "Share deleted" : "Поделиться удаленным",
     "Request could not be processed" : "Запрос не может быть обработан",
-    "Timestamp saved" : "Сохраненная временная метка",
+    "Timestamp saved" : "Временная метка сохранена",
     "Timestamp deleted" : "Временная метка удалена",
     "OK" : "ОК",
     "Cancel" : "Отмена",
