@@ -65,13 +65,17 @@ class ReportService {
         $lines[] = 'Share Review Report';
         $lines[] = 'Audit date: ' . (new \DateTime())->format('Y-m-d H:i');
         $lines[] = '';
-        $lines[] = 'App | Object | Initiator | Recipient | Time';
+        $lines[] = 'App | Object | Initiator | Type | Permissions | Time';
         foreach ($rows as $row) {
-            $lines[] = sprintf('%s | %s | %s | %s | %s',
+            [$shareType, $recipient] = array_pad(explode(';', (string)$row['type'], 2), 2, '');
+            $typeText = $this->formatType((int)$shareType, $recipient);
+            $permText = $this->formatPermission((int)$row['permissions']);
+            $lines[] = sprintf('%s | %s | %s | %s | %s | %s',
                 (string)$row['app'],
                 (string)$row['object'],
                 (string)$row['initiator'],
-                (string)$row['recipient'],
+                $typeText,
+                $permText,
                 (string)$row['time']
             );
         }
@@ -107,6 +111,63 @@ class ReportService {
         $pdf .= "trailer << /Size " . (count($objects) + 1) . " /Root 1 0 R >>\nstartxref\n{$xrefPos}\n%%EOF";
 
         return $pdf;
+    }
+
+    private function formatPermission(int $permission): string {
+        switch ($permission) {
+            case 1:
+            case 17:
+                return "\u{1F441} read";
+            case 2:
+            case 19:
+            case 31:
+                return "\u{270F} edit";
+            default:
+                return "\u{1F4AC} more";
+        }
+    }
+
+    private function formatType(int $type, string $recipient): string {
+        $icon = "\u{1F4AC}";
+        switch ($type) {
+            case 12:
+                $icon = "\u{1F5C2}"; // deck
+                $label = 'Deck';
+                break;
+            case 10:
+                $icon = "\u{1F4AC}"; // talk
+                $label = 'Talk room';
+                break;
+            case 7:
+                $icon = "\u{1F465}"; // team
+                $label = 'Team';
+                break;
+            case 9:
+            case 6:
+                $icon = "\u{1F310}"; // federation
+                $label = 'Federation';
+                break;
+            case 4:
+                $icon = "\u{2709}"; // email
+                $label = 'E-mail';
+                break;
+            case 3:
+                $icon = "\u{1F517}"; // link
+                $label = 'Link';
+                break;
+            case 1:
+                $icon = "\u{1F465}"; // group
+                $label = 'Group';
+                break;
+            case 0:
+                $icon = "\u{1F464}"; // user
+                $label = 'User';
+                break;
+            default:
+                $label = 'Other';
+                break;
+        }
+        return $icon . ' ' . $label . ' ' . $recipient;
     }
 
     private function escapePdfText(string $text): string {
