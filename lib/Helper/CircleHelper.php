@@ -1,0 +1,37 @@
+<?php
+/**
+ * Share Review
+ *
+ * SPDX-FileCopyrightText: 2024 Marcel Scherello
+ * SPDX-License-Identifier: AGPL-3.0-or-later
+ */
+
+namespace OCA\ShareReview\Helper;
+
+use Psr\Log\LoggerInterface;
+
+class CircleHelper {
+        private LoggerInterface $logger;
+
+        public function __construct(LoggerInterface $logger) {
+                $this->logger = $logger;
+        }
+
+        public function getCircleDisplayName(string $circleId): string {
+                if (!class_exists('OCA\\Circles\\Service\\CirclesService')) {
+                        return $circleId . ' (*)';
+                }
+
+                try {
+                        $circlesService = \OC::$server->query('OCA\\Circles\\Service\\CirclesService');
+                        $circle = $circlesService->getCircle($circleId);
+                        if ($circle && method_exists($circle, 'getName')) {
+                                return $circle->getName() ?: $circleId;
+                        }
+                } catch (\Throwable $e) {
+                        $this->logger->info('no circle given, will return circleId');
+                }
+
+                return $circleId . ' (*)';
+        }
+}
