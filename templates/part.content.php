@@ -37,6 +37,27 @@
         <a href="/settings/apps/enabled/sharereview"><?php p($l->t('Click here')); ?></a>
     </div>
 
+    <div id="settingsContainer" hidden>
+        <h3><?php p($l->t('Report settings')); ?></h3>
+        <p>
+            <label for="defaultFolder"><?php p($l->t('Default folder')); ?></label>
+            <input type="text" id="defaultFolder" readonly>
+            <button id="chooseDefaultFolder" class="button"><?php p($l->t('Select')); ?></button>
+        </p>
+        <p>
+            <label for="scheduleSelect"><?php p($l->t('Schedule')); ?></label>
+            <select id="scheduleSelect">
+                <option value="none"><?php p($l->t('None')); ?></option>
+                <option value="daily"><?php p($l->t('Daily')); ?></option>
+                <option value="weekly"><?php p($l->t('Weekly')); ?></option>
+                <option value="monthly"><?php p($l->t('Monthly')); ?></option>
+            </select>
+        </p>
+        <p>
+            <button id="saveSettings" class="button"><?php p($l->t('Save')); ?></button>
+        </p>
+    </div>
+
 </div>
 <div id="shareReview-loading" style="width:100%; padding: 100px 5%;" hidden>
     <div style="text-align:center; padding-top:100px" class="get-metadata icon-loading"></div>
