@@ -42,7 +42,6 @@
         <p>
             <label for="defaultFolder"><?php p($l->t('Default folder')); ?></label>
             <input type="text" id="defaultFolder" readonly>
-            <button id="chooseDefaultFolder" class="button"><?php p($l->t('Select')); ?></button>
         </p>
         <p>
             <label for="scheduleSelect"><?php p($l->t('Schedule')); ?></label>

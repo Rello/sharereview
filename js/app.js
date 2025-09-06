@@ -204,7 +204,7 @@ OCA.ShareReview.Navigation = {
             if (path) {
                 OCA.ShareReview.Backend.export(path);
             }
-        }, false, 'httpd', true, 'dir');
+        }, false, 'httpd', true, 'httpd/unix-directory', 1);
     },
 
     handleSettingsNavigation: function () {
@@ -385,15 +385,17 @@ document.addEventListener('DOMContentLoaded', function () {
     OCA.ShareReview.Navigation.buildNavigation();
     OCA.ShareReview.Navigation.handleNewSharesNavigation();
     OCA.ShareReview.UI.initBulkActions();
-    let choose = document.getElementById('chooseDefaultFolder');
-    if (choose) {
-        choose.addEventListener('click', function () {
+    let defaultFolderInput = document.getElementById('defaultFolder');
+    if (defaultFolderInput) {
+        let openPicker = function () {
             OC.dialogs.filepicker(t('sharereview', 'Select folder'), function (path) {
                 if (path) {
-                    document.getElementById('defaultFolder').value = path;
+                    defaultFolderInput.value = path;
                 }
-            }, false, 'httpd', true, 'dir');
-        });
+            }, false, 'httpd', true, 'httpd/unix-directory', 1);
+        };
+        defaultFolderInput.addEventListener('click', openPicker);
+        defaultFolderInput.addEventListener('focus', openPicker);
     }
     let save = document.getElementById('saveSettings');
     if (save) {

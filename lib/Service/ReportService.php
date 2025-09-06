@@ -37,26 +37,7 @@ class ReportService {
         }
         $data = $this->shareService->read(false);
 
-        $pdf = new \TCPDF();
-        $pdf->AddPage();
-        $pdf->SetFont('helvetica', '', 16);
-        $pdf->Cell(0, 10, 'Share Review Report', 0, 1, 'C');
-        $pdf->SetFont('helvetica', '', 10);
-        $pdf->Cell(0, 10, 'Audit date: ' . (new \DateTime())->format('Y-m-d H:i'), 0, 1);
-        $html = '<table border="1" cellpadding="4"><thead><tr>' .
-            '<th>App</th><th>Object</th><th>Initiator</th><th>Recipient</th><th>Time</th></tr></thead><tbody>';
-        foreach ($data as $row) {
-            $html .= '<tr>' .
-                '<td>' . htmlspecialchars((string)$row['app']) . '</td>' .
-                '<td>' . htmlspecialchars((string)$row['object']) . '</td>' .
-                '<td>' . htmlspecialchars((string)$row['initiator']) . '</td>' .
-                '<td>' . htmlspecialchars((string)$row['recipient']) . '</td>' .
-                '<td>' . htmlspecialchars((string)$row['time']) . '</td>' .
-                '</tr>';
-        }
-        $html .= '</tbody></table>';
-        $pdf->writeHTML($html);
-        $content = $pdf->Output('', 'S');
+        $content = $this->buildPdf($data);
 
         $userFolder = $this->rootFolder->getUserFolder($uid);
         $target = $userFolder->get($folder);
@@ -77,5 +58,58 @@ class ReportService {
             return;
         }
         $this->generate($folder, $owner);
+    }
+
+    private function buildPdf(array $rows): string {
+        $lines = [];
+        $lines[] = 'Share Review Report';
+        $lines[] = 'Audit date: ' . (new \DateTime())->format('Y-m-d H:i');
+        $lines[] = '';
+        $lines[] = 'App | Object | Initiator | Recipient | Time';
+        foreach ($rows as $row) {
+            $lines[] = sprintf('%s | %s | %s | %s | %s',
+                (string)$row['app'],
+                (string)$row['object'],
+                (string)$row['initiator'],
+                (string)$row['recipient'],
+                (string)$row['time']
+            );
+        }
+
+        $fontSize = 12;
+        $lineHeight = 14;
+        $contentStream = "BT\n/F1 {$fontSize} Tf\n72 800 Td\n";
+        foreach ($lines as $line) {
+            $contentStream .= '(' . $this->escapePdfText($line) . ") Tj\n0 -{$lineHeight} Td\n";
+        }
+        $contentStream .= "ET";
+        $length = strlen($contentStream);
+
+        $objects = [];
+        $objects[] = "<< /Type /Catalog /Pages 2 0 R >>";
+        $objects[] = "<< /Type /Pages /Kids [3 0 R] /Count 1 >>";
+        $objects[] = "<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>";
+        $objects[] = "<< /Length {$length} >>\nstream\n{$contentStream}\nendstream";
+        $objects[] = "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>";
+
+        $pdf = "%PDF-1.4\n";
+        $offsets = [0];
+        foreach ($objects as $i => $obj) {
+            $offsets[$i + 1] = strlen($pdf);
+            $pdf .= ($i + 1) . " 0 obj\n{$obj}\nendobj\n";
+        }
+        $xrefPos = strlen($pdf);
+        $pdf .= "xref\n0 " . (count($objects) + 1) . "\n";
+        $pdf .= "0000000000 65535 f \n";
+        for ($i = 1; $i <= count($objects); $i++) {
+            $pdf .= sprintf("%010d 00000 n \n", $offsets[$i]);
+        }
+        $pdf .= "trailer << /Size " . (count($objects) + 1) . " /Root 1 0 R >>\nstartxref\n{$xrefPos}\n%%EOF";
+
+        return $pdf;
+    }
+
+    private function escapePdfText(string $text): string {
+        return str_replace(['\\', '(', ')'], ['\\\\', '\\(', '\\)'], $text);
     }
 }
