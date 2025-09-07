@@ -13,6 +13,7 @@ use OCA\ShareReview\Helper\GroupHelper;
 use OCA\ShareReview\Helper\TalkHelper;
 use OCA\ShareReview\Helper\DeckHelper;
 use OCA\ShareReview\Db\ShareMapper;
+use OCA\ShareReview\Helper\CircleHelper;
 use OCA\ShareReview\Sources\SourceEvent;
 use OCP\Files\NotFoundException;
 use OCP\Files\NotPermittedException;
@@ -45,8 +46,9 @@ class ShareService {
 	private $userSession;
 	protected UserHelper $userHelper;
 	protected GroupHelper $groupHelper;
-	protected TalkHelper $talkHelper;
-	protected DeckHelper $deckHelper;
+        protected TalkHelper $talkHelper;
+        protected DeckHelper $deckHelper;
+        protected CircleHelper $circleHelper;
 	/** @var IEventDispatcher */
 	private $dispatcher;
 
@@ -59,11 +61,12 @@ class ShareService {
                 IUserSession     $userSession,
 		UserHelper       $userHelper,
 		GroupHelper      $groupHelper,
-		TalkHelper       $talkHelper,
-		DeckHelper       $deckHelper,
-		IRootFolder      $rootFolder,
-		IEventDispatcher $dispatcher
-	) {
+                TalkHelper       $talkHelper,
+                DeckHelper       $deckHelper,
+                CircleHelper     $circleHelper,
+                IRootFolder      $rootFolder,
+                IEventDispatcher $dispatcher
+        ) {
 		$this->appConfig = $appConfig;
 		$this->config = $config;
 		$this->logger = $logger;
@@ -72,11 +75,12 @@ class ShareService {
                 $this->rootFolder = $rootFolder;
 		$this->userHelper = $userHelper;
 		$this->groupHelper = $groupHelper;
-		$this->talkHelper = $talkHelper;
-		$this->deckHelper = $deckHelper;
-		$this->userSession = $userSession;
-		$this->dispatcher = $dispatcher;
-	}
+                $this->talkHelper = $talkHelper;
+                $this->deckHelper = $deckHelper;
+                $this->circleHelper = $circleHelper;
+                $this->userSession = $userSession;
+                $this->dispatcher = $dispatcher;
+        }
 
 	/**
 	 * get all shares
@@ -181,11 +185,13 @@ class ShareService {
 			$share['recipient'] = $share['recipient'] != '' ? $this->groupHelper->getGroupDisplayName($share['recipient']) : '';
 		} elseif ($share['type'] === IShare::TYPE_ROOM) {
 			$share['recipient'] = $share['recipient'] != '' ? $this->talkHelper->getRoomDisplayName($share['recipient']) : '';
-		} elseif ($share['type'] === IShare::TYPE_DECK) {
-			$share['recipient'] = $share['recipient'] != '' ? $this->deckHelper->getDeckDisplayName($share['recipient']) : '';
-		} elseif ($share['type'] === IShare::TYPE_USER) {
-			$share['recipient'] = $share['recipient'] != '' ? $this->userHelper->getUserDisplayName($share['recipient']) : '';
-		}
+                } elseif ($share['type'] === IShare::TYPE_DECK) {
+                        $share['recipient'] = $share['recipient'] != '' ? $this->deckHelper->getDeckDisplayName($share['recipient']) : '';
+                } elseif ($share['type'] === IShare::TYPE_CIRCLE) {
+                        $share['recipient'] = $share['recipient'] != '' ? $this->circleHelper->getCircleDisplayName($share['recipient']) : '';
+                } elseif ($share['type'] === IShare::TYPE_USER) {
+                        $share['recipient'] = $share['recipient'] != '' ? $this->userHelper->getUserDisplayName($share['recipient']) : '';
+                }
 
 		$share['type'] = $share['type'] . ';' . $share['recipient'];
 		$share['initiator'] = $share['initiator'] != '' ? $this->userHelper->getUserDisplayName($share['initiator']) : '';
