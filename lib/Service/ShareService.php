@@ -12,6 +12,7 @@ use OCA\ShareReview\Helper\UserHelper;
 use OCA\ShareReview\Helper\GroupHelper;
 use OCA\ShareReview\Helper\TalkHelper;
 use OCA\ShareReview\Helper\DeckHelper;
+use OCA\ShareReview\Db\ShareMapper;
 use OCA\ShareReview\Helper\CircleHelper;
 use OCA\ShareReview\Sources\SourceEvent;
 use OCP\Files\NotFoundException;
@@ -35,8 +36,10 @@ class ShareService {
 	protected $config;
 	/** @var LoggerInterface */
 	private $logger;
-	/** @var ShareManager */
-	private $shareManager;
+        /** @var ShareManager */
+        private $shareManager;
+        /** @var ShareMapper */
+        private $shareMapper;
 	/** @var IRootFolder */
 	private $rootFolder;
 	/** @var IUserSession */
@@ -52,9 +55,10 @@ class ShareService {
 	public function __construct(
 		IAppConfig       $appConfig,
 		IConfig          $config,
-		LoggerInterface  $logger,
-		ShareManager     $shareManager,
-		IUserSession     $userSession,
+                LoggerInterface  $logger,
+                ShareManager     $shareManager,
+                ShareMapper      $shareMapper,
+                IUserSession     $userSession,
 		UserHelper       $userHelper,
 		GroupHelper      $groupHelper,
                 TalkHelper       $talkHelper,
@@ -66,8 +70,9 @@ class ShareService {
 		$this->appConfig = $appConfig;
 		$this->config = $config;
 		$this->logger = $logger;
-		$this->shareManager = $shareManager;
-		$this->rootFolder = $rootFolder;
+                $this->shareManager = $shareManager;
+                $this->shareMapper = $shareMapper;
+                $this->rootFolder = $rootFolder;
 		$this->userHelper = $userHelper;
 		$this->groupHelper = $groupHelper;
                 $this->talkHelper = $talkHelper;
@@ -215,66 +220,66 @@ class ShareService {
 	 * @throws NotPermittedException
 	 */
 	private function getFileShares(bool $showTalk = true) {
-		$shares = $this->shareManager->getAllShares();
+		$shares = $this->shareMapper->findAll();
 		$formated = [];
 
 		foreach ($shares as $share) {
-			if (!$showTalk && $share->getShareType() === IShare::TYPE_ROOM) {
+			if (!$showTalk && (int)$share['share_type'] === IShare::TYPE_ROOM) {
 				continue;
 			}
 			$path = '';
 
-			if (!$this->userHelper->isValidOwner($share->getShareOwner())) {
-				/*				$userFolder = $this->rootFolder->getUserFolder($share->getShareOwner());
-								$nodes = $userFolder->getById($share->getNodeId());
-								$node = array_shift($nodes);
+			if (!$this->userHelper->isValidOwner($share['uid_owner'])) {
+				/*                              $userFolder = $this->rootFolder->getUserFolder($share->getShareOwner());
+				                                $nodes = $userFolder->getById($share->getNodeId());
+				                                $node = array_shift($nodes);
 
-								if ($node !== null && $userFolder !== null) {
-									$path = $userFolder->getRelativePath($node->getPath());
-								} else {
-									$path = 'invalid share (*) ' . $share->getTarget();
-								}
-							} else {*/
+				                                if ($node !== null && $userFolder !== null) {
+				                                        $path = $userFolder->getRelativePath($node->getPath());
+				                                } else {
+				                                        $path = 'invalid share (*) ' . $share->getTarget();
+				                                }
+				                        } else {*/
 				$path = 'invalid share (*) ';
 			}
-			$path = $path . $share->getTarget();
-			$recipient = $share->getSharedWith();
+			$path = $path . $share['file_target'];
+			$recipient = $share['share_with'];
 
-			switch ($share->getShareType()) {
+			switch ((int)$share['share_type']) {
 				case IShare::TYPE_USER:
 				case IShare::TYPE_GROUP:
 				case IShare::TYPE_LINK:
-					$action = 'ocinternal:' . $share->getId();
-					if ($share->getShareType() === IShare::TYPE_LINK) {
-						$recipient = $share->getToken();
+					$action = 'ocinternal:' . $share['id'];
+					if ((int)$share['share_type'] === IShare::TYPE_LINK) {
+						$recipient = $share['token'];
 					}
 					break;
 				case IShare::TYPE_EMAIL:
-					$action = 'ocMailShare:' . $share->getId();
+					$action = 'ocMailShare:' . $share['id'];
 					break;
 				case IShare::TYPE_REMOTE:
-					$action = 'ocFederatedSharing:' . $share->getId();
+					$action = 'ocFederatedSharing:' . $share['id'];
 					break;
 				case IShare::TYPE_ROOM:
-					$action = 'ocRoomShare:' . $share->getId();
+					$action = 'ocRoomShare:' . $share['id'];
 					break;
 				case IShare::TYPE_CIRCLE:
-					$action = 'ocCircleShare:' . $share->getId();
+					$action = 'ocCircleShare:' . $share['id'];
 					break;
 				case IShare::TYPE_DECK:
-					$action = 'deck:' . $share->getId();
+					$action = 'deck:' . $share['id'];
 					break;
 			}
 
 			$data = [
-				'id' => $share->getId(),
+				'id' => $share['id'],
 				'app' => 'Files',
 				'object' => $path,
-				'initiator' => $share->getSharedBy(),
-				'type' => $share->getShareType(),
+				'initiator' => $share['uid_initiator'],
+				'type' => $share['share_type'],
 				'recipient' => $recipient,
-				'permissions' => $share->getPermissions(),
-				'time' => $share->getShareTime()->format(\DATE_ATOM),
+				'permissions' => $share['permissions'],
+				'time' => (new \DateTime('@' . $share['stime']))->format(\DATE_ATOM),
 				'action' => rawurlencode($action),
 			];
 
