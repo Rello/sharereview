@@ -65,23 +65,23 @@ class ReportService {
         $lines[] = 'Share Review Report';
         $lines[] = 'Audit date: ' . (new \DateTime())->format('Y-m-d H:i');
         $lines[] = '';
-        $lines[] = 'App | Object | Initiator | Type | Permissions | Time';
+        $lines[] = $this->formatRow(['App', 'Object', 'Initiator', 'Type', 'Permissions', 'Time']);
         foreach ($rows as $row) {
             [$shareType, $recipient] = array_pad(explode(';', (string)$row['type'], 2), 2, '');
             $typeText = $this->formatType((int)$shareType, $recipient);
             $permText = $this->formatPermission((int)$row['permissions']);
-            $lines[] = sprintf('%s | %s | %s | %s | %s | %s',
+            $lines[] = $this->formatRow([
                 (string)$row['app'],
                 (string)$row['object'],
                 (string)$row['initiator'],
                 $typeText,
                 $permText,
-                (string)$row['time']
-            );
+                (string)$row['time'],
+            ]);
         }
 
-        $fontSize = 12;
-        $lineHeight = 14;
+        $fontSize = 9;
+        $lineHeight = 11;
         $contentStream = "BT\n/F1 {$fontSize} Tf\n72 800 Td\n";
         foreach ($lines as $line) {
             $contentStream .= '(' . $this->escapePdfText($line) . ") Tj\n0 -{$lineHeight} Td\n";
@@ -94,7 +94,7 @@ class ReportService {
         $objects[] = "<< /Type /Pages /Kids [3 0 R] /Count 1 >>";
         $objects[] = "<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>";
         $objects[] = "<< /Length {$length} >>\nstream\n{$contentStream}\nendstream";
-        $objects[] = "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>";
+        $objects[] = "<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>";
 
         $pdf = "%PDF-1.4\n";
         $offsets = [0];
@@ -117,60 +117,60 @@ class ReportService {
         switch ($permission) {
             case 1:
             case 17:
-                return "\u{1F441} read";
+                return 'read';
             case 2:
             case 19:
             case 31:
-                return "\u{270F} edit";
+                return 'edit';
             default:
-                return "\u{1F4AC} more";
+                return 'more';
         }
     }
 
     private function formatType(int $type, string $recipient): string {
-        $icon = "\u{1F4AC}";
         switch ($type) {
             case 12:
-                $icon = "\u{1F5C2}"; // deck
                 $label = 'Deck';
                 break;
             case 10:
-                $icon = "\u{1F4AC}"; // talk
                 $label = 'Talk room';
                 break;
             case 7:
-                $icon = "\u{1F465}"; // team
                 $label = 'Team';
                 break;
             case 9:
             case 6:
-                $icon = "\u{1F310}"; // federation
                 $label = 'Federation';
                 break;
             case 4:
-                $icon = "\u{2709}"; // email
                 $label = 'E-mail';
                 break;
             case 3:
-                $icon = "\u{1F517}"; // link
                 $label = 'Link';
                 break;
             case 1:
-                $icon = "\u{1F465}"; // group
                 $label = 'Group';
                 break;
             case 0:
-                $icon = "\u{1F464}"; // user
                 $label = 'User';
                 break;
             default:
                 $label = 'Other';
                 break;
         }
-        return $icon . ' ' . $label . ' ' . $recipient;
+        return $label . ' ' . $recipient;
     }
 
     private function escapePdfText(string $text): string {
         return str_replace(['\\', '(', ')'], ['\\\\', '\\(', '\\)'], $text);
+    }
+
+    private function formatRow(array $fields): string {
+        $widths = [8, 30, 12, 16, 12, 20];
+        $parts = [];
+        foreach ($fields as $i => $value) {
+            $parts[] = str_pad(substr($value, 0, $widths[$i]), $widths[$i]);
+        }
+        return implode(' ', $parts);
     }
 }
