@@ -236,7 +236,7 @@ class ShareService {
 				                        } else {*/
 				$path = 'invalid share (*) ';
 			}
-			$path = $path . $share['target'];
+			$path = $path . $share['file_target'];
 			$recipient = $share['share_with'];
 
 			switch ((int)$share['share_type']) {

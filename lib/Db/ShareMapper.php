@@ -24,7 +24,7 @@ class ShareMapper {
      */
     public function findAll(): array {
         $qb = $this->db->getQueryBuilder();
-        $qb->select('id', 'share_type', 'uid_owner', 'uid_initiator', 'share_with', 'permissions', 'stime', 'token', 'target')
+        $qb->select('id', 'share_type', 'uid_owner', 'uid_initiator', 'share_with', 'permissions', 'stime', 'token', 'file_target')
             ->from('share');
 
         $result = $qb->executeQuery();

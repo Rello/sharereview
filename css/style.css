@@ -30,8 +30,8 @@
     background-position: left !important;
 }
 
-.icon-sharereview-teams {
-    background-image: url(../img/teams.svg);
+.icon-sharereview-team {
+    background-image: url(../img/team.svg);
     filter: var(--background-invert-if-dark);
     background-size: 16px;
     background-position: left !important;
