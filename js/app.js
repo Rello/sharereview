@@ -126,14 +126,14 @@ OCA.ShareReview.Navigation = {
                 id: 'navExport',
                 name: t('sharereview', 'Export report'),
                 event: OCA.ShareReview.Navigation.handleExportNavigation,
-                style: 'icon-download',
+                style: 'icon-sharereview-download',
                 pinned: false
             },
             {
                 id: 'navSettings',
                 name: t('sharereview', 'Settings'),
                 event: OCA.ShareReview.Navigation.handleSettingsNavigation,
-                style: 'icon-settings',
+                style: 'icon-sharereview-settings',
                 pinned: false
             },
             {
@@ -395,7 +395,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }, false, 'httpd/unix-directory', true, 1);
         };
         defaultFolderInput.addEventListener('click', openPicker);
-        defaultFolderInput.addEventListener('focus', openPicker);
     }
     let save = document.getElementById('saveSettings');
     if (save) {

@@ -67,12 +67,16 @@ class ReportService {
         $header[] = '';
         $header[] = $this->formatRow([
             'App',
-            'Object',
+            'Object'
+        ], [40, 80]);
+        $header[] = $this->formatRow([
+            '',
             'Initiator',
             'Type',
             'Permissions',
             'Time'
-        ], [8, 60, 12, 16, 12, 20]);
+        ], [40, 20, 28, 12, 20]);
+        $header[] = '';
 
         $body = [];
         foreach ($rows as $row) {
@@ -82,12 +86,16 @@ class ReportService {
             $timeText = $this->formatTime((string)$row['time']);
             $body[] = $this->formatRow([
                 (string)$row['app'],
-                (string)$row['object'],
+                (string)$row['object']
+            ], [40, 80]);
+            $body[] = $this->formatRow([
+                '',
                 (string)$row['initiator'],
                 $typeText,
                 $permText,
                 $timeText,
-            ], [8, 60, 12, 16, 12, 20]);
+            ], [40, 20, 28, 12, 20]);
+            $body[] = '';
         }
 
         $fontSize = 9;
