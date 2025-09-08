@@ -36,51 +36,51 @@ class ShareService {
 	protected $config;
 	/** @var LoggerInterface */
 	private $logger;
-        /** @var ShareManager */
-        private $shareManager;
-        /** @var ShareMapper */
-        private $shareMapper;
+	/** @var ShareManager */
+	private $shareManager;
+	/** @var ShareMapper */
+	private $shareMapper;
 	/** @var IRootFolder */
 	private $rootFolder;
 	/** @var IUserSession */
 	private $userSession;
 	protected UserHelper $userHelper;
 	protected GroupHelper $groupHelper;
-        protected TalkHelper $talkHelper;
-        protected DeckHelper $deckHelper;
-        protected CircleHelper $circleHelper;
+	protected TalkHelper $talkHelper;
+	protected DeckHelper $deckHelper;
+	protected CircleHelper $circleHelper;
 	/** @var IEventDispatcher */
 	private $dispatcher;
 
 	public function __construct(
 		IAppConfig       $appConfig,
 		IConfig          $config,
-                LoggerInterface  $logger,
-                ShareManager     $shareManager,
-                ShareMapper      $shareMapper,
-                IUserSession     $userSession,
+		LoggerInterface  $logger,
+		ShareManager     $shareManager,
+		ShareMapper      $shareMapper,
+		IUserSession     $userSession,
 		UserHelper       $userHelper,
 		GroupHelper      $groupHelper,
-                TalkHelper       $talkHelper,
-                DeckHelper       $deckHelper,
-                CircleHelper     $circleHelper,
-                IRootFolder      $rootFolder,
-                IEventDispatcher $dispatcher
-        ) {
+		TalkHelper       $talkHelper,
+		DeckHelper       $deckHelper,
+		CircleHelper     $circleHelper,
+		IRootFolder      $rootFolder,
+		IEventDispatcher $dispatcher
+	) {
 		$this->appConfig = $appConfig;
 		$this->config = $config;
 		$this->logger = $logger;
-                $this->shareManager = $shareManager;
-                $this->shareMapper = $shareMapper;
-                $this->rootFolder = $rootFolder;
+		$this->shareManager = $shareManager;
+		$this->shareMapper = $shareMapper;
+		$this->rootFolder = $rootFolder;
 		$this->userHelper = $userHelper;
 		$this->groupHelper = $groupHelper;
-                $this->talkHelper = $talkHelper;
-                $this->deckHelper = $deckHelper;
-                $this->circleHelper = $circleHelper;
-                $this->userSession = $userSession;
-                $this->dispatcher = $dispatcher;
-        }
+		$this->talkHelper = $talkHelper;
+		$this->deckHelper = $deckHelper;
+		$this->circleHelper = $circleHelper;
+		$this->userSession = $userSession;
+		$this->dispatcher = $dispatcher;
+	}
 
 	/**
 	 * get all shares
@@ -185,13 +185,13 @@ class ShareService {
 			$share['recipient'] = $share['recipient'] != '' ? $this->groupHelper->getGroupDisplayName($share['recipient']) : '';
 		} elseif ($share['type'] === IShare::TYPE_ROOM) {
 			$share['recipient'] = $share['recipient'] != '' ? $this->talkHelper->getRoomDisplayName($share['recipient']) : '';
-                } elseif ($share['type'] === IShare::TYPE_DECK) {
-                        $share['recipient'] = $share['recipient'] != '' ? $this->deckHelper->getDeckDisplayName($share['recipient']) : '';
-                } elseif ($share['type'] === IShare::TYPE_CIRCLE) {
-                        $share['recipient'] = $share['recipient'] != '' ? $this->circleHelper->getCircleDisplayName($share['recipient']) : '';
-                } elseif ($share['type'] === IShare::TYPE_USER) {
-                        $share['recipient'] = $share['recipient'] != '' ? $this->userHelper->getUserDisplayName($share['recipient']) : '';
-                }
+		} elseif ($share['type'] === IShare::TYPE_DECK) {
+			$share['recipient'] = $share['recipient'] != '' ? $this->deckHelper->getDeckDisplayName($share['recipient']) : '';
+		} elseif ($share['type'] === IShare::TYPE_CIRCLE) {
+			$share['recipient'] = $share['recipient'] != '' ? $this->circleHelper->getCircleDisplayName($share['recipient']) : '';
+		} elseif ($share['type'] === IShare::TYPE_USER) {
+			$share['recipient'] = $share['recipient'] != '' ? $this->userHelper->getUserDisplayName($share['recipient']) : '';
+		}
 
 		$share['type'] = $share['type'] . ';' . $share['recipient'];
 		$share['initiator'] = $share['initiator'] != '' ? $this->userHelper->getUserDisplayName($share['initiator']) : '';
@@ -229,10 +229,22 @@ class ShareService {
 			}
 			$path = '';
 
+			// Retrieve the file object using the file_source
+			try {
+				$file = $this->rootFolder->getById($share['file_source']);
+				if (!empty($file)) {
+					$path = $file[0]->getPath() . ';' . $file[0]->getName();
+				}
+			} catch (NotFoundException $e) {
+				$this->logger->error('File not found for file_source: ' . $share['file_source']);
+			} catch (NotPermittedException $e) {
+				$this->logger->error('Access not permitted for file_source: ' . $share['file_source']);
+			}
+
+
 			if (!$this->userHelper->isValidOwner($share['uid_initiator'])) {
 				$path = 'invalid share (*) ';
 			}
-			$path = $path . $share['file_target'];
 			$recipient = $share['share_with'];
 
 			switch ((int)$share['share_type']) {

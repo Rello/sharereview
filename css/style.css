@@ -24,14 +24,14 @@
 }
 
 .icon-sharereview-user {
-    background-image: url(../img/user.svg);
+    background-image: url(../img/person.svg);
     filter: var(--background-invert-if-dark);
     background-size: 16px;
     background-position: left !important;
 }
 
 .icon-sharereview-team {
-    background-image: url(../img/team.svg);
+    background-image: url(../img/groups.svg);
     filter: var(--background-invert-if-dark);
     background-size: 16px;
     background-position: left !important;
@@ -73,7 +73,7 @@
 }
 
 .icon-sharereview-federation {
-    background-image: url(../img/federation.svg);
+    background-image: url(../img/share.svg);
     filter: var(--background-invert-if-dark);
     background-size: 16px;
     background-position: left !important;

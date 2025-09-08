@@ -97,9 +97,9 @@ OCA.ShareReview.Visualization = {
             headerCheckbox.addEventListener('change', OCA.ShareReview.UI.handleSelectAll);
         }
         OCA.ShareReview.UI.initCheckboxListeners();
-        },
+    },
 
-    addColumnRender: function(columns) {
+    addColumnRender: function (columns) {
         columns.forEach(obj => {
             if (obj.data === 'permissions') {
                 obj.render = OCA.ShareReview.Visualization.renderPermissions;
@@ -109,12 +109,14 @@ OCA.ShareReview.Visualization = {
                 obj.render = OCA.ShareReview.Visualization.renderAction;
             } else if (obj.data === 'type') {
                 obj.render = OCA.ShareReview.Visualization.renderTypes;
+            } else if (obj.data === 'object') {
+                obj.render = OCA.ShareReview.Visualization.renderObject;
             }
         });
         return columns;
     },
 
-    renderPermissions: function(data) {
+    renderPermissions: function (data) {
         let iconClass = 'icon-sharereview-more';
         let titleText = 'more'
 
@@ -132,10 +134,19 @@ OCA.ShareReview.Visualization = {
                 break;
         }
 
-        return '<div permission="' + data + '"class="' + iconClass + '" title="'+ titleText +'"></div>';
-},
+        return '<div permission="' + data + '"class="' + iconClass + '" title="' + titleText + '"></div>';
+    },
 
-    renderTypes: function(data) {
+    renderObject: function (data) {
+        let dataArray = data.split(';');
+        if (dataArray.length !== 1) {
+            return '<span title=' + dataArray[0] + '>' + dataArray[1] + '</span>';
+        } else {
+            return '<span title=' + data + '>' + data + '</span>';
+        }
+    },
+
+    renderTypes: function (data) {
         let iconClass = 'icon-sharereview-link';
         let titleText = 'more'
         let dataArray = data.split(';');
@@ -177,7 +188,7 @@ OCA.ShareReview.Visualization = {
         }
 
         return '<div style="display:flex;">' +
-            '<div class="' + iconClass + '" title="'+ titleText +'"></div>' +
+            '<div class="' + iconClass + '" title="' + titleText + '"></div>' +
             '<span style="margin-left: 10px;">' + dataArray[1] + '</span>' +
             '</div>';
     },
@@ -198,7 +209,7 @@ OCA.ShareReview.Visualization = {
         return null;
     },
 
-    renderSelect: function(data) {
+    renderSelect: function (data) {
         return '<input type="checkbox" class="share-selection" value="' + data + '">';
     },
 
