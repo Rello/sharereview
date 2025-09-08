@@ -11,23 +11,23 @@ namespace OCA\ShareReview\Db;
 use OCP\IDBConnection;
 
 class ShareMapper {
-    private IDBConnection $db;
+	private IDBConnection $db;
 
-    public function __construct(IDBConnection $db) {
-        $this->db = $db;
-    }
+	public function __construct(IDBConnection $db) {
+		$this->db = $db;
+	}
 
-    /**
-     * Read all shares from the database.
-     *
-     * @return array<int, array<string, mixed>>
-     */
-    public function findAll(): array {
-        $qb = $this->db->getQueryBuilder();
-        $qb->select('id', 'share_type', 'uid_owner', 'uid_initiator', 'share_with', 'permissions', 'stime', 'token', 'file_target', 'file_source')
-            ->from('share');
+	/**
+	 * Read all shares from the database.
+	 *
+	 * @return array<int, array<string, mixed>>
+	 */
+	public function findAll(): array {
+		$qb = $this->db->getQueryBuilder();
+		$qb->select('id', 'share_type', 'uid_owner', 'uid_initiator', 'share_with', 'permissions', 'stime', 'token', 'file_target', 'file_source')
+		   ->from('share')->where($qb->expr()->neq('share_type', $qb->createNamedParameter(2)));
 
-        $result = $qb->executeQuery();
-        return $result->fetchAll();
-    }
+		$result = $qb->executeQuery();
+		return $result->fetchAll();
+	}
 }
