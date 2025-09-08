@@ -123,6 +123,20 @@ OCA.ShareReview.Navigation = {
                 pinned: false
             },
             {
+                id: 'navExport',
+                name: t('sharereview', 'Export report'),
+                event: OCA.ShareReview.Navigation.handleExportNavigation,
+                style: 'icon-sharereview-download',
+                pinned: false
+            },
+            {
+                id: 'navSettings',
+                name: t('sharereview', 'Settings'),
+                event: OCA.ShareReview.Navigation.handleSettingsNavigation,
+                style: 'icon-sharereview-settings',
+                pinned: false
+            },
+            {
                 id: 'navTime',
                 name: localTime,
                 event: false,
@@ -167,12 +181,14 @@ OCA.ShareReview.Navigation = {
         document.getElementById('navAllShares').classList.add('active');
         document.getElementById('navNewShares').classList.remove('active');
         OCA.ShareReview.Backend.getData();
+        OCA.ShareReview.Visualization.hideElement('settingsContainer');
     },
 
     handleNewSharesNavigation: function () {
         document.getElementById('navNewShares').classList.add('active');
         document.getElementById('navAllShares').classList.remove('active');
         OCA.ShareReview.Backend.getData(true);
+        OCA.ShareReview.Visualization.hideElement('settingsContainer');
     },
 
     handleConfirmNavigation: function () {
@@ -181,6 +197,24 @@ OCA.ShareReview.Navigation = {
 
     handleConfirmResetNavigation: function () {
         OCA.ShareReview.Backend.confirmReset();
+    },
+
+    handleExportNavigation: function () {
+        OC.dialogs.filepicker(t('sharereview', 'Select folder'), function (path) {
+            if (path) {
+                OCA.ShareReview.Backend.export(path);
+            }
+        }, false, 'httpd/unix-directory', true, 1);
+    },
+
+    handleSettingsNavigation: function () {
+        OCA.ShareReview.Visualization.hideElement('tableContainer');
+        OCA.ShareReview.Visualization.hideElement('noDataContainer');
+        OCA.ShareReview.Visualization.hideElement('notSecuredContainer');
+        OCA.ShareReview.Visualization.hideElement('loadingContainer');
+        OCA.ShareReview.Visualization.showElement('settingsContainer');
+        document.getElementById('defaultFolder').value = OCA.ShareReview.Navigation.getInitialState('reportFolder') || '';
+        document.getElementById('scheduleSelect').value = OCA.ShareReview.Navigation.getInitialState('schedule') || 'none';
     },
 
     handleShowTalkChange: function () {
@@ -208,6 +242,7 @@ OCA.ShareReview.Backend = {
         OCA.ShareReview.Visualization.hideElement('noDataContainer');
         OCA.ShareReview.Visualization.hideElement('tableContainer');
         OCA.ShareReview.Visualization.hideElement('notSecuredContainer');
+        OCA.ShareReview.Visualization.hideElement('settingsContainer');
         fetch(requestUrl, {
             method: 'GET',
             headers: OCA.ShareReview.headers()
@@ -315,10 +350,58 @@ OCA.ShareReview.Backend = {
                 OCA.ShareReview.Backend.getData();
             });
     },
+
+    export: function(folder) {
+        let requestUrl = OC.generateUrl('apps/sharereview/report/export');
+        fetch(requestUrl, {
+            method: 'POST',
+            headers: OCA.ShareReview.headers(),
+            body: JSON.stringify({path: folder})
+        })
+            .then(response => response.json())
+            .then(() => {
+                OCA.ShareReview.Notification.notification('success', t('sharereview', 'Report created'));
+            })
+            .catch(() => {
+                OCA.ShareReview.Notification.notification('error', t('sharereview', 'Request could not be processed'));
+            });
+    },
+
+    saveSettings: function(folder, schedule) {
+        let requestUrl = OC.generateUrl('apps/sharereview/report/settings');
+        fetch(requestUrl, {
+            method: 'POST',
+            headers: OCA.ShareReview.headers(),
+            body: JSON.stringify({folder: folder, schedule: schedule})
+        })
+            .then(response => response.json())
+            .then(() => {
+                OCA.ShareReview.Notification.notification('success', t('sharereview', 'Settings saved'));
+            });
+    },
 };
 
 document.addEventListener('DOMContentLoaded', function () {
     OCA.ShareReview.Navigation.buildNavigation();
     OCA.ShareReview.Navigation.handleNewSharesNavigation();
     OCA.ShareReview.UI.initBulkActions();
+    let defaultFolderInput = document.getElementById('defaultFolder');
+    if (defaultFolderInput) {
+        let openPicker = function () {
+            OC.dialogs.filepicker(t('sharereview', 'Select folder'), function (path) {
+                if (path) {
+                    defaultFolderInput.value = path;
+                }
+            }, false, 'httpd/unix-directory', true, 1);
+        };
+        defaultFolderInput.addEventListener('click', openPicker);
+    }
+    let save = document.getElementById('saveSettings');
+    if (save) {
+        save.addEventListener('click', function () {
+            let folder = document.getElementById('defaultFolder').value;
+            let schedule = document.getElementById('scheduleSelect').value;
+            OCA.ShareReview.Backend.saveSettings(folder, schedule);
+        });
+    }
 });

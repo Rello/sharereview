@@ -79,6 +79,18 @@
     background-position: left !important;
 }
 
+.icon-sharereview-download {
+    background-image: url(../img/download.svg);
+    /*filter: var(--background-invert-if-dark);*/
+    background-size: 24px;
+}
+
+.icon-sharereview-settings {
+    background-image: url(../img/settings.svg);
+    /*filter: var(--background-invert-if-dark);*/
+    background-size: 24px;
+}
+
 .icon-sharereview-new {
     background-image: url(../img/new.svg);
     /*filter: var(--background-invert-if-dark);*/
@@ -103,6 +115,16 @@
     /*filter: var(--background-invert-if-dark);*/
     background-size: 24px;
     margin-left: 30px;
+}
+
+.icon-sharereview-download {
+    background-image: url(../img/download.svg);
+    background-size: 24px;
+}
+
+.icon-sharereview-settings {
+    background-image: url(../img/settings.svg);
+    background-size: 24px;
 }
 
 .icon-sharereview-delete {
