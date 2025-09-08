@@ -68,14 +68,14 @@ class ReportService {
         $header[] = $this->formatRow([
             'App',
             'Object'
-        ], [40, 80]);
+        ], [15, 105]);
         $header[] = $this->formatRow([
             '',
             'Initiator',
             'Type',
             'Permissions',
             'Time'
-        ], [40, 20, 28, 12, 20]);
+        ], [15, 20, 53, 12, 20]);
         $header[] = '';
 
         $body = [];
@@ -87,14 +87,14 @@ class ReportService {
             $body[] = $this->formatRow([
                 (string)$row['app'],
                 (string)$row['object']
-            ], [40, 80]);
+            ], [15, 105]);
             $body[] = $this->formatRow([
                 '',
                 (string)$row['initiator'],
                 $typeText,
                 $permText,
                 $timeText,
-            ], [40, 20, 28, 12, 20]);
+            ], [15, 20, 53, 12, 20]);
             $body[] = '';
         }
 
