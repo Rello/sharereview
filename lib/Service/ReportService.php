@@ -61,46 +61,78 @@ class ReportService {
     }
 
     private function buildPdf(array $rows): string {
-        $lines = [];
-        $lines[] = 'Share Review Report';
-        $lines[] = 'Audit date: ' . (new \DateTime())->format('Y-m-d H:i');
-        $lines[] = '';
-        $lines[] = $this->formatRow(['App', 'Object', 'Initiator', 'Type', 'Permissions', 'Time']);
+        $header = [];
+        $header[] = 'Share Review Report';
+        $header[] = 'Audit date: ' . (new \DateTime())->format('d.m.Y, H:i:s');
+        $header[] = '';
+        $header[] = $this->formatRow(['App', 'Object'], [8, 100]);
+        $header[] = '    ' . $this->formatRow(['Initiator', 'Type', 'Permissions', 'Time'], [12, 16, 12, 20]);
+
+        $body = [];
         foreach ($rows as $row) {
             [$shareType, $recipient] = array_pad(explode(';', (string)$row['type'], 2), 2, '');
             $typeText = $this->formatType((int)$shareType, $recipient);
             $permText = $this->formatPermission((int)$row['permissions']);
-            $lines[] = $this->formatRow([
-                (string)$row['app'],
-                (string)$row['object'],
+            $timeText = $this->formatTime((string)$row['time']);
+            $body[] = $this->formatRow([(string)$row['app'], (string)$row['object']], [8, 100]);
+            $body[] = '    ' . $this->formatRow([
                 (string)$row['initiator'],
                 $typeText,
                 $permText,
-                (string)$row['time'],
-            ]);
+                $timeText,
+            ], [12, 16, 12, 20]);
         }
 
         $fontSize = 9;
         $lineHeight = 11;
-        $contentStream = "BT\n/F1 {$fontSize} Tf\n72 800 Td\n";
-        foreach ($lines as $line) {
-            $contentStream .= '(' . $this->escapePdfText($line) . ") Tj\n0 -{$lineHeight} Td\n";
+        $width = 842;
+        $height = 595;
+        $leftMargin = 36;
+        $topMargin = 40;
+        $bottomMargin = 40;
+
+        $linesPerPage = intdiv($height - $topMargin - $bottomMargin, $lineHeight);
+        $usableLines = $linesPerPage - count($header);
+        $pages = [];
+        for ($i = 0; $i < count($body); $i += $usableLines) {
+            $pages[] = array_merge($header, array_slice($body, $i, $usableLines));
         }
-        $contentStream .= "ET";
-        $length = strlen($contentStream);
+        if ($pages === []) {
+            $pages[] = $header;
+        }
 
         $objects = [];
-        $objects[] = "<< /Type /Catalog /Pages 2 0 R >>";
-        $objects[] = "<< /Type /Pages /Kids [3 0 R] /Count 1 >>";
-        $objects[] = "<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>";
-        $objects[] = "<< /Length {$length} >>\nstream\n{$contentStream}\nendstream";
-        $objects[] = "<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>";
+        $objects[1] = '<< /Type /Catalog /Pages 2 0 R >>';
+        $pageNums = [];
 
+        $fontObjNum = 3;
+        $objects[$fontObjNum] = '<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>';
+        $nextObj = $fontObjNum + 1;
+
+        foreach ($pages as $pageLines) {
+            $contentStream = "BT\n/F1 {$fontSize} Tf\n{$leftMargin} " . ($height - $topMargin) . " Td\n";
+            foreach ($pageLines as $line) {
+                $contentStream .= '(' . $this->escapePdfText($line) . ") Tj\n0 -{$lineHeight} Td\n";
+            }
+            $contentStream .= "ET";
+            $length = strlen($contentStream);
+
+            $contentNum = $nextObj++;
+            $objects[$contentNum] = "<< /Length {$length} >>\nstream\n{$contentStream}\nendstream";
+
+            $pageNum = $nextObj++;
+            $objects[$pageNum] = "<< /Type /Page /Parent 2 0 R /MediaBox [0 0 {$width} {$height}] /Contents {$contentNum} 0 R /Resources << /Font << /F1 {$fontObjNum} 0 R >> >> >>";
+            $pageNums[] = $pageNum;
+        }
+
+        $objects[2] = '<< /Type /Pages /Kids [' . implode(' ', array_map(fn($n) => "$n 0 R", $pageNums)) . '] /Count ' . count($pageNums) . ' >>';
+
+        ksort($objects);
         $pdf = "%PDF-1.4\n";
         $offsets = [0];
-        foreach ($objects as $i => $obj) {
-            $offsets[$i + 1] = strlen($pdf);
-            $pdf .= ($i + 1) . " 0 obj\n{$obj}\nendobj\n";
+        for ($i = 1; $i <= count($objects); $i++) {
+            $offsets[$i] = strlen($pdf);
+            $pdf .= $i . " 0 obj\n" . $objects[$i] . "\nendobj\n";
         }
         $xrefPos = strlen($pdf);
         $pdf .= "xref\n0 " . (count($objects) + 1) . "\n";
@@ -165,12 +197,20 @@ class ReportService {
         return str_replace(['\\', '(', ')'], ['\\\\', '\\(', '\\)'], $text);
     }
 
-    private function formatRow(array $fields): string {
-        $widths = [8, 30, 12, 16, 12, 20];
+    private function formatRow(array $fields, array $widths): string {
         $parts = [];
         foreach ($fields as $i => $value) {
             $parts[] = str_pad(substr($value, 0, $widths[$i]), $widths[$i]);
         }
         return implode(' ', $parts);
+    }
+
+    private function formatTime(string $time): string {
+        try {
+            $dt = new \DateTime($time);
+        } catch (\Exception $e) {
+            $dt = new \DateTime();
+        }
+        return $dt->format('d.m.Y, H:i:s');
     }
 }
