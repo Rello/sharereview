@@ -229,17 +229,7 @@ class ShareService {
 			}
 			$path = '';
 
-			if (!$this->userHelper->isValidOwner($share['uid_owner'])) {
-				/*                              $userFolder = $this->rootFolder->getUserFolder($share->getShareOwner());
-				                                $nodes = $userFolder->getById($share->getNodeId());
-				                                $node = array_shift($nodes);
-
-				                                if ($node !== null && $userFolder !== null) {
-				                                        $path = $userFolder->getRelativePath($node->getPath());
-				                                } else {
-				                                        $path = 'invalid share (*) ' . $share->getTarget();
-				                                }
-				                        } else {*/
+			if (!$this->userHelper->isValidOwner($share['uid_initiator'])) {
 				$path = 'invalid share (*) ';
 			}
 			$path = $path . $share['file_target'];

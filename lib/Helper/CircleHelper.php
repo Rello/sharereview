@@ -11,27 +11,29 @@ namespace OCA\ShareReview\Helper;
 use Psr\Log\LoggerInterface;
 
 class CircleHelper {
-        private LoggerInterface $logger;
+	private LoggerInterface $logger;
 
-        public function __construct(LoggerInterface $logger) {
-                $this->logger = $logger;
-        }
+	public function __construct(LoggerInterface $logger) {
+		$this->logger = $logger;
+	}
 
-        public function getCircleDisplayName(string $circleId): string {
-                if (!class_exists('OCA\\Circles\\Service\\CirclesService')) {
-                        return $circleId . ' (*)';
-                }
+	public function getCircleDisplayName(string $circleId): string {
+		if (!class_exists('OCA\\Circles\\CirclesManager')) {
+			$this->logger->error('CirclesManager is not installed');
+			return $circleId . ' (*)';
+		}
 
-                try {
-                        $circlesService = \OC::$server->query('OCA\\Circles\\Service\\CirclesService');
-                        $circle = $circlesService->getCircle($circleId);
-                        if ($circle && method_exists($circle, 'getName')) {
-                                return $circle->getName() ?: $circleId;
-                        }
-                } catch (\Throwable $e) {
-                        $this->logger->info('no circle given, will return circleId');
-                }
+		try {
+			$circlesManager = \OC::$server->query('OCA\\Circles\\CirclesManager');
+			$circle = $circlesManager->startSuperSession();
+			$circle = $circlesManager->getCircle($circleId);
+			if ($circle && method_exists($circle, 'getName')) {
+				return $circle->getName() ?: $circleId;
+			}
+		} catch (\Throwable $e) {
+			$this->logger->info('no circle given, will return circleId');
+		}
 
-                return $circleId . ' (*)';
-        }
+		return $circleId . ' (*)';
+	}
 }
