@@ -204,7 +204,7 @@ OCA.ShareReview.Navigation = {
             if (path) {
                 OCA.ShareReview.Backend.export(path);
             }
-        }, false, 'httpd', true, 'httpd/unix-directory', 1);
+        }, false, 'httpd/unix-directory', true, 1);
     },
 
     handleSettingsNavigation: function () {
@@ -392,7 +392,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (path) {
                     defaultFolderInput.value = path;
                 }
-            }, false, 'httpd', true, 'httpd/unix-directory', 1);
+            }, false, 'httpd/unix-directory', true, 1);
         };
         defaultFolderInput.addEventListener('click', openPicker);
         defaultFolderInput.addEventListener('focus', openPicker);

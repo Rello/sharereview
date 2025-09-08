@@ -65,8 +65,14 @@ class ReportService {
         $header[] = 'Share Review Report';
         $header[] = 'Audit date: ' . (new \DateTime())->format('d.m.Y, H:i:s');
         $header[] = '';
-        $header[] = $this->formatRow(['App', 'Object'], [8, 100]);
-        $header[] = '    ' . $this->formatRow(['Initiator', 'Type', 'Permissions', 'Time'], [12, 16, 12, 20]);
+        $header[] = $this->formatRow([
+            'App',
+            'Object',
+            'Initiator',
+            'Type',
+            'Permissions',
+            'Time'
+        ], [8, 60, 12, 16, 12, 20]);
 
         $body = [];
         foreach ($rows as $row) {
@@ -74,13 +80,14 @@ class ReportService {
             $typeText = $this->formatType((int)$shareType, $recipient);
             $permText = $this->formatPermission((int)$row['permissions']);
             $timeText = $this->formatTime((string)$row['time']);
-            $body[] = $this->formatRow([(string)$row['app'], (string)$row['object']], [8, 100]);
-            $body[] = '    ' . $this->formatRow([
+            $body[] = $this->formatRow([
+                (string)$row['app'],
+                (string)$row['object'],
                 (string)$row['initiator'],
                 $typeText,
                 $permText,
                 $timeText,
-            ], [12, 16, 12, 20]);
+            ], [8, 60, 12, 16, 12, 20]);
         }
 
         $fontSize = 9;
