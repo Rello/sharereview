@@ -93,6 +93,7 @@ OCA.ShareReview.Navigation = {
             localTime = date.toLocaleString();
         }
 
+        let container = document.getElementById('shareReviewNavigation');
         let navigations = [
             {
                 id: 'navAllShares',
@@ -121,26 +122,30 @@ OCA.ShareReview.Navigation = {
                 event: OCA.ShareReview.Navigation.handleConfirmResetNavigation,
                 style: 'icon-sharereview-reset',
                 pinned: false
-            },
-            {
-                id: 'navExport',
-                name: t('sharereview', 'Export report'),
-                event: OCA.ShareReview.Navigation.handleExportNavigation,
-                style: 'icon-sharereview-download',
-                pinned: false
-            },
-            {
+            }
+        ];
+        for (let navigation of navigations) {
+            container.appendChild(OCA.ShareReview.Navigation.buildNavigationRow(navigation));
+        }
+        if (localTime !== '') {
+            container.appendChild(OCA.ShareReview.Navigation.buildNavigationRow({
                 id: 'navTime',
                 name: localTime,
                 event: false,
                 style: 'icon-sharereview-time',
                 pinned: false
-            }
-
-        ];
-        for (let navigation of navigations) {
-            document.getElementById('shareReviewNavigation').appendChild(OCA.ShareReview.Navigation.buildNavigationRow(navigation));
+            }));
         }
+        let spacer = document.createElement('li');
+        spacer.id = 'navSpacer';
+        container.appendChild(spacer);
+        container.appendChild(OCA.ShareReview.Navigation.buildNavigationRow({
+            id: 'navExport',
+            name: t('sharereview', 'Export report'),
+            event: OCA.ShareReview.Navigation.handleExportNavigation,
+            style: 'icon-sharereview-download',
+            pinned: false
+        }));
 
         let liTalk = document.createElement('li');
         liTalk.classList.add('pinned', 'first-pinned');
@@ -155,7 +160,7 @@ OCA.ShareReview.Navigation = {
         label.innerText = t('sharereview', 'Show talk shares');
         liTalk.appendChild(checkbox);
         liTalk.appendChild(label);
-        document.getElementById('shareReviewNavigation').appendChild(liTalk);
+        container.appendChild(liTalk);
     },
 
     buildNavigationRow: function (data) {
@@ -315,7 +320,21 @@ OCA.ShareReview.Backend = {
                 OCA.ShareReview.Notification.notification('success', t('sharereview', 'Timestamp saved'));
                 let timestampInMilliseconds = data * 1000;
                 let date = new Date(timestampInMilliseconds);
-                document.getElementById('navTime').firstChild.innerText = date.toLocaleString();
+                let navTime = document.getElementById('navTime');
+                if (!navTime) {
+                    let container = document.getElementById('shareReviewNavigation');
+                    let spacer = document.getElementById('navSpacer');
+                    navTime = OCA.ShareReview.Navigation.buildNavigationRow({
+                        id: 'navTime',
+                        name: date.toLocaleString(),
+                        event: false,
+                        style: 'icon-sharereview-time',
+                        pinned: false
+                    });
+                    container.insertBefore(navTime, spacer);
+                } else {
+                    navTime.firstChild.innerText = date.toLocaleString();
+                }
             });
     },
 
@@ -328,7 +347,8 @@ OCA.ShareReview.Backend = {
             .then(response => response.json())
             .then(data => {
                 OCA.ShareReview.Notification.notification('success', t('sharereview', 'Timestamp deleted'));
-                document.getElementById('navTime').firstChild.innerText = '';
+                let navTime = document.getElementById('navTime');
+                if (navTime) navTime.remove();
             });
     },
 
