@@ -8,6 +8,7 @@ OC.L10N.register(
     "New Shares" : "Nouveaux partages",
     "Confirm reviewed" : "Confirmer l'examination",
     "Reset time" : "Réinitialiser",
+    "Settings" : "Paramètres",
     "Show talk shares" : "Afficher les partages de discussion",
     "Share deleted" : "Partage supprimé",
     "Table not reloaded" : "Le tableau n'a pas été rechargé",
@@ -28,8 +29,11 @@ OC.L10N.register(
     "Delete selected" : "Supprimer la sélection",
     "Pause reload after deletion" : "Pause du rechargement après la suppression",
     "No share found" : "Aucun partage trouvé",
-    "Shares are being retrieved, please wait..." : "Récupération des partages en cours , veuillez patienter...",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "L'application doit être limitée à au moins un groupe d'utilisateurs spécifique dans le magasin d'applications. Cela permet d'éviter l'exposition accidentelle du contenu partagé à tous les utilisateurs.",
-    "Click here" : "Cliquez ici"
+    "Click here" : "Cliquez ici",
+    "Schedule" : "Calendrier",
+    "None" : "Aucun",
+    "Daily" : "Quotidiennement",
+    "Weekly" : "Hebdomadaire"
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

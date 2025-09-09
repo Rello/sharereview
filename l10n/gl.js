@@ -8,6 +8,7 @@ OC.L10N.register(
     "New Shares" : "Novas comparticións",
     "Confirm reviewed" : "Confirmar a revisión",
     "Reset time" : "Restabelecer a hora",
+    "Settings" : "Axustes",
     "Share deleted" : "A compartición foi eliminada",
     "Table not reloaded" : "Non volveu cargar a táboa",
     "Request could not be processed" : "Non foi posíbel procesar a solicitude",
@@ -27,6 +28,10 @@ OC.L10N.register(
     "Pause reload after deletion" : "Pausar a recarga após a eliminación",
     "No share found" : "Non se atopou ningunha compartición",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "A aplicación debe estar restrinxida a polo menos un grupo de usuarios específico na tenda de aplicacións. Isto evita a exposición accidental do contido compartido a todos os usuarios.",
-    "Click here" : "Prema aquí"
+    "Click here" : "Prema aquí",
+    "Schedule" : "Programa",
+    "None" : "Ningún",
+    "Daily" : "A diario",
+    "Weekly" : "Cada semana"
 },
 "nplurals=2; plural=(n != 1);");

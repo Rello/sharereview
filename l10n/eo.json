@@ -3,6 +3,8 @@
     "OK" : "Akcepti",
     "Cancel" : "Cancel",
     "Search" : "Serĉi",
-    "Select all" : "Elekti ĉion"
+    "Select all" : "Elekti ĉion",
+    "None" : "Nenio",
+    "Daily" : "Ĉiutage"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

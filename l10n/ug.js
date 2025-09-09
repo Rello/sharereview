@@ -8,11 +8,14 @@ OC.L10N.register(
     "New Shares" : "يېڭى پايلار",
     "Confirm reviewed" : "تەكشۈرۈلگەنلىكىنى جەزملەشتۈرۈڭ",
     "Reset time" : "ۋاقىتنى ئەسلىگە كەلتۈرۈش",
+    "Settings" : "تەڭشەكلەر",
+    "Select folder" : "ھۆججەت قىسقۇچنى تاللاڭ",
     "Share deleted" : "ھەمبەھىر ئۆچۈرۈلدى",
     "Table not reloaded" : "جەدۋەل قايتا يۈكلەنمىدى",
     "Request could not be processed" : "تەلەپ بىر تەرەپ قىلىنمىدى",
     "Timestamp saved" : "ۋاقىت جەدۋىلى ساقلاندى",
     "Timestamp deleted" : "ۋاقىت بەلگىسى ئۆچۈرۈلدى",
+    "Settings saved" : "تەڭشەكلەر ساقلاندى",
     "OK" : "ماقۇل",
     "Cancel" : "بىكار قىلىش",
     "Search" : "Search",
@@ -26,6 +29,11 @@ OC.L10N.register(
     "Pause reload after deletion" : "ئۆچۈرۈلگەندىن كېيىن قايتا يۈكلەشنى توختىتىڭ",
     "No share found" : "ھېچقانداق پاي تېپىلمىدى",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "بۇ ئەپ چوقۇم ئەپ دۇكىنىدىكى كەم دېگەندە بىر ئالاھىدە ئىشلەتكۈچى توپى بىلەنلا چەكلىنىشى كېرەك. بۇ بارلىق ئىشلەتكۈچىلەرگە ئورتاق مەزمۇننىڭ تاسادىپىي ئاشكارىلىنىپ كېتىشىنىڭ ئالدىنى ئالىدۇ.",
-    "Click here" : "بۇ يەرنى چېكىڭ"
+    "Click here" : "بۇ يەرنى چېكىڭ",
+    "None" : "يوق",
+    "Daily" : "كۈندىلىك",
+    "Weekly" : "ھەپتىلىك",
+    "Monthly" : "ئايلىق",
+    "Save" : "ساقلاش"
 },
 "nplurals=2; plural=(n != 1);");

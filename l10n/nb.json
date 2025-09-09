@@ -6,10 +6,13 @@
     "New Shares" : "Nye delte ressurser",
     "Confirm reviewed" : "Bekreft gjennomgått",
     "Reset time" : "Tilbakestill tid",
+    "Settings" : "Innstillinger",
+    "Select folder" : "Velg mappe",
     "Share deleted" : "Delt ressurs slettet",
     "Request could not be processed" : "Forespørselen kunne ikke behandles",
     "Timestamp saved" : "Tidsstempel lagret",
     "Timestamp deleted" : "Tidsstempel slettet",
+    "Settings saved" : "Innstillinger lagret",
     "OK" : "Ok",
     "Cancel" : "Avbryt",
     "Search" : "Søk",
@@ -21,6 +24,12 @@
     "Review and audit all shares" : "Gjennomgå og revider alle delte ressurser",
     "No share found" : "Ingen delt ressurs funnet",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Appen må være begrenset til minst én bestemt brukergruppe i appbutikken. Dette forhindrer utilsiktet eksponering av det delte innholdet for alle brukere.",
-    "Click here" : "Klikk her"
+    "Click here" : "Klikk her",
+    "Schedule" : "Timeplan",
+    "None" : "Ingen",
+    "Daily" : "Daglig",
+    "Weekly" : "Ukentlig",
+    "Monthly" : "Månedlig",
+    "Save" : "Lagre"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

@@ -6,12 +6,15 @@
     "New Shares" : "Nya delningar",
     "Confirm reviewed" : "Bekräfta granskad",
     "Reset time" : "Återställ tid",
+    "Settings" : "Inställningar",
     "Show talk shares" : "Visa Talk-delningar",
+    "Select folder" : "Välj mapp",
     "Share deleted" : "Delningen raderad",
     "Table not reloaded" : "Tabellen har inte laddats om",
     "Request could not be processed" : "Begäran kunde inte bearbetas",
     "Timestamp saved" : "Tidsstämpel sparad",
     "Timestamp deleted" : "Tidsstämpel raderad",
+    "Settings saved" : "Inställningar sparade",
     "OK" : "OK",
     "Cancel" : "Avbryt",
     "Search" : "Sök",
@@ -25,8 +28,13 @@
     "Delete selected" : "Ta bort markerade",
     "Pause reload after deletion" : "Pausa omladdning efter radering",
     "No share found" : "Ingen delning hittades",
-    "Shares are being retrieved, please wait..." : "Delningar hämtas, vänligen vänta…",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Appen måste vara begränsad till minst en specifik användargrupp i appbutiken. Detta förhindrar oavsiktlig exponering av det delade innehållet för alla användare.",
-    "Click here" : "Klicka här"
+    "Click here" : "Klicka här",
+    "Schedule" : "Schemalägg",
+    "None" : "Ingen",
+    "Daily" : "Varje dag",
+    "Weekly" : "Varje vecka",
+    "Monthly" : "Varje månad",
+    "Save" : "Spara"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

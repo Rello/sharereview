@@ -8,6 +8,7 @@ OC.L10N.register(
     "New Shares" : "Scaireanna Nua",
     "Confirm reviewed" : "Deimhnigh athbhreithniú",
     "Reset time" : "Athshocraigh am",
+    "Settings" : "Socruithe",
     "Show talk shares" : "Taispeáin scaireanna cainte",
     "Share deleted" : "Scriosadh an sciar",
     "Table not reloaded" : "Tábla gan athlódáil",
@@ -28,8 +29,11 @@ OC.L10N.register(
     "Delete selected" : "Scrios na roghanna",
     "Pause reload after deletion" : "Cuir athlódáil ar sos tar éis scriosta",
     "No share found" : "Níor aimsíodh sciar ar bith",
-    "Shares are being retrieved, please wait..." : "Tá na scaireanna á n-aisghabháil, fan le do thoil...",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Ní mór an aip a theorannú do ghrúpa úsáideoirí ar leith amháin ar a laghad sa siopa app. Cuireann sé seo cosc ​​ar an ábhar comhroinnte a nochtadh de thaisme do gach úsáideoir.",
-    "Click here" : "Cliceáil anseo"
+    "Click here" : "Cliceáil anseo",
+    "Schedule" : "Sceideal",
+    "None" : "aon cheann",
+    "Daily" : "Laethúil",
+    "Weekly" : "Seachtainiúil"
 },
 "nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : 4);");

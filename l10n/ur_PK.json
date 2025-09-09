@@ -1,7 +1,9 @@
 { "translations": {
     "Delete" : "حذف کریں",
+    "Settings" : "سیٹینگز",
     "OK" : "OK",
     "Cancel" : "Cancel",
-    "Search" : "Search"
+    "Search" : "Search",
+    "Save" : "حفظ"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

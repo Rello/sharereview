@@ -6,11 +6,14 @@
     "New Shares" : "Nowe udsotępnienia",
     "Confirm reviewed" : "Potwierdź, że sprawdzono",
     "Reset time" : "Zresetuj czas",
+    "Settings" : "Ustawienia",
+    "Select folder" : "Wybierz katalog",
     "Share deleted" : "Udostępnienie usunięto",
     "Table not reloaded" : "Tabela nie została ponownie załadowana",
     "Request could not be processed" : "Nie można przetworzyć żądania",
     "Timestamp saved" : "Znak czasu zapisany",
     "Timestamp deleted" : "Znak czasu został usunięty",
+    "Settings saved" : "Ustawienia zapisane",
     "OK" : "OK",
     "Cancel" : "Anuluj",
     "Search" : "Szukaj",
@@ -25,6 +28,12 @@
     "Pause reload after deletion" : "Wstrzymaj ponowne ładowanie po usunięciu",
     "No share found" : "Nie znaleziono udostępnienia",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Aplikacja musi być ograniczona do co najmniej jednej określonej grupy użytkowników w sklepie z aplikacjami. Zapobiega to przypadkowemu udostępnieniu udostępnionej zawartości wszystkim użytkownikom.",
-    "Click here" : "Kliknij tutaj"
+    "Click here" : "Kliknij tutaj",
+    "Schedule" : "Harmonogram",
+    "None" : "Brak",
+    "Daily" : "Codziennie",
+    "Weekly" : "Co tydzień",
+    "Monthly" : "Co miesiąc",
+    "Save" : "Zapisz"
 },"pluralForm" :"nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);"
 }

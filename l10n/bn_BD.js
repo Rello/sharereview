@@ -4,6 +4,7 @@ OC.L10N.register(
     "Delete" : "মুছে",
     "OK" : "OK",
     "Cancel" : "বাতিল করুন",
-    "Search" : "Search"
+    "Search" : "Search",
+    "Daily" : "দৈনিক"
 },
 "nplurals=2; plural=(n != 1);");

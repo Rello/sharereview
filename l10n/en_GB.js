@@ -28,8 +28,9 @@ OC.L10N.register(
     "Delete selected" : "Delete selected",
     "Pause reload after deletion" : "Pause reload after deletion",
     "No share found" : "No share found",
-    "Shares are being retrieved, please wait..." : "Shares are being retrieved, please wait...",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users.",
-    "Click here" : "Click here"
+    "Click here" : "Click here",
+    "None" : "None",
+    "Daily" : "Daily"
 },
 "nplurals=2; plural=(n != 1);");

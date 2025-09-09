@@ -1,11 +1,18 @@
 { "translations": {
     "Delete" : "Xóa",
     "Are you sure?" : "Bạn chắc chắn?",
+    "Settings" : "Thiết lập",
     "Request could not be processed" : "Yêu cầu không thể xử lý",
+    "Settings saved" : "Cấu hình đã được lưu",
     "OK" : "Đồng ý",
     "Cancel" : "Hủy",
     "Search" : "Tìm kiếm",
     "Showing 0 to 0 of 0 entries" : "Đang xem 0 đến 0 của 0 mục",
-    "Select all" : "Chọn tất cả"
+    "Select all" : "Chọn tất cả",
+    "None" : "Không có",
+    "Daily" : "Hằng ngày",
+    "Weekly" : "Hằng tuần",
+    "Monthly" : "Hằng tháng",
+    "Save" : "Lưu"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

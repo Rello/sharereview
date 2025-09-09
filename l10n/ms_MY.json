@@ -1,8 +1,12 @@
 { "translations": {
     "Delete" : "Padam",
     "Are you sure?" : "Anda pasti?",
+    "Settings" : "Tetapan",
     "OK" : "OK",
     "Cancel" : "Cancel",
-    "Search" : "Search"
+    "Search" : "Search",
+    "Daily" : "Setiap hari",
+    "Weekly" : "Setiap minggu",
+    "Save" : "Simpan"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

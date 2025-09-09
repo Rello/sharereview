@@ -3,6 +3,8 @@ OC.L10N.register(
     {
     "Are you sure?" : "क्या आपको यकीन है?",
     "OK" : "OK",
-    "Cancel" : "Cancel"
+    "Cancel" : "Cancel",
+    "Daily" : "दैनिक",
+    "Weekly" : "साप्ताहिक"
 },
 "nplurals=2; plural=(n != 1);");

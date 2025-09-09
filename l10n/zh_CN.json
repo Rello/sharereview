@@ -6,10 +6,13 @@
     "New Shares" : "新分享",
     "Confirm reviewed" : "确认评论",
     "Reset time" : "重置时间",
+    "Settings" : "设置",
+    "Select folder" : "选择文件夹",
     "Share deleted" : "分享已删除",
     "Request could not be processed" : "无法处理请求",
     "Timestamp saved" : "时间戳已保存",
     "Timestamp deleted" : "时间戳已删除",
+    "Settings saved" : "已保存设置",
     "OK" : "还可以",
     "Cancel" : "取消",
     "Search" : "搜索",
@@ -20,6 +23,11 @@
     "Share Review" : "分享评论",
     "Review and audit all shares" : "检查并核对全部分享",
     "No share found" : "未找到分享",
-    "Click here" : "点击此处"
+    "Click here" : "点击此处",
+    "None" : "无",
+    "Daily" : "每天",
+    "Weekly" : "每周",
+    "Monthly" : "每月",
+    "Save" : "保存"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

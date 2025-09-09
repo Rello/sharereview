@@ -8,11 +8,13 @@ OC.L10N.register(
     "New Shares" : "Yangi ulashmalar",
     "Confirm reviewed" : "Tekshiruvni tasdiqlang",
     "Reset time" : "Vaqtni tiklash",
+    "Settings" : "Sozlamalar",
     "Share deleted" : "Ulashish oʻchirildi",
     "Table not reloaded" : "Jadval qayta yuklanmadi",
     "Request could not be processed" : "So‘rovni ko‘rib bo‘lmadi",
     "Timestamp saved" : "Vaqt tamg‘asi saqlandi",
     "Timestamp deleted" : "Vaqt tamg‘asi o‘chirildi",
+    "Settings saved" : "Settings saved",
     "OK" : "Yaxshi",
     "Cancel" : "Bekor qilish",
     "Search" : "Qidirish",
@@ -27,6 +29,11 @@ OC.L10N.register(
     "Pause reload after deletion" : "O'chirishdan keyin qayta yuklashni to'xtatib turing",
     "No share found" : "Hech qanday ulashish topilmadi",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Ilova ilovalar do'konidagi kamida bitta foydalanuvchi guruhi bilan cheklangan bo'lishi kerak. Bu barcha foydalanuvchilarga umumiy tarkibning tasodifiy ta'sirini oldini oladi.",
-    "Click here" : "Bu yerga bosing"
+    "Click here" : "Bu yerga bosing",
+    "None" : "Yo'q",
+    "Daily" : "Kunlik",
+    "Weekly" : "Haftalik",
+    "Monthly" : "Oylik",
+    "Save" : "Saqlash"
 },
 "nplurals=1; plural=0;");

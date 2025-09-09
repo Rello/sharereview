@@ -3,7 +3,9 @@ OC.L10N.register(
     {
     "Delete" : "Izdzēst",
     "Are you sure?" : "Vai tiešām?",
+    "Settings" : "Iestatījumi",
     "Request could not be processed" : "Pieprasījums nevarēja tikt apstrādāts",
+    "Settings saved" : "Iestatījumi saglabāti",
     "OK" : "Labi",
     "Cancel" : "Atcelt",
     "Search" : "Meklēt",
@@ -11,6 +13,11 @@ OC.L10N.register(
     "Showing _START_ to _END_ of _TOTAL_ entries" : "Rāda _START_ līdz _END_ no _TOTAL_ ierakstiem",
     "Showing 0 to 0 of 0 entries" : "Rāda 0 līdz 0 no 0 ierakstiem",
     "Select all" : "Atzīmēt visu",
-    "Delete selected" : "Izdzēst atlasītās"
+    "Delete selected" : "Izdzēst atlasītās",
+    "None" : "Nekas",
+    "Daily" : "Katru dienu",
+    "Weekly" : "Katru nedēļu",
+    "Monthly" : "Ikmēneša",
+    "Save" : "Saglabāt"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);");

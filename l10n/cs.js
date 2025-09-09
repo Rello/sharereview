@@ -27,8 +27,8 @@ OC.L10N.register(
     "Delete selected" : "Smazat vybrané",
     "Pause reload after deletion" : "Po smazání pozastavit znovunačtení",
     "No share found" : "Nenalezeno žádné sdílení",
-    "Shares are being retrieved, please wait..." : "Sdílení jsou získávána – čekejte…",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Je třeba, aby aplikace byla omezena na alespoň jednu konkrétní skupinu uživatelů v katalogu aplikací. To zabrání neúmyslnému exponování sdíleného obsahu všem uživatelům.",
-    "Click here" : "Klikněte sem"
+    "Click here" : "Klikněte sem",
+    "Daily" : "Každý den"
 },
 "nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;");

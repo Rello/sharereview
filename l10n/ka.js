@@ -3,9 +3,15 @@ OC.L10N.register(
     {
     "Delete" : "Delete",
     "Are you sure?" : "დარწმუნებული ხართ?",
+    "Settings" : "ოფციები",
+    "Settings saved" : "Settings saved",
     "OK" : "OK",
     "Cancel" : "Cancel",
     "Search" : "Search",
-    "Select all" : "Select all"
+    "Select all" : "Select all",
+    "None" : "None",
+    "Daily" : "დღიურად",
+    "Weekly" : "კვირეულად",
+    "Save" : "დამახსოვრება"
 },
 "nplurals=2; plural=(n!=1);");

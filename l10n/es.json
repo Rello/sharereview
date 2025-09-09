@@ -26,8 +26,9 @@
     "Delete selected" : "Eliminar seleccionado",
     "Pause reload after deletion" : "Pausar la recarga luego de la eliminación",
     "No share found" : "No se encontró ningún recurso compartido",
-    "Shares are being retrieved, please wait..." : "Se están recuperando los recursos compartidos, por favor, espere...",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "La app debe estar restringida al menos a un grupo de usuarios específico en la tienda de apps. Esto evita exponer accidentalmente el contenido compartido a todos los usuarios.",
-    "Click here" : "Haga clic aquí"
+    "Click here" : "Haga clic aquí",
+    "None" : "Ninguno",
+    "Daily" : "Cada día"
 },"pluralForm" :"nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
 }

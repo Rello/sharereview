@@ -5,6 +5,8 @@ OC.L10N.register(
     "OK" : "Akcepti",
     "Cancel" : "Cancel",
     "Search" : "Serĉi",
-    "Select all" : "Elekti ĉion"
+    "Select all" : "Elekti ĉion",
+    "None" : "Nenio",
+    "Daily" : "Ĉiutage"
 },
 "nplurals=2; plural=(n != 1);");

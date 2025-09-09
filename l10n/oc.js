@@ -3,8 +3,15 @@ OC.L10N.register(
     {
     "Delete" : "Suprimir",
     "Are you sure?" : "Ne sètz segur ?",
+    "Settings" : "Paramètres",
+    "Settings saved" : "Paramètres salvats",
     "OK" : "D’acòrdi",
     "Cancel" : "Anullar",
-    "Search" : "Recercar"
+    "Search" : "Recercar",
+    "None" : "Cap",
+    "Daily" : "Quotidian",
+    "Weekly" : "Setmanièr",
+    "Monthly" : "Cada mes",
+    "Save" : "Enregistrar"
 },
 "nplurals=2; plural=(n > 1);");

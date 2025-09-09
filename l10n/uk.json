@@ -6,12 +6,15 @@
     "New Shares" : "Нові спільні ресурси",
     "Confirm reviewed" : "Підтвердити перегляд",
     "Reset time" : "Скинути час",
+    "Settings" : "Налаштування",
     "Show talk shares" : "Показати обговорення",
+    "Select folder" : "Виберіть каталог",
     "Share deleted" : "Спільний ресурс вилучено",
     "Table not reloaded" : "Таблицю не завантажено",
     "Request could not be processed" : "Не вдалося обробити запит",
     "Timestamp saved" : "Часову мітку записано",
     "Timestamp deleted" : "Часову мітку вилучено",
+    "Settings saved" : "Налаштування збережено",
     "OK" : "Гаразд",
     "Cancel" : "Скасувати",
     "Search" : "Пошук",
@@ -26,8 +29,13 @@
     "Delete selected" : "Видалити вибране",
     "Pause reload after deletion" : "Пауза з оновленням після вилучення",
     "No share found" : "Відсутні спільні ресурси",
-    "Shares are being retrieved, please wait..." : "Відбувається завантаження акцій, будь ласка, зачекайте...",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "З метою уникнення надання доступу до спільних ресурсів всім користувачам доступ до застосунку потрібно обмежити щонайменше для однєї визначеної групи користувачів в параметрах встановлення з крамниці застосунків.",
-    "Click here" : "Клацніть тут"
+    "Click here" : "Клацніть тут",
+    "Schedule" : "Розклад",
+    "None" : "Нічого",
+    "Daily" : "Щоденно",
+    "Weekly" : "Щотижня",
+    "Monthly" : "Щомісяця",
+    "Save" : "Зберегти"
 },"pluralForm" :"nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);"
 }

@@ -8,10 +8,12 @@ OC.L10N.register(
     "New Shares" : "新しい共有",
     "Confirm reviewed" : "レビューを確認",
     "Reset time" : "リセットタイム",
+    "Settings" : "設定",
     "Share deleted" : "共有が削除されました",
     "Request could not be processed" : "リクエストを処理できませんでした",
     "Timestamp saved" : "タイムスタンプを保存しました",
     "Timestamp deleted" : "タイムスタンプを削除しました",
+    "Settings saved" : "設定が保存されました",
     "OK" : "OK",
     "Cancel" : "キャンセル",
     "Search" : "検索",
@@ -22,6 +24,10 @@ OC.L10N.register(
     "Share Review" : "共有レビュー",
     "No share found" : "共有が見つかりません",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "このアプリは、アプリストアで少なくとも1つ以上のユーザーグループに制限される必要があります。これにより、共有コンテンツが誤ってすべてのユーザーに公開されるのを防ぐことができます。",
-    "Click here" : "ここをクリック"
+    "Click here" : "ここをクリック",
+    "None" : "なし",
+    "Daily" : "毎日",
+    "Weekly" : "毎週",
+    "Save" : "保存する"
 },
 "nplurals=1; plural=0;");

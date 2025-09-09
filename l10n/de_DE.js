@@ -28,8 +28,9 @@ OC.L10N.register(
     "Delete selected" : "Ausgewählte löschen",
     "Pause reload after deletion" : "Neuladen nach dem Löschen pausieren",
     "No share found" : "Keine Freigabe gefunden",
-    "Shares are being retrieved, please wait..." : "Freigaben werden abgerufen, bitte warten…",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Die App muss im App-Store auf mindestens eine bestimmte Benutzergruppe beschränkt sein. Dadurch wird verhindert, dass die freigegebenen Inhalte versehentlich allen Benutzern zugänglich gemacht werden.",
-    "Click here" : "Klicken Sie hier"
+    "Click here" : "Klicken Sie hier",
+    "None" : "Keine",
+    "Daily" : "Täglich"
 },
 "nplurals=2; plural=(n != 1);");
