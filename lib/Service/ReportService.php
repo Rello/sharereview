@@ -29,19 +29,25 @@ class ReportService {
     }
 
     /**
-     * Generate PDF report and store in the given folder for the given user
+     * Generate report and store in the given folder for the given user
      */
-    public function generate(string $folder, ?string $uid = null): string {
+    public function generate(string $folder, string $type = 'pdf', ?string $uid = null): string {
         if ($uid === null) {
             $uid = $this->userSession->getUser()->getUID();
         }
         $data = $this->shareService->read(false);
 
-        $content = $this->buildPdf($data);
+        if ($type === 'csv') {
+            $content = $this->buildCsv($data);
+            $extension = 'csv';
+        } else {
+            $content = $this->buildPdf($data);
+            $extension = 'pdf';
+        }
 
         $userFolder = $this->rootFolder->getUserFolder($uid);
         $target = $userFolder->get($folder);
-        $fileName = 'share-report-' . date('YmdHis') . '.pdf';
+        $fileName = 'share-report-' . date('YmdHis') . '.' . $extension;
         $file = $target->newFile($fileName);
         $file->putContent($content);
 
@@ -54,10 +60,39 @@ class ReportService {
     public function generateDefault(): void {
         $owner = $this->config->getAppValue('sharereview', 'reportOwner', '');
         $folder = $this->config->getAppValue('sharereview', 'reportFolder', '');
+        $type = $this->config->getAppValue('sharereview', 'reportType', 'pdf');
         if ($owner === '' || $folder === '') {
             return;
         }
-        $this->generate($folder, $owner);
+        $this->generate($folder, $type, $owner);
+    }
+
+    private function buildCsv(array $rows): string {
+        $lines = [];
+        $lines[] = implode(',', ['App', 'Object', 'Initiator', 'Type', 'Permissions', 'Time']);
+        foreach ($rows as $row) {
+            [$shareType, $recipient] = array_pad(explode(';', (string)$row['type'], 2), 2, '');
+            $typeText = $this->formatType((int)$shareType, $recipient);
+            $permText = $this->formatPermission((int)$row['permissions']);
+            $timeText = $this->formatTime((string)$row['time']);
+            $lines[] = implode(',', [
+                $this->escapeCsv((string)$row['app']),
+                $this->escapeCsv((string)$row['object']),
+                $this->escapeCsv((string)$row['initiator']),
+                $this->escapeCsv($typeText),
+                $this->escapeCsv($permText),
+                $this->escapeCsv($timeText),
+            ]);
+        }
+        return implode("\n", $lines);
+    }
+
+    private function escapeCsv(string $text): string {
+        $escaped = str_replace('"', '""', $text);
+        if (str_contains($text, ',') || str_contains($text, '"') || str_contains($text, "\n")) {
+            return '"' . $escaped . '"';
+        }
+        return $escaped;
     }
 
     private function buildPdf(array $rows): string {

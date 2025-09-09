@@ -40,19 +40,20 @@ class ReportController extends Controller {
     /**
      * @NoAdminRequired
      */
-    public function export(string $path): DataResponse {
-        $name = $this->reportService->generate($path);
+    public function export(string $path, string $type = 'pdf'): DataResponse {
+        $name = $this->reportService->generate($path, $type);
         return new DataResponse(['file' => $name], Http::STATUS_OK);
     }
 
     /**
      * @NoAdminRequired
      */
-    public function saveSettings(string $folder, string $schedule): DataResponse {
+    public function saveSettings(string $folder, string $schedule, string $type = 'pdf'): DataResponse {
         $user = $this->userSession->getUser();
         $this->config->setAppValue('sharereview', 'reportOwner', $user->getUID());
         $this->config->setAppValue('sharereview', 'reportFolder', $folder);
         $this->config->setAppValue('sharereview', 'schedule', $schedule);
+        $this->config->setAppValue('sharereview', 'reportType', $type);
 
         $this->jobList->remove(GenerateReportJob::class);
         if ($schedule !== 'none') {

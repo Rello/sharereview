@@ -54,6 +54,7 @@ class PageController extends Controller {
                 $this->initialState->provideInitialState('showTalk', $this->config->getUserValue($user->getUID(), 'sharereview', 'showTalk', 'false'));
                 $this->initialState->provideInitialState('reportFolder', $this->config->getAppValue('sharereview', 'reportFolder', ''));
                 $this->initialState->provideInitialState('schedule', $this->config->getAppValue('sharereview', 'schedule', 'none'));
+                $this->initialState->provideInitialState('reportType', $this->config->getAppValue('sharereview', 'reportType', 'pdf'));
                 $params = array();
                 return new TemplateResponse($this->appName, 'main', $params);
         }

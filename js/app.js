@@ -130,13 +130,6 @@ OCA.ShareReview.Navigation = {
                 pinned: false
             },
             {
-                id: 'navSettings',
-                name: t('sharereview', 'Settings'),
-                event: OCA.ShareReview.Navigation.handleSettingsNavigation,
-                style: 'icon-sharereview-settings',
-                pinned: false
-            },
-            {
                 id: 'navTime',
                 name: localTime,
                 event: false,
@@ -181,14 +174,14 @@ OCA.ShareReview.Navigation = {
         document.getElementById('navAllShares').classList.add('active');
         document.getElementById('navNewShares').classList.remove('active');
         OCA.ShareReview.Backend.getData();
-        OCA.ShareReview.Visualization.hideElement('settingsContainer');
+        OCA.ShareReview.Visualization.hideElement('exportContainer');
     },
 
     handleNewSharesNavigation: function () {
         document.getElementById('navNewShares').classList.add('active');
         document.getElementById('navAllShares').classList.remove('active');
         OCA.ShareReview.Backend.getData(true);
-        OCA.ShareReview.Visualization.hideElement('settingsContainer');
+        OCA.ShareReview.Visualization.hideElement('exportContainer');
     },
 
     handleConfirmNavigation: function () {
@@ -200,21 +193,22 @@ OCA.ShareReview.Navigation = {
     },
 
     handleExportNavigation: function () {
-        OC.dialogs.filepicker(t('sharereview', 'Select folder'), function (path) {
-            if (path) {
-                OCA.ShareReview.Backend.export(path);
-            }
-        }, false, 'httpd/unix-directory', true, 1);
-    },
-
-    handleSettingsNavigation: function () {
         OCA.ShareReview.Visualization.hideElement('tableContainer');
         OCA.ShareReview.Visualization.hideElement('noDataContainer');
         OCA.ShareReview.Visualization.hideElement('notSecuredContainer');
         OCA.ShareReview.Visualization.hideElement('loadingContainer');
-        OCA.ShareReview.Visualization.showElement('settingsContainer');
+        OCA.ShareReview.Visualization.showElement('exportContainer');
         document.getElementById('defaultFolder').value = OCA.ShareReview.Navigation.getInitialState('reportFolder') || '';
         document.getElementById('scheduleSelect').value = OCA.ShareReview.Navigation.getInitialState('schedule') || 'none';
+        document.getElementById('typeSelect').value = OCA.ShareReview.Navigation.getInitialState('reportType') || 'pdf';
+    },
+
+    handleExportClick: function (type) {
+        OC.dialogs.filepicker(t('sharereview', 'Select folder'), function (path) {
+            if (path) {
+                OCA.ShareReview.Backend.export(path, type);
+            }
+        }, false, 'httpd/unix-directory', true, 1);
     },
 
     handleShowTalkChange: function () {
@@ -242,7 +236,7 @@ OCA.ShareReview.Backend = {
         OCA.ShareReview.Visualization.hideElement('noDataContainer');
         OCA.ShareReview.Visualization.hideElement('tableContainer');
         OCA.ShareReview.Visualization.hideElement('notSecuredContainer');
-        OCA.ShareReview.Visualization.hideElement('settingsContainer');
+        OCA.ShareReview.Visualization.hideElement('exportContainer');
         fetch(requestUrl, {
             method: 'GET',
             headers: OCA.ShareReview.headers()
@@ -351,12 +345,12 @@ OCA.ShareReview.Backend = {
             });
     },
 
-    export: function(folder) {
+    export: function(folder, type) {
         let requestUrl = OC.generateUrl('apps/sharereview/report/export');
         fetch(requestUrl, {
             method: 'POST',
             headers: OCA.ShareReview.headers(),
-            body: JSON.stringify({path: folder})
+            body: JSON.stringify({path: folder, type: type})
         })
             .then(response => response.json())
             .then(() => {
@@ -367,12 +361,12 @@ OCA.ShareReview.Backend = {
             });
     },
 
-    saveSettings: function(folder, schedule) {
+    saveSettings: function(folder, schedule, type) {
         let requestUrl = OC.generateUrl('apps/sharereview/report/settings');
         fetch(requestUrl, {
             method: 'POST',
             headers: OCA.ShareReview.headers(),
-            body: JSON.stringify({folder: folder, schedule: schedule})
+            body: JSON.stringify({folder: folder, schedule: schedule, type: type})
         })
             .then(response => response.json())
             .then(() => {
@@ -396,12 +390,25 @@ document.addEventListener('DOMContentLoaded', function () {
         };
         defaultFolderInput.addEventListener('click', openPicker);
     }
+    let exportCsv = document.getElementById('exportCsv');
+    if (exportCsv) {
+        exportCsv.addEventListener('click', function () {
+            OCA.ShareReview.Navigation.handleExportClick('csv');
+        });
+    }
+    let exportPdf = document.getElementById('exportPdf');
+    if (exportPdf) {
+        exportPdf.addEventListener('click', function () {
+            OCA.ShareReview.Navigation.handleExportClick('pdf');
+        });
+    }
     let save = document.getElementById('saveSettings');
     if (save) {
         save.addEventListener('click', function () {
             let folder = document.getElementById('defaultFolder').value;
             let schedule = document.getElementById('scheduleSelect').value;
-            OCA.ShareReview.Backend.saveSettings(folder, schedule);
+            let type = document.getElementById('typeSelect').value;
+            OCA.ShareReview.Backend.saveSettings(folder, schedule, type);
         });
     }
 });
