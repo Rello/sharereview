@@ -37,8 +37,14 @@
         <a href="/settings/apps/enabled/sharereview"><?php p($l->t('Click here')); ?></a>
     </div>
 
-    <div id="settingsContainer" hidden>
-        <h3><?php p($l->t('Report settings')); ?></h3>
+    <div id="exportContainer" hidden>
+        <h3><?php p($l->t('Export report')); ?></h3>
+        <h4><?php p($l->t('On demand report')); ?></h4>
+        <p>
+            <button id="exportCsv" class="button"><?php p($l->t('CSV')); ?></button>
+            <button id="exportPdf" class="button"><?php p($l->t('PDF')); ?></button>
+        </p>
+        <h4><?php p($l->t('Scheduled report')); ?></h4>
         <p>
             <label for="defaultFolder"><?php p($l->t('Default folder')); ?></label>
             <input type="text" id="defaultFolder" readonly>
@@ -50,6 +56,13 @@
                 <option value="daily"><?php p($l->t('Daily')); ?></option>
                 <option value="weekly"><?php p($l->t('Weekly')); ?></option>
                 <option value="monthly"><?php p($l->t('Monthly')); ?></option>
+            </select>
+        </p>
+        <p>
+            <label for="typeSelect"><?php p($l->t('Format')); ?></label>
+            <select id="typeSelect">
+                <option value="pdf"><?php p($l->t('PDF')); ?></option>
+                <option value="csv"><?php p($l->t('CSV')); ?></option>
             </select>
         </p>
         <p>
