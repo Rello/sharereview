@@ -8,12 +8,15 @@ OC.L10N.register(
     "New Shares" : "New Shares",
     "Confirm reviewed" : "Confirm reviewed",
     "Reset time" : "Reset time",
+    "Settings" : "Settings",
     "Show talk shares" : "Show talk shares",
+    "Select folder" : "Select folder",
     "Share deleted" : "Share deleted",
     "Table not reloaded" : "Table not reloaded",
     "Request could not be processed" : "Request could not be processed",
     "Timestamp saved" : "Timestamp saved",
     "Timestamp deleted" : "Timestamp deleted",
+    "Settings saved" : "Settings saved",
     "OK" : "OK",
     "Cancel" : "Cancel",
     "Search" : "Search",
@@ -30,7 +33,11 @@ OC.L10N.register(
     "No share found" : "No share found",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users.",
     "Click here" : "Click here",
+    "Schedule" : "Schedule",
     "None" : "None",
-    "Daily" : "Daily"
+    "Daily" : "Daily",
+    "Weekly" : "Weekly",
+    "Monthly" : "Monthly",
+    "Save" : "Save"
 },
 "nplurals=2; plural=(n != 1);");

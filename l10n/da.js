@@ -4,10 +4,13 @@ OC.L10N.register(
     "Delete" : "Slet",
     "Are you sure?" : "Er du sikker?",
     "The share will be deleted!" : "Delingen vil blive slettet!",
+    "Settings" : "Indstillinger",
+    "Select folder" : "Vælg mappe",
     "Share deleted" : "Deling slettet",
     "Request could not be processed" : "Anmodningen kunne ikke behandles",
     "Timestamp saved" : "Tidsstempel gemt",
     "Timestamp deleted" : "Tidsstempel slettet",
+    "Settings saved" : "Indstillinger gemt",
     "OK" : "OK",
     "Cancel" : "Annuller",
     "Search" : "Søg",
@@ -20,6 +23,10 @@ OC.L10N.register(
     "No share found" : "Ingen delinger fundet",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Appen skal være begrænset til mindst en specifik brugergruppe i appbutikken. Dette forhindrer utilsigtet eksponering af det delte indhold til alle brugere.",
     "Click here" : "Klik her",
-    "Daily" : "Dagligt"
+    "None" : "Ingen",
+    "Daily" : "Dagligt",
+    "Weekly" : "Ugentligt",
+    "Monthly" : "Månedligt",
+    "Save" : "Gem"
 },
 "nplurals=2; plural=(n != 1);");

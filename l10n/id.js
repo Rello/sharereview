@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Delete" : "Hapus",
     "Settings" : "Setelan",
+    "Select folder" : "Pilih folder",
     "Request could not be processed" : "Permintaan tidak dapat diproses",
     "Settings saved" : "Setelan tersimpan",
     "OK" : "Oke",
@@ -14,6 +15,8 @@ OC.L10N.register(
     "Select all" : "Pilih semua",
     "None" : "Tidak ada",
     "Daily" : "Harian",
-    "Weekly" : "Mingguan"
+    "Weekly" : "Mingguan",
+    "Monthly" : "Bulanan",
+    "Save" : "Simpan"
 },
 "nplurals=1; plural=0;");

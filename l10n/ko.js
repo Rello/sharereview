@@ -4,6 +4,7 @@ OC.L10N.register(
     "Delete" : "삭제",
     "Are you sure?" : "확실합니까?",
     "Settings" : "설정",
+    "Select folder" : "폴더 선택",
     "Settings saved" : "설정 저장됨",
     "OK" : "확인",
     "Cancel" : "취소",

@@ -10,11 +10,13 @@ OC.L10N.register(
     "Reset time" : "Athshocraigh am",
     "Settings" : "Socruithe",
     "Show talk shares" : "Taispeáin scaireanna cainte",
+    "Select folder" : "Roghnaigh fillteán",
     "Share deleted" : "Scriosadh an sciar",
     "Table not reloaded" : "Tábla gan athlódáil",
     "Request could not be processed" : "Níorbh fhéidir an t-iarratas a phróiseáil",
     "Timestamp saved" : "Stampa ama sábháilte",
     "Timestamp deleted" : "Scriosadh an stampa ama",
+    "Settings saved" : "Socruithe sábháilte",
     "OK" : "Ceart go leor",
     "Cancel" : "Cealaigh",
     "Search" : "Cuardach",
@@ -34,6 +36,8 @@ OC.L10N.register(
     "Schedule" : "Sceideal",
     "None" : "aon cheann",
     "Daily" : "Laethúil",
-    "Weekly" : "Seachtainiúil"
+    "Weekly" : "Seachtainiúil",
+    "Monthly" : "Go míosúil",
+    "Save" : "Sábháil"
 },
 "nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : 4);");

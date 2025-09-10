@@ -9,11 +9,13 @@ OC.L10N.register(
     "Confirm reviewed" : "Confirmar a revisión",
     "Reset time" : "Restabelecer a hora",
     "Settings" : "Axustes",
+    "Select folder" : "Cartafol seleccionado",
     "Share deleted" : "A compartición foi eliminada",
     "Table not reloaded" : "Non volveu cargar a táboa",
     "Request could not be processed" : "Non foi posíbel procesar a solicitude",
     "Timestamp saved" : "Gardouse a marca de tempo",
     "Timestamp deleted" : "A marca de tempo foi eliminada",
+    "Settings saved" : "Axustes gardados",
     "OK" : "Aceptar",
     "Cancel" : "Cancelar",
     "Search" : "Buscar",
@@ -32,6 +34,8 @@ OC.L10N.register(
     "Schedule" : "Programa",
     "None" : "Ningún",
     "Daily" : "A diario",
-    "Weekly" : "Cada semana"
+    "Weekly" : "Cada semana",
+    "Monthly" : "Mensual",
+    "Save" : "Gardar"
 },
 "nplurals=2; plural=(n != 1);");

@@ -4,6 +4,7 @@ OC.L10N.register(
     "Delete" : "Elimina",
     "Are you sure?" : "Sei sicuro?",
     "Settings" : "Impostazioni",
+    "Select folder" : "Seleziona cartella",
     "Request could not be processed" : "La richiesta non può essere elaborata",
     "Settings saved" : "Impostazioni salvate",
     "OK" : "OK",
@@ -16,6 +17,7 @@ OC.L10N.register(
     "None" : "Nessuno",
     "Daily" : "Giornalmente",
     "Weekly" : "Settimanalmente",
+    "Monthly" : "Mensilmente",
     "Save" : "Salva"
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

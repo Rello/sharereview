@@ -3,7 +3,9 @@ OC.L10N.register(
     {
     "Delete" : "Eliminar",
     "Are you sure?" : "Está seguro?",
+    "Settings" : "Configuración",
     "Request could not be processed" : "No se pudo procesar la solicitud",
+    "Settings saved" : "Configuraciones guardadas",
     "OK" : "Aceptar",
     "Cancel" : "Cancel",
     "Search" : "Buscar",
@@ -13,6 +15,7 @@ OC.L10N.register(
     "Select all" : "Seleccionar todo",
     "None" : "Ninguno",
     "Daily" : "Diariamente",
-    "Weekly" : "Semanalmente"
+    "Weekly" : "Semanalmente",
+    "Save" : "Guardar"
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

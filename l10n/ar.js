@@ -8,11 +8,14 @@ OC.L10N.register(
     "New Shares" : "مشاركات جديدة",
     "Confirm reviewed" : "تأكيد المراجعة",
     "Reset time" : "إعادة تعيين الوقت",
+    "Settings" : "الإعدادات",
+    "Select folder" : "إختر مجلداً",
     "Share deleted" : "تمّ حذف المشاركة",
     "Table not reloaded" : "لم يتم تحميل الجدول",
     "Request could not be processed" : "تتعذر معالجة الطلب",
     "Timestamp saved" : "تمّ حفظ الختم الزمني",
     "Timestamp deleted" : "تمّ حذف الختم الزمني",
+    "Settings saved" : "تمّ حفظ الإعدادات",
     "OK" : "موافق",
     "Cancel" : "إلغاء",
     "Search" : "بحث",
@@ -27,6 +30,12 @@ OC.L10N.register(
     "Pause reload after deletion" : "الإيقاف المؤقت لإعادة التحميل بعد الحذف",
     "No share found" : "لا توجد أي مشاركات",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "يجب أن يقتصر التطبيق على مجموعة مستخدمين محددة واحدة على الأقل في متجر التطبيقات. وهذا يمنع العرض العَرَضِي للمحتوى المشترك لجميع المستخدمين.",
-    "Click here" : "أُنقُر هنا"
+    "Click here" : "أُنقُر هنا",
+    "Schedule" : "جدْوَل",
+    "None" : "لا شيء",
+    "Daily" : "يومياً",
+    "Weekly" : "أسبوعياً",
+    "Monthly" : "شهري",
+    "Save" : "حفظ"
 },
 "nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;");
