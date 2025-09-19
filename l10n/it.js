@@ -14,6 +14,7 @@ OC.L10N.register(
     "Showing _START_ to _END_ of _TOTAL_ entries" : "Visualizza da _START_ a _END_ di _TOTAL_ records",
     "Showing 0 to 0 of 0 entries" : "Visualizza da 0 a 0 di 0 voci",
     "Select all" : "Seleziona tutto",
+    "Schedule" : "Programma",
     "None" : "Nessuno",
     "Daily" : "Giornalmente",
     "Weekly" : "Settimanalmente",
