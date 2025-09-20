@@ -26,6 +26,8 @@ OC.L10N.register(
     "No share found" : "共有が見つかりません",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "このアプリは、アプリストアで少なくとも1つ以上のユーザーグループに制限される必要があります。これにより、共有コンテンツが誤ってすべてのユーザーに公開されるのを防ぐことができます。",
     "Click here" : "ここをクリック",
+    "Default folder" : "デフォルトフォルダー",
+    "Schedule" : "スケジュール",
     "None" : "なし",
     "Daily" : "毎日",
     "Weekly" : "毎週",
