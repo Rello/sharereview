@@ -38,7 +38,7 @@ OC.L10N.register(
     "Click here" : "Prema aquí",
     "Report settings" : "Axustes dos informes",
     "Default folder" : "Cartafol predeterminado",
-    "Schedule" : "Programación",
+    "Schedule" : "Programar",
     "None" : "Ningún",
     "Daily" : "A diario",
     "Weekly" : "Cada semana",
