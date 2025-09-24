@@ -23,6 +23,7 @@ OC.L10N.register(
     "No share found" : "Ingen delinger fundet",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Appen skal være begrænset til mindst en specifik brugergruppe i appbutikken. Dette forhindrer utilsigtet eksponering af det delte indhold til alle brugere.",
     "Click here" : "Klik her",
+    "Schedule" : "Planlæg",
     "None" : "Ingen",
     "Daily" : "Dagligt",
     "Weekly" : "Ugentligt",
