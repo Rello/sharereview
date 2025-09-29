@@ -8,6 +8,7 @@ OC.L10N.register(
     "Search" : "Search",
     "Select all" : "Նշել բոլորը",
     "Daily" : "Օրական",
-    "Weekly" : "Շաբաթական"
+    "Weekly" : "Շաբաթական",
+    "Save" : "Պահպանել"
 },
 "nplurals=2; plural=(n != 1);");

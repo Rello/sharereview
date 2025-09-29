@@ -10,6 +10,7 @@ OC.L10N.register(
     "Select all" : "Selectionar toto",
     "None" : "Nulle",
     "Daily" : "Cata die",
-    "Weekly" : "Cata septimana"
+    "Weekly" : "Cata septimana",
+    "Save" : "Salveguardar"
 },
 "nplurals=2; plural=(n != 1);");
