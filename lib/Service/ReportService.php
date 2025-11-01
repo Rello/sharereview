@@ -10,38 +10,44 @@ namespace OCA\ShareReview\Service;
 
 use OCP\Files\IRootFolder;
 use OCP\IUserSession;
-use OCP\IConfig;
+use OCP\IAppConfig;
 
 class ReportService {
     private ShareService $shareService;
     private IRootFolder $rootFolder;
     private IUserSession $userSession;
-    private IConfig $config;
+    private IAppConfig $appConfig;
 
     public function __construct(ShareService $shareService,
                                 IRootFolder $rootFolder,
                                 IUserSession $userSession,
-                                IConfig $config) {
+								IAppConfig $appConfig) {
         $this->shareService = $shareService;
         $this->rootFolder = $rootFolder;
         $this->userSession = $userSession;
-        $this->config = $config;
+        $this->appConfig = $appConfig;
     }
 
     /**
-     * Generate PDF report and store in the given folder for the given user
+     * Generate report and store in the given folder for the given user
      */
-    public function generate(string $folder, ?string $uid = null): string {
+    public function generate(string $folder, string $type = 'pdf', ?string $uid = null): string {
         if ($uid === null) {
             $uid = $this->userSession->getUser()->getUID();
         }
         $data = $this->shareService->read(false);
 
-        $content = $this->buildPdf($data);
+        if ($type === 'csv') {
+            $content = $this->buildCsv($data);
+            $extension = 'csv';
+        } else {
+            $content = $this->buildPdf($data);
+            $extension = 'pdf';
+        }
 
         $userFolder = $this->rootFolder->getUserFolder($uid);
         $target = $userFolder->get($folder);
-        $fileName = 'share-report-' . date('YmdHis') . '.pdf';
+        $fileName = 'Share Review - Report ' . date('YmdHis') . '.' . $extension;
         $file = $target->newFile($fileName);
         $file->putContent($content);
 
@@ -52,12 +58,41 @@ class ReportService {
      * Generate report using stored default folder
      */
     public function generateDefault(): void {
-        $owner = $this->config->getAppValue('sharereview', 'reportOwner', '');
-        $folder = $this->config->getAppValue('sharereview', 'reportFolder', '');
+        $owner = $this->appConfig->getValueString('sharereview', 'reportOwner', '');
+        $folder = $this->appConfig->getValueString('sharereview', 'reportFolder', '');
+        $type = $this->appConfig->getValueString('sharereview', 'reportType', 'pdf');
         if ($owner === '' || $folder === '') {
             return;
         }
-        $this->generate($folder, $owner);
+        $this->generate($folder, $type, $owner);
+    }
+
+    private function buildCsv(array $rows): string {
+        $lines = [];
+        $lines[] = implode(',', ['App', 'Object', 'Initiator', 'Type', 'Permissions', 'Time']);
+        foreach ($rows as $row) {
+            [$shareType, $recipient] = array_pad(explode(';', (string)$row['type'], 2), 2, '');
+            $typeText = $this->formatType((int)$shareType, $recipient);
+            $permText = $this->formatPermission((int)$row['permissions']);
+            $timeText = $this->formatTime((string)$row['time']);
+            $lines[] = implode(',', [
+                $this->escapeCsv((string)$row['app']),
+                $this->escapeCsv((string)$row['object']),
+                $this->escapeCsv((string)$row['initiator']),
+                $this->escapeCsv($typeText),
+                $this->escapeCsv($permText),
+                $this->escapeCsv($timeText),
+            ]);
+        }
+        return implode("\n", $lines);
+    }
+
+    private function escapeCsv(string $text): string {
+        $escaped = str_replace('"', '""', $text);
+        if (str_contains($text, ',') || str_contains($text, '"') || str_contains($text, "\n")) {
+            return '"' . $escaped . '"';
+        }
+        return $escaped;
     }
 
     private function buildPdf(array $rows): string {
@@ -72,7 +107,7 @@ class ReportService {
         $header[] = $this->formatRow([
             '',
             'Initiator',
-            'Type',
+            'Receiver',
             'Permissions',
             'Time'
         ], [15, 20, 53, 12, 20]);
@@ -205,7 +240,7 @@ class ReportService {
                 $label = 'Other';
                 break;
         }
-        return $label . ' ' . $recipient;
+        return $label . ': ' . $recipient;
     }
 
     private function escapePdfText(string $text): string {
