@@ -2,10 +2,16 @@ OC.L10N.register(
     "sharereview",
     {
     "Delete" : "Desaniciar",
+    "Settings" : "Configuración",
     "Request could not be processed" : "Nun se pudo procesar la solicitú",
+    "Settings saved" : "Guardóse la configuración",
     "OK" : "Normal",
     "Cancel" : "Encaboxar",
     "Search" : "Buscar",
-    "Select all" : "Seleicionar too"
+    "Select all" : "Seleicionar too",
+    "None" : "Nada",
+    "Daily" : "Caldía",
+    "Weekly" : "Selmanalmente",
+    "Save" : "Guardar"
 },
 "nplurals=2; plural=(n != 1);");

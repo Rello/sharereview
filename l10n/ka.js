@@ -12,6 +12,7 @@ OC.L10N.register(
     "None" : "None",
     "Daily" : "დღიურად",
     "Weekly" : "კვირეულად",
+    "Monthly" : "Monthly",
     "Save" : "დამახსოვრება"
 },
 "nplurals=2; plural=(n!=1);");

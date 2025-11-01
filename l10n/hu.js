@@ -4,6 +4,7 @@ OC.L10N.register(
     "Delete" : "Törlés",
     "Are you sure?" : "Biztos benne?",
     "Settings" : "Beállítások",
+    "Select folder" : "Válasszon egy mappát",
     "Request could not be processed" : "A kérést nem sikerült feldolgozni",
     "Settings saved" : "Beállítások mentve",
     "OK" : "Rendben",
@@ -15,6 +16,8 @@ OC.L10N.register(
     "Schedule" : "Ütemterv",
     "None" : "Egyik sem",
     "Daily" : "Naponta",
-    "Weekly" : "Hetente"
+    "Weekly" : "Hetente",
+    "Monthly" : "Havonta",
+    "Save" : "Mentés"
 },
 "nplurals=2; plural=(n != 1);");

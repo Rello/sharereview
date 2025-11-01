@@ -1,13 +1,21 @@
 { "translations": {
     "Delete" : "Изтриване",
     "Are you sure?" : "Сигурни ли сте?",
+    "Settings" : "Настройки",
+    "Select folder" : "Избор на папка",
     "Request could not be processed" : "Заявката не можа да бъде обработена",
+    "Settings saved" : "Настройките са запазени",
     "OK" : "Добре",
     "Cancel" : "Отказ",
     "Search" : "Търсене",
     "Show _MENU_ entries" : "Показване на _МЕНЮ_ записи",
     "Showing _START_ to _END_ of _TOTAL_ entries" : "Показват се от _НАЧАЛО_ до _КРАЙ_ от _ОБЩО_ записа",
     "Showing 0 to 0 of 0 entries" : "Показване на 0 до 0 от 0 записа",
-    "Select all" : "Избери всички"
+    "Select all" : "Избери всички",
+    "None" : "Няма",
+    "Daily" : "Всеки ден",
+    "Weekly" : "Всяка седмица",
+    "Monthly" : "Месечно",
+    "Save" : "Запиши"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

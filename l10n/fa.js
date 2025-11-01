@@ -4,7 +4,9 @@ OC.L10N.register(
     "Delete" : "حذف",
     "Are you sure?" : "مطمئنی؟",
     "Settings" : "تنظیمات",
+    "Select folder" : "Select folder",
     "Request could not be processed" : "Request could not be processed",
+    "Settings saved" : "تنظیمات ذخیره شد",
     "OK" : "مورد قبول",
     "Cancel" : "منصرف شدن",
     "Search" : "جستجو",
@@ -14,6 +16,8 @@ OC.L10N.register(
     "Select all" : "انتخاب همه",
     "None" : "هیچ‌کدام",
     "Daily" : "روزانه",
-    "Weekly" : "هفته گی"
+    "Weekly" : "هفته گی",
+    "Monthly" : "ماهانه",
+    "Save" : "ذخیره"
 },
 "nplurals=2; plural=(n > 1);");

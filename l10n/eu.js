@@ -4,7 +4,9 @@ OC.L10N.register(
     "Delete" : "Ezabatu",
     "Are you sure?" : "Ziur zaude?",
     "Settings" : "Ezarpenak",
+    "Select folder" : "Hautatu karpeta",
     "Request could not be processed" : "Ezin izan da prozesatu eskaera",
+    "Settings saved" : "Ezarpenak gordeta",
     "OK" : "Ados",
     "Cancel" : "Utzi",
     "Search" : "Bilatu",
@@ -14,6 +16,8 @@ OC.L10N.register(
     "Select all" : "Hautatu dena",
     "None" : "Bat ere ez",
     "Daily" : "Egunero",
-    "Weekly" : "Astero"
+    "Weekly" : "Astero",
+    "Monthly" : "Hilabetero",
+    "Save" : "Gorde"
 },
 "nplurals=2; plural=(n != 1);");

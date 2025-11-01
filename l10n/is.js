@@ -4,6 +4,7 @@ OC.L10N.register(
     "Delete" : "Eyða",
     "Are you sure?" : "Ertu viss?",
     "Settings" : "Stillingar",
+    "Select folder" : "Veldu möppu",
     "Settings saved" : "Stillingar vistaðar",
     "OK" : "OK",
     "Cancel" : "Hætta við",
@@ -12,6 +13,7 @@ OC.L10N.register(
     "None" : "Ekkert",
     "Daily" : "Daglega",
     "Weekly" : "Vikulega",
+    "Monthly" : "Mánaðarlega",
     "Save" : "Vista"
 },
 "nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);");

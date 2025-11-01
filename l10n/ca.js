@@ -3,7 +3,10 @@ OC.L10N.register(
     {
     "Delete" : "Suprimir",
     "Are you sure?" : "Estas segur?",
+    "Settings" : "Paràmetres",
+    "Select folder" : "Trieu una carpeta",
     "Request could not be processed" : "No s'ha pogut processar la sol·licitud",
+    "Settings saved" : "S'han desat els paràmetres",
     "OK" : "Correcta",
     "Cancel" : "Cancel·la",
     "Search" : "Cercar",
@@ -11,6 +14,10 @@ OC.L10N.register(
     "Showing _START_ to _END_ of _TOTAL_ entries" : "Es mostren les entrades _START_ a _END_ de _TOTAL_",
     "Showing 0 to 0 of 0 entries" : "Mostrant 0 a 0 de 0 entrades",
     "Select all" : "Selecciona-ho tot",
-    "Daily" : "Diàriament"
+    "None" : "Només una vegada",
+    "Daily" : "Diàriament",
+    "Weekly" : "Setmanalment",
+    "Monthly" : "Mensualment",
+    "Save" : "Desar"
 },
 "nplurals=2; plural=(n != 1);");

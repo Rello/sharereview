@@ -1,8 +1,14 @@
 { "translations": {
     "Delete" : "Sil",
+    "Settings" : "Quraşdırmalar",
+    "Settings saved" : "Parametrlər yaddaşa verildi",
     "OK" : "OK",
     "Cancel" : "Cancel",
     "Search" : "Axtarış",
-    "Select all" : "Hamısıı seç"
+    "Select all" : "Hamısıı seç",
+    "None" : "Heç bir",
+    "Daily" : "Günlük",
+    "Weekly" : "Həftəlik",
+    "Save" : "Saxla"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
