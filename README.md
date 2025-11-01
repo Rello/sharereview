@@ -1,14 +1,16 @@
 # Share Review
-This app can be used  for auditing shares within a Nextcloud instance e.g. for data loss prevention.
+This app can be used for auditing shares within a Nextcloud instance e.g. for data loss prevention.
+Share status can be exported for documentation.
 
 - Review any file share 
   - files, talk, deck, teams, federation
-  - app specific shares dependent on app-implementation
+  - app specific shares (if implemented by other apps)
 - Remove shares
 - Confirm current review
   - show only new shares next time
 - Audit compliance
 - Assign review to user groups (e.g. audit or risk mgmt)
+- Export as CSV or PDF manually or scheduled
 
 ### Note:
 The app must be restricted to at least one specific user group in the app store. 

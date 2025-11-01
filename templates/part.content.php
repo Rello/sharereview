@@ -8,7 +8,9 @@
 
 ?>
 <div id="sharereview-content" style="width:100%; padding: 20px 5%;">
-    <h2 id="reportHeader">Share Review</h2>
+    <h2 id="reportHeader">
+        <?php // TRANSLATORS "Share Review" is the app name
+        p($l->t('Share Review')); ?></h2>
     <h3 id="reportSubHeader" hidden></h3>
     <div id="tableContainer" hidden>
         <table id="dataTable"></table>

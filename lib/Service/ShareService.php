@@ -27,6 +27,7 @@ use OCP\IConfig;
 use OCP\IAppConfig;
 use OCP\IUserSession;
 use OCP\EventDispatcher\IEventDispatcher;
+use OCP\IL10N;
 
 class ShareService {
 
@@ -51,6 +52,7 @@ class ShareService {
 	protected CircleHelper $circleHelper;
 	/** @var IEventDispatcher */
 	private $dispatcher;
+	private IL10N $l10n;
 
 	public function __construct(
 		IAppConfig       $appConfig,
@@ -65,7 +67,8 @@ class ShareService {
 		DeckHelper       $deckHelper,
 		CircleHelper     $circleHelper,
 		IRootFolder      $rootFolder,
-		IEventDispatcher $dispatcher
+		IEventDispatcher $dispatcher,
+		IL10N $l10n
 	) {
 		$this->appConfig = $appConfig;
 		$this->config = $config;
@@ -80,6 +83,7 @@ class ShareService {
 		$this->circleHelper = $circleHelper;
 		$this->userSession = $userSession;
 		$this->dispatcher = $dispatcher;
+		$this->l10n = $l10n;
 	}
 
 	/**
@@ -275,7 +279,7 @@ class ShareService {
 
 			$data = [
 				'id' => $share['id'],
-				'app' => 'Files',
+				'app' => $this->l10n->t('Files'),
 				'object' => $path,
 				'initiator' => $share['uid_initiator'],
 				'type' => $share['share_type'],
