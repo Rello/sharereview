@@ -2,8 +2,11 @@
 
 ## 1.5.0 - 2025-11-xx
 ### Added
-- Export report as csv or pdf
+- Export report as csv or pdf #25
 - Export on demand or scheduled with background job
+
+### Fixed
+- missing translations #27
 
 ## 1.4.0 - 2025-05-19
 ### Added

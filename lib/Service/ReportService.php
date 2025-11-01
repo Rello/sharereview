@@ -11,22 +11,26 @@ namespace OCA\ShareReview\Service;
 use OCP\Files\IRootFolder;
 use OCP\IUserSession;
 use OCP\IAppConfig;
+use OCP\IL10N;
 
 class ReportService {
     private ShareService $shareService;
     private IRootFolder $rootFolder;
     private IUserSession $userSession;
     private IAppConfig $appConfig;
+	private IL10N $l10n;
 
     public function __construct(ShareService $shareService,
                                 IRootFolder $rootFolder,
                                 IUserSession $userSession,
-								IAppConfig $appConfig) {
+								IAppConfig $appConfig,
+								IL10N $l10n) {
         $this->shareService = $shareService;
         $this->rootFolder = $rootFolder;
         $this->userSession = $userSession;
         $this->appConfig = $appConfig;
-    }
+		$this->l10n = $l10n;
+	}
 
     /**
      * Generate report and store in the given folder for the given user
@@ -69,7 +73,7 @@ class ReportService {
 
     private function buildCsv(array $rows): string {
         $lines = [];
-        $lines[] = implode(',', ['App', 'Object', 'Initiator', 'Type', 'Permissions', 'Time']);
+        $lines[] = implode(',', [$this->l10n->t('App'), $this->l10n->t('Item'), $this->l10n->t('Initiator'), $this->l10n->t('Type'), $this->l10n->t('Permissions'), $this->l10n->t('Time')]);
         foreach ($rows as $row) {
             [$shareType, $recipient] = array_pad(explode(';', (string)$row['type'], 2), 2, '');
             $typeText = $this->formatType((int)$shareType, $recipient);
@@ -101,15 +105,15 @@ class ReportService {
         $header[] = 'Audit date: ' . (new \DateTime())->format('d.m.Y, H:i:s');
         $header[] = '';
         $header[] = $this->formatRow([
-            'App',
-            'Object'
+			$this->l10n->t('App'),
+			$this->l10n->t('Item')
         ], [15, 105]);
         $header[] = $this->formatRow([
             '',
-            'Initiator',
-            'Receiver',
-            'Permissions',
-            'Time'
+			$this->l10n->t('Initiator'),
+            $this->l10n->t('Type'),
+            $this->l10n->t('Permissions'),
+            $this->l10n->t('Time')
         ], [15, 20, 53, 12, 20]);
         $header[] = '';
 

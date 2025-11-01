@@ -59,9 +59,19 @@ OCA.ShareReview.Visualization = {
             },
         };
 
+        let columnTitles = {
+            app: t('sharereview', 'App'),
+            object: t('sharereview', 'Item'),
+            initiator: t('sharereview', 'Initiator'),
+            type: t('sharereview', 'Type'),
+            permissions: t('sharereview', 'Permissions'),
+            time: t('sharereview', 'Time'),
+            action: t('sharereview', 'Action'),
+        };
+
         let columns = Object.keys(data[0]).map(key => ({
-            title: key.charAt(0).toUpperCase() + key.slice(1),
-            data: key
+            title: columnTitles[key] ?? key,
+            data: key,
         }));
 
         columns = OCA.ShareReview.Visualization.addColumnRender(columns);
