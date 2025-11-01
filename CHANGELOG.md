@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.5.0 - 2025-11-xx
+### Added
+- Export report as csv or pdf
+- Export on demand or scheduled with background job
+
 ## 1.4.0 - 2025-05-19
 ### Added
 - Add bulk share deletion #15

@@ -38,12 +38,12 @@
     </div>
 
     <div id="exportContainer" hidden>
-        <h3><?php p($l->t('Export report')); ?></h3>
         <h4><?php p($l->t('On demand report')); ?></h4>
         <p>
             <button id="exportCsv" class="button"><?php p($l->t('CSV')); ?></button>
             <button id="exportPdf" class="button"><?php p($l->t('PDF')); ?></button>
         </p>
+        <br><br>
         <h4><?php p($l->t('Scheduled report')); ?></h4>
         <p>
             <label for="defaultFolder"><?php p($l->t('Default folder')); ?></label>

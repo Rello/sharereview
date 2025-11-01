@@ -10,22 +10,22 @@ namespace OCA\ShareReview\Service;
 
 use OCP\Files\IRootFolder;
 use OCP\IUserSession;
-use OCP\IConfig;
+use OCP\IAppConfig;
 
 class ReportService {
     private ShareService $shareService;
     private IRootFolder $rootFolder;
     private IUserSession $userSession;
-    private IConfig $config;
+    private IAppConfig $appConfig;
 
     public function __construct(ShareService $shareService,
                                 IRootFolder $rootFolder,
                                 IUserSession $userSession,
-                                IConfig $config) {
+								IAppConfig $appConfig) {
         $this->shareService = $shareService;
         $this->rootFolder = $rootFolder;
         $this->userSession = $userSession;
-        $this->config = $config;
+        $this->appConfig = $appConfig;
     }
 
     /**
@@ -47,7 +47,7 @@ class ReportService {
 
         $userFolder = $this->rootFolder->getUserFolder($uid);
         $target = $userFolder->get($folder);
-        $fileName = 'share-report-' . date('YmdHis') . '.' . $extension;
+        $fileName = 'Share Review - Report ' . date('YmdHis') . '.' . $extension;
         $file = $target->newFile($fileName);
         $file->putContent($content);
 
@@ -58,9 +58,9 @@ class ReportService {
      * Generate report using stored default folder
      */
     public function generateDefault(): void {
-        $owner = $this->config->getAppValue('sharereview', 'reportOwner', '');
-        $folder = $this->config->getAppValue('sharereview', 'reportFolder', '');
-        $type = $this->config->getAppValue('sharereview', 'reportType', 'pdf');
+        $owner = $this->appConfig->getValueString('sharereview', 'reportOwner', '');
+        $folder = $this->appConfig->getValueString('sharereview', 'reportFolder', '');
+        $type = $this->appConfig->getValueString('sharereview', 'reportType', 'pdf');
         if ($owner === '' || $folder === '') {
             return;
         }
@@ -107,7 +107,7 @@ class ReportService {
         $header[] = $this->formatRow([
             '',
             'Initiator',
-            'Type',
+            'Receiver',
             'Permissions',
             'Time'
         ], [15, 20, 53, 12, 20]);
@@ -240,7 +240,7 @@ class ReportService {
                 $label = 'Other';
                 break;
         }
-        return $label . ' ' . $recipient;
+        return $label . ': ' . $recipient;
     }
 
     private function escapePdfText(string $text): string {

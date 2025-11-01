@@ -178,6 +178,7 @@ OCA.ShareReview.Navigation = {
     handleAllNavigation: function () {
         document.getElementById('navAllShares').classList.add('active');
         document.getElementById('navNewShares').classList.remove('active');
+        document.getElementById('navExport').classList.remove('active');
         OCA.ShareReview.Backend.getData();
         OCA.ShareReview.Visualization.hideElement('exportContainer');
     },
@@ -185,6 +186,7 @@ OCA.ShareReview.Navigation = {
     handleNewSharesNavigation: function () {
         document.getElementById('navNewShares').classList.add('active');
         document.getElementById('navAllShares').classList.remove('active');
+        document.getElementById('navExport').classList.remove('active');
         OCA.ShareReview.Backend.getData(true);
         OCA.ShareReview.Visualization.hideElement('exportContainer');
     },
@@ -198,6 +200,9 @@ OCA.ShareReview.Navigation = {
     },
 
     handleExportNavigation: function () {
+        document.getElementById('navNewShares').classList.remove('active');
+        document.getElementById('navAllShares').classList.remove('active');
+        document.getElementById('navExport').classList.add('active');
         OCA.ShareReview.Visualization.hideElement('tableContainer');
         OCA.ShareReview.Visualization.hideElement('noDataContainer');
         OCA.ShareReview.Visualization.hideElement('notSecuredContainer');
