@@ -3,7 +3,6 @@ OC.L10N.register(
     {
     "Delete" : "Выдаліць",
     "Are you sure?" : "Вы ўпэўнены?",
-    "Settings" : "Налады",
     "Select folder" : "Выберыце папку",
     "Settings saved" : "Налады захаваны",
     "OK" : "OK",

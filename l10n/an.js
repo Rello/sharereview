@@ -2,7 +2,6 @@ OC.L10N.register(
     "sharereview",
     {
     "Delete" : "Borrar",
-    "Settings" : "Configuración",
     "OK" : "OK",
     "Cancel" : "Cancelar",
     "Search" : "Buscar",

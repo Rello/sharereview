@@ -2,11 +2,12 @@ OC.L10N.register(
     "sharereview",
     {
     "Delete" : "Sguab às",
-    "Settings" : "Roghainnean",
     "OK" : "Ceart ma-thà",
     "Cancel" : "Sguir dheth",
     "Search" : "Lorg",
+    "Type" : "Seòrsa",
     "Select all" : "Tagh na h-uile",
+    "Files" : "Faidhlichean",
     "None" : "Chan eil gin",
     "Save" : "Sàbhail"
 },

@@ -2,7 +2,6 @@ OC.L10N.register(
     "sharereview",
     {
     "Delete" : "Sil",
-    "Settings" : "Quraşdırmalar",
     "Settings saved" : "Parametrlər yaddaşa verildi",
     "OK" : "OK",
     "Cancel" : "Cancel",

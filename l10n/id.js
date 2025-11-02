@@ -2,7 +2,6 @@ OC.L10N.register(
     "sharereview",
     {
     "Delete" : "Hapus",
-    "Settings" : "Setelan",
     "Select folder" : "Pilih folder",
     "Request could not be processed" : "Permintaan tidak dapat diproses",
     "Settings saved" : "Setelan tersimpan",
@@ -12,11 +11,15 @@ OC.L10N.register(
     "Show _MENU_ entries" : "Lihat _MENU_ entri",
     "Showing _START_ to _END_ of _TOTAL_ entries" : "Memperlihatkan _START_ ke _END_ dari _TOTAL_ entri",
     "Showing 0 to 0 of 0 entries" : "Menampilkan 0 hingga 0 dari 0 entri",
+    "App" : "Apl",
+    "Type" : "tipe",
+    "Time" : "Waktu",
     "Select all" : "Pilih semua",
     "None" : "Tidak ada",
     "Daily" : "Harian",
     "Weekly" : "Mingguan",
     "Monthly" : "Bulanan",
+    "Format" : "Format",
     "Save" : "Simpan"
 },
 "nplurals=1; plural=0;");

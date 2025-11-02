@@ -3,7 +3,6 @@ OC.L10N.register(
     {
     "Delete" : "Ezabatu",
     "Are you sure?" : "Ziur zaude?",
-    "Settings" : "Ezarpenak",
     "Select folder" : "Hautatu karpeta",
     "Request could not be processed" : "Ezin izan da prozesatu eskaera",
     "Settings saved" : "Ezarpenak gordeta",
@@ -13,11 +12,20 @@ OC.L10N.register(
     "Show _MENU_ entries" : "Erakutsi _MENU_ sarrerak",
     "Showing _START_ to _END_ of _TOTAL_ entries" : "_TOTAL_ sarreretatik _START_(e)tik _END_(e)ra erakusten",
     "Showing 0 to 0 of 0 entries" : "0 sarreretatik 0tik 0ra erakusten",
+    "App" : "Aplikazioa",
+    "Item" : "Elementua",
+    "Type" : "Mota",
+    "Permissions" : "Baimenak",
+    "Time" : "Noiz",
+    "Action" : "Ekintza",
     "Select all" : "Hautatu dena",
+    "Files" : "Fitxategiak",
+    "PDF" : "PDF",
     "None" : "Bat ere ez",
     "Daily" : "Egunero",
     "Weekly" : "Astero",
     "Monthly" : "Hilabetero",
+    "Format" : "Formatua",
     "Save" : "Gorde"
 },
 "nplurals=2; plural=(n != 1);");

@@ -2,7 +2,6 @@ OC.L10N.register(
     "sharereview",
     {
     "Delete" : "Dilemel",
-    "Settings" : "Arventennoù",
     "Settings saved" : "Stummoù enrollet",
     "OK" : "Mat eo",
     "Cancel" : "Nullañ",

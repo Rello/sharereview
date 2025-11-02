@@ -3,7 +3,6 @@ OC.L10N.register(
     {
     "Delete" : "Изтриване",
     "Are you sure?" : "Сигурни ли сте?",
-    "Settings" : "Настройки",
     "Select folder" : "Избор на папка",
     "Request could not be processed" : "Заявката не можа да бъде обработена",
     "Settings saved" : "Настройките са запазени",

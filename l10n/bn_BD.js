@@ -2,7 +2,6 @@ OC.L10N.register(
     "sharereview",
     {
     "Delete" : "মুছে",
-    "Settings" : "সেটিংস",
     "OK" : "OK",
     "Cancel" : "বাতিল করুন",
     "Search" : "Search",

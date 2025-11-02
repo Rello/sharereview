@@ -2,11 +2,12 @@ OC.L10N.register(
     "sharereview",
     {
     "Delete" : "ລຶບ",
-    "Settings" : "ການຕັ້ງຄ່າ",
     "OK" : "ຕົກລົງ",
     "Cancel" : "ຍົກເລີກ",
     "Search" : "ຄົ້ນຫາ",
+    "Type" : "ພິມ",
     "Select all" : "ເລືອກທັງໝົດ",
+    "Files" : "ຟາຍ",
     "None" : "ບໍ່ມີ",
     "Daily" : "ລາຍວັນ",
     "Weekly" : "ອາທິດ",

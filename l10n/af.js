@@ -2,7 +2,6 @@ OC.L10N.register(
     "sharereview",
     {
     "Delete" : "Skrap",
-    "Settings" : "Instellings",
     "Settings saved" : "Instellings gestoor",
     "OK" : "OK",
     "Cancel" : "Cancel",
