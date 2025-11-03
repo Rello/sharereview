@@ -3,10 +3,11 @@ OC.L10N.register(
     {
     "Delete" : "Padam",
     "Are you sure?" : "Anda pasti?",
-    "Settings" : "Tetapan",
     "OK" : "OK",
     "Cancel" : "Cancel",
     "Search" : "Search",
+    "Type" : "Jenis",
+    "Files" : "Fail-fail",
     "Daily" : "Setiap hari",
     "Weekly" : "Setiap minggu",
     "Save" : "Simpan"

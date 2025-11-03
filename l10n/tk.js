@@ -2,10 +2,10 @@ OC.L10N.register(
     "sharereview",
     {
     "Delete" : "Pozmak",
-    "Settings" : "Sazlamalar",
     "OK" : "Bolýar",
     "Cancel" : "ýatyrmak",
     "Search" : "Gözlemek",
+    "Type" : "Görnüşi",
     "Select all" : "Hemmesini saýlaň",
     "None" : "Hiç",
     "Save" : "Saklamak"

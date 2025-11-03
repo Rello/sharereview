@@ -1,11 +1,12 @@
 { "translations": {
     "Delete" : "Dilemel",
-    "Settings" : "Arventennoù",
     "Settings saved" : "Stummoù enrollet",
     "OK" : "Mat eo",
     "Cancel" : "Nullañ",
     "Search" : "Klask",
+    "Type" : "Seurt",
     "Select all" : "Dibab pep tra",
+    "PDF" : "PDF",
     "None" : "Hini ebet",
     "Daily" : "Pemdeziek",
     "Weekly" : "Sizhuniek",

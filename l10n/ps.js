@@ -2,7 +2,6 @@ OC.L10N.register(
     "sharereview",
     {
     "Delete" : "ړنګول",
-    "Settings" : "سمونې",
     "OK" : "OK",
     "Cancel" : "پرېښودل",
     "Select all" : "ټول ټاکل",

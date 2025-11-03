@@ -1,18 +1,26 @@
 { "translations": {
     "Delete" : "Poista",
     "Are you sure?" : "Oletko varma?",
-    "Settings" : "Asetukset",
     "Select folder" : "Valitse kansio",
     "Request could not be processed" : "Pyyntöä ei voitu käsitellä",
     "Settings saved" : "Asetukset tallennettu",
     "OK" : "OK",
     "Cancel" : "Peruuta",
     "Search" : "Etsi",
+    "App" : "Sovellus",
+    "Item" : "Kohde",
+    "Type" : "Tyyppi",
+    "Permissions" : "Oikeudet",
+    "Time" : "Aika",
+    "Action" : "Toiminto",
     "Select all" : "Valitse kaikki",
+    "Files" : "Tiedostot",
+    "PDF" : "PDF",
     "None" : "Ei mitään",
     "Daily" : "Päivittäin",
     "Weekly" : "Viikottain",
     "Monthly" : "Kuukausittain",
+    "Format" : "Muoto",
     "Save" : "Tallenna"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

@@ -2,11 +2,12 @@ OC.L10N.register(
     "sharereview",
     {
     "Delete" : "Deler",
-    "Settings" : "Configurationes",
     "Settings saved" : "Configurationes salveguardate",
     "OK" : "OK",
     "Cancel" : "Cancel",
     "Search" : "Cercar",
+    "Type" : "Typo",
+    "Time" : "Tempore",
     "Select all" : "Selectionar toto",
     "None" : "Nulle",
     "Daily" : "Cata die",

@@ -1,10 +1,12 @@
 { "translations": {
     "Delete" : "Forigi",
-    "Settings" : "Agordoj",
     "Settings saved" : "Agordoj konservitaj",
     "OK" : "Akcepti",
     "Cancel" : "Cancel",
     "Search" : "Serĉi",
+    "App" : "Aplikaĵo",
+    "Type" : "Tipo",
+    "Time" : "Dato",
     "Select all" : "Elekti ĉion",
     "None" : "Nenio",
     "Daily" : "Ĉiutage",

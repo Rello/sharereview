@@ -1,7 +1,6 @@
 OC.L10N.register(
     "sharereview",
     {
-    "Settings" : "सेटिङ्हरू",
     "OK" : "OK",
     "Cancel" : "Cancel",
     "Daily" : "दैनिक",

@@ -2,10 +2,10 @@ OC.L10N.register(
     "sharereview",
     {
     "Delete" : "Borrar",
-    "Settings" : "Configuración",
     "OK" : "OK",
     "Cancel" : "Cancelar",
     "Search" : "Buscar",
+    "Files" : "Archivos",
     "None" : "Denguno",
     "Daily" : "Diariament",
     "Weekly" : "Semanalment"

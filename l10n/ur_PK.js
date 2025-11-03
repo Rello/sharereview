@@ -2,7 +2,6 @@ OC.L10N.register(
     "sharereview",
     {
     "Delete" : "حذف کریں",
-    "Settings" : "سیٹینگز",
     "OK" : "OK",
     "Cancel" : "Cancel",
     "Search" : "Search",

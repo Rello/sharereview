@@ -2,9 +2,10 @@ OC.L10N.register(
     "sharereview",
     {
     "Delete" : "Obriši",
-    "Settings" : "Поставке",
     "Cancel" : "Poništi",
     "Search" : "Traži",
+    "Type" : "Tip",
+    "Files" : "Fajlovi",
     "None" : "Ništa",
     "Daily" : "дневно",
     "Weekly" : "недељно",

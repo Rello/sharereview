@@ -2,10 +2,12 @@ OC.L10N.register(
     "sharereview",
     {
     "Delete" : "Dileu",
-    "Settings" : "Gosodiadau",
     "OK" : "OK",
     "Cancel" : "Cancel",
     "Search" : "Chwilio",
+    "App" : "Ap",
+    "Type" : "Math",
+    "Time" : "Amser",
     "None" : "Dim",
     "Daily" : "Dyddiol",
     "Weekly" : "Wythnosol",
