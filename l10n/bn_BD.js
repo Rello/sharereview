@@ -5,6 +5,8 @@ OC.L10N.register(
     "OK" : "OK",
     "Cancel" : "বাতিল করুন",
     "Search" : "Search",
+    "Type" : "ধরণ",
+    "Time" : "সময়",
     "None" : "কোনটিই নয়",
     "Daily" : "দৈনিক",
     "Weekly" : "সাপ্তাহিক",

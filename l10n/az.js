@@ -6,6 +6,8 @@ OC.L10N.register(
     "OK" : "OK",
     "Cancel" : "Cancel",
     "Search" : "Axtarış",
+    "App" : "Tətbiq",
+    "Time" : "Vaxt",
     "Select all" : "Hamısıı seç",
     "None" : "Heç bir",
     "Daily" : "Günlük",
