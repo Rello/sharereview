@@ -40,36 +40,36 @@
     </div>
 
     <div id="exportContainer" hidden>
-        <h4><?php p($l->t('On demand report')); ?></h4>
+        <h5><?php p($l->t('On demand report')); ?></h5>
         <p>
             <button id="exportCsv" class="button"><?php p($l->t('CSV')); ?></button>
             <button id="exportPdf" class="button"><?php p($l->t('PDF')); ?></button>
         </p>
         <br><br>
-        <h4><?php p($l->t('Scheduled report')); ?></h4>
+        <!--<h5><?php /*p($l->t('Scheduled report')); */?></h4>
         <p>
-            <label for="defaultFolder"><?php p($l->t('Default folder')); ?></label>
+            <label for="defaultFolder"><?php /*p($l->t('Default folder')); */?></label>
             <input type="text" id="defaultFolder" readonly>
         </p>
         <p>
-            <label for="scheduleSelect"><?php p($l->t('Schedule')); ?></label>
+            <label for="scheduleSelect"><?php /*p($l->t('Schedule')); */?></label>
             <select id="scheduleSelect">
-                <option value="none"><?php p($l->t('None')); ?></option>
-                <option value="daily"><?php p($l->t('Daily')); ?></option>
-                <option value="weekly"><?php p($l->t('Weekly')); ?></option>
-                <option value="monthly"><?php p($l->t('Monthly')); ?></option>
+                <option value="none"><?php /*p($l->t('None')); */?></option>
+                <option value="daily"><?php /*p($l->t('Daily')); */?></option>
+                <option value="weekly"><?php /*p($l->t('Weekly')); */?></option>
+                <option value="monthly"><?php /*p($l->t('Monthly')); */?></option>
             </select>
         </p>
         <p>
-            <label for="typeSelect"><?php p($l->t('Format')); ?></label>
+            <label for="typeSelect"><?php /*p($l->t('Format')); */?></label>
             <select id="typeSelect">
-                <option value="pdf"><?php p($l->t('PDF')); ?></option>
-                <option value="csv"><?php p($l->t('CSV')); ?></option>
+                <option value="pdf"><?php /*p($l->t('PDF')); */?></option>
+                <option value="csv"><?php /*p($l->t('CSV')); */?></option>
             </select>
         </p>
         <p>
-            <button id="saveSettings" class="button"><?php p($l->t('Save')); ?></button>
-        </p>
+            <button id="saveSettings" class="button"><?php /*p($l->t('Save')); */?></button>
+        </p>-->
     </div>
 
 </div>

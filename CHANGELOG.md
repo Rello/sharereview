@@ -3,7 +3,7 @@
 ## 1.5.0 - 2025-11-xx
 ### Added
 - Export report as csv or pdf #25
-- Export on demand or scheduled with background job
+- Show the full directory path for each share #26
 
 ### Fixed
 - missing translations #27

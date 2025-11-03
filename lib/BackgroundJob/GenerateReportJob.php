@@ -11,14 +11,22 @@ namespace OCA\ShareReview\BackgroundJob;
 use OCP\BackgroundJob\TimedJob;
 use OCP\IAppConfig;
 use OCA\ShareReview\Service\ReportService;
+use OCP\AppFramework\Utility\ITimeFactory;
+use Psr\Log\LoggerInterface;
 
 class GenerateReportJob extends TimedJob {
 	private IAppConfig $appConfig;
 	private ReportService $reportService;
+	private LoggerInterface $logger;
 
-	public function __construct(IAppConfig $appConfig, ReportService $reportService) {
+	public function __construct(ITimeFactory $time,
+								IAppConfig $appConfig,
+								ReportService $reportService,
+								LoggerInterface $logger) {
+		parent::__construct($time);
 		$this->appConfig = $appConfig;
 		$this->reportService = $reportService;
+		$this->logger = $logger;
 		$this->setInterval($this->getInterval());
 	}
 
@@ -28,6 +36,7 @@ class GenerateReportJob extends TimedJob {
 			return;
 		}
 		$this->setInterval($interval);
+		$this->logger->info("Generating Share Review report in the background");
 		$this->reportService->generateDefault();
 	}
 
