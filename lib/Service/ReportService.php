@@ -81,7 +81,7 @@ class ReportService {
             $timeText = $this->formatTime((string)$row['time']);
             $lines[] = implode(',', [
                 $this->escapeCsv((string)$row['app']),
-                $this->escapeCsv((string)$row['object']),
+                $this->escapeCsv($this->formatObject((string)$row['object'])),
                 $this->escapeCsv((string)$row['initiator']),
                 $this->escapeCsv($typeText),
                 $this->escapeCsv($permText),
@@ -125,7 +125,7 @@ class ReportService {
             $timeText = $this->formatTime((string)$row['time']);
             $body[] = $this->formatRow([
                 (string)$row['app'],
-                (string)$row['object']
+                $this->formatObject((string)$row['object'])
             ], [15, 105]);
             $body[] = $this->formatRow([
                 '',
@@ -245,6 +245,14 @@ class ReportService {
                 break;
         }
         return $label . ': ' . $recipient;
+    }
+
+    private function formatObject(string $object): string {
+        if ($object === '') {
+            return '';
+        }
+
+        return explode(';', $object, 2)[0];
     }
 
     private function escapePdfText(string $text): string {
