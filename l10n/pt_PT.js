@@ -15,10 +15,6 @@ OC.L10N.register(
     "Time" : "Tempo",
     "Select all" : "Selecionar tudo",
     "Files" : "Ficheiros",
-    "PDF" : "PDF",
-    "None" : "Nenhum",
-    "Daily" : "Diariamente",
-    "Weekly" : "Semanalmente",
-    "Save" : "Guardar"
+    "PDF" : "PDF"
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

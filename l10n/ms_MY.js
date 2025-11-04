@@ -7,9 +7,6 @@ OC.L10N.register(
     "Cancel" : "Cancel",
     "Search" : "Search",
     "Type" : "Jenis",
-    "Files" : "Fail-fail",
-    "Daily" : "Setiap hari",
-    "Weekly" : "Setiap minggu",
-    "Save" : "Simpan"
+    "Files" : "Fail-fail"
 },
 "nplurals=1; plural=0;");

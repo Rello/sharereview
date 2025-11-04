@@ -44,15 +44,6 @@ OC.L10N.register(
     "Click here" : "Klõpsi siin",
     "On demand report" : "Vastavalt vajadusele koostatud aruanne",
     "CSV" : "CSV-fail",
-    "PDF" : "PDF-fail",
-    "Scheduled report" : "Ajastatud aruanne",
-    "Default folder" : "Vaikimisi kaust",
-    "Schedule" : "Ajakava",
-    "None" : "Pole kasutusel",
-    "Daily" : "Kord päevas",
-    "Weekly" : "Kord nädalas",
-    "Monthly" : "Igakuine",
-    "Format" : "Vorming",
-    "Save" : "Salvesta"
+    "PDF" : "PDF-fail"
 },
 "nplurals=2; plural=(n != 1);");

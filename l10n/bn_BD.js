@@ -6,10 +6,6 @@ OC.L10N.register(
     "Cancel" : "বাতিল করুন",
     "Search" : "Search",
     "Type" : "ধরণ",
-    "Time" : "সময়",
-    "None" : "কোনটিই নয়",
-    "Daily" : "দৈনিক",
-    "Weekly" : "সাপ্তাহিক",
-    "Save" : "সংরক্ষণ"
+    "Time" : "সময়"
 },
 "nplurals=2; plural=(n != 1);");

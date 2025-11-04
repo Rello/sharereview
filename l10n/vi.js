@@ -14,11 +14,6 @@ OC.L10N.register(
     "Time" : "Thời gian",
     "Action" : "Hành động",
     "Select all" : "Chọn tất cả",
-    "Files" : "Tệp Tin",
-    "None" : "Không có",
-    "Daily" : "Hằng ngày",
-    "Weekly" : "Hằng tuần",
-    "Monthly" : "Hằng tháng",
-    "Save" : "Lưu"
+    "Files" : "Tệp Tin"
 },
 "nplurals=1; plural=0;");

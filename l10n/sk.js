@@ -21,12 +21,6 @@ OC.L10N.register(
     "Action" : "Akcia",
     "Select all" : "Vybrať všetko",
     "Files" : "Súbory",
-    "PDF" : "PDF",
-    "None" : "Žiadne",
-    "Daily" : "Denne",
-    "Weekly" : "Týždenne",
-    "Monthly" : "Mesačne",
-    "Format" : "Formát",
-    "Save" : "Uložiť"
+    "PDF" : "PDF"
 },
 "nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);");

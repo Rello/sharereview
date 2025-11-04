@@ -9,10 +9,6 @@ OC.L10N.register(
     "App" : "Aplikaĵo",
     "Type" : "Tipo",
     "Time" : "Dato",
-    "Select all" : "Elekti ĉion",
-    "None" : "Nenio",
-    "Daily" : "Ĉiutage",
-    "Weekly" : "Ĉiusemajne",
-    "Save" : "Konservi"
+    "Select all" : "Elekti ĉion"
 },
 "nplurals=2; plural=(n != 1);");

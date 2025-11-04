@@ -20,11 +20,6 @@ OC.L10N.register(
     "Action" : "Dejanje",
     "Select all" : "Izberi vse",
     "Files" : "Datoteke",
-    "PDF" : "PDF",
-    "None" : "Brez",
-    "Daily" : "Dnevno",
-    "Weekly" : "Tedensko",
-    "Monthly" : "Mesečno",
-    "Save" : "Shrani"
+    "PDF" : "PDF"
 },
 "nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);");

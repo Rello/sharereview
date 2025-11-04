@@ -20,11 +20,6 @@ OC.L10N.register(
     "Action" : "Действие",
     "Select all" : "Избери всички",
     "Files" : "Файлове",
-    "PDF" : "PDF",
-    "None" : "Няма",
-    "Daily" : "Всеки ден",
-    "Weekly" : "Всяка седмица",
-    "Monthly" : "Месечно",
-    "Save" : "Запиши"
+    "PDF" : "PDF"
 },
 "nplurals=2; plural=(n != 1);");

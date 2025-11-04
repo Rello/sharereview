@@ -39,14 +39,6 @@
     "Shares are being retrieved, please wait …" : "Les partages sont en cours de récupération, veuillez patienter...",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "L'application doit être limitée à au moins un groupe d'utilisateurs spécifique dans le magasin d'applications. Cela permet d'éviter l'exposition accidentelle du contenu partagé à tous les utilisateurs.",
     "Click here" : "Cliquez ici",
-    "PDF" : "PDF",
-    "Default folder" : "Dossier par défaut",
-    "Schedule" : "Calendrier",
-    "None" : "Aucun",
-    "Daily" : "Quotidiennement",
-    "Weekly" : "Hebdomadaire",
-    "Monthly" : "Mensuel",
-    "Format" : "Format",
-    "Save" : "Enregistrer"
+    "PDF" : "PDF"
 },"pluralForm" :"nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
 }

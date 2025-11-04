@@ -7,10 +7,6 @@ OC.L10N.register(
     "Search" : "Nadi",
     "Type" : "Anaw",
     "Select all" : "Fren akk",
-    "PDF" : "PDF",
-    "None" : "Ula d yiwen",
-    "Daily" : "S wass",
-    "Weekly" : "S umalas",
-    "Save" : "Sekles"
+    "PDF" : "PDF"
 },
 "nplurals=2; plural=(n != 1);");

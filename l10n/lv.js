@@ -18,11 +18,6 @@ OC.L10N.register(
     "Action" : "Darbība",
     "Select all" : "Atzīmēt visu",
     "Files" : "Datnes",
-    "Delete selected" : "Izdzēst atlasītās",
-    "None" : "Nekas",
-    "Daily" : "Katru dienu",
-    "Weekly" : "Katru nedēļu",
-    "Monthly" : "Ikmēneša",
-    "Save" : "Saglabāt"
+    "Delete selected" : "Izdzēst atlasītās"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);");

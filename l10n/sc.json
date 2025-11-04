@@ -16,11 +16,6 @@
     "Time" : "Ora",
     "Action" : "Atzione",
     "Files" : "Archìvios",
-    "PDF" : "PDF",
-    "None" : "Perunu",
-    "Daily" : "Ogni die",
-    "Weekly" : "Ogni chida",
-    "Monthly" : "Ogni mese",
-    "Save" : "Sarva"
+    "PDF" : "PDF"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

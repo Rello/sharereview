@@ -18,11 +18,6 @@ OC.L10N.register(
     "Time" : "Ora",
     "Action" : "Atzione",
     "Files" : "Archìvios",
-    "PDF" : "PDF",
-    "None" : "Perunu",
-    "Daily" : "Ogni die",
-    "Weekly" : "Ogni chida",
-    "Monthly" : "Ogni mese",
-    "Save" : "Sarva"
+    "PDF" : "PDF"
 },
 "nplurals=2; plural=(n != 1);");

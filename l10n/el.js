@@ -20,12 +20,6 @@ OC.L10N.register(
     "Action" : "Ενέργεια",
     "Select all" : "Επιλογή όλων",
     "Files" : "Αρχεία",
-    "PDF" : "PDF",
-    "None" : "Καμία",
-    "Daily" : "Ημερησίως",
-    "Weekly" : "Εβδομαδιαίως",
-    "Monthly" : "Μηνιαίως",
-    "Format" : "Μορφότυπος",
-    "Save" : "Αποθήκευση"
+    "PDF" : "PDF"
 },
 "nplurals=2; plural=(n != 1);");

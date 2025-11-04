@@ -10,10 +10,6 @@ OC.L10N.register(
     "Time" : "Tyd",
     "Select all" : "Kies alle",
     "Files" : "Lêer ",
-    "PDF" : "PDF",
-    "None" : "Geen",
-    "Daily" : "Daagliks",
-    "Weekly" : "Weekliks",
-    "Save" : "Stoor"
+    "PDF" : "PDF"
 },
 "nplurals=2; plural=(n != 1);");

@@ -11,11 +11,6 @@
     "Time" : "Време",
     "Action" : "Акција",
     "Select all" : "Избери се",
-    "Files" : "Датотеки",
-    "None" : "Ништо",
-    "Daily" : "Дневно",
-    "Weekly" : "Неделно",
-    "Monthly" : "Месечно",
-    "Save" : "Сними"
+    "Files" : "Датотеки"
 },"pluralForm" :"nplurals=2; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : 1;"
 }

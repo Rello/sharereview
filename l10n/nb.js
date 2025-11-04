@@ -33,12 +33,6 @@ OC.L10N.register(
     "No share found" : "Ingen delt ressurs funnet",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Appen må være begrenset til minst én bestemt brukergruppe i appbutikken. Dette forhindrer utilsiktet eksponering av det delte innholdet for alle brukere.",
     "Click here" : "Klikk her",
-    "PDF" : ".PDF",
-    "Schedule" : "Timeplan",
-    "None" : "Ingen",
-    "Daily" : "Daglig",
-    "Weekly" : "Ukentlig",
-    "Monthly" : "Månedlig",
-    "Save" : "Lagre"
+    "PDF" : ".PDF"
 },
 "nplurals=2; plural=(n != 1);");

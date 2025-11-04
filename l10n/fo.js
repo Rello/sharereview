@@ -4,8 +4,6 @@ OC.L10N.register(
     "Delete" : "Strika",
     "Settings saved" : "Stillingar eru goymd",
     "OK" : "OK",
-    "Cancel" : "Cancel",
-    "Daily" : "Hvønn dag",
-    "Weekly" : "Hvørja viku"
+    "Cancel" : "Cancel"
 },
 "nplurals=2; plural=(n != 1);");

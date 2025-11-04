@@ -12,11 +12,6 @@ OC.L10N.register(
     "Permissions" : "Permissions",
     "Time" : "Time",
     "Action" : "Action",
-    "Select all" : "Select all",
-    "None" : "None",
-    "Daily" : "დღიურად",
-    "Weekly" : "კვირეულად",
-    "Monthly" : "Monthly",
-    "Save" : "დამახსოვრება"
+    "Select all" : "Select all"
 },
 "nplurals=2; plural=(n!=1);");

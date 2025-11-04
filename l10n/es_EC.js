@@ -16,14 +16,10 @@ OC.L10N.register(
     "Item" : "Elemento",
     "Type" : "Tipo",
     "Permissions" : "Permisos",
+    "Time" : "Hora",
     "Action" : "Acción",
     "Select all" : "Seleccionar todo",
     "Files" : "Archivo",
-    "PDF" : "PDF",
-    "None" : "Ninguno",
-    "Daily" : "Diariamente",
-    "Weekly" : "Semanalmente",
-    "Monthly" : "Mensual",
-    "Save" : "Guardar"
+    "PDF" : "PDF"
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

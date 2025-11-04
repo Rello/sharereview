@@ -10,10 +10,6 @@ OC.L10N.register(
     "Permissions" : "უფლებები",
     "Time" : "დრო",
     "Action" : "ქმედება",
-    "Select all" : "ყველას არჩევა",
-    "None" : "არც ერთი",
-    "Daily" : "ყოველდღიური",
-    "Weekly" : "ყოველკვირეული",
-    "Save" : "შენახვა"
+    "Select all" : "ყველას არჩევა"
 },
 "nplurals=2; plural=(n!=1);");

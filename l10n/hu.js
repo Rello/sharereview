@@ -19,12 +19,6 @@ OC.L10N.register(
     "Time" : "Idő",
     "Action" : "Művelet",
     "Files" : "Fájlok",
-    "PDF" : "PDF",
-    "Schedule" : "Ütemterv",
-    "None" : "Egyik sem",
-    "Daily" : "Naponta",
-    "Weekly" : "Hetente",
-    "Monthly" : "Havonta",
-    "Save" : "Mentés"
+    "PDF" : "PDF"
 },
 "nplurals=2; plural=(n != 1);");

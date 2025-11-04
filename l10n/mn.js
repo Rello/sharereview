@@ -10,10 +10,6 @@ OC.L10N.register(
     "Type" : "Төрөл",
     "Time" : "Цаг",
     "Select all" : "бүгдийг сонгох",
-    "Files" : "Файлууд",
-    "None" : "юу ч үгүй",
-    "Daily" : "Өдөр бүр",
-    "Weekly" : "Долоо хоног бүр",
-    "Save" : "Хадгалах"
+    "Files" : "Файлууд"
 },
 "nplurals=2; plural=(n != 1);");

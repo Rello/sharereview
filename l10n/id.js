@@ -14,12 +14,6 @@ OC.L10N.register(
     "App" : "Apl",
     "Type" : "tipe",
     "Time" : "Waktu",
-    "Select all" : "Pilih semua",
-    "None" : "Tidak ada",
-    "Daily" : "Harian",
-    "Weekly" : "Mingguan",
-    "Monthly" : "Bulanan",
-    "Format" : "Format",
-    "Save" : "Simpan"
+    "Select all" : "Pilih semua"
 },
 "nplurals=1; plural=0;");

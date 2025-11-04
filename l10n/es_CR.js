@@ -9,11 +9,9 @@ OC.L10N.register(
     "Search" : "Buscar",
     "App" : "Aplicación",
     "Permissions" : "Permisos",
+    "Time" : "Hora",
     "Action" : "Acción",
     "Select all" : "Seleccionar todo",
-    "None" : "Ninguno",
-    "Daily" : "Diariamente",
-    "Weekly" : "Semanalmente",
-    "Save" : "Guardar"
+    "Files" : "Archivo"
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

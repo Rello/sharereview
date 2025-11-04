@@ -20,12 +20,6 @@ OC.L10N.register(
     "Action" : "Acció",
     "Select all" : "Selecciona-ho tot",
     "Files" : "Fitxers",
-    "PDF" : "PDF",
-    "None" : "Només una vegada",
-    "Daily" : "Diàriament",
-    "Weekly" : "Setmanalment",
-    "Monthly" : "Mensualment",
-    "Format" : "Format",
-    "Save" : "Desar"
+    "PDF" : "PDF"
 },
 "nplurals=2; plural=(n != 1);");

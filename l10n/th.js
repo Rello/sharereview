@@ -11,11 +11,6 @@ OC.L10N.register(
     "Type" : "ประเภท",
     "Time" : "เวลา",
     "Select all" : "เลือกทั้งหมด",
-    "PDF" : "PDF",
-    "None" : "ไม่มี",
-    "Daily" : "รายวัน",
-    "Weekly" : "รายสัปดาห์",
-    "Monthly" : "ทุก ๆ เดือน",
-    "Save" : "บันทึก"
+    "PDF" : "PDF"
 },
 "nplurals=1; plural=0;");

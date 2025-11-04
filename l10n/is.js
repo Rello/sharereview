@@ -15,12 +15,6 @@ OC.L10N.register(
     "Action" : "Aðgerð",
     "Select all" : "Velja allt",
     "Files" : "Skráaforrit",
-    "PDF" : "PDF",
-    "None" : "Ekkert",
-    "Daily" : "Daglega",
-    "Weekly" : "Vikulega",
-    "Monthly" : "Mánaðarlega",
-    "Format" : "Snið",
-    "Save" : "Vista"
+    "PDF" : "PDF"
 },
 "nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);");

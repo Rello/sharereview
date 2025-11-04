@@ -10,11 +10,6 @@ OC.L10N.register(
     "Type" : "Tip",
     "Permissions" : "Permisiuni",
     "Time" : "Interval orar",
-    "Select all" : "Selectează tot",
-    "None" : "Niciuna",
-    "Daily" : "Zilnic",
-    "Weekly" : "Săptămânal",
-    "Monthly" : "Lunar",
-    "Save" : "Salvează"
+    "Select all" : "Selectează tot"
 },
 "nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));");

@@ -20,12 +20,6 @@ OC.L10N.register(
     "Action" : "Ekintza",
     "Select all" : "Hautatu dena",
     "Files" : "Fitxategiak",
-    "PDF" : "PDF",
-    "None" : "Bat ere ez",
-    "Daily" : "Egunero",
-    "Weekly" : "Astero",
-    "Monthly" : "Hilabetero",
-    "Format" : "Formatua",
-    "Save" : "Gorde"
+    "PDF" : "PDF"
 },
 "nplurals=2; plural=(n != 1);");

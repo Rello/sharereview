@@ -13,11 +13,6 @@ OC.L10N.register(
     "Time" : "Време",
     "Action" : "Акција",
     "Select all" : "Избери се",
-    "Files" : "Датотеки",
-    "None" : "Ништо",
-    "Daily" : "Дневно",
-    "Weekly" : "Неделно",
-    "Monthly" : "Месечно",
-    "Save" : "Сними"
+    "Files" : "Датотеки"
 },
 "nplurals=2; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : 1;");

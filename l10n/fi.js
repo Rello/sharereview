@@ -17,12 +17,6 @@ OC.L10N.register(
     "Action" : "Toiminto",
     "Select all" : "Valitse kaikki",
     "Files" : "Tiedostot",
-    "PDF" : "PDF",
-    "None" : "Ei mitään",
-    "Daily" : "Päivittäin",
-    "Weekly" : "Viikottain",
-    "Monthly" : "Kuukausittain",
-    "Format" : "Muoto",
-    "Save" : "Tallenna"
+    "PDF" : "PDF"
 },
 "nplurals=2; plural=(n != 1);");

@@ -12,10 +12,6 @@ OC.L10N.register(
     "Time" : "Kohë",
     "Action" : "Veprim",
     "Select all" : "Zgjidhi të gjitha",
-    "Files" : "Skedarë",
-    "None" : "Asnjë",
-    "Daily" : "Përditë",
-    "Weekly" : "Çdo javë",
-    "Save" : "Ruaje"
+    "Files" : "Skedarë"
 },
 "nplurals=2; plural=(n != 1);");

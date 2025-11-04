@@ -36,12 +36,6 @@ OC.L10N.register(
     "No share found" : "ھېچقانداق پاي تېپىلمىدى",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "بۇ ئەپ چوقۇم ئەپ دۇكىنىدىكى كەم دېگەندە بىر ئالاھىدە ئىشلەتكۈچى توپى بىلەنلا چەكلىنىشى كېرەك. بۇ بارلىق ئىشلەتكۈچىلەرگە ئورتاق مەزمۇننىڭ تاسادىپىي ئاشكارىلىنىپ كېتىشىنىڭ ئالدىنى ئالىدۇ.",
     "Click here" : "بۇ يەرنى چېكىڭ",
-    "PDF" : "PDF",
-    "None" : "يوق",
-    "Daily" : "كۈندىلىك",
-    "Weekly" : "ھەپتىلىك",
-    "Monthly" : "ئايلىق",
-    "Format" : "فورماتى",
-    "Save" : "ساقلاش"
+    "PDF" : "PDF"
 },
 "nplurals=2; plural=(n != 1);");

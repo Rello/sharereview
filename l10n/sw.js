@@ -41,14 +41,6 @@ OC.L10N.register(
     "Shares are being retrieved, please wait …" : "Shiriki zinarejeshwa, tafadhali subiri...",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Ni lazima programu iwekwe kwa angalau kikundi kimoja mahususi cha watumiaji katika stoo ya programu. Hii inazuia kufichuliwa kwa bahati mbaya kwa maudhui yaliyoshirikiwa kwa watumiaji wote.",
     "Click here" : "Bofya hapa",
-    "PDF" : "PDF",
-    "Default folder" : "Folda chaguo-msingi",
-    "Schedule" : "Ratiba",
-    "None" : "Hakuna",
-    "Daily" : "Kwa kila siku",
-    "Weekly" : "Kwa kila wiki",
-    "Monthly" : "Kwa kila mwezi",
-    "Format" : "Umbizo",
-    "Save" : "Hifadhi"
+    "PDF" : "PDF"
 },
 "nplurals=2; plural=(n != 1);");

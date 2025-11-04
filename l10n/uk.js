@@ -38,13 +38,6 @@ OC.L10N.register(
     "No share found" : "Відсутні спільні ресурси",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "З метою уникнення надання доступу до спільних ресурсів всім користувачам доступ до застосунку потрібно обмежити щонайменше для однєї визначеної групи користувачів в параметрах встановлення з крамниці застосунків.",
     "Click here" : "Клацніть тут",
-    "PDF" : "PDF",
-    "Schedule" : "Розклад",
-    "None" : "Нічого",
-    "Daily" : "Щоденно",
-    "Weekly" : "Щотижня",
-    "Monthly" : "Щомісяця",
-    "Format" : "Формат",
-    "Save" : "Зберегти"
+    "PDF" : "PDF"
 },
 "nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);");

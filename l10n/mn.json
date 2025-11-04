@@ -8,10 +8,6 @@
     "Type" : "Төрөл",
     "Time" : "Цаг",
     "Select all" : "бүгдийг сонгох",
-    "Files" : "Файлууд",
-    "None" : "юу ч үгүй",
-    "Daily" : "Өдөр бүр",
-    "Weekly" : "Долоо хоног бүр",
-    "Save" : "Хадгалах"
+    "Files" : "Файлууд"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

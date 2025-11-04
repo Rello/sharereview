@@ -16,11 +16,6 @@ OC.L10N.register(
     "Action" : "פעולה",
     "Select all" : "בחר הכל",
     "Files" : "קבצים",
-    "PDF" : "PDF",
-    "None" : "ללא",
-    "Daily" : "יומי",
-    "Weekly" : "שבועי",
-    "Monthly" : "חודשי",
-    "Save" : "שמירה"
+    "PDF" : "PDF"
 },
 "nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: 2;");

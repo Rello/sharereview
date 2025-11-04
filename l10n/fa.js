@@ -20,11 +20,6 @@ OC.L10N.register(
     "Action" : "عمل",
     "Select all" : "انتخاب همه",
     "Files" : "پرونده‌ها",
-    "PDF" : "PDF",
-    "None" : "هیچ‌کدام",
-    "Daily" : "روزانه",
-    "Weekly" : "هفته گی",
-    "Monthly" : "ماهانه",
-    "Save" : "ذخیره"
+    "PDF" : "PDF"
 },
 "nplurals=2; plural=(n > 1);");

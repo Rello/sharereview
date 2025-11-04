@@ -18,11 +18,6 @@ OC.L10N.register(
     "Time" : "시간",
     "Action" : "동작",
     "Select all" : "모두 선택",
-    "Files" : "파일",
-    "None" : "없음",
-    "Daily" : "매일",
-    "Weekly" : "매주",
-    "Monthly" : "매달",
-    "Save" : "저장"
+    "Files" : "파일"
 },
 "nplurals=1; plural=0;");

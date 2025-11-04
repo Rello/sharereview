@@ -10,11 +10,6 @@ OC.L10N.register(
     "Type" : "Tipe",
     "Permissions" : "Autorizacions",
     "Time" : "Ora",
-    "PDF" : "PDF",
-    "None" : "Cap",
-    "Daily" : "Quotidian",
-    "Weekly" : "Setmanièr",
-    "Monthly" : "Cada mes",
-    "Save" : "Enregistrar"
+    "PDF" : "PDF"
 },
 "nplurals=2; plural=(n > 1);");

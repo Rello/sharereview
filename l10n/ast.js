@@ -15,10 +15,6 @@ OC.L10N.register(
     "Action" : "Aición",
     "Select all" : "Seleicionar too",
     "Files" : "Ficheros",
-    "PDF" : "PDF",
-    "None" : "Nada",
-    "Daily" : "Caldía",
-    "Weekly" : "Selmanalmente",
-    "Save" : "Guardar"
+    "PDF" : "PDF"
 },
 "nplurals=2; plural=(n != 1);");

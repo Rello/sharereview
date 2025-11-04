@@ -41,14 +41,6 @@ OC.L10N.register(
     "Shares are being retrieved, please wait …" : "Sdílení jsou získávána – čekejte…",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Je třeba, aby aplikace byla omezena na alespoň jednu konkrétní skupinu uživatelů v katalogu aplikací. To zabrání neúmyslnému exponování sdíleného obsahu všem uživatelům.",
     "Click here" : "Klikněte sem",
-    "PDF" : "PDF",
-    "Default folder" : "Výchozí složka",
-    "Schedule" : "Plán",
-    "None" : "Žádná",
-    "Daily" : "Každý den",
-    "Weekly" : "Každý týden",
-    "Monthly" : "Měsíčně",
-    "Format" : "Formát",
-    "Save" : "Uložit"
+    "PDF" : "PDF"
 },
 "nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;");
