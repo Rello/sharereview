@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.5.0 - 2025-11-xx
+## 1.5.0 - 2025-11-04
 ### Added
 - Export report as csv or pdf #25
 - Show the full directory path for each share #26
