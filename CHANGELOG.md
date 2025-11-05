@@ -1,5 +1,8 @@
 # Changelog
 
+### Fixed
+- Make permissions' tooltips translatable #31
+
 ## 1.5.0 - 2025-11-04
 ### Added
 - Export report as csv or pdf #25

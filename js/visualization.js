@@ -128,19 +128,19 @@ OCA.ShareReview.Visualization = {
 
     renderPermissions: function (data) {
         let iconClass = 'icon-sharereview-more';
-        let titleText = 'more'
+        let titleText = t('sharereview', 'more')
 
         switch (parseInt(data)) {
             case 1:
             case 17:
                 iconClass = 'icon-sharereview-read';
-                titleText = 'read';
+                titleText = t('sharereview', 'read');
                 break;
             case 2:
             case 31:
             case 19:
                 iconClass = 'icon-sharereview-edit';
-                titleText = 'edit';
+                titleText = t('sharereview', 'edit');
                 break;
         }
 
@@ -164,36 +164,36 @@ OCA.ShareReview.Visualization = {
         switch (parseInt(dataArray[0])) {
             case 12:
                 iconClass = 'icon-sharereview-deck';
-                titleText = 'Deck'
+                titleText = t('sharereview', 'Deck');
                 break;
             case 10:
                 iconClass = 'icon-sharereview-talk';
-                titleText = 'Talk room'
+                titleText = t('sharereview', 'Talk room');
                 break;
             case 7:
                 iconClass = 'icon-sharereview-team';
-                titleText = 'Team'
+                titleText = t('sharereview', 'Team');
                 break;
             case 9: // remote group
             case 6:
                 iconClass = 'icon-sharereview-federation';
-                titleText = 'Federation'
+                titleText = t('sharereview', 'Federation');
                 break;
             case 4:
                 iconClass = 'icon-sharereview-email';
-                titleText = 'E-mail'
+                titleText = t('sharereview', 'E-mail');
                 break;
             case 3:
                 iconClass = 'icon-sharereview-link';
-                titleText = 'Link'
+                titleText = t('sharereview', 'Link');
                 break;
             case 1:
                 iconClass = 'icon-sharereview-group';
-                titleText = 'User group'
+                titleText = t('sharereview', 'User group');
                 break;
             case 0:
                 iconClass = 'icon-sharereview-user';
-                titleText = 'User'
+                titleText = t('sharereview', 'User');
                 break;
         }
 
