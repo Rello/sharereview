@@ -24,6 +24,7 @@
     "Showing 0 to 0 of 0 entries" : "Zobrazují se položky 0 až 0 z 0",
     "App" : "Aplikace",
     "Item" : "Položka",
+    "Initiator" : "Iniciátor",
     "Type" : "Typ",
     "Permissions" : "Oprávnění",
     "Time" : "Time",
@@ -39,6 +40,7 @@
     "Shares are being retrieved, please wait …" : "Sdílení jsou získávána – čekejte…",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Je třeba, aby aplikace byla omezena na alespoň jednu konkrétní skupinu uživatelů v katalogu aplikací. To zabrání neúmyslnému exponování sdíleného obsahu všem uživatelům.",
     "Click here" : "Klikněte sem",
+    "CSV" : "CSV",
     "PDF" : "PDF"
 },"pluralForm" :"nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;"
 }
