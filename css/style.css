@@ -132,7 +132,6 @@
     filter: var(--background-invert-if-dark);
     background-size: 16px;
     cursor: pointer;
-    background-position: left !important;
 }
 
 .icon-sharereview-time {
