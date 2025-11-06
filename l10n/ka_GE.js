@@ -10,6 +10,10 @@ OC.L10N.register(
     "Permissions" : "უფლებები",
     "Time" : "დრო",
     "Action" : "ქმედება",
-    "Select all" : "ყველას არჩევა"
+    "Select all" : "ყველას არჩევა",
+    "Deck" : "დასტა",
+    "Federation" : "ფედერაცია",
+    "E-mail" : "ელ-ფოსტა",
+    "User" : "მომხმარებელი"
 },
 "nplurals=2; plural=(n!=1);");

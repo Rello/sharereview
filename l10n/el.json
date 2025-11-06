@@ -17,6 +17,11 @@
     "Time" : "Ώρα",
     "Action" : "Ενέργεια",
     "Select all" : "Επιλογή όλων",
+    "edit" : "επεξεργασία",
+    "Talk room" : "Δωμάτιο του Talk ",
+    "Team" : "Ομάδα",
+    "Federation" : "Ομοσπονδία",
+    "E-mail" : "E-mail",
     "Files" : "Αρχεία",
     "PDF" : "PDF"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"

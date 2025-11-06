@@ -20,6 +20,13 @@ OC.L10N.register(
     "Time" : "Čas",
     "Action" : "Akcia",
     "Select all" : "Vybrať všetko",
+    "edit" : "upraviť",
+    "Deck" : "Nástenka",
+    "Talk room" : "Diskusná miestnosť",
+    "Team" : "Tím",
+    "Federation" : "Združovanie",
+    "Link" : "Prepojenie",
+    "User" : "Používateľ",
     "Files" : "Súbory",
     "PDF" : "PDF"
 },

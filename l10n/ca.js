@@ -19,6 +19,9 @@ OC.L10N.register(
     "Time" : "Hora",
     "Action" : "Acció",
     "Select all" : "Selecciona-ho tot",
+    "Team" : "Equip",
+    "Federation" : "Federació",
+    "E-mail" : "Correu electrònic",
     "Files" : "Fitxers",
     "PDF" : "PDF"
 },

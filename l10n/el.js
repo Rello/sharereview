@@ -19,6 +19,11 @@ OC.L10N.register(
     "Time" : "Ώρα",
     "Action" : "Ενέργεια",
     "Select all" : "Επιλογή όλων",
+    "edit" : "επεξεργασία",
+    "Talk room" : "Δωμάτιο του Talk ",
+    "Team" : "Ομάδα",
+    "Federation" : "Ομοσπονδία",
+    "E-mail" : "E-mail",
     "Files" : "Αρχεία",
     "PDF" : "PDF"
 },

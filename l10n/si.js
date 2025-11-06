@@ -8,6 +8,8 @@ OC.L10N.register(
     "App" : "යෙදුම",
     "Time" : "වේලාව",
     "Select all" : "සියල්ල තෝරන්න",
+    "Link" : "සබැඳිය",
+    "User" : "පරිශීලක",
     "Files" : "ගොනු"
 },
 "nplurals=2; plural=(n != 1);");

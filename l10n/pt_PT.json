@@ -12,6 +12,12 @@
     "Type" : "Tipo",
     "Time" : "Tempo",
     "Select all" : "Selecionar tudo",
+    "edit" : "editar",
+    "Deck" : "Quadro",
+    "Federation" : "Federação",
+    "E-mail" : "Correio Eletrónico",
+    "Link" : "Hiperligação",
+    "User" : "Utilizador",
     "Files" : "Ficheiros",
     "PDF" : "PDF"
 },"pluralForm" :"nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"

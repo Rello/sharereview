@@ -10,6 +10,13 @@ OC.L10N.register(
     "Type" : "Tip",
     "Permissions" : "Permisiuni",
     "Time" : "Interval orar",
-    "Select all" : "Selectează tot"
+    "Select all" : "Selectează tot",
+    "edit" : "editare",
+    "Talk room" : "Camera de Talk",
+    "Team" : "Echipă",
+    "Federation" : "Federare",
+    "E-mail" : "E-mail",
+    "Link" : "Legătură",
+    "User" : "Utilizator"
 },
 "nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));");

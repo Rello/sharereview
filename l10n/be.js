@@ -15,6 +15,7 @@ OC.L10N.register(
     "Time" : "Час",
     "Action" : "Дзеянне",
     "Select all" : "Выбраць усе",
+    "more" : "яшчэ",
     "Files" : "Файлы",
     "CSV" : "CSV",
     "PDF" : "PDF"

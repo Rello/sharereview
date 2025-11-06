@@ -11,6 +11,9 @@ OC.L10N.register(
     "Type" : "ประเภท",
     "Time" : "เวลา",
     "Select all" : "เลือกทั้งหมด",
+    "Federation" : "ที่ติดต่อกับภายนอก",
+    "Link" : "ลิงก์",
+    "User" : "ผู้ใช้",
     "PDF" : "PDF"
 },
 "nplurals=1; plural=0;");

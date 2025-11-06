@@ -16,6 +16,14 @@
     "Permissions" : "Jogosultságok",
     "Time" : "Idő",
     "Action" : "Művelet",
+    "edit" : "szerkesztés",
+    "Deck" : "Kártyák",
+    "Talk room" : "Beszélgetés szoba",
+    "Team" : "Csapat",
+    "Federation" : "Föderáció",
+    "E-mail" : "E-mail",
+    "Link" : "Hivatkozás",
+    "User" : "Felhasználó",
     "Files" : "Fájlok",
     "PDF" : "PDF"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"

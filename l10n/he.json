@@ -13,6 +13,12 @@
     "Time" : "זמן",
     "Action" : "פעולה",
     "Select all" : "בחר הכל",
+    "edit" : "עריכה",
+    "Deck" : "חפיסה",
+    "Federation" : "איגוד",
+    "E-mail" : "דוא״ל",
+    "Link" : "קישור",
+    "User" : "משתמש",
     "Files" : "קבצים",
     "PDF" : "PDF"
 },"pluralForm" :"nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: 2;"

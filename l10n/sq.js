@@ -12,6 +12,12 @@ OC.L10N.register(
     "Time" : "Kohë",
     "Action" : "Veprim",
     "Select all" : "Zgjidhi të gjitha",
+    "edit" : "redakto",
+    "Deck" : "Shto paisjen U2F",
+    "Federation" : "Federim",
+    "E-mail" : "E-mail",
+    "Link" : "Lidhje",
+    "User" : "Përdorues",
     "Files" : "Skedarë"
 },
 "nplurals=2; plural=(n != 1);");

@@ -8,6 +8,10 @@ OC.L10N.register(
     "Search" : "Cercar",
     "Type" : "Typo",
     "Time" : "Tempore",
-    "Select all" : "Selectionar toto"
+    "Select all" : "Selectionar toto",
+    "edit" : "modificar",
+    "Federation" : "Federation",
+    "Link" : "Ligamine",
+    "User" : "User"
 },
 "nplurals=2; plural=(n != 1);");

@@ -8,6 +8,7 @@ OC.L10N.register(
     "Type" : "Typ",
     "Time" : "Zäit",
     "Select all" : "All auswielen",
+    "User" : "User",
     "Files" : "Dateien"
 },
 "nplurals=2; plural=(n != 1);");

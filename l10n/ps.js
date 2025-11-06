@@ -4,6 +4,7 @@ OC.L10N.register(
     "Delete" : "ړنګول",
     "OK" : "OK",
     "Cancel" : "پرېښودل",
-    "Select all" : "ټول ټاکل"
+    "Select all" : "ټول ټاکل",
+    "Link" : "لېنک"
 },
 "nplurals=2; plural=(n != 1);");

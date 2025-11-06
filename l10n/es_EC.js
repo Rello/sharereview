@@ -19,6 +19,11 @@ OC.L10N.register(
     "Time" : "Hora",
     "Action" : "Acción",
     "Select all" : "Seleccionar todo",
+    "Deck" : "Deck",
+    "Talk room" : "Sala de chat",
+    "Federation" : "Federación",
+    "Link" : "Liga",
+    "User" : "Usuario",
     "Files" : "Archivo",
     "PDF" : "PDF"
 },

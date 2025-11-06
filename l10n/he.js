@@ -15,6 +15,12 @@ OC.L10N.register(
     "Time" : "זמן",
     "Action" : "פעולה",
     "Select all" : "בחר הכל",
+    "edit" : "עריכה",
+    "Deck" : "חפיסה",
+    "Federation" : "איגוד",
+    "E-mail" : "דוא״ל",
+    "Link" : "קישור",
+    "User" : "משתמש",
     "Files" : "קבצים",
     "PDF" : "PDF"
 },

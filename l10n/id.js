@@ -14,6 +14,13 @@ OC.L10N.register(
     "App" : "Apl",
     "Type" : "tipe",
     "Time" : "Waktu",
-    "Select all" : "Pilih semua"
+    "Select all" : "Pilih semua",
+    "edit" : "ubah",
+    "Deck" : "Longgok",
+    "Talk room" : "Ruang Obrolan",
+    "Federation" : "Federasi",
+    "E-mail" : "Email",
+    "Link" : "Tautan",
+    "User" : "Pengguna"
 },
 "nplurals=1; plural=0;");
