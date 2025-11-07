@@ -6,6 +6,10 @@
     "Search" : "Cercar",
     "Type" : "Typo",
     "Time" : "Tempore",
-    "Select all" : "Selectionar toto"
+    "Select all" : "Selectionar toto",
+    "edit" : "modificar",
+    "Federation" : "Federation",
+    "Link" : "Ligamine",
+    "User" : "User"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

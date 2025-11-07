@@ -9,6 +9,10 @@ OC.L10N.register(
     "App" : "Aplikaĵo",
     "Type" : "Tipo",
     "Time" : "Dato",
-    "Select all" : "Elekti ĉion"
+    "Select all" : "Elekti ĉion",
+    "edit" : "modifi",
+    "Federation" : "Federado",
+    "E-mail" : "Retpoŝto",
+    "Link" : "Ligilo"
 },
 "nplurals=2; plural=(n != 1);");

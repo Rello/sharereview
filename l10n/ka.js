@@ -12,6 +12,11 @@ OC.L10N.register(
     "Permissions" : "Permissions",
     "Time" : "Time",
     "Action" : "Action",
-    "Select all" : "Select all"
+    "Select all" : "Select all",
+    "Deck" : "Deck",
+    "Federation" : "Federation",
+    "E-mail" : "E-mail",
+    "Link" : "Link",
+    "User" : "User"
 },
 "nplurals=2; plural=(n!=1);");

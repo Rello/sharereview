@@ -5,6 +5,8 @@ OC.L10N.register(
     "OK" : "OK",
     "Cancel" : "ரத்து செய்",
     "Search" : "தேடுதல்",
-    "Type" : "வகை"
+    "Type" : "வகை",
+    "Link" : "Link",
+    "User" : "User"
 },
 "nplurals=2; plural=(n != 1);");

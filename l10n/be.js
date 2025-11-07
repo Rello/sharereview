@@ -15,6 +15,12 @@ OC.L10N.register(
     "Time" : "Час",
     "Action" : "Дзеянне",
     "Select all" : "Выбраць усе",
+    "more" : "яшчэ",
+    "edit" : "рэдагаваць",
+    "Team" : "Каманда",
+    "Federation" : "Федэрацыя",
+    "Link" : "Спасылка",
+    "User" : "Карыстальнік",
     "Files" : "Файлы",
     "CSV" : "CSV",
     "PDF" : "PDF"

@@ -17,6 +17,12 @@ OC.L10N.register(
     "Permissions" : "Permissos",
     "Time" : "Ora",
     "Action" : "Atzione",
+    "Deck" : "Deck",
+    "Talk room" : "Istantza de Talk",
+    "Federation" : "Federatzione",
+    "E-mail" : "Posta eletrònica",
+    "Link" : "Ligòngiu",
+    "User" : "Utente",
     "Files" : "Archìvios",
     "PDF" : "PDF"
 },

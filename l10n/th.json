@@ -9,6 +9,9 @@
     "Type" : "ประเภท",
     "Time" : "เวลา",
     "Select all" : "เลือกทั้งหมด",
+    "Federation" : "ที่ติดต่อกับภายนอก",
+    "Link" : "ลิงก์",
+    "User" : "ผู้ใช้",
     "PDF" : "PDF"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

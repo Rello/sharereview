@@ -10,6 +10,11 @@ OC.L10N.register(
     "Type" : "Төрөл",
     "Time" : "Цаг",
     "Select all" : "бүгдийг сонгох",
+    "edit" : "Засварлах",
+    "Deck" : "Ажлын талбар",
+    "Federation" : "холбоо",
+    "E-mail" : "И-мэйл",
+    "Link" : "Холбоос",
     "Files" : "Файлууд"
 },
 "nplurals=2; plural=(n != 1);");

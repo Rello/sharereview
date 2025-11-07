@@ -11,6 +11,11 @@ OC.L10N.register(
     "Time" : "Hora",
     "Action" : "Acción",
     "Select all" : "Seleccionar todo",
+    "Deck" : "Deck",
+    "Federation" : "Federación",
+    "E-mail" : "Correo electrónico",
+    "Link" : "Liga",
+    "User" : "Usuario",
     "Files" : "Archivo"
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

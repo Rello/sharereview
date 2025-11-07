@@ -6,6 +6,7 @@ OC.L10N.register(
     "Cancel" : "বাতিল করুন",
     "Search" : "Search",
     "Type" : "ধরণ",
-    "Time" : "সময়"
+    "Time" : "সময়",
+    "User" : "User"
 },
 "nplurals=2; plural=(n != 1);");

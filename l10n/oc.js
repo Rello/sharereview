@@ -10,6 +10,8 @@ OC.L10N.register(
     "Type" : "Tipe",
     "Permissions" : "Autorizacions",
     "Time" : "Ora",
+    "Link" : "Ligam",
+    "User" : "Utilizator",
     "PDF" : "PDF"
 },
 "nplurals=2; plural=(n > 1);");

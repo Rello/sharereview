@@ -12,6 +12,14 @@
     "Time" : "Tími",
     "Action" : "Aðgerð",
     "Select all" : "Velja allt",
+    "edit" : "breyta",
+    "Deck" : "Deck-spjaldaforrit",
+    "Talk room" : "Spjallrás",
+    "Team" : "Teymi",
+    "Federation" : "Deilt milli þjóna",
+    "E-mail" : "Tölvupóstfang",
+    "Link" : "Tengill",
+    "User" : "Notandi",
     "Files" : "Skráaforrit",
     "PDF" : "PDF"
 },"pluralForm" :"nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);"

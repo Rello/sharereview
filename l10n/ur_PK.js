@@ -4,6 +4,7 @@ OC.L10N.register(
     "Delete" : "حذف کریں",
     "OK" : "OK",
     "Cancel" : "Cancel",
-    "Search" : "Search"
+    "Search" : "Search",
+    "User" : "User"
 },
 "nplurals=2; plural=(n != 1);");

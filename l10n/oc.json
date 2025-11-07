@@ -8,6 +8,8 @@
     "Type" : "Tipe",
     "Permissions" : "Autorizacions",
     "Time" : "Ora",
+    "Link" : "Ligam",
+    "User" : "Utilizator",
     "PDF" : "PDF"
 },"pluralForm" :"nplurals=2; plural=(n > 1);"
 }

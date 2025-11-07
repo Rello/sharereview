@@ -15,6 +15,13 @@ OC.L10N.register(
     "Time" : "Vrijeme",
     "Action" : "Radnja",
     "Select all" : "Odaberi sve",
+    "edit" : "uredi",
+    "Deck" : "Deck",
+    "Talk room" : "Soba za razgovor",
+    "Federation" : "Udruženje",
+    "E-mail" : "E-pošta",
+    "Link" : "Poveznica",
+    "User" : "@string/user_icon",
     "Files" : "Datoteke",
     "PDF" : "PDF"
 },

@@ -11,6 +11,14 @@
     "Time" : "Време",
     "Action" : "Акција",
     "Select all" : "Избери се",
+    "edit" : "уреди",
+    "Deck" : "Deck",
+    "Talk room" : "Соба за разговор",
+    "Team" : "Тим",
+    "Federation" : "Федерација",
+    "E-mail" : "Е-пошта",
+    "Link" : "Линк",
+    "User" : "Корисник",
     "Files" : "Датотеки"
 },"pluralForm" :"nplurals=2; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : 1;"
 }

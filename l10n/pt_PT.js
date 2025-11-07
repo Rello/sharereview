@@ -14,6 +14,12 @@ OC.L10N.register(
     "Type" : "Tipo",
     "Time" : "Tempo",
     "Select all" : "Selecionar tudo",
+    "edit" : "editar",
+    "Deck" : "Quadro",
+    "Federation" : "Federação",
+    "E-mail" : "Correio Eletrónico",
+    "Link" : "Hiperligação",
+    "User" : "Utilizador",
     "Files" : "Ficheiros",
     "PDF" : "PDF"
 },

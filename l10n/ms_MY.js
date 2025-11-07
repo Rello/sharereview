@@ -7,6 +7,7 @@ OC.L10N.register(
     "Cancel" : "Cancel",
     "Search" : "Search",
     "Type" : "Jenis",
+    "User" : "User",
     "Files" : "Fail-fail"
 },
 "nplurals=1; plural=0;");

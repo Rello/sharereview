@@ -17,6 +17,11 @@ OC.L10N.register(
     "Time" : "Hora",
     "Action" : "Acción",
     "Select all" : "Seleccionar todo",
+    "edit" : "editar",
+    "Deck" : "Deck",
+    "Federation" : "Federación",
+    "E-mail" : "Correo electrónico",
+    "User" : "Usuario",
     "Files" : "Archivo"
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

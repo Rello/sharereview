@@ -7,6 +7,9 @@ OC.L10N.register(
     "Search" : "ຄົ້ນຫາ",
     "Type" : "ພິມ",
     "Select all" : "ເລືອກທັງໝົດ",
+    "E-mail" : "ອີເມວ",
+    "Link" : "ລິງ",
+    "User" : "ຜູ້ໃຊ້",
     "Files" : "ຟາຍ"
 },
 "nplurals=1; plural=0;");

@@ -18,6 +18,13 @@
     "Time" : "Čas",
     "Action" : "Akcia",
     "Select all" : "Vybrať všetko",
+    "edit" : "upraviť",
+    "Deck" : "Nástenka",
+    "Talk room" : "Diskusná miestnosť",
+    "Team" : "Tím",
+    "Federation" : "Združovanie",
+    "Link" : "Prepojenie",
+    "User" : "Používateľ",
     "Files" : "Súbory",
     "PDF" : "PDF"
 },"pluralForm" :"nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);"

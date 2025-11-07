@@ -14,6 +14,13 @@ OC.L10N.register(
     "Time" : "Thời gian",
     "Action" : "Hành động",
     "Select all" : "Chọn tất cả",
+    "edit" : "chỉnh sửa",
+    "Deck" : "Deck",
+    "Talk room" : "Phòng họp",
+    "Team" : "Đội",
+    "Federation" : "Kết nối Liên Bang ",
+    "Link" : "Liên kết",
+    "User" : "Người dùng",
     "Files" : "Tệp Tin"
 },
 "nplurals=1; plural=0;");

@@ -17,6 +17,12 @@ OC.L10N.register(
     "Time" : "Laiks",
     "Action" : "Darbība",
     "Select all" : "Atzīmēt visu",
+    "edit" : "rediģēt",
+    "Team" : "Komanda",
+    "Federation" : "Federācija",
+    "E-mail" : "E-pasts",
+    "Link" : "Saite",
+    "User" : "Lietotājs",
     "Files" : "Datnes",
     "Delete selected" : "Izdzēst atlasītās"
 },

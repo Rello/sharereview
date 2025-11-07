@@ -6,6 +6,9 @@ OC.L10N.register(
     "Cancel" : "ýatyrmak",
     "Search" : "Gözlemek",
     "Type" : "Görnüşi",
-    "Select all" : "Hemmesini saýlaň"
+    "Select all" : "Hemmesini saýlaň",
+    "E-mail" : "E-mail",
+    "Link" : "Baglanyşyk",
+    "User" : "Ulanyjy"
 },
 "nplurals=2; plural=(n != 1);");

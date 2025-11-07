@@ -7,6 +7,8 @@ OC.L10N.register(
     "Search" : "Search",
     "Type" : "Տիպ",
     "Time" : "Ժամ",
-    "Select all" : "Նշել բոլորը"
+    "Select all" : "Նշել բոլորը",
+    "Link" : "Հղում",
+    "User" : "User"
 },
 "nplurals=2; plural=(n != 1);");

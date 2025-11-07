@@ -18,6 +18,14 @@ OC.L10N.register(
     "Time" : "시간",
     "Action" : "동작",
     "Select all" : "모두 선택",
+    "edit" : "편집",
+    "Deck" : "덱",
+    "Talk room" : "대화방",
+    "Team" : "팀",
+    "Federation" : "연합",
+    "E-mail" : "이메일",
+    "Link" : "링크",
+    "User" : "사용자",
     "Files" : "파일"
 },
 "nplurals=1; plural=0;");
