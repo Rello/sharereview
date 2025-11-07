@@ -9,6 +9,8 @@ OC.L10N.register(
     "App" : "Toep",
     "Time" : "Tyd",
     "Select all" : "Kies alle",
+    "edit" : "edigeer",
+    "User" : "Gebruiker",
     "Files" : "Lêer ",
     "PDF" : "PDF"
 },

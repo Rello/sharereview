@@ -20,10 +20,13 @@ OC.L10N.register(
     "Action" : "Ενέργεια",
     "Select all" : "Επιλογή όλων",
     "edit" : "επεξεργασία",
+    "Deck" : "Deck",
     "Talk room" : "Δωμάτιο του Talk ",
     "Team" : "Ομάδα",
     "Federation" : "Ομοσπονδία",
     "E-mail" : "E-mail",
+    "Link" : "Σύνδεσμος",
+    "User" : "Χρήστης",
     "Files" : "Αρχεία",
     "PDF" : "PDF"
 },

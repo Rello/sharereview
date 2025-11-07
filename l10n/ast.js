@@ -14,6 +14,12 @@ OC.L10N.register(
     "Time" : "Data",
     "Action" : "Aición",
     "Select all" : "Seleicionar too",
+    "Deck" : "Tarxeteru",
+    "Team" : "Equipu",
+    "Federation" : "Federación",
+    "E-mail" : "Corréu",
+    "Link" : "Enllaz",
+    "User" : "Usuariu",
     "Files" : "Ficheros",
     "PDF" : "PDF"
 },

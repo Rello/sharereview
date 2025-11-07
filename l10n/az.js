@@ -8,6 +8,7 @@ OC.L10N.register(
     "Search" : "Axtarış",
     "App" : "Tətbiq",
     "Time" : "Vaxt",
-    "Select all" : "Hamısıı seç"
+    "Select all" : "Hamısıı seç",
+    "User" : "User"
 },
 "nplurals=2; plural=(n != 1);");

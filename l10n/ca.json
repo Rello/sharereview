@@ -17,9 +17,14 @@
     "Time" : "Hora",
     "Action" : "Acció",
     "Select all" : "Selecciona-ho tot",
+    "edit" : "edita",
+    "Deck" : "Targetes",
+    "Talk room" : "Sala de xerrades",
     "Team" : "Equip",
     "Federation" : "Federació",
     "E-mail" : "Correu electrònic",
+    "Link" : "Enllaç",
+    "User" : "Usuari",
     "Files" : "Fitxers",
     "PDF" : "PDF"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"

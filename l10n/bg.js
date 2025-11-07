@@ -19,6 +19,12 @@ OC.L10N.register(
     "Time" : "Час",
     "Action" : "Действие",
     "Select all" : "Избери всички",
+    "edit" : "редактиране",
+    "Deck" : "Deck",
+    "Talk room" : "Стая за разговор",
+    "Federation" : "Федерация",
+    "E-mail" : "Имейл",
+    "Link" : "Връзка",
     "Files" : "Файлове",
     "PDF" : "PDF"
 },
