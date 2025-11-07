@@ -150,9 +150,9 @@ OCA.ShareReview.Visualization = {
     renderObject: function (data) {
         let dataArray = data.split(';');
         if (dataArray.length !== 1) {
-            return '<span title=' + dataArray[0] + '>' + dataArray[1] + '</span>';
+            return '<span title="' + dataArray[0] + '">' + dataArray[1] + '</span>';
         } else {
-            return '<span title=' + data + '>' + data + '</span>';
+            return '<span title="' + data + '">' + data + '</span>';
         }
     },
 

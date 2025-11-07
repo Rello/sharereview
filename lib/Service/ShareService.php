@@ -235,7 +235,8 @@ class ShareService {
 
 			// Retrieve the file object using the file_source
 			try {
-				$file = $this->rootFolder->getById($share['file_source']);
+				$userFolder = $this->rootFolder->getUserFolder($share['uid_initiator']);
+				$file = $userFolder->getById($share['file_source']);
 				if (!empty($file)) {
 					$path = $file[0]->getPath() . ';' . $file[0]->getName();
 				}
@@ -244,7 +245,6 @@ class ShareService {
 			} catch (NotPermittedException $e) {
 				$this->logger->error('Access not permitted for file_source: ' . $share['file_source']);
 			}
-
 
 			if (!$this->userHelper->isValidOwner($share['uid_initiator'])) {
 				$path = 'invalid share (*) ';
