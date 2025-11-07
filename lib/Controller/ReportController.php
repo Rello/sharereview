@@ -14,25 +14,25 @@ use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\BackgroundJob\IJobList;
-use OCP\IConfig;
+use OCP\IAppConfig;
 use OCP\IRequest;
 use OCP\IUserSession;
 
 class ReportController extends Controller {
     private ReportService $reportService;
-    private IConfig $config;
+	private IAppConfig $appConfig;
     private IJobList $jobList;
     private IUserSession $userSession;
 
     public function __construct(string $appName,
                                 IRequest $request,
                                 ReportService $reportService,
-                                IConfig $config,
+								IAppConfig $appConfig,
                                 IJobList $jobList,
                                 IUserSession $userSession) {
         parent::__construct($appName, $request);
         $this->reportService = $reportService;
-        $this->config = $config;
+		$this->appConfig = $appConfig;
         $this->jobList = $jobList;
         $this->userSession = $userSession;
     }
@@ -50,10 +50,10 @@ class ReportController extends Controller {
      */
     public function saveSettings(string $folder, string $schedule, string $type = 'pdf'): DataResponse {
         $user = $this->userSession->getUser();
-        $this->config->setAppValue('sharereview', 'reportOwner', $user->getUID());
-        $this->config->setAppValue('sharereview', 'reportFolder', $folder);
-        $this->config->setAppValue('sharereview', 'schedule', $schedule);
-        $this->config->setAppValue('sharereview', 'reportType', $type);
+        $this->appConfig->setValueString('sharereview', 'folderOwner', $user->getUID());
+        $this->appConfig->setValueString('sharereview', 'reportFolder', $folder);
+        $this->appConfig->setValueString('sharereview', 'schedule', $schedule);
+        $this->appConfig->setValueString('sharereview', 'reportType', $type);
 
         $this->jobList->remove(GenerateReportJob::class);
         if ($schedule !== 'none') {

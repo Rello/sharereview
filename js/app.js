@@ -211,6 +211,7 @@ OCA.ShareReview.Navigation = {
         document.getElementById('defaultFolder').value = OCA.ShareReview.Navigation.getInitialState('reportFolder') || '';
         document.getElementById('scheduleSelect').value = OCA.ShareReview.Navigation.getInitialState('schedule') || 'none';
         document.getElementById('typeSelect').value = OCA.ShareReview.Navigation.getInitialState('reportType') || 'pdf';
+        document.getElementById('folderOwner').value = OCA.ShareReview.Navigation.getInitialState('folderOwner') || '';
     },
 
     handleExportClick: function (type) {
@@ -386,12 +387,17 @@ OCA.ShareReview.Backend = {
             });
     },
 
-    saveSettings: function(folder, schedule, type) {
+    saveSettings: function() {
+        let folder = document.getElementById('defaultFolder').value;
+        let schedule = document.getElementById('scheduleSelect').value;
+        let type = document.getElementById('typeSelect').value;
+        let folderOwner = document.getElementById('folderOwner').value;
+
         let requestUrl = OC.generateUrl('apps/sharereview/report/settings');
         fetch(requestUrl, {
             method: 'POST',
             headers: OCA.ShareReview.headers(),
-            body: JSON.stringify({folder: folder, schedule: schedule, type: type})
+            body: JSON.stringify({folder: folder, schedule: schedule, folderOwner: folderOwner, type: type})
         })
             .then(response => response.json())
             .then(() => {
@@ -410,6 +416,7 @@ document.addEventListener('DOMContentLoaded', function () {
             OC.dialogs.filepicker(t('sharereview', 'Select folder'), function (path) {
                 if (path) {
                     defaultFolderInput.value = path;
+                    document.getElementById('folderOwner').value = OC.currentUser;
                 }
             }, false, 'httpd/unix-directory', true, 1);
         };
@@ -429,11 +436,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     let save = document.getElementById('saveSettings');
     if (save) {
-        save.addEventListener('click', function () {
-            let folder = document.getElementById('defaultFolder').value;
-            let schedule = document.getElementById('scheduleSelect').value;
-            let type = document.getElementById('typeSelect').value;
-            OCA.ShareReview.Backend.saveSettings(folder, schedule, type);
-        });
+        save.addEventListener('click', OCA.ShareReview.Backend.saveSettings);
     }
 });

@@ -94,10 +94,15 @@ class ShareService {
 	 * @throws NotFoundException
 	 * @throws NotPermittedException
 	 */
-	public function read($onlyNew) {
-		$user = $this->userSession->getUser();
-		$userTimestamp = $this->config->getUserValue($user->getUID(), 'sharereview', 'reviewTimestamp', 0);
-		$showTalk = $this->config->getUserValue($user->getUID(), 'sharereview', 'showTalk', 'true') !== 'false';
+	public function read($onlyNew, $backgroundUserId = null) {
+		if ($backgroundUserId != null) {
+			$user = $backgroundUserId;
+		} else {
+			$user = $this->userSession->getUser()->getUID();
+		}
+
+		$userTimestamp = $this->config->getUserValue($user, 'sharereview', 'reviewTimestamp', 0);
+		$showTalk = $this->config->getUserValue($user, 'sharereview', 'showTalk', 'true') !== 'false';
 		$formated = [];
 
 		$shares = $this->getFileShares($showTalk);

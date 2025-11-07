@@ -46,30 +46,42 @@
             <button id="exportPdf" class="button"><?php p($l->t('PDF')); ?></button>
         </p>
         <br><br>
-        <!--<h5><?php /*p($l->t('Scheduled report')); */?></h4>
-        <p>
-            <label for="defaultFolder"><?php /*p($l->t('Default folder')); */?></label>
-            <input type="text" id="defaultFolder" readonly>
-        </p>
-        <p>
-            <label for="scheduleSelect"><?php /*p($l->t('Schedule')); */?></label>
-            <select id="scheduleSelect">
-                <option value="none"><?php /*p($l->t('None')); */?></option>
-                <option value="daily"><?php /*p($l->t('Daily')); */?></option>
-                <option value="weekly"><?php /*p($l->t('Weekly')); */?></option>
-                <option value="monthly"><?php /*p($l->t('Monthly')); */?></option>
-            </select>
-        </p>
-        <p>
-            <label for="typeSelect"><?php /*p($l->t('Format')); */?></label>
-            <select id="typeSelect">
-                <option value="pdf"><?php /*p($l->t('PDF')); */?></option>
-                <option value="csv"><?php /*p($l->t('CSV')); */?></option>
-            </select>
-        </p>
-        <p>
-            <button id="saveSettings" class="button"><?php /*p($l->t('Save')); */?></button>
-        </p>-->
+        <h5><?php p($l->t('Scheduled report')); ?></h5>
+        <table>
+            <tr>
+                <td style="width: 200px"><label for="defaultFolder"><?php p($l->t('Default folder')); ?></label></td>
+                <td><input type="text" id="defaultFolder" readonly></td>
+            </tr>
+            <tr>
+                <td><label for="folderOwner"><?php p($l->t('Folder owner')); ?></label></td>
+                <td><input type="text" id="folderOwner" disabled></td>
+            </tr>
+            <tr>
+                <td><label for="scheduleSelect"><?php p($l->t('Schedule')); ?></label></td>
+                <td>
+                    <select id="scheduleSelect">
+                        <option value="none"><?php p($l->t('None')); ?></option>
+                        <option value="daily"><?php p($l->t('Daily')); ?></option>
+                        <option value="weekly"><?php p($l->t('Weekly')); ?></option>
+                        <option value="monthly"><?php p($l->t('Monthly')); ?></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="typeSelect"><?php p($l->t('Format')); ?></label></td>
+                <td>
+                    <select id="typeSelect">
+                        <option value="pdf"><?php p($l->t('PDF')); ?></option>
+                        <option value="csv"><?php p($l->t('CSV')); ?></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: right;">
+                    <button id="saveSettings" class="button"><?php p($l->t('Save')); ?></button>
+                </td>
+            </tr>
+        </table>
     </div>
 
 </div>

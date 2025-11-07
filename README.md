@@ -10,7 +10,7 @@ Share status can be exported for documentation.
   - show only new shares next time
 - Audit compliance
 - Assign review to user groups (e.g. audit or risk mgmt)
-- Export as CSV or PDF
+- Export as CSV or PDF (manual or regular background job)
 
 ### Note:
 The app must be restricted to at least one specific user group in the app store. 

@@ -13,9 +13,9 @@ use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IRequest;
 use OCP\AppFramework\Services\IInitialState;
 use OCP\IConfig;
+use OCP\IAppConfig;
 use OCP\IUserSession;
 use Psr\Log\LoggerInterface;
-use OCA\Text\Event\LoadEditor;
 
 /**
  * Controller class for main page.
@@ -28,6 +28,7 @@ class PageController extends Controller {
 	protected $config;
 	/** @var IUserSession */
 	private $userSession;
+	private IAppConfig $appConfig;
 
 	public function __construct(
 		string          $appName,
@@ -36,26 +37,29 @@ class PageController extends Controller {
 		IInitialState   $initialState,
 		IConfig         $config,
 		IUserSession    $userSession,
+		IAppConfig      $appConfig,
 	) {
 		parent::__construct($appName, $request);
 		$this->logger = $logger;
 		$this->initialState = $initialState;
 		$this->config = $config;
 		$this->userSession = $userSession;
+		$this->appConfig = $appConfig;
 	}
 
 	/**
 	 * @NoAdminRequired
 	 * @NoCSRFRequired
 	 */
-        public function index() {
-                $user = $this->userSession->getUser();
-                $this->initialState->provideInitialState('reviewTimestamp', $this->config->getUserValue($user->getUID(), 'sharereview', 'reviewTimestamp', 0));
-                $this->initialState->provideInitialState('showTalk', $this->config->getUserValue($user->getUID(), 'sharereview', 'showTalk', 'false'));
-                $this->initialState->provideInitialState('reportFolder', $this->config->getAppValue('sharereview', 'reportFolder', ''));
-                $this->initialState->provideInitialState('schedule', $this->config->getAppValue('sharereview', 'schedule', 'none'));
-                $this->initialState->provideInitialState('reportType', $this->config->getAppValue('sharereview', 'reportType', 'pdf'));
-                $params = array();
-                return new TemplateResponse($this->appName, 'main', $params);
-        }
+	public function index() {
+		$user = $this->userSession->getUser();
+		$this->initialState->provideInitialState('reviewTimestamp', $this->config->getUserValue($user->getUID(), 'sharereview', 'reviewTimestamp', 0));
+		$this->initialState->provideInitialState('showTalk', $this->config->getUserValue($user->getUID(), 'sharereview', 'showTalk', 'false'));
+		$this->initialState->provideInitialState('reportFolder', $this->appConfig->getValueString('sharereview', 'reportFolder', ''));
+		$this->initialState->provideInitialState('schedule', $this->appConfig->getValueString('sharereview', 'schedule', 'none'));
+		$this->initialState->provideInitialState('reportType', $this->appConfig->getValueString('sharereview', 'reportType', 'pdf'));
+		$this->initialState->provideInitialState('folderOwner', $this->appConfig->getValueString('sharereview', 'folderOwner', ''));
+		$params = array();
+		return new TemplateResponse($this->appName, 'main', $params);
+	}
 }
