@@ -21,6 +21,11 @@ OC.L10N.register(
     "Federation" : "Kết nối Liên Bang ",
     "Link" : "Liên kết",
     "User" : "Người dùng",
-    "Files" : "Tệp Tin"
+    "Files" : "Tệp Tin",
+    "None" : "Không có",
+    "Daily" : "Hằng ngày",
+    "Weekly" : "Hằng tuần",
+    "Monthly" : "Hằng tháng",
+    "Save" : "Lưu"
 },
 "nplurals=1; plural=0;");

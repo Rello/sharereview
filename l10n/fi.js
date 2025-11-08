@@ -25,6 +25,12 @@ OC.L10N.register(
     "Link" : "Linkki",
     "User" : "Käyttäjä",
     "Files" : "Tiedostot",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "None" : "Ei mitään",
+    "Daily" : "Päivittäin",
+    "Weekly" : "Viikottain",
+    "Monthly" : "Kuukausittain",
+    "Format" : "Muoto",
+    "Save" : "Tallenna"
 },
 "nplurals=2; plural=(n != 1);");

@@ -55,6 +55,15 @@ OC.L10N.register(
     "Click here" : "Klicka här",
     "On demand report" : "Rapport på begäran",
     "CSV" : "CSV",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "Scheduled report" : "Schemalagd rapport",
+    "Default folder" : "Standardmapp",
+    "Schedule" : "Schemalägg",
+    "None" : "Ingen",
+    "Daily" : "Varje dag",
+    "Weekly" : "Varje vecka",
+    "Monthly" : "Varje månad",
+    "Format" : "Format",
+    "Save" : "Spara"
 },
 "nplurals=2; plural=(n != 1);");

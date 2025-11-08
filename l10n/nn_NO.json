@@ -9,6 +9,10 @@
     "Select all" : "Merk alt",
     "E-mail" : "E-post",
     "Link" : "Lenkje",
-    "User" : "Bruker"
+    "User" : "Bruker",
+    "None" : "Ingen",
+    "Daily" : "Kvar dag",
+    "Weekly" : "Kvar veke",
+    "Save" : "Lagre"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

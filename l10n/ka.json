@@ -15,6 +15,11 @@
     "Federation" : "Federation",
     "E-mail" : "E-mail",
     "Link" : "Link",
-    "User" : "User"
+    "User" : "User",
+    "None" : "None",
+    "Daily" : "დღიურად",
+    "Weekly" : "კვირეულად",
+    "Monthly" : "Monthly",
+    "Save" : "დამახსოვრება"
 },"pluralForm" :"nplurals=2; plural=(n!=1);"
 }

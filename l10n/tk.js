@@ -9,6 +9,8 @@ OC.L10N.register(
     "Select all" : "Hemmesini saýlaň",
     "E-mail" : "E-mail",
     "Link" : "Baglanyşyk",
-    "User" : "Ulanyjy"
+    "User" : "Ulanyjy",
+    "None" : "Hiç",
+    "Save" : "Saklamak"
 },
 "nplurals=2; plural=(n != 1);");

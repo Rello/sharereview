@@ -9,6 +9,10 @@ OC.L10N.register(
     "Time" : "Zäit",
     "Select all" : "All auswielen",
     "User" : "User",
-    "Files" : "Dateien"
+    "Files" : "Dateien",
+    "None" : "Keng",
+    "Daily" : "All Dag",
+    "Weekly" : "All Woch",
+    "Save" : "Späicheren"
 },
 "nplurals=2; plural=(n != 1);");

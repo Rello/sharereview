@@ -16,6 +16,10 @@ OC.L10N.register(
     "E-mail" : "Correo electrónico",
     "Link" : "Liga",
     "User" : "Usuario",
-    "Files" : "Archivo"
+    "Files" : "Archivo",
+    "None" : "Ninguno",
+    "Daily" : "Diariamente",
+    "Weekly" : "Semanalmente",
+    "Save" : "Guardar"
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

@@ -46,7 +46,6 @@ OC.L10N.register(
     "Files" : "Dateien",
     "Share Review" : "Freigaben überprüfen",
     "Review and audit all shares" : "Alle Freigaben überprüfen und auditieren",
-    "This app can be used for auditing shares within a Nextcloud instance e.g. for data loss prevention.\nShare status can be exported for documentation.\n\n- Review any file share\n  - files, talk, deck, teams, federation\n  - app specific shares (if implemented by other apps)\n- Remove shares\n- Confirm current review\n  - show only new shares next time\n- Audit compliance\n- Assign review to user groups (e.g. audit or risk mgmt)\n- Export as CSV or PDF\n\nNote:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users." : "Diese App kann zur Überprüfung von Freigaben innerhalb einer Nextcloud-Instanz verwendet werden, z. B. zur Verhinderung von Datenverlust. Der Freigabestatus kann zur Dokumentation exportiert werden.\n\n- Beliebige Dateifreigaben überprüfen\n  - Dateien, Talk, Deck, Teams, Federation\n  - App-spezifische Freigaben (falls von anderen Apps implementiert)\n- Freigaben entfernen\n- Aktuelle Überprüfung bestätigen\n  - Beim nächsten Mal nur neue Freigaben anzeigen\n- Compliance-Überprüfung\n- Überprüfung Benutzergruppen zuweisen (z. B. Audit oder Risikomanagement)\n- Export als CSV oder PDF\n\nHinweis:\nDie App muss im App Store auf mindestens eine bestimmte Benutzergruppe beschränkt sein.\nDies verhindert, dass die freigegebenen Inhalte versehentlich allen Benutzern zugänglich gemacht werden.",
     "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) kennzeichnet fehlerhafte Daten. Die Freigabe sollte nach Überprüfung entfernt werden.",
     "Delete selected" : "Ausgewählte löschen",
     "Pause reload after deletion" : "Neuladen nach dem Löschen pausieren",
@@ -56,6 +55,9 @@ OC.L10N.register(
     "Click here" : "Klicke hier",
     "On demand report" : "Bericht auf Anforderung",
     "CSV" : "CSV",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "Scheduled report" : "Geplanter Bericht",
+    "Weekly" : "Wöchentlich",
+    "Monthly" : "Monatlich"
 },
 "nplurals=2; plural=(n != 1);");

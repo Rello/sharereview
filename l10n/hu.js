@@ -27,6 +27,12 @@ OC.L10N.register(
     "Link" : "Hivatkozás",
     "User" : "Felhasználó",
     "Files" : "Fájlok",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "Schedule" : "Ütemterv",
+    "None" : "Egyik sem",
+    "Daily" : "Naponta",
+    "Weekly" : "Hetente",
+    "Monthly" : "Havonta",
+    "Save" : "Mentés"
 },
 "nplurals=2; plural=(n != 1);");

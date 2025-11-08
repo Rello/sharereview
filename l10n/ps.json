@@ -3,6 +3,9 @@
     "OK" : "OK",
     "Cancel" : "پرېښودل",
     "Select all" : "ټول ټاکل",
-    "Link" : "لېنک"
+    "Link" : "لېنک",
+    "Daily" : "روزانه",
+    "Weekly" : "هفته وار",
+    "Save" : "ساتل"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

@@ -28,6 +28,13 @@ OC.L10N.register(
     "Link" : "Prepojenie",
     "User" : "Používateľ",
     "Files" : "Súbory",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "Schedule" : "Program",
+    "None" : "Žiadne",
+    "Daily" : "Denne",
+    "Weekly" : "Týždenne",
+    "Monthly" : "Mesačne",
+    "Format" : "Formát",
+    "Save" : "Uložiť"
 },
 "nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);");

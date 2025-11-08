@@ -26,6 +26,8 @@
     "Link" : "Enllaç",
     "User" : "Usuari",
     "Files" : "Fitxers",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "Weekly" : "Setmanalment",
+    "Monthly" : "Mensualment"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

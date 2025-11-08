@@ -22,6 +22,11 @@ OC.L10N.register(
     "Link" : "קישור",
     "User" : "משתמש",
     "Files" : "קבצים",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "None" : "ללא",
+    "Daily" : "יומי",
+    "Weekly" : "שבועי",
+    "Monthly" : "חודשי",
+    "Save" : "שמירה"
 },
 "nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: 2;");

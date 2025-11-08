@@ -27,6 +27,12 @@
     "User" : "Gebruiker",
     "Files" : "Bestanden",
     "Click here" : "Klik hier",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "Schedule" : "Agenda",
+    "None" : "Geen",
+    "Daily" : "Dagelijks",
+    "Weekly" : "Wekelijks",
+    "Monthly" : "Maandelijks",
+    "Save" : "Opslaan"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

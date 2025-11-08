@@ -48,6 +48,14 @@
     "Shares are being retrieved, please wait …" : "Tá na scaireanna á n-aisghabháil, fan le do thoil …",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Ní mór an aip a theorannú do ghrúpa úsáideoirí ar leith amháin ar a laghad sa siopa app. Cuireann sé seo cosc ​​ar an ábhar comhroinnte a nochtadh de thaisme do gach úsáideoir.",
     "Click here" : "Cliceáil anseo",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "Default folder" : "Fillteán réamhshocraithe",
+    "Schedule" : "Sceideal",
+    "None" : "aon cheann",
+    "Daily" : "Laethúil",
+    "Weekly" : "Seachtainiúil",
+    "Monthly" : "Go míosúil",
+    "Format" : "Formáid",
+    "Save" : "Sábháil"
 },"pluralForm" :"nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n<11 ? 3 : 4);"
 }

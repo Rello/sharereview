@@ -18,11 +18,11 @@ OC.L10N.register(
     "Showing 0 to 0 of 0 entries" : "Viser 0 til 0 af 0 poster",
     "App" : "App",
     "Type" : "Type",
-    "Permissions" : "Tilladelser",
+    "Permissions" : "Rettigheder",
     "Time" : "Tid",
     "Action" : "Handling",
     "Select all" : "Vælg alle",
-    "edit" : "redigér",
+    "edit" : "rediger",
     "Deck" : "Opslag",
     "Talk room" : "Snak rum",
     "Team" : "Team",
@@ -35,6 +35,8 @@ OC.L10N.register(
     "No share found" : "Ingen delinger fundet",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Appen skal være begrænset til mindst en specifik brugergruppe i appbutikken. Dette forhindrer utilsigtet eksponering af det delte indhold til alle brugere.",
     "Click here" : "Klik her",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "Weekly" : "Ugentligt",
+    "Monthly" : "Månedligt"
 },
 "nplurals=2; plural=(n != 1);");

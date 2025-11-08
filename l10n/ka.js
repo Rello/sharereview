@@ -17,6 +17,11 @@ OC.L10N.register(
     "Federation" : "Federation",
     "E-mail" : "E-mail",
     "Link" : "Link",
-    "User" : "User"
+    "User" : "User",
+    "None" : "None",
+    "Daily" : "დღიურად",
+    "Weekly" : "კვირეულად",
+    "Monthly" : "Monthly",
+    "Save" : "დამახსოვრება"
 },
 "nplurals=2; plural=(n!=1);");

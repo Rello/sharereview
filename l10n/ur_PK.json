@@ -3,6 +3,7 @@
     "OK" : "OK",
     "Cancel" : "Cancel",
     "Search" : "Search",
-    "User" : "User"
+    "User" : "User",
+    "Save" : "حفظ"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

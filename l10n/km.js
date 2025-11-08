@@ -9,6 +9,10 @@ OC.L10N.register(
     "Showing 0 to 0 of 0 entries" : "បង្ហាញទិន្នន័យទី 0 ដល់ទី 0 លើ 0",
     "Type" : "ប្រភេទ",
     "Time" : "ម៉ោង",
-    "User" : "User"
+    "User" : "User",
+    "None" : "គ្មាន",
+    "Daily" : "រាល់ថ្ងៃ",
+    "Weekly" : "រាល់​សប្ដាហ៍",
+    "Save" : "រក្សាទុក"
 },
 "nplurals=1; plural=0;");

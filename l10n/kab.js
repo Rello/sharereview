@@ -10,6 +10,10 @@ OC.L10N.register(
     "Team" : "Tarbaɛt",
     "Link" : "Aseɣwen",
     "User" : "Aseqdac",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "None" : "Ula d yiwen",
+    "Daily" : "S wass",
+    "Weekly" : "S umalas",
+    "Save" : "Sekles"
 },
 "nplurals=2; plural=(n != 1);");

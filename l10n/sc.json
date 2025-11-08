@@ -22,6 +22,11 @@
     "Link" : "Ligòngiu",
     "User" : "Utente",
     "Files" : "Archìvios",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "None" : "Perunu",
+    "Daily" : "Ogni die",
+    "Weekly" : "Ogni chida",
+    "Monthly" : "Ogni mese",
+    "Save" : "Sarva"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

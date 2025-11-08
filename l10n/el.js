@@ -28,6 +28,10 @@ OC.L10N.register(
     "Link" : "Σύνδεσμος",
     "User" : "Χρήστης",
     "Files" : "Αρχεία",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "None" : "Καμία",
+    "Weekly" : "Εβδομαδιαίως",
+    "Monthly" : "Μηνιαίως",
+    "Save" : "Αποθήκευση"
 },
 "nplurals=2; plural=(n != 1);");

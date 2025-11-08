@@ -28,6 +28,8 @@ OC.L10N.register(
     "Link" : "Enllaç",
     "User" : "Usuari",
     "Files" : "Fitxers",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "Weekly" : "Setmanalment",
+    "Monthly" : "Mensualment"
 },
 "nplurals=2; plural=(n != 1);");

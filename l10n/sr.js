@@ -50,6 +50,14 @@ OC.L10N.register(
     "Shares are being retrieved, please wait …" : "Преузимају се дељења, молимо вас да сачекате…",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Апликација мора да се ограничи на барем једну одређену групу корисника у продавници апликација. На тај начин се спречава нехотично излагање дељеног садржаја свим корисницима.",
     "Click here" : "Кликните овде",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "Default folder" : "Подразумевани фолдер",
+    "Schedule" : "Закажи",
+    "None" : "Ништа",
+    "Daily" : "дневно",
+    "Weekly" : "недељно",
+    "Monthly" : "Месечно",
+    "Format" : "Формат",
+    "Save" : "Сачувај"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);");

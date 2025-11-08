@@ -12,6 +12,11 @@ OC.L10N.register(
     "Time" : "Ora",
     "Link" : "Ligam",
     "User" : "Utilizator",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "None" : "Cap",
+    "Daily" : "Quotidian",
+    "Weekly" : "Setmanièr",
+    "Monthly" : "Cada mes",
+    "Save" : "Enregistrar"
 },
 "nplurals=2; plural=(n > 1);");

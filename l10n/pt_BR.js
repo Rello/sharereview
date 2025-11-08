@@ -40,6 +40,7 @@ OC.L10N.register(
     "Federation" : "Federação",
     "E-mail" : "E-mail",
     "Link" : "Link",
+    "User group" : "Grupo de usuários",
     "User" : "Usuário",
     "Files" : "Arquivos",
     "Share Review" : "Revisão de Compartilhamentos",
@@ -53,6 +54,15 @@ OC.L10N.register(
     "Click here" : "Clique aqui",
     "On demand report" : "Relatório sob demanda",
     "CSV" : "CSV",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "Scheduled report" : "Relatório agendado",
+    "Default folder" : "Pasta padrão",
+    "Schedule" : "Agenda",
+    "None" : "Nenhum",
+    "Daily" : "Diariamente",
+    "Weekly" : "Semanalmente",
+    "Monthly" : "Mensalmente",
+    "Format" : "Formato",
+    "Save" : "Salvar"
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

@@ -25,6 +25,11 @@ OC.L10N.register(
     "Link" : "Liga",
     "User" : "Usuario",
     "Files" : "Archivo",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "None" : "Ninguno",
+    "Daily" : "Diariamente",
+    "Weekly" : "Semanalmente",
+    "Monthly" : "Mensual",
+    "Save" : "Guardar"
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

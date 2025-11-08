@@ -21,6 +21,12 @@ OC.L10N.register(
     "Federation" : "Federasi",
     "E-mail" : "Email",
     "Link" : "Tautan",
-    "User" : "Pengguna"
+    "User" : "Pengguna",
+    "None" : "Tidak ada",
+    "Daily" : "Harian",
+    "Weekly" : "Mingguan",
+    "Monthly" : "Bulanan",
+    "Format" : "Format",
+    "Save" : "Simpan"
 },
 "nplurals=1; plural=0;");

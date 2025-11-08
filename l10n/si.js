@@ -10,6 +10,8 @@ OC.L10N.register(
     "Select all" : "සියල්ල තෝරන්න",
     "Link" : "සබැඳිය",
     "User" : "පරිශීලක",
-    "Files" : "ගොනු"
+    "Files" : "ගොනු",
+    "Daily" : "දිනපතා",
+    "Weekly" : "සතිපතා"
 },
 "nplurals=2; plural=(n != 1);");

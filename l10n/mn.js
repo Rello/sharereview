@@ -15,6 +15,10 @@ OC.L10N.register(
     "Federation" : "холбоо",
     "E-mail" : "И-мэйл",
     "Link" : "Холбоос",
-    "Files" : "Файлууд"
+    "Files" : "Файлууд",
+    "None" : "юу ч үгүй",
+    "Daily" : "Өдөр бүр",
+    "Weekly" : "Долоо хоног бүр",
+    "Save" : "Хадгалах"
 },
 "nplurals=2; plural=(n != 1);");

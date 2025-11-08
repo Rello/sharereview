@@ -10,6 +10,10 @@ OC.L10N.register(
     "E-mail" : "ອີເມວ",
     "Link" : "ລິງ",
     "User" : "ຜູ້ໃຊ້",
-    "Files" : "ຟາຍ"
+    "Files" : "ຟາຍ",
+    "None" : "ບໍ່ມີ",
+    "Daily" : "ລາຍວັນ",
+    "Weekly" : "ອາທິດ",
+    "Save" : "ບັນທຶກ"
 },
 "nplurals=1; plural=0;");
