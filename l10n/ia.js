@@ -12,6 +12,10 @@ OC.L10N.register(
     "edit" : "modificar",
     "Federation" : "Federation",
     "Link" : "Ligamine",
-    "User" : "User"
+    "User" : "User",
+    "None" : "Nulle",
+    "Daily" : "Cata die",
+    "Weekly" : "Cata septimana",
+    "Save" : "Salveguardar"
 },
 "nplurals=2; plural=(n != 1);");

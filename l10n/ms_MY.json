@@ -6,6 +6,9 @@
     "Search" : "Search",
     "Type" : "Jenis",
     "User" : "User",
-    "Files" : "Fail-fail"
+    "Files" : "Fail-fail",
+    "Daily" : "Setiap hari",
+    "Weekly" : "Setiap minggu",
+    "Save" : "Simpan"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

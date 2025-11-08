@@ -2,6 +2,8 @@
     "Delete" : "Strika",
     "Settings saved" : "Stillingar eru goymd",
     "OK" : "OK",
-    "Cancel" : "Cancel"
+    "Cancel" : "Cancel",
+    "Daily" : "Hvønn dag",
+    "Weekly" : "Hvørja viku"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

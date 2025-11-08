@@ -22,9 +22,11 @@ OC.L10N.register(
     "edit" : "редактиране",
     "Deck" : "Deck",
     "Talk room" : "Стая за разговор",
+    "Team" : "Екип",
     "Federation" : "Федерация",
     "E-mail" : "Имейл",
     "Link" : "Връзка",
+    "User" : "Потребител",
     "Files" : "Файлове",
     "PDF" : "PDF"
 },

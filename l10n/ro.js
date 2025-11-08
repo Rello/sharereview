@@ -17,6 +17,11 @@ OC.L10N.register(
     "Federation" : "Federare",
     "E-mail" : "E-mail",
     "Link" : "Legătură",
-    "User" : "Utilizator"
+    "User" : "Utilizator",
+    "None" : "Niciuna",
+    "Daily" : "Zilnic",
+    "Weekly" : "Săptămânal",
+    "Monthly" : "Lunar",
+    "Save" : "Salvează"
 },
 "nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));");

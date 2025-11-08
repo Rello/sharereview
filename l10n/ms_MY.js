@@ -8,6 +8,9 @@ OC.L10N.register(
     "Search" : "Search",
     "Type" : "Jenis",
     "User" : "User",
-    "Files" : "Fail-fail"
+    "Files" : "Fail-fail",
+    "Daily" : "Setiap hari",
+    "Weekly" : "Setiap minggu",
+    "Save" : "Simpan"
 },
 "nplurals=1; plural=0;");

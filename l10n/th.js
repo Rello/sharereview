@@ -14,6 +14,11 @@ OC.L10N.register(
     "Federation" : "ที่ติดต่อกับภายนอก",
     "Link" : "ลิงก์",
     "User" : "ผู้ใช้",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "None" : "ไม่มี",
+    "Daily" : "รายวัน",
+    "Weekly" : "รายสัปดาห์",
+    "Monthly" : "ทุก ๆ เดือน",
+    "Save" : "บันทึก"
 },
 "nplurals=1; plural=0;");

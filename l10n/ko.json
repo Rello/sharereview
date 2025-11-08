@@ -24,6 +24,11 @@
     "E-mail" : "이메일",
     "Link" : "링크",
     "User" : "사용자",
-    "Files" : "파일"
+    "Files" : "파일",
+    "None" : "없음",
+    "Daily" : "매일",
+    "Weekly" : "매주",
+    "Monthly" : "매달",
+    "Save" : "저장"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

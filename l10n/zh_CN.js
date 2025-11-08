@@ -41,6 +41,12 @@ OC.L10N.register(
     "Review and audit all shares" : "检查并核对全部分享",
     "No share found" : "未找到分享",
     "Click here" : "点击此处",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "None" : "无",
+    "Daily" : "每天",
+    "Weekly" : "每周",
+    "Monthly" : "每月",
+    "Format" : "格式",
+    "Save" : "保存"
 },
 "nplurals=1; plural=0;");

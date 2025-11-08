@@ -28,6 +28,12 @@ OC.L10N.register(
     "Link" : "Esteka",
     "User" : "Erabiltzailea",
     "Files" : "Fitxategiak",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "None" : "Bat ere ez",
+    "Daily" : "Egunero",
+    "Weekly" : "Astero",
+    "Monthly" : "Hilabetero",
+    "Format" : "Formatua",
+    "Save" : "Gorde"
 },
 "nplurals=2; plural=(n != 1);");

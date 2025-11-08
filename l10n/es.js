@@ -32,6 +32,7 @@ OC.L10N.register(
     "Action" : "Acción",
     "Select all" : "Seleccionar todo",
     "edit" : "editar",
+    "Deck" : "Deck",
     "Talk room" : "Sala de conversación",
     "Team" : "Equipo",
     "Federation" : "Federación",
@@ -48,6 +49,11 @@ OC.L10N.register(
     "Shares are being retrieved, please wait …" : "Se están obteniendo los recursos compartidos, por favor espere …",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "La app debe estar restringida al menos a un grupo de usuarios específico en la tienda de apps. Esto evita exponer accidentalmente el contenido compartido a todos los usuarios.",
     "Click here" : "Haga clic aquí",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "Default folder" : "Carpeta predeterminada",
+    "None" : "Ninguno",
+    "Weekly" : "Semanalmente",
+    "Monthly" : "Mensualmente",
+    "Save" : "Guardar"
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

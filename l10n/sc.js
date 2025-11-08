@@ -24,6 +24,11 @@ OC.L10N.register(
     "Link" : "Ligòngiu",
     "User" : "Utente",
     "Files" : "Archìvios",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "None" : "Perunu",
+    "Daily" : "Ogni die",
+    "Weekly" : "Ogni chida",
+    "Monthly" : "Ogni mese",
+    "Save" : "Sarva"
 },
 "nplurals=2; plural=(n != 1);");

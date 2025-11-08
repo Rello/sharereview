@@ -11,8 +11,13 @@ OC.L10N.register(
     "Time" : "Dato",
     "Select all" : "Elekti ĉion",
     "edit" : "modifi",
+    "Deck" : "Kartaro",
     "Federation" : "Federado",
     "E-mail" : "Retpoŝto",
-    "Link" : "Ligilo"
+    "Link" : "Ligilo",
+    "User" : "Uzanto",
+    "None" : "Nenio",
+    "Weekly" : "Ĉiusemajne",
+    "Save" : "Konservi"
 },
 "nplurals=2; plural=(n != 1);");

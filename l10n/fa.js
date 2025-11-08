@@ -28,6 +28,11 @@ OC.L10N.register(
     "Link" : "پیوند",
     "User" : "کاربر",
     "Files" : "پرونده‌ها",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "None" : "هیچ‌کدام",
+    "Daily" : "روزانه",
+    "Weekly" : "هفته گی",
+    "Monthly" : "ماهانه",
+    "Save" : "ذخیره"
 },
 "nplurals=2; plural=(n > 1);");

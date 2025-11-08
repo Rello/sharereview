@@ -46,7 +46,6 @@ OC.L10N.register(
     "Files" : "Fichiers",
     "Share Review" : "Revue des partages",
     "Review and audit all shares" : "Examiner et auditer tous les partages",
-    "This app can be used for auditing shares within a Nextcloud instance e.g. for data loss prevention.\nShare status can be exported for documentation.\n\n- Review any file share\n  - files, talk, deck, teams, federation\n  - app specific shares (if implemented by other apps)\n- Remove shares\n- Confirm current review\n  - show only new shares next time\n- Audit compliance\n- Assign review to user groups (e.g. audit or risk mgmt)\n- Export as CSV or PDF\n\nNote:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users." : "Cette application peut être utilisée pour auditer les partages au sein d'une instance Nextcloud, par exemple pour prévenir la perte de données.\nLe statut des partages peut être exporté à des fins de documentation.\n\n- Examiner n'importe quel partage de fichier\n - fichiers, conversations, Deck, équipes, fédération\n - partages spécifiques à une appli (si implémentés par d'autres applis)\n- Suppression de partages\n- Confirmation de la révision en cours\n - affichage les nouveaux partages uniquement la prochaine fois\n- Audition de la conformité\n- Attribution de la révision à des groupes d'utilisateurs (par exemple, audit ou gestion des risques)\n- Export au format CSV ou PDF\n\nRemarque :\nL'application doit être restreinte à au moins un groupe d'utilisateurs spécifique dans le magasin d'application.\nCela permet d'éviter l'exposition accidentelle du contenu partagé à tous les utilisateurs.",
     "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) indique des données incorrectes. Le partage doit être supprimé après évaluation.",
     "Delete selected" : "Supprimer la sélection",
     "Pause reload after deletion" : "Pause du rechargement après la suppression",
@@ -56,6 +55,14 @@ OC.L10N.register(
     "Click here" : "Cliquez ici",
     "On demand report" : "Rapport sur demande",
     "CSV" : "CSV",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "Default folder" : "Dossier par défaut",
+    "Schedule" : "Calendrier",
+    "None" : "Aucun",
+    "Daily" : "Quotidiennement",
+    "Weekly" : "Hebdomadaire",
+    "Monthly" : "Mensuel",
+    "Format" : "Format",
+    "Save" : "Enregistrer"
 },
 "nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");

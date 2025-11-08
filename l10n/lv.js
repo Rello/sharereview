@@ -24,6 +24,11 @@ OC.L10N.register(
     "Link" : "Saite",
     "User" : "Lietotājs",
     "Files" : "Datnes",
-    "Delete selected" : "Izdzēst atlasītās"
+    "Delete selected" : "Izdzēst atlasītās",
+    "None" : "Nekas",
+    "Daily" : "Katru dienu",
+    "Weekly" : "Katru nedēļu",
+    "Monthly" : "Ikmēneša",
+    "Save" : "Saglabāt"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);");

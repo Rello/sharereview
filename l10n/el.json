@@ -26,6 +26,10 @@
     "Link" : "Σύνδεσμος",
     "User" : "Χρήστης",
     "Files" : "Αρχεία",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "None" : "Καμία",
+    "Weekly" : "Εβδομαδιαίως",
+    "Monthly" : "Μηνιαίως",
+    "Save" : "Αποθήκευση"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

@@ -9,6 +9,9 @@ OC.L10N.register(
     "Time" : "Ժամ",
     "Select all" : "Նշել բոլորը",
     "Link" : "Հղում",
-    "User" : "User"
+    "User" : "User",
+    "Daily" : "Օրական",
+    "Weekly" : "Շաբաթական",
+    "Save" : "Պահպանել"
 },
 "nplurals=2; plural=(n != 1);");

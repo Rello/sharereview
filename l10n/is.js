@@ -23,6 +23,12 @@ OC.L10N.register(
     "Link" : "Tengill",
     "User" : "Notandi",
     "Files" : "Skráaforrit",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "None" : "Ekkert",
+    "Daily" : "Daglega",
+    "Weekly" : "Vikulega",
+    "Monthly" : "Mánaðarlega",
+    "Format" : "Snið",
+    "Save" : "Vista"
 },
 "nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);");

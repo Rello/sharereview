@@ -29,6 +29,12 @@ OC.L10N.register(
     "User" : "Gebruiker",
     "Files" : "Bestanden",
     "Click here" : "Klik hier",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "Schedule" : "Agenda",
+    "None" : "Geen",
+    "Daily" : "Dagelijks",
+    "Weekly" : "Wekelijks",
+    "Monthly" : "Maandelijks",
+    "Save" : "Opslaan"
 },
 "nplurals=2; plural=(n != 1);");

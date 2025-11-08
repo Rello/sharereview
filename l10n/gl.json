@@ -44,7 +44,6 @@
     "Files" : "Ficheiros",
     "Share Review" : "Compartir a revisión",
     "Review and audit all shares" : "Revisar e auditar todas as comparticións",
-    "This app can be used for auditing shares within a Nextcloud instance e.g. for data loss prevention.\nShare status can be exported for documentation.\n\n- Review any file share\n  - files, talk, deck, teams, federation\n  - app specific shares (if implemented by other apps)\n- Remove shares\n- Confirm current review\n  - show only new shares next time\n- Audit compliance\n- Assign review to user groups (e.g. audit or risk mgmt)\n- Export as CSV or PDF\n\nNote:\nThe app must be restricted to at least one specific user group in the app store.\nThis prevents accidental exposure of the shared content to all users." : "Esta aplicación pódese usar para auditaplicaciónar os recursos compartidos dentro dunha instancia de Nextcloud, p. ex., para a prevención da perda de datos.\nO estado compartido pódese exportar para documentación.\n\n- Revisa calquera ficheiro compartido\n  - ficheiros, conversa, gabeta, equipos, federación\n  - compartir aplicacións específicas (se están implementadas por outras aplicacións)\n- Eliminar comparticións\n- Confirmar a revisión actual\n  - a próxima vez, amosar só as comparticións novas\n- Auditoría de cumprimento\n- Asignar a revisión a grupos de usuarios (p. ex., auditoría ou xestión de riscos)\n- Exportar como CSV ou PDF\n\nNota:\nA aplicación debe estar restrinxida a polo menos un grupo de usuarios específico na tenda de aplicacións.\nIsto evita a exposición accidental do contido compartido a todos os usuarios.",
     "(*) indicates incorrect data. Share should be removed after evaluation." : "(*) indica datos incorrectos. A compartición debe retirarse após a avaliación.",
     "Delete selected" : "Eliminar a selección",
     "Pause reload after deletion" : "Pausar a recarga após a eliminación",
@@ -54,6 +53,15 @@
     "Click here" : "Prema aquí",
     "On demand report" : "Informe baixo demanda",
     "CSV" : "CSV",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "Scheduled report" : "Informe programado",
+    "Default folder" : "Cartafol predeterminado",
+    "Schedule" : "Programar",
+    "None" : "Ningún",
+    "Daily" : "A diario",
+    "Weekly" : "Cada semana",
+    "Monthly" : "Mensual",
+    "Format" : "Formato",
+    "Save" : "Gardar"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

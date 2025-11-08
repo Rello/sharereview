@@ -7,6 +7,10 @@
     "Time" : "Zäit",
     "Select all" : "All auswielen",
     "User" : "User",
-    "Files" : "Dateien"
+    "Files" : "Dateien",
+    "None" : "Keng",
+    "Daily" : "All Dag",
+    "Weekly" : "All Woch",
+    "Save" : "Späicheren"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

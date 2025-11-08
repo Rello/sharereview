@@ -7,6 +7,8 @@ OC.L10N.register(
     "Search" : "தேடுதல்",
     "Type" : "வகை",
     "Link" : "Link",
-    "User" : "User"
+    "User" : "User",
+    "None" : "ஒன்றுமில்லை",
+    "Save" : "சேமிக்க "
 },
 "nplurals=2; plural=(n != 1);");

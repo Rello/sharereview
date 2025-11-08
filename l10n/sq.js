@@ -18,6 +18,10 @@ OC.L10N.register(
     "E-mail" : "E-mail",
     "Link" : "Lidhje",
     "User" : "Përdorues",
-    "Files" : "Skedarë"
+    "Files" : "Skedarë",
+    "None" : "Asnjë",
+    "Daily" : "Përditë",
+    "Weekly" : "Çdo javë",
+    "Save" : "Ruaje"
 },
 "nplurals=2; plural=(n != 1);");

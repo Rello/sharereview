@@ -40,6 +40,13 @@ OC.L10N.register(
     "Shares are being retrieved, please wait …" : "Ulanishlar olinmoqda, kuting…",
     "The app must be restricted to at least one specific user group in the app store. This prevents accidental exposure of the shared content to all users." : "Ilova ilovalar do'konidagi kamida bitta foydalanuvchi guruhi bilan cheklangan bo'lishi kerak. Bu barcha foydalanuvchilarga umumiy tarkibning tasodifiy ta'sirini oldini oladi.",
     "Click here" : "Bu yerga bosing",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "Default folder" : "Standart jild",
+    "Schedule" : "Schedule",
+    "None" : "Yo'q",
+    "Daily" : "Kunlik",
+    "Weekly" : "Haftalik",
+    "Monthly" : "Oylik",
+    "Save" : "Saqlash"
 },
 "nplurals=1; plural=0;");

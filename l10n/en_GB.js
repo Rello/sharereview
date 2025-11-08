@@ -33,6 +33,7 @@ OC.L10N.register(
     "Action" : "Action",
     "Select all" : "Select all",
     "more" : "more",
+    "read" : "read",
     "edit" : "edit",
     "Deck" : "Deck",
     "Talk room" : "Talk room",
@@ -40,6 +41,7 @@ OC.L10N.register(
     "Federation" : "Federation",
     "E-mail" : "E-mail",
     "Link" : "Link",
+    "User group" : "User group",
     "User" : "User",
     "Files" : "Files",
     "Share Review" : "Share Review",
@@ -53,6 +55,12 @@ OC.L10N.register(
     "Click here" : "Click here",
     "On demand report" : "On demand report",
     "CSV" : "CSV",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "Scheduled report" : "Scheduled report",
+    "Default folder" : "Default folder",
+    "None" : "None",
+    "Weekly" : "Weekly",
+    "Monthly" : "Monthly",
+    "Save" : "Save"
 },
 "nplurals=2; plural=(n != 1);");

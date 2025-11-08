@@ -5,6 +5,7 @@ OC.L10N.register(
     "OK" : "OK",
     "Cancel" : "Cancel",
     "Search" : "Search",
-    "User" : "User"
+    "User" : "User",
+    "Save" : "حفظ"
 },
 "nplurals=2; plural=(n != 1);");
