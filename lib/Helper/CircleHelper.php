@@ -25,7 +25,7 @@ class CircleHelper {
 
 		try {
 			$circlesManager = \OC::$server->query('OCA\\Circles\\CirclesManager');
-			$circle = $circlesManager->startSuperSession();
+			$circlesManager->startSuperSession();
 			$circle = $circlesManager->getCircle($circleId);
 			if ($circle && method_exists($circle, 'getName')) {
 				return $circle->getName() ?: $circleId;

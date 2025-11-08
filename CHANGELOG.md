@@ -8,6 +8,7 @@
 - Make permissions' tooltips translatable #31
 - Center trash icon #32
 - Item of shares from other users not visible in v1.5.0 #29
+- selecting only valid team share
 
 ## 1.5.0 - 2025-11-04
 ### Added
