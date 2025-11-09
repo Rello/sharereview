@@ -204,6 +204,7 @@ class ShareService {
 
 		$share['type'] = $share['type'] . ';' . $share['recipient'];
 		$share['initiator'] = $share['initiator'] != '' ? $this->userHelper->getUserDisplayName($share['initiator']) : '';
+		$share['permissions'] = $share['permissions'] . ';' . $share['password'] . ';' . $share['expiration'];
 
 		$share['action'] = $share['action'] !== '' ? $share['action'] : $share['id'];
 		$share['action'] = $share['app'] . '_' . $share['action'];
@@ -290,6 +291,8 @@ class ShareService {
 				'type' => $share['share_type'],
 				'recipient' => $recipient,
 				'permissions' => $share['permissions'],
+				'password' => isset($share['password']) && $share['password'] !== '',
+				'expiration' => $share['expiration'],
 				'time' => (new \DateTime('@' . $share['stime']))->format(\DATE_ATOM),
 				'action' => rawurlencode($action),
 			];

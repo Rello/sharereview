@@ -129,8 +129,9 @@ OCA.ShareReview.Visualization = {
     renderPermissions: function (data) {
         let iconClass = 'icon-sharereview-more';
         let titleText = t('sharereview', 'more')
+        let dataArray = data.split(';');
 
-        switch (parseInt(data)) {
+        switch (parseInt(dataArray[0])) {
             case 1:
             case 17:
                 iconClass = 'icon-sharereview-read';
@@ -146,7 +147,17 @@ OCA.ShareReview.Visualization = {
                 break;
         }
 
-        return '<div permission="' + data + '"class="' + iconClass + '" title="' + titleText + '"></div>';
+        let returnString = '<div style="display: flex;">' +
+            '<div permission="' + dataArray[0] + '" class="' + iconClass + '" title="' + titleText + '"></div>';
+
+        if (dataArray[1] !== '') {
+            returnString += '&nbsp;<div class="icon-sharereview-password" title="' + t('sharereview', 'Password protected') + '"></div>';
+        }
+        if (dataArray[2] !== '') {
+            returnString += '&nbsp;<div class="icon-sharereview-calendar" title="' + t('sharereview', 'Expiration date: ')  + dataArray[2] + '"></div>';
+        }
+        returnString += '</div>';
+        return returnString;
     },
 
     renderObject: function (data) {

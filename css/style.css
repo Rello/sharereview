@@ -85,6 +85,18 @@
     background-size: 24px;
 }
 
+.icon-sharereview-password {
+    background-image: url(../img/password.svg);
+    /*filter: var(--background-invert-if-dark);*/
+    background-size: 16px;
+}
+
+.icon-sharereview-calendar {
+    background-image: url(../img/calendar.svg);
+    /*filter: var(--background-invert-if-dark);*/
+    background-size: 16px;
+}
+
 .icon-sharereview-settings {
     background-image: url(../img/settings.svg);
     /*filter: var(--background-invert-if-dark);*/

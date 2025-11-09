@@ -1,5 +1,8 @@
 # Changelog
 
+### Added
+- indicate password protection and expiration date #20
+
 ### Changed
 - sort type column by type and not text
 
