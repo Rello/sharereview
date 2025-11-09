@@ -1,0 +1,7 @@
+{ "translations": {
+    "OK" : "OK",
+    "Cancel" : "Cancel",
+    "Daily" : "दैनिक",
+    "Weekly" : "साप्ताहिक"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

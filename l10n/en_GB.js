@@ -58,9 +58,12 @@ OC.L10N.register(
     "PDF" : "PDF",
     "Scheduled report" : "Scheduled report",
     "Default folder" : "Default folder",
+    "Schedule" : "Schedule",
     "None" : "None",
+    "Daily" : "Daily",
     "Weekly" : "Weekly",
     "Monthly" : "Monthly",
+    "Format" : "Format",
     "Save" : "Save"
 },
 "nplurals=2; plural=(n != 1);");

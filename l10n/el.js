@@ -30,8 +30,10 @@ OC.L10N.register(
     "Files" : "Αρχεία",
     "PDF" : "PDF",
     "None" : "Καμία",
+    "Daily" : "Ημερησίως",
     "Weekly" : "Εβδομαδιαίως",
     "Monthly" : "Μηνιαίως",
+    "Format" : "Μορφότυπος",
     "Save" : "Αποθήκευση"
 },
 "nplurals=2; plural=(n != 1);");

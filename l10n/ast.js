@@ -21,6 +21,10 @@ OC.L10N.register(
     "Link" : "Enllaz",
     "User" : "Usuariu",
     "Files" : "Ficheros",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "None" : "Nada",
+    "Daily" : "Caldía",
+    "Weekly" : "Selmanalmente",
+    "Save" : "Guardar"
 },
 "nplurals=2; plural=(n != 1);");

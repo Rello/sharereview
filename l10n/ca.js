@@ -29,7 +29,11 @@ OC.L10N.register(
     "User" : "Usuari",
     "Files" : "Fitxers",
     "PDF" : "PDF",
+    "None" : "Només una vegada",
+    "Daily" : "Diàriament",
     "Weekly" : "Setmanalment",
-    "Monthly" : "Mensualment"
+    "Monthly" : "Mensualment",
+    "Format" : "Format",
+    "Save" : "Desar"
 },
 "nplurals=2; plural=(n != 1);");

@@ -17,6 +17,7 @@ OC.L10N.register(
     "Link" : "Ligilo",
     "User" : "Uzanto",
     "None" : "Nenio",
+    "Daily" : "Ĉiutage",
     "Weekly" : "Ĉiusemajne",
     "Save" : "Konservi"
 },

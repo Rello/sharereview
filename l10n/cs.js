@@ -53,7 +53,13 @@ OC.L10N.register(
     "Click here" : "Klikněte sem",
     "CSV" : "CSV",
     "PDF" : "PDF",
+    "Default folder" : "Výchozí složka",
+    "Schedule" : "Plán",
+    "None" : "Žádná",
+    "Daily" : "Každý den",
     "Weekly" : "Každý týden",
-    "Monthly" : "Měsíčně"
+    "Monthly" : "Měsíčně",
+    "Format" : "Formát",
+    "Save" : "Uložit"
 },
 "nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;");

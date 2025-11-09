@@ -9,6 +9,10 @@ OC.L10N.register(
     "App" : "Tətbiq",
     "Time" : "Vaxt",
     "Select all" : "Hamısıı seç",
-    "User" : "User"
+    "User" : "User",
+    "None" : "Heç bir",
+    "Daily" : "Günlük",
+    "Weekly" : "Həftəlik",
+    "Save" : "Saxla"
 },
 "nplurals=2; plural=(n != 1);");

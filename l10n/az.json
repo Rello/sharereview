@@ -7,6 +7,10 @@
     "App" : "Tətbiq",
     "Time" : "Vaxt",
     "Select all" : "Hamısıı seç",
-    "User" : "User"
+    "User" : "User",
+    "None" : "Heç bir",
+    "Daily" : "Günlük",
+    "Weekly" : "Həftəlik",
+    "Save" : "Saxla"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
