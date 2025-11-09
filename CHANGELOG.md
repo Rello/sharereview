@@ -1,5 +1,8 @@
 # Changelog
 
+### Changed
+- sort type column by type and not text
+
 ## 1.6.0 - 2025-11-09
 ### Added
 - Scheduling of report creation via daily/weekly/monthly background job

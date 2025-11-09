@@ -199,7 +199,7 @@ OCA.ShareReview.Visualization = {
                 break;
         }
 
-        return '<div style="display:flex;">' +
+        return '<div data-order="' + parseInt(dataArray[0]) + '" style="display:flex;">' +
             '<div class="' + iconClass + '" title="' + titleText + '"></div>' +
             '<span style="margin-left: 10px;">' + dataArray[1] + '</span>' +
             '</div>';
