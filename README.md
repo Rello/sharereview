@@ -22,6 +22,9 @@ This prevents accidental exposure of the shared content to all users.
 <p align="center">
 <img src="https://github.com/Rello/sharereview/blob/main/screenshots/screenshot.png?raw=true" alt="Main" width="600" title="Share Review">
 </p>
+<p align="center">
+<img src="https://github.com/Rello/sharereview/blob/main/screenshots/report.png?raw=true" alt="Main" width="600" title="Share Review">
+</p>
 
 ## Maintainers
 - [Marcel Scherello](https://github.com/rello) (author, project leader)
