@@ -28,6 +28,11 @@ OC.L10N.register(
     "Link" : "Връзка",
     "User" : "Потребител",
     "Files" : "Файлове",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "None" : "Няма",
+    "Daily" : "Всеки ден",
+    "Weekly" : "Всяка седмица",
+    "Monthly" : "Месечно",
+    "Save" : "Запиши"
 },
 "nplurals=2; plural=(n != 1);");

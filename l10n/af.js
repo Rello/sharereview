@@ -12,6 +12,10 @@ OC.L10N.register(
     "edit" : "edigeer",
     "User" : "Gebruiker",
     "Files" : "Lêer ",
-    "PDF" : "PDF"
+    "PDF" : "PDF",
+    "None" : "Geen",
+    "Daily" : "Daagliks",
+    "Weekly" : "Weekliks",
+    "Save" : "Stoor"
 },
 "nplurals=2; plural=(n != 1);");

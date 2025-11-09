@@ -5,6 +5,9 @@ OC.L10N.register(
     "OK" : "OK",
     "Cancel" : "Cancelar",
     "Search" : "Buscar",
-    "Files" : "Archivos"
+    "Files" : "Archivos",
+    "None" : "Denguno",
+    "Daily" : "Diariament",
+    "Weekly" : "Semanalment"
 },
 "nplurals=2; plural=(n != 1);");

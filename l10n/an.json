@@ -3,6 +3,9 @@
     "OK" : "OK",
     "Cancel" : "Cancelar",
     "Search" : "Buscar",
-    "Files" : "Archivos"
+    "Files" : "Archivos",
+    "None" : "Denguno",
+    "Daily" : "Diariament",
+    "Weekly" : "Semanalment"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

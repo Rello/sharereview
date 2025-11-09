@@ -51,9 +51,12 @@ OC.L10N.register(
     "Click here" : "Haga clic aquí",
     "PDF" : "PDF",
     "Default folder" : "Carpeta predeterminada",
+    "Schedule" : "Programar",
     "None" : "Ninguno",
+    "Daily" : "Cada día",
     "Weekly" : "Semanalmente",
     "Monthly" : "Mensualmente",
+    "Format" : "Formato",
     "Save" : "Guardar"
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
