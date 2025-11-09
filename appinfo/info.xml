@@ -37,6 +37,9 @@ This prevents accidental exposure of the shared content to all users.
     <screenshot>
         https://raw.githubusercontent.com/Rello/sharereview/master/screenshots/screenshot.png
     </screenshot>
+    <screenshot>
+        https://raw.githubusercontent.com/Rello/sharereview/master/screenshots/report.png
+    </screenshot>
     <dependencies>
         <nextcloud min-version="20" max-version="99"/>
     </dependencies>
