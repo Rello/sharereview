@@ -73,7 +73,6 @@ class ReportService {
 		$owner = $this->appConfig->getValueString('sharereview', 'folderOwner', '');
 		$folder = $this->appConfig->getValueString('sharereview', 'reportFolder', '');
 		$type = $this->appConfig->getValueString('sharereview', 'reportType', 'pdf');
-		$this->logger->info("Generating Share Review report for user " . $owner);
 		if ($owner === '' || $folder === '') {
 			return;
 		}
@@ -220,45 +219,47 @@ class ReportService {
 		switch ($permission) {
 			case 1:
 			case 17:
-				return 'read';
+				return $this->l10n->t('read');
 			case 2:
 			case 19:
+			case 15:
 			case 31:
-				return 'edit';
+			case 5:
+				return $this->l10n->t('edit');
 			default:
-				return 'more';
+				return $this->l10n->t('more');
 		}
 	}
 
 	private function formatType(int $type, string $recipient): string {
 		switch ($type) {
 			case 12:
-				$label = 'Deck';
+				$label = $this->l10n->t('Deck');
 				break;
 			case 10:
-				$label = 'Talk room';
+				$label = $this->l10n->t('Talk room');
 				break;
 			case 7:
-				$label = 'Team';
+				$label = $this->l10n->t('Team');
 				break;
 			case 9:
 			case 6:
-				$label = 'Federation';
+				$label = $this->l10n->t('Federation');
 				break;
 			case 4:
-				$label = 'E-mail';
+				$label = $this->l10n->t('E-mail');
 				break;
 			case 3:
-				$label = 'Link';
+				$label = $this->l10n->t('Link');
 				break;
 			case 1:
-				$label = 'Group';
+				$label = $this->l10n->t('Group');
 				break;
 			case 0:
-				$label = 'User';
+				$label = $this->l10n->t('User');
 				break;
 			default:
-				$label = 'Other';
+				$label = $this->l10n->t('Other');
 				break;
 		}
 		return $label . ': ' . $recipient;

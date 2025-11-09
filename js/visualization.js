@@ -137,7 +137,9 @@ OCA.ShareReview.Visualization = {
                 titleText = t('sharereview', 'read');
                 break;
             case 2:
+            case 5:
             case 31:
+            case 15:
             case 19:
                 iconClass = 'icon-sharereview-edit';
                 titleText = t('sharereview', 'edit');
