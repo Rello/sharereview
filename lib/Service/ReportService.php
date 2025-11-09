@@ -24,11 +24,11 @@ class ReportService {
 	private $logger;
 
 	public function __construct(
-		ShareService $shareService,
-		IRootFolder $rootFolder,
-		IUserSession $userSession,
-		IAppConfig $appConfig,
-		IL10N $l10n,
+		ShareService    $shareService,
+		IRootFolder     $rootFolder,
+		IUserSession    $userSession,
+		IAppConfig      $appConfig,
+		IL10N           $l10n,
 		LoggerInterface $logger
 	) {
 		$this->shareService = $shareService;
@@ -92,7 +92,8 @@ class ReportService {
 		foreach ($rows as $row) {
 			[$shareType, $recipient] = array_pad(explode(';', (string)$row['type'], 2), 2, '');
 			$typeText = $this->formatType((int)$shareType, $recipient);
-			$permText = $this->formatPermission((int)$row['permissions']);
+			[$permission, $password, $expiration] = explode(';', (string)$row['permissions']);
+			$permText = $this->formatPermission((int)$permission, $password, $expiration);
 			$timeText = $this->formatTime((string)$row['time']);
 			$lines[] = implode(',', [
 				$this->escapeCsv((string)$row['app']),
@@ -129,14 +130,15 @@ class ReportService {
 			$this->l10n->t('Type'),
 			$this->l10n->t('Permissions'),
 			$this->l10n->t('Time')
-		], [15, 20, 53, 12, 20]);
+		], [15, 20, 33, 42, 20]);
 		$header[] = '';
 
 		$body = [];
 		foreach ($rows as $row) {
 			[$shareType, $recipient] = array_pad(explode(';', (string)$row['type'], 2), 2, '');
 			$typeText = $this->formatType((int)$shareType, $recipient);
-			$permText = $this->formatPermission((int)$row['permissions']);
+			[$permission, $password, $expiration] = explode(';', (string)$row['permissions']);
+			$permText = $this->formatPermission((int)$permission, $password, $expiration);
 			$timeText = $this->formatTime((string)$row['time']);
 			$body[] = $this->formatRow([
 				(string)$row['app'],
@@ -148,7 +150,7 @@ class ReportService {
 				$typeText,
 				$permText,
 				$timeText,
-			], [15, 20, 53, 12, 20]);
+			], [15, 20, 33, 42, 20]);
 			$body[] = '';
 		}
 
@@ -215,20 +217,32 @@ class ReportService {
 		return $pdf;
 	}
 
-	private function formatPermission(int $permission): string {
+	private function formatPermission(int $permission, $password, $expiration): string {
 		switch ($permission) {
 			case 1:
 			case 17:
-				return $this->l10n->t('read');
+				$label = $this->l10n->t('read');
 			case 2:
 			case 19:
 			case 15:
 			case 31:
 			case 5:
-				return $this->l10n->t('edit');
+				$label = $this->l10n->t('edit');
 			default:
-				return $this->l10n->t('more');
+				$label = $this->l10n->t('more');
 		}
+
+		if ($password !== '') {
+			$passLabel = ' ' . $this->l10n->t('Password protected');
+		} else {
+			$passLabel = '';
+		}
+		if ($expiration !== '') {
+			$expLabel = ' ' . $expiration;
+		} else {
+			$expLabel = '';
+		}
+		return $label . $passLabel . $expLabel;
 	}
 
 	private function formatType(int $type, string $recipient): string {
