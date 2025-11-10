@@ -19,6 +19,7 @@ OC.L10N.register(
     "User" : "Usuario",
     "Files" : "Archivo",
     "None" : "Ninguno",
+    "Daily" : "Diariamente",
     "Weekly" : "Semanalmente",
     "Save" : "Guardar"
 },
