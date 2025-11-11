@@ -21,6 +21,8 @@ OC.L10N.register(
     "Federation" : "Федэрацыя",
     "Link" : "Спасылка",
     "User" : "Карыстальнік",
+    "Group" : "Група",
+    "Other" : "Іншае",
     "Files" : "Файлы",
     "CSV" : "CSV",
     "PDF" : "PDF",

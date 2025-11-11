@@ -11,6 +11,7 @@ OC.L10N.register(
     "Select all" : "Kies alle",
     "edit" : "edigeer",
     "User" : "Gebruiker",
+    "Other" : "Ander",
     "Files" : "Lêer ",
     "PDF" : "PDF",
     "None" : "Geen",

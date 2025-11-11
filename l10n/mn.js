@@ -11,6 +11,7 @@ OC.L10N.register(
     "Time" : "Цаг",
     "Select all" : "бүгдийг сонгох",
     "edit" : "Засварлах",
+    "Password protected" : "Нууц үгээх хамгаалагдсан",
     "Deck" : "Ажлын талбар",
     "Federation" : "холбоо",
     "E-mail" : "И-мэйл",

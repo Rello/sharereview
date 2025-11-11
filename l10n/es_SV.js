@@ -12,6 +12,7 @@ OC.L10N.register(
     "Time" : "Hora",
     "Action" : "Acción",
     "Select all" : "Seleccionar todo",
+    "Password protected" : "Protegido con contraseña",
     "Deck" : "Deck",
     "Federation" : "Federación",
     "E-mail" : "Correo electrónico",

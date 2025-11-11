@@ -10,6 +10,7 @@ OC.L10N.register(
     "Select all" : "සියල්ල තෝරන්න",
     "Link" : "සබැඳිය",
     "User" : "පරිශීලක",
+    "Other" : "වෙනත්",
     "Files" : "ගොනු",
     "Daily" : "දිනපතා",
     "Weekly" : "සතිපතා"

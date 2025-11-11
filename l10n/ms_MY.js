@@ -8,6 +8,7 @@ OC.L10N.register(
     "Search" : "Search",
     "Type" : "Jenis",
     "User" : "User",
+    "Other" : "Lain",
     "Files" : "Fail-fail",
     "Daily" : "Setiap hari",
     "Weekly" : "Setiap minggu",

@@ -3,7 +3,9 @@
     "OK" : "OK",
     "Cancel" : "Cancel",
     "Search" : "Search",
+    "Password protected" : "پاسورڈ سے محفوظ کیا گیا ہے",
     "User" : "User",
+    "Other" : "دیگر",
     "Save" : "حفظ"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

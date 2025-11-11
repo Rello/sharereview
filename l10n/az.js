@@ -10,6 +10,8 @@ OC.L10N.register(
     "Time" : "Vaxt",
     "Select all" : "Hamısıı seç",
     "User" : "User",
+    "Group" : "Qrup",
+    "Other" : "Digər",
     "None" : "Heç bir",
     "Daily" : "Günlük",
     "Weekly" : "Həftəlik",

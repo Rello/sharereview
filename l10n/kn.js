@@ -7,8 +7,11 @@ OC.L10N.register(
     "Search" : "Search",
     "Time" : "ಸಮಯ",
     "Select all" : "﻿ಎಲ್ಲಾ ಆಯ್ಕೆ ಮಾಡಿ",
+    "Password protected" : "ಗುಪ್ತಪದದಿಂದ ರಕ್ಷಿಸಲಾಗಿದೆ",
     "Link" : "ಸಂಪರ್ಕ ಕೊಂಡಿ",
     "User" : "User",
+    "Group" : "﻿ಗುಂಪು",
+    "Other" : "﻿ಇತರೆ",
     "Files" : "﻿ಕಡತಗಳು",
     "None" : "﻿ಯಾವುದೂ ಇಲ್ಲ",
     "Save" : "﻿ಉಳಿಸಿ"

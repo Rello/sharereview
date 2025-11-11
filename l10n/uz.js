@@ -30,6 +30,7 @@ OC.L10N.register(
     "Deck" : "Pastki qavat",
     "Talk room" : "Suhbat xonasi",
     "Link" : "Havola",
+    "Other" : "Boshqa",
     "Files" : "Fayllar",
     "Share Review" : "Shahr ulashish",
     "Review and audit all shares" : "Barcha ulashmalarni ko'rib chiqing va tekshiring",

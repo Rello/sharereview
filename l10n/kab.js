@@ -10,6 +10,8 @@ OC.L10N.register(
     "Team" : "Tarbaɛt",
     "Link" : "Aseɣwen",
     "User" : "Aseqdac",
+    "Group" : "Agraw",
+    "Other" : "Wayeḍ",
     "PDF" : "PDF",
     "None" : "Ula d yiwen",
     "Daily" : "S wass",

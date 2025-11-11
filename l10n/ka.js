@@ -18,6 +18,8 @@ OC.L10N.register(
     "E-mail" : "E-mail",
     "Link" : "Link",
     "User" : "User",
+    "Group" : "Group",
+    "Other" : "Other",
     "None" : "None",
     "Daily" : "დღიურად",
     "Weekly" : "კვირეულად",

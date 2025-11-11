@@ -6,6 +6,8 @@
     "Type" : "வகை",
     "Link" : "Link",
     "User" : "User",
+    "Group" : "Group",
+    "Other" : "மற்றவை",
     "None" : "ஒன்றுமில்லை",
     "Save" : "சேமிக்க "
 },"pluralForm" :"nplurals=2; plural=(n != 1);"

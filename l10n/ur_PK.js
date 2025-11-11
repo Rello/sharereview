@@ -5,7 +5,9 @@ OC.L10N.register(
     "OK" : "OK",
     "Cancel" : "Cancel",
     "Search" : "Search",
+    "Password protected" : "پاسورڈ سے محفوظ کیا گیا ہے",
     "User" : "User",
+    "Other" : "دیگر",
     "Save" : "حفظ"
 },
 "nplurals=2; plural=(n != 1);");

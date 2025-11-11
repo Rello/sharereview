@@ -8,6 +8,8 @@ OC.L10N.register(
     "Type" : "வகை",
     "Link" : "Link",
     "User" : "User",
+    "Group" : "Group",
+    "Other" : "மற்றவை",
     "None" : "ஒன்றுமில்லை",
     "Save" : "சேமிக்க "
 },

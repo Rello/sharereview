@@ -6,6 +6,7 @@ OC.L10N.register(
     "Cancel" : "پرېښودل",
     "Select all" : "ټول ټاکل",
     "Link" : "لېنک",
+    "Other" : "نور",
     "Daily" : "روزانه",
     "Weekly" : "هفته وار",
     "Save" : "ساتل"

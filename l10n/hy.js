@@ -10,6 +10,8 @@ OC.L10N.register(
     "Select all" : "Նշել բոլորը",
     "Link" : "Հղում",
     "User" : "User",
+    "Group" : "Խումբ",
+    "Other" : "Այլ",
     "Daily" : "Օրական",
     "Weekly" : "Շաբաթական",
     "Save" : "Պահպանել"
