@@ -451,3 +451,11 @@ div.dt-container .dt-paging .dt-paging-button {
     border-radius: var(--border-radius-pill);
     background-color: var(--color-primary-element-light);
 }
+
+#exportContainer input[type="text"] {
+        width: 200px;
+}
+
+#exportContainer select {
+        width: 200px;
+}
