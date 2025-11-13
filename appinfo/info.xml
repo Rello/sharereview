@@ -32,13 +32,13 @@ This prevents accidental exposure of the shared content to all users.
     <website>https://github.com/nextcloud/sharereview</website>
     <bugs>https://github.com/nextcloud/sharereview/issues</bugs>
     <screenshot>
-        https://raw.githubusercontent.com/nextcloud/sharereview/master/screenshots/logo.png
+        https://raw.githubusercontent.com/nextcloud/sharereview/main/screenshots/logo.png
     </screenshot>
     <screenshot>
-        https://raw.githubusercontent.com/nextcloud/sharereview/master/screenshots/screenshot.png
+        https://raw.githubusercontent.com/nextcloud/sharereview/main/screenshots/screenshot.png
     </screenshot>
     <screenshot>
-        https://raw.githubusercontent.com/nextcloud/sharereview/master/screenshots/report.png
+        https://raw.githubusercontent.com/nextcloud/sharereview/main/screenshots/report.png
     </screenshot>
     <dependencies>
         <nextcloud min-version="20" max-version="99"/>
