@@ -3,7 +3,7 @@
 version = 1
 SPDX-PackageName = "sharereview"
 SPDX-PackageSupplier = "Marcel Scherello <sharereview@scherello.de>"
-SPDX-PackageDownloadLocation = "https://github.com/rello/sharereview"
+SPDX-PackageDownloadLocation = "https://github.com/nextcloud/sharereview"
 
 [[annotations]]
 path = "l10n/**"
