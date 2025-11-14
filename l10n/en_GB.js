@@ -36,6 +36,7 @@ OC.L10N.register(
     "read" : "read",
     "edit" : "edit",
     "Password protected" : "Password protected",
+    "Expiration date: " : "Expiration date: ",
     "Deck" : "Deck",
     "Talk room" : "Talk room",
     "Team" : "Team",

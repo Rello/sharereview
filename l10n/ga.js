@@ -36,6 +36,7 @@ OC.L10N.register(
     "read" : "léigh",
     "edit" : "eagar",
     "Password protected" : "Pasfhocal cosanta",
+    "Expiration date: " : "Dáta éaga:",
     "Deck" : "Deic",
     "Talk room" : "Seomra cainte",
     "Team" : "Foireann",
