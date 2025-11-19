@@ -36,6 +36,7 @@ OC.L10N.register(
     "read" : "讀取",
     "edit" : "編輯",
     "Password protected" : "密碼保護",
+    "Expiration date: " : "到期日：",
     "Deck" : "Deck",
     "Talk room" : "Talk 聊天室",
     "Team" : "團隊",
