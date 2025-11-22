@@ -1,10 +1,12 @@
 # Changelog
 
+## 2.0.0 - 2025-11-22
 ### Added
 - indicate password protection and expiration date #20
 
 ### Changed
 - sort type column by type and not text
+- released under the Nextcloud organization
 
 ## 1.6.0 - 2025-11-09
 ### Added
