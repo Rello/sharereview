@@ -1,10 +1,11 @@
 # Changelog
 
-## 2.0.0 - 2025-11-22
+## 2.0.0 - 2025-11-24
 ### Added
 - indicate password protection and expiration date #20
 
 ### Changed
+- the app is now provided via /nextcloud
 - sort type column by type and not text
 - released under the Nextcloud organization
 
