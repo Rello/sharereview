@@ -459,3 +459,11 @@ div.dt-container .dt-paging .dt-paging-button {
 #exportContainer select {
         width: 200px;
 }
+
+#dataTable .dt-type-numeric {
+  text-align: center;
+}
+
+#dataTable .dt-type-numeric > div {
+  justify-content: center;
+}
