@@ -10,7 +10,7 @@ OC.L10N.register(
     "Reset time" : "Restabelecer a hora",
     "Export report" : "Exportar o informe",
     "Show talk shares" : "Amosar as comparticións de conversa",
-    "Select folder" : "Cartafol seleccionado",
+    "Select folder" : "Seleccionar cartafol",
     "Share deleted" : "A compartición foi eliminada",
     "Table not reloaded" : "Non volveu cargar a táboa",
     "Request could not be processed" : "Non foi posíbel procesar a solicitude",
