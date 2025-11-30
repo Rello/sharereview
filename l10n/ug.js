@@ -28,6 +28,7 @@ OC.L10N.register(
     "Time" : "ۋاقىت",
     "Action" : "ھەرىكەت",
     "Select all" : "ھەممىنى تاللاڭ",
+    "more" : "تېخىمۇ كۆپ",
     "edit" : "تەھرىرلە",
     "Password protected" : "پارول قوغدالدى",
     "Deck" : "پالۋان",
