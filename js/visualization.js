@@ -216,9 +216,21 @@ OCA.ShareReview.Visualization = {
             '</div>';
     },
 
-    renderDates: function (data) {
-        const date = new Date(data);
-        return date.toLocaleString();
+    renderDates: function (data, type) {
+        const parsedTimestamp = Number(data);
+        const date = Number.isNaN(parsedTimestamp) ? new Date(data) : new Date(parsedTimestamp);
+
+        if (Number.isNaN(date.getTime())) {
+            return data;
+        }
+
+        const timeValue = date.getTime();
+
+        if (type === 'sort' || type === 'type') {
+            return timeValue;
+        }
+
+        return '<span data-order="' + timeValue + '">' + date.toLocaleString() + '</span>';
     },
 
     renderAction: function (data) {
