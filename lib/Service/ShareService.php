@@ -133,7 +133,7 @@ class ShareService {
 		$app = $array[0];
 		$shareString = rawurldecode($array[1]);
 
-		if ($app === 'Files') {
+		if ($app === 'files') {
 			$this->logger->info('deleting files share: ' . $shareString);
 			$share = $this->shareManager->getShareById($shareString);
 			return $this->shareManager->deleteShare($share);
@@ -208,9 +208,11 @@ class ShareService {
 		$expiration = isset($share['expiration']) && $share['expiration'] !== null && $share['expiration'] !== '' ? $share['expiration'] : '';
 		$share['permissions'] = $share['permissions'] . ';' . $password . ';' . $expiration;
 
+		// get the original app name if available - not the translated one
+		$app = $share['appId'] ?? $share['app'];
 		$share['action'] = $share['action'] !== '' ? $share['action'] : $share['id'];
-		$share['action'] = $share['app'] . '_' . $share['action'];
-
+		$share['action'] = $app . '_' . $share['action'];
+		
 		// remap to the required structure to avoid issues with wrong app arrays
 		$data = [
 			'app' => $share['app'],
@@ -288,6 +290,7 @@ class ShareService {
 			$data = [
 				'id' => $share['id'],
 				'app' => $this->l10n->t('Files'),
+				'appId' => 'files',
 				'object' => $path,
 				'initiator' => $share['uid_initiator'],
 				'type' => $share['share_type'],
