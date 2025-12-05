@@ -204,7 +204,9 @@ class ShareService {
 
 		$share['type'] = $share['type'] . ';' . $share['recipient'];
 		$share['initiator'] = $share['initiator'] != '' ? $this->userHelper->getUserDisplayName($share['initiator']) : '';
-		$share['permissions'] = $share['permissions'] . ';' . $share['password'] . ';' . $share['expiration'];
+		$password = isset($share['password']) && $share['password'] !== null && $share['password'] !== '' ? $share['password'] : '';
+		$expiration = isset($share['expiration']) && $share['expiration'] !== null && $share['expiration'] !== '' ? $share['expiration'] : '';
+		$share['permissions'] = $share['permissions'] . ';' . $password . ';' . $expiration;
 
 		$share['action'] = $share['action'] !== '' ? $share['action'] : $share['id'];
 		$share['action'] = $share['app'] . '_' . $share['action'];
