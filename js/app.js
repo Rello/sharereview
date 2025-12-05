@@ -87,7 +87,7 @@ OCA.ShareReview.Navigation = {
         let reviewTimestamp = OCA.ShareReview.Navigation.getInitialState('reviewTimestamp');
         let showTalk = OCA.ShareReview.Navigation.getInitialState('showTalk') === "true";
         let localTime = '';
-        if (reviewTimestamp !== '0') {
+        if (reviewTimestamp !== '0' && reviewTimestamp !== 0) {
             let timestampInMilliseconds = reviewTimestamp * 1000;
             let date = new Date(timestampInMilliseconds);
             localTime = date.toLocaleString();
