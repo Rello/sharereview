@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.0.1 - 2025-12-05
+### Fixed
+- Refactor permissions assignment in ShareService #43
+- Sorting of time column #42
+- UI fixes
+- Improve reviewTimestamp condition check #45
+- Normalize app name and update action format #44
+
 ## 2.0.0 - 2025-11-24
 ### Added
 - indicate password protection and expiration date #20
